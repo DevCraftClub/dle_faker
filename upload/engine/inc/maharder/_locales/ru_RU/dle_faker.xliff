@@ -15,188 +15,240 @@
         <target>Активировать шаблон</target>
       </trans-unit>
       <trans-unit id="4">
-        <source>При включённом параметре можно будет использовать этот шаблон для создания новости</source>
-        <target>При включённом параметре можно будет использовать этот шаблон для создания новости</target>
-      </trans-unit>
-      <trans-unit id="5">
         <source>Автор новости</source>
         <target>Автор новости</target>
       </trans-unit>
-      <trans-unit id="6">
+      <trans-unit id="5">
         <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
         <target>Используя теги заполните шаблон. Либо укажите ID автора</target>
       </trans-unit>
-      <trans-unit id="7">
+      <trans-unit id="6">
         <source>Заголовок новости</source>
         <target>Заголовок новости</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="7">
         <source>Используя теги заполните шаблон для заголовка новости.</source>
         <target>Используя теги заполните шаблон для заголовка новости.</target>
       </trans-unit>
-      <trans-unit id="9">
+      <trans-unit id="8">
         <source>Категория новости</source>
         <target>Категория новости</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="9">
         <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
         <target>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="10">
         <source>Дата публикации, начало</source>
         <target>Дата публикации, начало</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="11">
         <source>Укажите начальную дату для случайного значения</source>
         <target>Укажите начальную дату для случайного значения</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="12">
         <source>Дата публикации, конец</source>
         <target>Дата публикации, конец</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="13">
         <source>Укажите конечную дату для случайного значения</source>
         <target>Укажите конечную дату для случайного значения</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="14">
         <source>Краткое содержание</source>
         <target>Краткое содержание</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="15">
         <source>Сгенерируйте описание используя теги генерации</source>
         <target>Сгенерируйте описание используя теги генерации</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="16">
         <source>Полное содержание</source>
         <target>Полное содержание</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="17">
         <source>Дополнительное поле:</source>
         <target>Дополнительное поле:</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="18">
         <source>Содержимое для поля</source>
         <target>Содержимое для поля</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="19">
         <source>Включить</source>
         <target>Включить</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="20">
         <source>Выключить</source>
         <target>Выключить</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="21">
         <source>Случайно</source>
         <target>Случайно</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="22">
         <source>Следующие параметры будут учитываться:</source>
         <target>Следующие параметры будут учитываться:</target>
       </trans-unit>
+      <trans-unit id="23">
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
+        <target>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
+      </trans-unit>
       <trans-unit id="24">
-        <source>&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target>&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
+        <target>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="25">
-        <source>&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target>&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</target>
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
+        <target>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</target>
       </trans-unit>
       <trans-unit id="26">
-        <source>&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target>&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</target>
-      </trans-unit>
-      <trans-unit id="27">
         <source>Публиковать на главной</source>
         <target>Публиковать на главной</target>
       </trans-unit>
-      <trans-unit id="28">
+      <trans-unit id="27">
         <source>Опубликовать новость на сайте</source>
         <target>Опубликовать новость на сайте</target>
       </trans-unit>
-      <trans-unit id="29">
+      <trans-unit id="28">
         <source>Зафиксировать новость</source>
         <target>Зафиксировать новость</target>
       </trans-unit>
-      <trans-unit id="30">
+      <trans-unit id="29">
         <source>Разрешить комментарии</source>
         <target>Разрешить комментарии</target>
       </trans-unit>
-      <trans-unit id="31">
+      <trans-unit id="30">
         <source>Разрешить рейтинг статьи</source>
         <target>Разрешить рейтинг статьи</target>
       </trans-unit>
-      <trans-unit id="32">
+      <trans-unit id="31">
         <source>Запретить индексацию для поисковиков</source>
         <target>Запретить индексацию для поисковиков</target>
       </trans-unit>
-      <trans-unit id="33">
+      <trans-unit id="32">
         <source>Исключить из поиска по сайту</source>
         <target>Исключить из поиска по сайту</target>
       </trans-unit>
-      <trans-unit id="34">
+      <trans-unit id="33">
         <source>Опубликовать новость в RSS потоке</source>
         <target>Опубликовать новость в RSS потоке</target>
       </trans-unit>
-      <trans-unit id="35">
+      <trans-unit id="34">
         <source>Использовать в Яндекс Турбо</source>
         <target>Использовать в Яндекс Турбо</target>
       </trans-unit>
-      <trans-unit id="36">
+      <trans-unit id="35">
         <source>Использовать в Яндекс Дзен</source>
         <target>Использовать в Яндекс Дзен</target>
       </trans-unit>
-      <trans-unit id="37">
+      <trans-unit id="36">
         <source>Сохранить</source>
         <target>Сохранить</target>
       </trans-unit>
-      <trans-unit id="38">
+      <trans-unit id="37">
         <source>Всё отлично!</source>
         <target>Всё отлично!</target>
       </trans-unit>
-      <trans-unit id="39">
+      <trans-unit id="38">
         <source>Данные были сохранены!</source>
         <target>Данные были сохранены!</target>
       </trans-unit>
-      <trans-unit id="40">
+      <trans-unit id="39">
         <source>шаблон</source>
         <target>шаблон</target>
       </trans-unit>
-      <trans-unit id="41">
-        <source>шаблона</source>
-        <target>шаблона</target>
-      </trans-unit>
-      <trans-unit id="42">
-        <source>шаблонов</source>
-        <target>шаблонов</target>
-      </trans-unit>
-      <trans-unit id="43">
+      <trans-unit id="40">
         <source>Название</source>
         <target>Название</target>
       </trans-unit>
-      <trans-unit id="44">
+      <trans-unit id="41">
         <source>Включён?</source>
         <target>Включён?</target>
       </trans-unit>
-      <trans-unit id="45">
+      <trans-unit id="42">
         <source>Выбор действия</source>
         <target>Выбор действия</target>
       </trans-unit>
-      <trans-unit id="46">
+      <trans-unit id="43">
         <source>Изменить</source>
         <target>Изменить</target>
       </trans-unit>
-      <trans-unit id="47">
+      <trans-unit id="44">
         <source>Удалить</source>
         <target>Удалить</target>
       </trans-unit>
-      <trans-unit id="48">
+      <trans-unit id="45">
         <source>Отключить</source>
         <target>Отключить</target>
       </trans-unit>
-      <trans-unit id="49">
+      <trans-unit id="46">
         <source>Настройки</source>
         <target>Настройки</target>
+      </trans-unit>
+      <trans-unit id="47">
+        <source>Зависимости не были установлены!</source>
+        <target>Зависимости не были установлены!</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
+        <target>Установите их при помощи консоли сами! PHP должен быть выполняемым!</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>Шаблоны</source>
+        <target>Шаблоны</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>Активные</source>
+        <target>Активные</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>Создание нового шаблона</source>
+        <target>Создание нового шаблона</target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>Настройки модуля</source>
+        <target>Настройки модуля</target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>Основной релиз</source>
+        <target>Основной релиз</target>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>История изменений</source>
+        <target>История изменений</target>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>Название шаблона не может быть пустым</source>
+        <target>Название шаблона не может быть пустым</target>
+      </trans-unit>
+      <trans-unit id="56">
+        <source>Автор не может быть пустым</source>
+        <target>Автор не может быть пустым</target>
+      </trans-unit>
+      <trans-unit id="57">
+        <source>Заголовок не может быть пустым</source>
+        <target>Заголовок не может быть пустым</target>
+      </trans-unit>
+      <trans-unit id="58">
+        <source>Категория не может быть пустой</source>
+        <target>Категория не может быть пустой</target>
+      </trans-unit>
+      <trans-unit id="59">
+        <source>Короткое описание не может быть пустой</source>
+        <target>Короткое описание не может быть пустой</target>
+      </trans-unit>
+      <trans-unit id="60">
+        <source>Шаблон успешно создан</source>
+        <target>Шаблон успешно создан</target>
+      </trans-unit>
+      <trans-unit id="61">
+        <source>Такого шаблона не существует!</source>
+        <target>Такого шаблона не существует!</target>
+      </trans-unit>
+      <trans-unit id="62">
+        <source>Шаблон был включён</source>
+        <target>Шаблон был включён</target>
       </trans-unit>
     </body>
   </file>
