@@ -16,239 +16,239 @@
       </trans-unit>
       <trans-unit id="4">
         <source>Автор новости</source>
-        <target state="needs-translation">Автор новости</target>
+        <target state="translated">With this option enabled, you can use this template to create a news item</target>
       </trans-unit>
       <trans-unit id="5">
         <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
-        <target state="needs-translation">Используя теги заполните шаблон. Либо укажите ID автора</target>
+        <target state="translated">The author of the news story</target>
       </trans-unit>
       <trans-unit id="6">
         <source>Заголовок новости</source>
-        <target state="needs-translation">Заголовок новости</target>
+        <target state="translated">Using tags, fill in the template. Or specify author ID</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Используя теги заполните шаблон для заголовка новости.</source>
-        <target state="needs-translation">Используя теги заполните шаблон для заголовка новости.</target>
+        <target state="translated">News headline</target>
       </trans-unit>
       <trans-unit id="8">
         <source>Категория новости</source>
-        <target state="needs-translation">Категория новости</target>
+        <target state="translated">Using tags, fill in the template for the news headline.</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="needs-translation">Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</target>
+        <target state="translated">News Category</target>
       </trans-unit>
       <trans-unit id="10">
         <source>Дата публикации, начало</source>
-        <target state="needs-translation">Дата публикации, начало</target>
+        <target state="translated">Using tags, fill in the template for the news category. Or specify category IDs</target>
       </trans-unit>
       <trans-unit id="11">
         <source>Укажите начальную дату для случайного значения</source>
-        <target state="needs-translation">Укажите начальную дату для случайного значения</target>
+        <target state="translated">Date of publication, beginning</target>
       </trans-unit>
       <trans-unit id="12">
         <source>Дата публикации, конец</source>
-        <target state="needs-translation">Дата публикации, конец</target>
+        <target state="translated">Specify the start date for the random value</target>
       </trans-unit>
       <trans-unit id="13">
         <source>Укажите конечную дату для случайного значения</source>
-        <target state="needs-translation">Укажите конечную дату для случайного значения</target>
+        <target state="translated">Date of publication, end</target>
       </trans-unit>
       <trans-unit id="14">
         <source>Краткое содержание</source>
-        <target state="needs-translation">Краткое содержание</target>
+        <target state="translated">Specify the end date for the random value</target>
       </trans-unit>
       <trans-unit id="15">
         <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="needs-translation">Сгенерируйте описание используя теги генерации</target>
+        <target state="translated">Summary</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Полное содержание</source>
-        <target state="needs-translation">Полное содержание</target>
+        <target state="translated">Generate a description using the generation tags</target>
       </trans-unit>
       <trans-unit id="17">
         <source>Дополнительное поле:</source>
-        <target state="needs-translation">Дополнительное поле:</target>
+        <target state="translated">Full Content</target>
       </trans-unit>
       <trans-unit id="18">
         <source>Содержимое для поля</source>
-        <target state="needs-translation">Содержимое для поля</target>
+        <target state="translated">Additional field:</target>
       </trans-unit>
       <trans-unit id="19">
         <source>Включить</source>
-        <target state="needs-translation">Включить</target>
+        <target state="translated">Content for the field</target>
       </trans-unit>
       <trans-unit id="20">
         <source>Выключить</source>
-        <target state="needs-translation">Выключить</target>
+        <target state="translated">Enable</target>
       </trans-unit>
       <trans-unit id="21">
         <source>Случайно</source>
-        <target state="needs-translation">Случайно</target>
+        <target state="translated">Off</target>
       </trans-unit>
       <trans-unit id="22">
         <source>Следующие параметры будут учитываться:</source>
-        <target state="needs-translation">Следующие параметры будут учитываться:</target>
+        <target state="translated">Accidentally</target>
       </trans-unit>
       <trans-unit id="23">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="needs-translation">&lt;div class="item"&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
+        <target state="translated">The following parameters will be considered:</target>
       </trans-unit>
       <trans-unit id="24">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target state="needs-translation">&lt;div class="item"&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables option&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="25">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target state="needs-translation">&lt;div class="item"&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</target>
+        <target state="translated">&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables the option&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="26">
         <source>Публиковать на главной</source>
-        <target state="needs-translation">Публиковать на главной</target>
+        <target state="translated">&gt;&lt;b&gt;Random&lt;/b&gt; - Programmatically decides whether to enable the option or not&lt;/div&gt;&lt;br&gt;&lt;i&gt;Default: Random&lt;/i&gt;</target>
       </trans-unit>
       <trans-unit id="27">
         <source>Опубликовать новость на сайте</source>
-        <target state="needs-translation">Опубликовать новость на сайте</target>
+        <target state="translated">Publish on the main page</target>
       </trans-unit>
       <trans-unit id="28">
         <source>Зафиксировать новость</source>
-        <target state="needs-translation">Зафиксировать новость</target>
+        <target state="translated">Publish the news on the website</target>
       </trans-unit>
       <trans-unit id="29">
         <source>Разрешить комментарии</source>
-        <target state="needs-translation">Разрешить комментарии</target>
+        <target state="translated">Record the news</target>
       </trans-unit>
       <trans-unit id="30">
         <source>Разрешить рейтинг статьи</source>
-        <target state="needs-translation">Разрешить рейтинг статьи</target>
+        <target state="translated">Allow comments</target>
       </trans-unit>
       <trans-unit id="31">
         <source>Запретить индексацию для поисковиков</source>
-        <target state="needs-translation">Запретить индексацию для поисковиков</target>
+        <target state="translated">Allow article rating</target>
       </trans-unit>
       <trans-unit id="32">
         <source>Исключить из поиска по сайту</source>
-        <target state="needs-translation">Исключить из поиска по сайту</target>
+        <target state="translated">Prohibit indexing for search engines</target>
       </trans-unit>
       <trans-unit id="33">
         <source>Опубликовать новость в RSS потоке</source>
-        <target state="needs-translation">Опубликовать новость в RSS потоке</target>
+        <target state="translated">Exclude from site search</target>
       </trans-unit>
       <trans-unit id="34">
         <source>Использовать в Яндекс Турбо</source>
-        <target state="needs-translation">Использовать в Яндекс Турбо</target>
+        <target state="translated">Publish news in RSS feed</target>
       </trans-unit>
       <trans-unit id="35">
         <source>Использовать в Яндекс Дзен</source>
-        <target state="needs-translation">Использовать в Яндекс Дзен</target>
+        <target state="translated">Use in Yandex Turbo</target>
       </trans-unit>
       <trans-unit id="36">
         <source>Сохранить</source>
-        <target state="needs-translation">Сохранить</target>
+        <target state="translated">Use in Yandex Zen</target>
       </trans-unit>
       <trans-unit id="37">
         <source>Всё отлично!</source>
-        <target state="needs-translation">Всё отлично!</target>
+        <target state="translated">Save</target>
       </trans-unit>
       <trans-unit id="38">
         <source>Данные были сохранены!</source>
-        <target state="needs-translation">Данные были сохранены!</target>
+        <target state="translated">Everything's great!</target>
       </trans-unit>
       <trans-unit id="39">
         <source>шаблон</source>
-        <target state="needs-translation">шаблон</target>
+        <target state="translated">The data has been saved!</target>
       </trans-unit>
       <trans-unit id="40">
         <source>Название</source>
-        <target state="needs-translation">Название</target>
+        <target state="translated">template</target>
       </trans-unit>
       <trans-unit id="41">
         <source>Включён?</source>
-        <target state="needs-translation">Включён?</target>
+        <target state="translated">template</target>
       </trans-unit>
       <trans-unit id="42">
         <source>Выбор действия</source>
-        <target state="needs-translation">Выбор действия</target>
+        <target state="translated">templates</target>
       </trans-unit>
       <trans-unit id="43">
         <source>Изменить</source>
-        <target state="needs-translation">Изменить</target>
+        <target state="translated">Title</target>
       </trans-unit>
       <trans-unit id="44">
         <source>Удалить</source>
-        <target state="needs-translation">Удалить</target>
+        <target state="translated">Is it on?</target>
       </trans-unit>
       <trans-unit id="45">
         <source>Отключить</source>
-        <target state="needs-translation">Отключить</target>
+        <target state="translated">Action selection</target>
       </trans-unit>
       <trans-unit id="46">
         <source>Настройки</source>
-        <target state="needs-translation">Настройки</target>
+        <target state="translated">Modify</target>
       </trans-unit>
       <trans-unit id="47">
         <source>Зависимости не были установлены!</source>
-        <target state="needs-translation">Зависимости не были установлены!</target>
+        <target state="translated">Delete</target>
       </trans-unit>
       <trans-unit id="48">
         <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
-        <target state="needs-translation">Установите их при помощи консоли сами! PHP должен быть выполняемым!</target>
+        <target state="translated">Disconnect</target>
       </trans-unit>
       <trans-unit id="49">
         <source>Шаблоны</source>
-        <target state="needs-translation">Шаблоны</target>
+        <target state="translated">Settings</target>
       </trans-unit>
       <trans-unit id="50">
         <source>Активные</source>
-        <target state="needs-translation">Активные</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Active</target>
       </trans-unit>
       <trans-unit id="51">
         <source>Создание нового шаблона</source>
-        <target state="needs-translation">Создание нового шаблона</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Creating a new template</target>
       </trans-unit>
       <trans-unit id="52">
         <source>Настройки модуля</source>
-        <target state="needs-translation">Настройки модуля</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Module settings</target>
       </trans-unit>
       <trans-unit id="53">
         <source>Основной релиз</source>
-        <target state="needs-translation">Основной релиз</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Main release</target>
       </trans-unit>
       <trans-unit id="54">
         <source>История изменений</source>
-        <target state="needs-translation">История изменений</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Change history</target>
       </trans-unit>
       <trans-unit id="55">
         <source>Название шаблона не может быть пустым</source>
-        <target state="needs-translation">Название шаблона не может быть пустым</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">The name of the template cannot be empty</target>
       </trans-unit>
       <trans-unit id="56">
         <source>Автор не может быть пустым</source>
-        <target state="needs-translation">Автор не может быть пустым</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">An author can't be blank</target>
       </trans-unit>
       <trans-unit id="57">
         <source>Заголовок не может быть пустым</source>
-        <target state="needs-translation">Заголовок не может быть пустым</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">The header cannot be blank</target>
       </trans-unit>
       <trans-unit id="58">
         <source>Категория не может быть пустой</source>
-        <target state="needs-translation">Категория не может быть пустой</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">A category cannot be empty</target>
       </trans-unit>
       <trans-unit id="59">
         <source>Короткое описание не может быть пустой</source>
-        <target state="needs-translation">Короткое описание не может быть пустой</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">A short description can't be empty</target>
       </trans-unit>
       <trans-unit id="60">
         <source>Шаблон успешно создан</source>
-        <target state="needs-translation">Шаблон успешно создан</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template was successfully created</target>
       </trans-unit>
       <trans-unit id="61">
         <source>Такого шаблона не существует!</source>
-        <target state="needs-translation">Такого шаблона не существует!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">There is no such template!</target>
       </trans-unit>
       <trans-unit id="62">
         <source>Шаблон был включён</source>
-        <target state="needs-translation">Шаблон был включён</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template was included</target>
       </trans-unit>
     </body>
   </file>
