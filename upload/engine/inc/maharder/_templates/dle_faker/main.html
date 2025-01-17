@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+
+<form class="ui form segment">
+    <div class="ui bottom attached tab active" data-tab="main">
+        <h4 class="ui dividing header">{%trans%}Настройки{%endtrans%}</h4>
+        <div class="ui four column grid">
+            {% autoescape 'html' %}
+
+
+
+            {% endautoescape %}
+        </div>
+    </div>
+</form>
+<div class="ui segment">
+    <div class="ui button save" tabindex="0">{%trans%}Сохранить{%endtrans%}</div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+
+{% autoescape 'js' %}
+<script>
+	$(() => {
+		$(document).on('click', '.save', function () {
+			startLoading();
+			$.ajax({
+				url: 'engine/ajax/controller.php?mod=maharder',
+				data: {
+					user_hash: '{{dle_login_hash}}',
+					module: '{{module_code}}',
+					file: 'master',
+					method: 'settings',
+					data: $('.form').serialize()
+				},
+				type: 'POST',
+				success: function (data) {
+					hideLoading('');
+					$('body').toast({
+						class: 'success',
+						title: `{%trans%}Всё отлично!{%endtrans%}`,
+						message: `{%trans%}Данные были сохранены!{%endtrans%}`,
+						showProgress: 'bottom'
+					});
+
+				}
+			});
+		});
+	});
+</script>
+{% endautoescape %}
+{% endblock %}
