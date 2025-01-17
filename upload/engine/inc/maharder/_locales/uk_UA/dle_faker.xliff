@@ -15,188 +15,240 @@
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Активувати шаблон</target>
       </trans-unit>
       <trans-unit id="4">
-        <source>При включённом параметре можно будет использовать этот шаблон для создания новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">При увімкненому параметрі можна буде використовувати цей шаблон для створення новини</target>
+        <source>Автор новости</source>
+        <target state="needs-translation">Автор новости</target>
       </trans-unit>
       <trans-unit id="5">
-        <source>Автор новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Автор новини</target>
+        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
+        <target state="needs-translation">Используя теги заполните шаблон. Либо укажите ID автора</target>
       </trans-unit>
       <trans-unit id="6">
-        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон. Або вкажіть ID автора</target>
+        <source>Заголовок новости</source>
+        <target state="needs-translation">Заголовок новости</target>
       </trans-unit>
       <trans-unit id="7">
-        <source>Заголовок новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заголовок новини</target>
+        <source>Используя теги заполните шаблон для заголовка новости.</source>
+        <target state="needs-translation">Используя теги заполните шаблон для заголовка новости.</target>
       </trans-unit>
       <trans-unit id="8">
-        <source>Используя теги заполните шаблон для заголовка новости.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон для заголовка новини.</target>
+        <source>Категория новости</source>
+        <target state="needs-translation">Категория новости</target>
       </trans-unit>
       <trans-unit id="9">
-        <source>Категория новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Категорія новини</target>
+        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
+        <target state="needs-translation">Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</target>
       </trans-unit>
       <trans-unit id="10">
-        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон для категорії новини. Або вкажіть ID категорій</target>
+        <source>Дата публикации, начало</source>
+        <target state="needs-translation">Дата публикации, начало</target>
       </trans-unit>
       <trans-unit id="11">
-        <source>Дата публикации, начало</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, початок</target>
+        <source>Укажите начальную дату для случайного значения</source>
+        <target state="needs-translation">Укажите начальную дату для случайного значения</target>
       </trans-unit>
       <trans-unit id="12">
-        <source>Укажите начальную дату для случайного значения</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть початкову дату для випадкового значення</target>
+        <source>Дата публикации, конец</source>
+        <target state="needs-translation">Дата публикации, конец</target>
       </trans-unit>
       <trans-unit id="13">
-        <source>Дата публикации, конец</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, кінець</target>
+        <source>Укажите конечную дату для случайного значения</source>
+        <target state="needs-translation">Укажите конечную дату для случайного значения</target>
       </trans-unit>
       <trans-unit id="14">
-        <source>Укажите конечную дату для случайного значения</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть кінцеву дату для випадкового значення</target>
+        <source>Краткое содержание</source>
+        <target state="needs-translation">Краткое содержание</target>
       </trans-unit>
       <trans-unit id="15">
-        <source>Краткое содержание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Короткий зміст</target>
+        <source>Сгенерируйте описание используя теги генерации</source>
+        <target state="needs-translation">Сгенерируйте описание используя теги генерации</target>
       </trans-unit>
       <trans-unit id="16">
-        <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Згенеруйте опис, використовуючи теги генерації</target>
+        <source>Полное содержание</source>
+        <target state="needs-translation">Полное содержание</target>
       </trans-unit>
       <trans-unit id="17">
-        <source>Полное содержание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повний зміст</target>
+        <source>Дополнительное поле:</source>
+        <target state="needs-translation">Дополнительное поле:</target>
       </trans-unit>
       <trans-unit id="18">
-        <source>Дополнительное поле:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Додаткове поле:</target>
+        <source>Содержимое для поля</source>
+        <target state="needs-translation">Содержимое для поля</target>
       </trans-unit>
       <trans-unit id="19">
-        <source>Содержимое для поля</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вміст для поля</target>
+        <source>Включить</source>
+        <target state="needs-translation">Включить</target>
       </trans-unit>
       <trans-unit id="20">
-        <source>Включить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнути</target>
+        <source>Выключить</source>
+        <target state="needs-translation">Выключить</target>
       </trans-unit>
       <trans-unit id="21">
-        <source>Выключить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнути</target>
+        <source>Случайно</source>
+        <target state="needs-translation">Случайно</target>
       </trans-unit>
       <trans-unit id="22">
-        <source>Случайно</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадково</target>
+        <source>Следующие параметры будут учитываться:</source>
+        <target state="needs-translation">Следующие параметры будут учитываться:</target>
       </trans-unit>
       <trans-unit id="23">
-        <source>Следующие параметры будут учитываться:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Наступні параметри будуть враховуватися:</target>
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
+        <target state="needs-translation">&lt;div class="item"&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="24">
-        <source>&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="needs-translation">&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
+        <target state="needs-translation">&lt;div class="item"&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="25">
-        <source>&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&gt;&lt;b&gt;Вимкнути&lt;/b&gt; - Опція вимикає опцію&lt;/div&gt;</target>
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
+        <target state="needs-translation">&lt;div class="item"&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</target>
       </trans-unit>
       <trans-unit id="26">
-        <source>&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&gt;&lt;b&gt;Випадково&lt;/b&gt; - Програмно вирішує, увімкнути опцію чи ні&lt;/div&gt;&lt;br&gt;&lt;i&gt;За замовчуванням: Випадково&lt;/i&gt;</target>
+        <source>Публиковать на главной</source>
+        <target state="needs-translation">Публиковать на главной</target>
       </trans-unit>
       <trans-unit id="27">
-        <source>Публиковать на главной</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Публікувати на головній</target>
+        <source>Опубликовать новость на сайте</source>
+        <target state="needs-translation">Опубликовать новость на сайте</target>
       </trans-unit>
       <trans-unit id="28">
-        <source>Опубликовать новость на сайте</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опублікувати новину на сайті</target>
+        <source>Зафиксировать новость</source>
+        <target state="needs-translation">Зафиксировать новость</target>
       </trans-unit>
       <trans-unit id="29">
-        <source>Зафиксировать новость</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зафіксувати новину</target>
+        <source>Разрешить комментарии</source>
+        <target state="needs-translation">Разрешить комментарии</target>
       </trans-unit>
       <trans-unit id="30">
-        <source>Разрешить комментарии</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дозволити коментарі</target>
+        <source>Разрешить рейтинг статьи</source>
+        <target state="needs-translation">Разрешить рейтинг статьи</target>
       </trans-unit>
       <trans-unit id="31">
-        <source>Разрешить рейтинг статьи</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дозволити рейтинг статті</target>
+        <source>Запретить индексацию для поисковиков</source>
+        <target state="needs-translation">Запретить индексацию для поисковиков</target>
       </trans-unit>
       <trans-unit id="32">
-        <source>Запретить индексацию для поисковиков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заборонити індексацію для пошукових систем</target>
+        <source>Исключить из поиска по сайту</source>
+        <target state="needs-translation">Исключить из поиска по сайту</target>
       </trans-unit>
       <trans-unit id="33">
-        <source>Исключить из поиска по сайту</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Виключити з пошуку по сайту</target>
+        <source>Опубликовать новость в RSS потоке</source>
+        <target state="needs-translation">Опубликовать новость в RSS потоке</target>
       </trans-unit>
       <trans-unit id="34">
-        <source>Опубликовать новость в RSS потоке</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опублікувати новину в RSS потоці</target>
+        <source>Использовать в Яндекс Турбо</source>
+        <target state="needs-translation">Использовать в Яндекс Турбо</target>
       </trans-unit>
       <trans-unit id="35">
-        <source>Использовать в Яндекс Турбо</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовувати в Яндекс Турбо</target>
+        <source>Использовать в Яндекс Дзен</source>
+        <target state="needs-translation">Использовать в Яндекс Дзен</target>
       </trans-unit>
       <trans-unit id="36">
-        <source>Использовать в Яндекс Дзен</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовувати в Яндекс Дзен</target>
+        <source>Сохранить</source>
+        <target state="needs-translation">Сохранить</target>
       </trans-unit>
       <trans-unit id="37">
-        <source>Сохранить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зберегти</target>
+        <source>Всё отлично!</source>
+        <target state="needs-translation">Всё отлично!</target>
       </trans-unit>
       <trans-unit id="38">
-        <source>Всё отлично!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Все чудово!</target>
+        <source>Данные были сохранены!</source>
+        <target state="needs-translation">Данные были сохранены!</target>
       </trans-unit>
       <trans-unit id="39">
-        <source>Данные были сохранены!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дані було збережено!</target>
+        <source>шаблон</source>
+        <target state="needs-translation">шаблон</target>
       </trans-unit>
       <trans-unit id="40">
-        <source>шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">шаблон</target>
+        <source>Название</source>
+        <target state="needs-translation">Название</target>
       </trans-unit>
       <trans-unit id="41">
-        <source>шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">шаблону</target>
+        <source>Включён?</source>
+        <target state="needs-translation">Включён?</target>
       </trans-unit>
       <trans-unit id="42">
-        <source>шаблонов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">шаблонів</target>
+        <source>Выбор действия</source>
+        <target state="needs-translation">Выбор действия</target>
       </trans-unit>
       <trans-unit id="43">
-        <source>Название</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва</target>
+        <source>Изменить</source>
+        <target state="needs-translation">Изменить</target>
       </trans-unit>
       <trans-unit id="44">
-        <source>Включён?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнено?</target>
+        <source>Удалить</source>
+        <target state="needs-translation">Удалить</target>
       </trans-unit>
       <trans-unit id="45">
-        <source>Выбор действия</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибір дії</target>
+        <source>Отключить</source>
+        <target state="needs-translation">Отключить</target>
       </trans-unit>
       <trans-unit id="46">
-        <source>Изменить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Змінити</target>
+        <source>Настройки</source>
+        <target state="needs-translation">Настройки</target>
       </trans-unit>
       <trans-unit id="47">
-        <source>Удалить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Видалити</target>
+        <source>Зависимости не были установлены!</source>
+        <target state="needs-translation">Зависимости не были установлены!</target>
       </trans-unit>
       <trans-unit id="48">
-        <source>Отключить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнути</target>
+        <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
+        <target state="needs-translation">Установите их при помощи консоли сами! PHP должен быть выполняемым!</target>
       </trans-unit>
       <trans-unit id="49">
-        <source>Настройки</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування</target>
+        <source>Шаблоны</source>
+        <target state="needs-translation">Шаблоны</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>Активные</source>
+        <target state="needs-translation">Активные</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>Создание нового шаблона</source>
+        <target state="needs-translation">Создание нового шаблона</target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>Настройки модуля</source>
+        <target state="needs-translation">Настройки модуля</target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>Основной релиз</source>
+        <target state="needs-translation">Основной релиз</target>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>История изменений</source>
+        <target state="needs-translation">История изменений</target>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>Название шаблона не может быть пустым</source>
+        <target state="needs-translation">Название шаблона не может быть пустым</target>
+      </trans-unit>
+      <trans-unit id="56">
+        <source>Автор не может быть пустым</source>
+        <target state="needs-translation">Автор не может быть пустым</target>
+      </trans-unit>
+      <trans-unit id="57">
+        <source>Заголовок не может быть пустым</source>
+        <target state="needs-translation">Заголовок не может быть пустым</target>
+      </trans-unit>
+      <trans-unit id="58">
+        <source>Категория не может быть пустой</source>
+        <target state="needs-translation">Категория не может быть пустой</target>
+      </trans-unit>
+      <trans-unit id="59">
+        <source>Короткое описание не может быть пустой</source>
+        <target state="needs-translation">Короткое описание не может быть пустой</target>
+      </trans-unit>
+      <trans-unit id="60">
+        <source>Шаблон успешно создан</source>
+        <target state="needs-translation">Шаблон успешно создан</target>
+      </trans-unit>
+      <trans-unit id="61">
+        <source>Такого шаблона не существует!</source>
+        <target state="needs-translation">Такого шаблона не существует!</target>
+      </trans-unit>
+      <trans-unit id="62">
+        <source>Шаблон был включён</source>
+        <target state="needs-translation">Шаблон был включён</target>
       </trans-unit>
     </body>
   </file>
