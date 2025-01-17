@@ -1,0 +1,182 @@
+{% from "_macros/select.twig" import multi, select %}
+{% from "_macros/checkbox.twig" import checkbox %}
+
+
+{% extends 'base.html' %} {% block content %}
+
+<form class="ui form segment">
+	<div class="ui bottom attached tab active" data-tab="main">
+		<h4 class="ui dividing header">{{title}}</h4>
+		<div class="ui four column grid">
+			{% autoescape 'html' %}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'name',
+				name: 'Название шаблона'|trans|raw,
+				descr: 'Укажите уникальное название для шаблона'|trans|html_entity_decode,
+				type: 'input',
+				variable: settings
+				})
+			}}
+
+			{{ checkbox('active_template', 'Активировать шаблон'|trans, 'При включённом параметре можно будет использовать этот шаблон для создания новости'|trans, settings) }}
+
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'autor',
+				name: 'Автор новости'|trans|raw,
+				descr: 'Используя теги заполните шаблон. Либо укажите ID автора'|trans|html_entity_decode,
+				type: 'input',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'title',
+				name: 'Заголовок новости'|trans|raw,
+				descr: 'Используя теги заполните шаблон для заголовка новости.'|trans|html_entity_decode,
+				type: 'input',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'category',
+				name: 'Категория новости'|trans|raw,
+				descr: 'Используя теги заполните шаблон для категории новости. Либо укажите ID категорий'|trans|html_entity_decode,
+				type: 'input',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'date_from',
+				name: 'Дата публикации, начало'|trans|raw,
+				descr: 'Укажите начальную дату для случайного значения'|trans|html_entity_decode,
+				type: 'datetime',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'date_to',
+				name: 'Дата публикации, конец'|trans|raw,
+				descr: 'Укажите конечную дату для случайного значения'|trans|html_entity_decode,
+				type: 'datetime',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'short_story',
+				name: 'Краткое содержание'|trans|raw,
+				descr: 'Сгенерируйте описание используя теги генерации'|trans|html_entity_decode,
+				type: 'editor',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'full_story',
+				name: 'Полное содержание'|trans|raw,
+				descr: 'Сгенерируйте описание используя теги генерации'|trans|html_entity_decode,
+				type: 'editor',
+				variable: settings
+				})
+			}}
+
+			{% for type, name in xfields %}
+
+				{{ include('templateIncludes/segRow.html', {
+					id: 'xfields['~type ~ ']',
+					name: 'Дополнительное поле: '|trans|raw ~ name,
+					descr: 'Содержимое для поля '|trans|html_entity_decode ~ type,
+					type: 'text',
+					variable: settings
+					})
+				}}
+
+			{% endfor %}
+
+			{% set allow_values = {
+				on: 'Включить'|trans,
+				off: 'Выключить'|trans,
+				random: 'Случайно'|trans,
+			} %}
+
+			{% set allow_descr = 'Следующие параметры будут учитываться:'|htmlentities|raw|trans|html_entity_decode ~ '<div class="ui bulleted list">' ~
+				'<div class="item"><b>Включить</b> - Опция включает опцию</div>'|htmlentities|raw|trans|html_entity_decode ~
+				'<div class="item"><b>Выключить</b> - Опция выключает опцию</div>'|htmlentities|raw|trans|html_entity_decode ~
+				'<div class="item"><b>Случайно</b> - Программно решает, включить опцию или нет</div><br><i>По умолчанию: Случайно</i>'|htmlentities|raw|trans|html_entity_decode ~
+				'</div><br>'
+			%}
+
+			{{ select('allow_main', 'Публиковать на главной'|trans, allow_descr, settings, allow_values) }}
+			{{ select('approve', 'Опубликовать новость на сайте'|trans, allow_descr, settings, allow_values) }}
+			{{ select('fixed', 'Зафиксировать новость'|trans, allow_descr, settings, allow_values) }}
+			{{ select('allow_comm', 'Разрешить комментарии'|trans, allow_descr, settings, allow_values) }}
+			{{ select('allow_rate', 'Разрешить рейтинг статьи'|trans, allow_descr, settings, allow_values) }}
+			{{ select('disable_index', 'Запретить индексацию для поисковиков'|trans, allow_descr, settings, allow_values) }}
+			{{ select('disable_search', 'Исключить из поиска по сайту'|trans, allow_descr, settings, allow_values) }}
+			{{ select('allow_rss', 'Опубликовать новость в RSS потоке'|trans, allow_descr, settings, allow_values) }}
+			{{ select('allow_rss_turbo', 'Использовать в Яндекс Турбо'|trans, allow_descr, settings, allow_values) }}
+			{{ select('allow_rss_dzen', 'Использовать в Яндекс Дзен'|trans, allow_descr, settings, allow_values) }}
+
+			{% endautoescape %}
+		</div>
+	</div>
+</form>
+<div class="ui segment">
+	<div class="ui button tiny save" tabindex="0">{% trans %}Сохранить{% endtrans %}</div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+
+{% autoescape 'js' %}
+<script>
+	$(() => {
+		$(document).on('click', '.save', function () {
+			startLoading();
+			$.ajax({
+				url: 'engine/ajax/controller.php?mod=maharder',
+				data: {
+					user_hash: '{{dle_login_hash}}',
+					module: '{{module_code}}',
+					file: 'master',
+					method: 'create_template',
+					data: $('.form').serialize()
+				},
+				type: 'POST',
+				success: function (data) {
+					hideLoading('');
+					$('body').toast({
+						class: 'success',
+						title: `{%trans%}Всё отлично!{%endtrans%}`,
+						message: `{%trans%}Данные были сохранены!{%endtrans%}`,
+						showProgress: 'bottom'
+					});
+					if (typeof data.redirect === 'string' && data.redirect.trim() !== '') {
+						setTimeout(() => {
+							window.location.replace(`/${data.redirect}`);
+						}, 2000); // 2 секунды
+					}
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					hideLoading('');
+					let error = JSON.parse(xhr.responseText);
+					validateForm(error.meta, 'error');
+					$('body').toast({
+						class: 'error',
+						title: error.message,
+						message: error.data.join('<br>'),
+						showProgress: 'bottom'
+					});
+				}
+			});
+		});
+	});
+</script>
+{% endautoescape %}
+{% endblock %}

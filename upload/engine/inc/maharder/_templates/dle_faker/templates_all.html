@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% from "_macros/pagination.twig" import pagination %}
+{% from "_macros/tablesort.twig" import tablesort %}
+
+{% block filter %}
+{{ include('templateIncludes/filterArea.html', {filters: filters}) }}
+{% endblock %}
+
+{% block content %}
+
+<form class="ui form segment">
+	<div class="ui bottom attached tab active" data-tab="main">
+		<h4 class="ui dividing header">{{title}} ({{total}} {{ decline(total | default(0), ['шаблон'|trans, 'шаблона'|trans, 'шаблонов'|trans]) }})</h4>
+		<div class="ui four column grid">
+			{% autoescape 'html' %}
+
+			<table class="ui very basic striped selectable tablet stackable table">
+				<thead>
+				<tr>
+					<th class="one wide">
+						<div class="ui checkbox">
+							<input type="checkbox" name="templates_all" >
+						</div>
+					</th>
+					<th>{{ tablesort('#', 'id', order, sort) }}</th>
+					<th>{{ tablesort('Название'|trans, 'type', order, sort) }}</th>
+					<th class="two wide center aligned">{{ tablesort('Включён?'|trans, 'fn_name', order, sort) }}</th>
+					<th class="one wide"></th>
+				</tr>
+				</thead>
+				<tbody>
+				{% for temp in templates %}
+					<tr id="service-{{ temp.id }}">
+						<td class="center aligned">
+							<div class="ui checkbox">
+								<input type="checkbox" name="template[]" value="{{ temp.id }}" >
+							</div>
+						</td>
+						<td>{{ temp.id }}</td>
+						<td><a class="item" href="{{links.template.href}}&action=edit&id={{temp.id}}">{{ temp.name }}</a></td>
+						<td class="center aligned">
+							{% if temp.active %}
+							<span data-action="deactivate" data-id="{{ temp.id }}" class="ui success text fad fa-check-circle"></span>
+							{% else %}
+							<span data-action="activate" data-id="{{ temp.id }}" class="ui red text fad fa-times-circle"></span>
+							{% endif %}
+						</td>
+						<td class="center aligned">
+							<div class="ui icon top left pointing dropdown button">
+								<i class="settings icon"></i>
+								<div class="menu">
+									<div class="header">{% trans %}Выбор действия{% endtrans %}</div>
+									<a class="item" href="{{links.template.href}}&action=edit&id={{temp.id}}">{% trans %}Изменить{% endtrans %}</a>
+									<a class="item" data-action="delete" data-id="{{ temp.id }}">{% trans %}Удалить{% endtrans %}</a>
+									{% if s.active %}
+									<div data-action="deactivate" data-id="{{ temp.id }}" class="item">{% trans %}Отключить{% endtrans %}</div>
+									{% else %}
+									<div data-action="activate" data-id="{{ temp.id }}" class="item">{% trans %}Включить{% endtrans %}</div>
+									{% endif %}
+								</div>
+							</div>
+						</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+
+			{% endautoescape %}
+		</div>
+	</div>
+</form>
+
+{{ pagination(total_pages, page) }}
+
+{% endblock %}
+
+
+{% block scripts %}
+
+{% autoescape 'js' %}
+<script>
+	$(() => {
+
+		$(document).on('click', '[data-action="deactivate"]', function() {
+			$(document).find('span[data-action="deactivate"]')
+					   .first()
+					   .removeClass('success')
+					   .removeClass('fa-check-circle')
+					   .addClass('red')
+					   .addClass('fa-times-circle')
+					   .data('action', 'activate')
+					   .attr('data-action', 'activate')
+			;
+			$(document).find('div[data-action="deactivate"]')
+					   .first()
+					   .html('{% trans %}Включить{% endtrans %}')
+					   .data('action', 'activate')
+					   .attr('data-action', 'activate')
+			;
+			startLoading();
+			$.ajax({
+				url: 'engine/ajax/controller.php?mod=maharder',
+				data: {
+					user_hash: '{{dle_login_hash}}',
+					module: '{{module_code}}',
+					file: 'master',
+					method: 'deactivate_template',
+					data: $.param({
+						id: $(this).data('id')
+					})
+				},
+				type: 'POST',
+				success: function (data) {
+					hideLoading('');
+
+					try {
+						data = JSON.parse(data);
+					} catch (e) {}
+
+					$('body').toast({
+						class: 'success',
+						title: data.message,
+						message: data.data.join('<br>'),
+						showProgress: 'bottom'
+					});
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					hideLoading('');
+
+					try {
+						let data = JSON.parse(xhr);
+					} catch (e) {
+						let data = xhr;
+					}
+
+					$('body').toast({
+						class: 'error',
+						title: data.message,
+						message: data.data.join('<br>'),
+						showProgress: 'bottom'
+					});
+				}
+			});
+		});
+		$(document).on('click', '[data-action="activate"]', function() {
+			$(document).find('span[data-action="activate"]')
+					   .first()
+					   .addClass('success')
+					   .addClass('fa-check-circle')
+					   .removeClass('red')
+					   .removeClass('fa-times-circle')
+					   .data('action', 'deactivate')
+					   .attr('data-action', 'deactivate')
+			;
+			$(document).find('div[data-action="activate"]')
+					   .first()
+					   .html('{% trans %}Отключить{% endtrans %}')
+					   .data('action', 'deactivate')
+					   .attr('data-action', 'deactivate')
+			;
+			$.ajax({
+				url: 'engine/ajax/controller.php?mod=maharder',
+				data: {
+					user_hash: '{{dle_login_hash}}',
+					module: '{{module_code}}',
+					file: 'master',
+					method: 'activate_template',
+					data: $.param({
+						id: $(this).data('id')
+					})
+				},
+				type: 'POST',
+				success: function (data) {
+					hideLoading('');
+
+					try {
+						data = JSON.parse(data);
+					} catch (e) {}
+
+					$('body').toast({
+						class: 'success',
+						title: data.message,
+						message: data.data.join('<br>'),
+						showProgress: 'bottom'
+					});
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					hideLoading('');
+
+					try {
+						let data = JSON.parse(xhr);
+					} catch (e) {
+						let data = xhr;
+					}
+
+					$('body').toast({
+						class: 'error',
+						title: data.message,
+						message: data.data.join('<br>'),
+						showProgress: 'bottom'
+					});
+				}
+			});
+
+		});
+	});
+</script>
+{% endautoescape %}
+{% endblock %}
