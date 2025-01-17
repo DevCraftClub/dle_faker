@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="dle_faker.ru_RU" datatype="plaintext" source-language="ru_RU" target-language="ru_RU">
+    <body>
+      <trans-unit id="1">
+        <source>Название шаблона</source>
+        <target>Название шаблона</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Укажите уникальное название для шаблона</source>
+        <target>Укажите уникальное название для шаблона</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Активировать шаблон</source>
+        <target>Активировать шаблон</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>При включённом параметре можно будет использовать этот шаблон для создания новости</source>
+        <target>При включённом параметре можно будет использовать этот шаблон для создания новости</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Автор новости</source>
+        <target>Автор новости</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
+        <target>Используя теги заполните шаблон. Либо укажите ID автора</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Заголовок новости</source>
+        <target>Заголовок новости</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Используя теги заполните шаблон для заголовка новости.</source>
+        <target>Используя теги заполните шаблон для заголовка новости.</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Категория новости</source>
+        <target>Категория новости</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
+        <target>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Дата публикации, начало</source>
+        <target>Дата публикации, начало</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Укажите начальную дату для случайного значения</source>
+        <target>Укажите начальную дату для случайного значения</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Дата публикации, конец</source>
+        <target>Дата публикации, конец</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Укажите конечную дату для случайного значения</source>
+        <target>Укажите конечную дату для случайного значения</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Краткое содержание</source>
+        <target>Краткое содержание</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Сгенерируйте описание используя теги генерации</source>
+        <target>Сгенерируйте описание используя теги генерации</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Полное содержание</source>
+        <target>Полное содержание</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Дополнительное поле:</source>
+        <target>Дополнительное поле:</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Содержимое для поля</source>
+        <target>Содержимое для поля</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Включить</source>
+        <target>Включить</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Выключить</source>
+        <target>Выключить</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Случайно</source>
+        <target>Случайно</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Следующие параметры будут учитываться:</source>
+        <target>Следующие параметры будут учитываться:</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
+        <target>&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
+        <target>&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
+        <target>&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Публиковать на главной</source>
+        <target>Публиковать на главной</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Опубликовать новость на сайте</source>
+        <target>Опубликовать новость на сайте</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>Зафиксировать новость</source>
+        <target>Зафиксировать новость</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>Разрешить комментарии</source>
+        <target>Разрешить комментарии</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Разрешить рейтинг статьи</source>
+        <target>Разрешить рейтинг статьи</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Запретить индексацию для поисковиков</source>
+        <target>Запретить индексацию для поисковиков</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Исключить из поиска по сайту</source>
+        <target>Исключить из поиска по сайту</target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>Опубликовать новость в RSS потоке</source>
+        <target>Опубликовать новость в RSS потоке</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Использовать в Яндекс Турбо</source>
+        <target>Использовать в Яндекс Турбо</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Использовать в Яндекс Дзен</source>
+        <target>Использовать в Яндекс Дзен</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Сохранить</source>
+        <target>Сохранить</target>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>Всё отлично!</source>
+        <target>Всё отлично!</target>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>Данные были сохранены!</source>
+        <target>Данные были сохранены!</target>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>шаблон</source>
+        <target>шаблон</target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>шаблона</source>
+        <target>шаблона</target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>шаблонов</source>
+        <target>шаблонов</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Название</source>
+        <target>Название</target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>Включён?</source>
+        <target>Включён?</target>
+      </trans-unit>
+      <trans-unit id="45">
+        <source>Выбор действия</source>
+        <target>Выбор действия</target>
+      </trans-unit>
+      <trans-unit id="46">
+        <source>Изменить</source>
+        <target>Изменить</target>
+      </trans-unit>
+      <trans-unit id="47">
+        <source>Удалить</source>
+        <target>Удалить</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>Отключить</source>
+        <target>Отключить</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>Настройки</source>
+        <target>Настройки</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
