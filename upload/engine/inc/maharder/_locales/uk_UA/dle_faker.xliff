@@ -95,8 +95,8 @@
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Наступні параметри будуть враховуватися:</target>
       </trans-unit>
       <trans-unit id="24">
-        <source>&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="needs-translation">&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
+        <source>&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
+        <target state="needs-translation">&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="25">
         <source>&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
