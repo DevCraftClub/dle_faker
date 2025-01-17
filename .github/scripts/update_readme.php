@@ -2,8 +2,8 @@
 // Пути к файлам
 $ROOT = dirname(__FILE__, 3);
 
-$manifestPath = ROOT . '/manifest.json';
-$readmePath = ROOT . '/README.md';
+$manifestPath = $ROOT . '/manifest.json';
+$readmePath = $ROOT . '/README.md';
 
 // Проверяем наличие manifest.json
 if (!file_exists($manifestPath)) {
