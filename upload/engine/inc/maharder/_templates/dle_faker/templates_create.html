@@ -1,5 +1,6 @@
 {% from "_macros/select.twig" import multi, select %}
 {% from "_macros/checkbox.twig" import checkbox %}
+{% from "_macros/input.twig" import hidden %}
 
 
 {% extends 'base.html' %} {% block content %}
@@ -9,6 +10,8 @@
 		<h4 class="ui dividing header">{{title}}</h4>
 		<div class="ui four column grid">
 			{% autoescape 'html' %}
+
+			{{ hidden('id', id) }}
 
 			{{ include('templateIncludes/segRow.html', {
 				id: 'name',
@@ -59,10 +62,28 @@
 			}}
 
 			{{ include('templateIncludes/segRow.html', {
+				id: 'date_from_alt',
+				name: 'Дата публикации, начало (Альтернатива)'|trans|raw,
+				descr: 'Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.'|trans|html_entity_decode,
+				type: 'text',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
 				id: 'date_to',
 				name: 'Дата публикации, конец'|trans|raw,
 				descr: 'Укажите конечную дату для случайного значения'|trans|html_entity_decode,
 				type: 'datetime',
+				variable: settings
+				})
+			}}
+
+			{{ include('templateIncludes/segRow.html', {
+				id: 'date_to_alt',
+				name: 'Дата публикации, конец (Альтернатива)'|trans|raw,
+				descr: 'Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.'|trans|html_entity_decode,
+				type: 'text',
 				variable: settings
 				})
 			}}
@@ -90,7 +111,7 @@
 				{{ include('templateIncludes/segRow.html', {
 					id: 'xfields['~type ~ ']',
 					name: 'Дополнительное поле: '|trans|raw ~ name,
-					descr: 'Содержимое для поля '|trans|html_entity_decode ~ type,
+					descr: '<b class="ui warning text">!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!</b><br>Содержимое для поля '|trans|html_entity_decode ~ type,
 					type: 'text',
 					variable: settings
 					})
@@ -159,7 +180,7 @@
 					});
 					if (typeof data.redirect === 'string' && data.redirect.trim() !== '') {
 						setTimeout(() => {
-							window.location.replace(`/${data.redirect}`);
+							window.location.replace(data.redirect);
 						}, 2000); // 2 секунды
 					}
 				},

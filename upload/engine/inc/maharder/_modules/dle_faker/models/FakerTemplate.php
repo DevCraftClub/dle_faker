@@ -2,8 +2,10 @@
 
 use Cycle\Annotated\Annotation\Entity;
 use Cycle\Annotated\Annotation\Column;
+use Cycle\Annotated\Annotation\Table\Index;
 
 #[Entity(role: 'faker_template', repository: FakerTemplateRepository::class, table: 'faker_templates')]
+#[Index(columns: ['name'], unique: true)]
 class FakerTemplate extends BasisModel {
 	#[Column(type: 'bigPrimary')]
 	public int    $id;

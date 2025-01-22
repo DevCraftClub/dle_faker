@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ui segment">
+    <div class="ui accordion">
+
+        <div class="active title">
+            <i class="dropdown icon"></i>
+            {{'Теги для генерации пользователей'|trans}}
+        </div>
+        <div class="active content">
+            <div class="ui bottom attached tab active" data-tab="user">
+                <div class="ui four column grid">
+                    <div class="two column row">
+                        <div class="eight wide column rowDescr">
+                            <strong>{{'Тег'|trans}}</strong>
+                        </div>
+                        <div class="eight wide column">
+                            <strong>{{'Описание'|trans}}</strong>
+                        </div>
+                    </div>
+                    {% for tag, descr in user_tags %}
+                        <div class="two column row">
+                            <div class="eight wide column rowDescr">
+                                <strong>{{'{{ ' ~ tag ~ ' }}'|raw}}</strong> <i class="fa-solid fa-copy copy_text" data-clipboard-text="{{'{{ ' ~ tag ~ ' }}'|raw}}"></i>
+                            </div>
+                            <div class="eight wide column">
+                                {{descr}}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="title">
+            <i class="dropdown icon"></i>
+            {{'Теги для генерации новостей'|trans}}
+        </div>
+        <div class="content">
+            <div class="ui bottom attached tab active" data-tab="post">
+                <div class="ui four column grid">
+                    <div class="two column row">
+                        <div class="eight wide column rowDescr">
+                            <strong>{{'Тег'|trans}}</strong>
+                        </div>
+                        <div class="eight wide column">
+                            <strong>{{'Описание'|trans}}</strong>
+                        </div>
+                    </div>
+                    {% for tag, descr in post_tags %}
+                    <div class="two column row">
+                        <div class="eight wide column rowDescr">
+                            <strong>{{'{{ ' ~ tag ~ ' }}'|raw}}</strong>
+                            <i class="fa-solid fa-copy copy_text" data-clipboard-text="{{'{{ ' ~ tag ~ ' }}'|raw}}"></i>
+                        </div>
+                        <div class="eight wide column">
+                            {{descr}}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="title">
+            <i class="dropdown icon"></i>
+            {{'Вспомогательные теги, которые доступны для всех генераторов'|trans}}
+        </div>
+        <div class="content">
+            <div class="ui bottom attached tab active" data-tab="helper">
+                <div class="ui four column grid">
+                    <div class="two column row">
+                        <div class="eight wide column rowDescr">
+                            <strong>{{'Тег'|trans}}</strong>
+                        </div>
+                        <div class="eight wide column">
+                            <strong>{{'Описание'|trans}}</strong>
+                        </div>
+                    </div>
+                    {% for tag, descr in helper_tags %}
+                    <div class="two column row">
+                        <div class="eight wide column rowDescr">
+                            <strong>{{'{{ ' ~ tag ~ ' }}'|raw}}</strong>
+                            <i class="fa-solid fa-copy copy_text" data-clipboard-text="{{'{{ ' ~ tag ~ ' }}'|raw}}"></i>
+                        </div>
+                        <div class="eight wide column">
+                            {{descr}}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
