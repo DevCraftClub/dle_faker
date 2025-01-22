@@ -1,6 +1,6 @@
 <?php
 
-global $GET_DATA, $filterKeys, $repo, $mhConfig, $twigFilter;
+global $GET_DATA, $filterKeys, $repo, $mhConfig, $twigFilter, $mh;
 
 use Spiral\Pagination\Paginator;
 
@@ -46,15 +46,9 @@ $modVars = [
 	)
 ];
 
-$breadcrumbs[] = [
-	'name' => $modVars['title'],
-	'url'  => THIS_SELF . '?' . http_build_query($GET_DATA)
-];
 if ($cur_page > 1) {
-	$breadcrumbs[] = [
-		'name' => __('mhadmin', 'Страница %page%', ['%page%' => $cur_page]),
-		'url'  => THIS_SELF . '?' . http_build_query($GET_DATA),
-	];
+	$mh->setBreadcrumb(new BreadCrumb(__('mhadmin', 'Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
+
 }
 
 $htmlTemplate = 'dle_faker/templates_all.html';

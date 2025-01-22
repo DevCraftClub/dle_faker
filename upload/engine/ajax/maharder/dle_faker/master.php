@@ -36,15 +36,28 @@
 		exit();
 	}
 	parse_str($POST_DATA['data'], $parsedData);
+	$fakerConfig = DataManager::getConfig('dle_faker');
 
 
 	switch ($method) {
 		case 'settings':
+			require_once DLEPlugins::Check(__DIR__ . '/settings.php');
+			break;
 
+		case 'generate_users':
+			require_once DLEPlugins::Check(__DIR__ . '/generator_create_user.php');
+			break;
+
+		case 'generate_posts':
+			require_once DLEPlugins::Check(__DIR__ . '/generator_create_post.php');
 			break;
 
 		case 'create_template':
 			require_once DLEPlugins::Check(__DIR__ . '/templates_create.php');
+			break;
+
+		case 'delete_template':
+			require_once DLEPlugins::Check(__DIR__ . '/templates_delete.php');
 			break;
 
 		case 'deactivate_template':
