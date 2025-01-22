@@ -1,4 +1,9 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+
+{% from "_macros/select.twig" import multi, select %}
+{% from "_macros/input.twig" import input, number %}
+
+{% block content %}
 
 <form class="ui form segment">
     <div class="ui bottom attached tab active" data-tab="main">
@@ -6,7 +11,10 @@
         <div class="ui four column grid">
             {% autoescape 'html' %}
 
-
+            {{ select('language', 'Язык генерации'|trans, 'Выберите язык, который будет использован при генерации данных. Это повлияет на структуру и данные. К примеру, если будет выбран русский, то имя пользователя будет Георгий. А если - английский, то имя будет Gregory.'|trans, settings, available_languages) }}
+            {{ multi('users', 'Список пользователей'|trans, 'Выберите пользователей, которые случайным образом будут браться', settings, users) }}
+            {{ multi('categories', 'Список категорий'|trans, 'Выберите категории, которые случайным образом будут браться', settings, categories) }}
+            {{ number('categories_count', 'Количество категорий'|trans, 'Укажите кол-во категорий, которые будут проставливаться случайным образом в новость.'|trans, settings) }}
 
             {% endautoescape %}
         </div>
@@ -39,12 +47,30 @@
 					hideLoading('');
 					$('body').toast({
 						class: 'success',
-						title: `{%trans%}Всё отлично!{%endtrans%}`,
-						message: `{%trans%}Данные были сохранены!{%endtrans%}`,
+						title: data.message,
+						message: data.data?.join('<br>'),
 						showProgress: 'bottom'
 					});
 
-				}
+				},
+                error: function (error) {
+					hideLoading('');
+                    let data = error;
+					try {
+                        data = JSON.parse(error.responseText);
+					} catch (e) {}
+
+                    console.error(data)
+
+					validateForm(data.meta, 'error');
+
+					$('body').toast({
+						class: 'error',
+						title: data.message,
+						message: data.data?.join('<br>'),
+						showProgress: 'bottom'
+					});
+                }
 			});
 		});
 	});

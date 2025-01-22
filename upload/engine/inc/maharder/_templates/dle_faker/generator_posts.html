@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+
+{% from "_macros/select.twig" import select %}
+{% from "_macros/input.twig" import number %}
+
+{% block content %}
+
+<form class="ui form segment">
+    <div class="ui bottom attached tab active" data-tab="main">
+        <h4 class="ui dividing header">{{ title }}</h4>
+        <div class="ui four column grid">
+            {% autoescape 'html' %}
+
+            {{ select('template', 'Шаблон'|trans, 'Выберите шаблон для генерации новостей', {}, templates) }}
+            {{ number('count', 'Кол-во новостей'|trans, 'Укажите кол-во новостей, которые будут сгенерированы', {count: 10}) }}
+
+            {% endautoescape %}
+        </div>
+    </div>
+</form>
+<div class="ui segment">
+    <div class="ui button start" tabindex="0">{%trans%}Генерировать{%endtrans%}</div>
+</div>
+
+<div class="ui modal" data-progress="modal">
+    <div class="header">{{ 'Сводка информации'|trans }}</div>
+    <div class="content">
+        <div class="ui four column grid">
+
+            <div class="two column row">
+                <div class="eight wide column rowDescr">
+                    <strong>{{'Кол-во объектов'|trans}}</strong>
+                </div>
+                <div class="eight wide column" data-generator="total">
+                    0
+                </div>
+            </div>
+
+            <div class="two column row">
+                <div class="eight wide column rowDescr">
+                    <strong>{{'Прогресс'|trans}}</strong>
+                </div>
+                <div class="eight wide column" data-generator="process">
+                    <div class="ui indicating progress" id="generator_progress">
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="label">{{ 'Ожидаем начала...'|trans }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two column row">
+                <div class="eight wide column rowDescr">
+                    <strong>{{'Вывод'|trans}}</strong>
+                </div>
+                <div class="eight wide column" data-generator="done">
+                    <div class="ui list">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui green ok button" data-generator="start">{{ 'Начать обработку'|trans }}</div>
+        <div class="ui red cancel button">{{ 'Отмена / Закрыть'|trans }}</div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+
+{% autoescape 'js' %}
+<script>
+
+	function listItem(id, name, category, post_date) {
+		// Формируем базовый URL один раз
+		const baseUrl = window.location.origin;
+		const postAdminPanelUrl = `${baseUrl}${window.location.pathname}?mod=editnews&action=editnews&id=${id}`;
+		const postProfileUrl = `${baseUrl}/index.php?newsid=${id}`;
+
+		// Возвращаем более читаемый шаблон
+		return `
+        <div class="item">
+            <i class="book open icon"></i>
+            <div class="content">
+                <div class="header">${name}</div>
+                <div class="description">
+                    <i class="fa-duotone fa-thin fa-tags"></i> ${category} | <i class="fa-regular fa-calendar-clock"></i> ${post_date} |
+                    <a href="${postAdminPanelUrl}" target="_blank"><i class="fa-regular fa-screwdriver-wrench"></i></a> |
+                    <a href="${postProfileUrl}" target="_blank"><i class="fa-duotone fa-thin fa-globe-pointer"></i></a>
+                </div>
+            </div>
+        </div>`;
+	}
+
+	$(() => {
+		const generatorProgress = $('#generator_progress').progress({
+			text: {
+				active: __('Обработано {value} из {total}')
+			}
+		});
+
+		const generatorModal = $('[data-progress="modal"]');
+		const startButton = $('[data-generator="start"]');
+		const doneList = $('[data-generator="done"] .list');
+		const countInput = $('#count');
+
+		// Обработчик на стартовый клик
+		$(document).on('click', '.start', () => {
+			const total = parseInt(countInput.val());
+			$('[data-generator="total"]').html(total);
+			doneList.html('');
+			generatorModal.modal({
+				closable: false,
+				// blurring: true,
+				onApprove: () => false
+			}).modal('show');
+		});
+
+		// Функция для выполнения асинхронных задач
+		const sendRequests = async (total) => {
+			// Очищаем результат и прогресс
+			doneList.html('');
+			generatorProgress.progress('reset');
+			generatorProgress.progress('set value', 0).progress('set total', total);
+
+			const requests = Array.from({ length: total }, (_, i) => {
+				return $.ajax({
+					url: 'engine/ajax/controller.php?mod=maharder',
+					method: 'POST',
+					data: {
+						user_hash: '{{dle_login_hash}}',
+						module: '{{module_code}}',
+						file: 'master',
+						method: 'generate_posts',
+						data: $('.form').serialize()
+					}
+				}).then(
+					(response) => {
+						let data = response;
+						try {
+							data = JSON.parse(response);
+						} catch (e) {}
+						if (data && data.data) {
+							doneList.append(listItem(data.data.id, data.data.name, data.data.category, data.data.date));
+							generatorProgress.progress('increment');
+						}
+					},
+					(errorResponse) => {
+						let errorData = errorResponse;
+						try {
+							errorData = JSON.parse(errorResponse.responseText);
+						} catch (e) {
+							console.error('Ошибка при обработке ошибки AJAX:', e);
+						}
+						console.error(errorData)
+						if (errorData) {
+							$('body').toast({
+								class: 'error',
+								title: errorData.message,
+								message: errorData.data?.join('<br>') || 'Неизвестная ошибка',
+								showProgress: 'bottom'
+							});
+						}
+					}
+				);
+			});
+
+			// Выполнение всех запросов параллельно
+			await Promise.all(requests);
+		};
+
+		// Обработчик на старт генерации
+		$(document).on('click', '[data-generator="start"]', async () => {
+			const total = parseInt(countInput.val());
+			startButton.attr('disabled', 'disabled').prop('disabled', true);
+
+			try {
+				await sendRequests(total);
+			} finally {
+				// Разблокируем кнопку после завершения всех событий
+				startButton.removeAttr('disabled').prop('disabled', false);
+			}
+		});
+
+		// Обработчик отмены генерации
+		$('.cancel.button').on('click', () => {
+			startButton.removeAttr('disabled').prop('disabled', false);
+		});
+
+	});
+</script>
+{% endautoescape %}
+{% endblock %}
