@@ -1,5 +1,5 @@
 <?php
-global $is_logged, $dle_login_hash, $parsedData, $MHDB;
+global $is_logged, $dle_login_hash, $parsedData, $MHDB, $mh_admin;
 
 if (!$is_logged) {
 	exit('error');
@@ -16,7 +16,9 @@ $filter               = [
 	'title'           => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
 	'category'        => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
 	'date_from'       => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
+	'date_from_alt'   => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
 	'date_to'         => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
+	'date_to_alt'     => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
 	'short_story'     => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
 	'full_story'      => FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_FLAG_EMPTY_STRING_NULL,
 	'xfields'         => FILTER_REQUIRE_ARRAY,
@@ -33,26 +35,30 @@ $filter               = [
 ];
 $inputData            = filter_var_array($parsedData, $filter);
 $inputData['xfields'] = $inputData['xfields'] !== false ?: $parsedData['xfields'];
-$templateData = array_diff_key($inputData, array_flip(['name', 'active_template']));
 
 if (empty($inputData['name'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Название шаблона не может быть пустым')])->setMeta(['name'])->send();
+	echo (new ErrorResponseAjax())
+		->setData([__('dle_faker', 'Название шаблона не может быть пустым')])->setMeta(['name'])->send();
 	exit;
 }
 if (empty($inputData['autor'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Автор не может быть пустым')])->setMeta(['autor'])->send();
+	echo (new ErrorResponseAjax())
+		->setData([__('dle_faker', 'Автор не может быть пустым')])->setMeta(['autor'])->send();
 	exit;
 }
 if (empty($inputData['title'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Заголовок не может быть пустым')])->setMeta(['title'])->send();
+	echo (new ErrorResponseAjax())
+		->setData([__('dle_faker', 'Заголовок не может быть пустым')])->setMeta(['title'])->send();
 	exit;
 }
 if (empty($inputData['category'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Категория не может быть пустой')])->setMeta(['category'])->send();
+	echo (new ErrorResponseAjax())
+		->setData([__('dle_faker', 'Категория не может быть пустой')])->setMeta(['category'])->send();
 	exit;
 }
 if (empty($inputData['short_story'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Короткое описание не может быть пустой')])->setMeta(['short_story'])->send();
+	echo (new ErrorResponseAjax())
+		->setData([__('dle_faker', 'Короткое описание не может быть пустой')])->setMeta(['short_story'])->send();
 	exit;
 }
 if (empty($inputData['allow_main'])) $inputData['allow_main'] = 'random';
@@ -66,15 +72,34 @@ if (empty($inputData['allow_rss'])) $inputData['allow_rss'] = 'random';
 if (empty($inputData['allow_rss_turbo'])) $inputData['allow_rss_turbo'] = 'random';
 if (empty($inputData['allow_rss_dzen'])) $inputData['allow_rss_dzen'] = 'random';
 
+$templateData = array_diff_key($inputData, array_flip(['name', 'active_template']));
+
 try {
-	$template           = new FakerTemplate();
+	$id = filter_var($parsedData['id'], FILTER_VALIDATE_INT);
+	if ($id) {
+		$template = $MHDB->get(FakerTemplate::class, $id);
+	} else {
+		$template = new FakerTemplate();
+	}
+
 	$template->name     = $inputData['name'];
 	$template->active   = (bool)$inputData['active_template'];
 	$template->template = json_encode($templateData, JSON_UNESCAPED_UNICODE);
 
-	$MHDB->create($template);
+	if ($id) {
+		$MHDB->update($template);
+		echo (new SuccessResponseAjax(201))
+			->setData([__('dle_faker', 'Шаблон успешно изменен')])->setRedirect(
+				$mh_admin->getDleUrl() . '?mod=dle_faker&sites=template'
+			)->send();
+	} else {
+		$MHDB->create($template);
+		echo (new SuccessResponseAjax())
+			->setData([__('dle_faker', 'Шаблон успешно создан')])->setRedirect(
+				$mh_admin->getDleUrl() . '?mod=dle_faker&sites=template'
+			)->send();
+	}
 
-	echo (new SuccessResponseAjax())->setData([__('dle_faker', 'Шаблон успешно создан')])->setRedirect('?mod=dle_faker&sites=template')->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
 }

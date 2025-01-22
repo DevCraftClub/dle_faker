@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+
+<form class="ui form segment">
+    <div class="ui bottom attached tab active" data-tab="main">
+        <h4 class="ui dividing header">{{title}}</h4>
+
+        <div class="ui cards">
+
+            <div class="card">
+                <div class="content">
+                    <div class="header">{{ 'Генератор новостей'|trans }}</div>
+                    <div class="description">
+                        {{ 'Генерация новостей на основе шаблонов'|trans }}
+                    </div>
+                </div>
+
+                <a role="button" href="{{ links.generator.getLink }}&action=news" class="ui bottom attached button">
+                    <i class="linkify icon"></i>
+                    {{ 'Перейти'|trans }}
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="header">{{ 'Генератор пользователей'|trans }}</div>
+                    <div class="description">
+                        {{ 'Генерация случайных пользователей'|trans }}
+                    </div>
+                </div>
+
+                <a role="button" href="{{ links.generator.getLink }}&action=users" class="ui bottom attached button">
+                    <i class="linkify icon"></i>
+                    {{ 'Перейти'|trans }}
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+{% endblock %}
+
+
