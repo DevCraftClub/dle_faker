@@ -4,403 +4,403 @@
     <body>
       <trans-unit id="1">
         <source>Псевдоним пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">User alias</target>
+        <target state="translated">User Pseudonym</target>
       </trans-unit>
       <trans-unit id="2">
         <source>Полное имя пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Full user name</target>
+        <target state="translated">User Full Name</target>
       </trans-unit>
       <trans-unit id="3">
         <source>Электронная почта пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">User's e-mail</target>
+        <target state="translated">User Email</target>
       </trans-unit>
       <trans-unit id="4">
         <source>Группа пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">User group</target>
+        <target state="translated">User Group</target>
       </trans-unit>
       <trans-unit id="5">
         <source>Пароль</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Password</target>
+        <target state="translated">Password</target>
       </trans-unit>
       <trans-unit id="6">
         <source>Кол-во пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Number of users</target>
+        <target state="translated">Number of Users</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Генерировать</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generate</target>
+        <target state="translated">Generate</target>
       </trans-unit>
       <trans-unit id="8">
         <source>Сводка информации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Summary of information</target>
+        <target state="translated">Information Summary</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Кол-во объектов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Number of objects</target>
+        <target state="translated">Number of Objects</target>
       </trans-unit>
       <trans-unit id="10">
         <source>Прогресс</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Progress</target>
+        <target state="translated">Progress</target>
       </trans-unit>
       <trans-unit id="11">
         <source>Ожидаем начала...</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Expect to start...</target>
+        <target state="translated">Waiting to Start...</target>
       </trans-unit>
       <trans-unit id="12">
         <source>Вывод</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Conclusion</target>
+        <target state="translated">Output</target>
       </trans-unit>
       <trans-unit id="13">
         <source>Начать обработку</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Start processing</target>
+        <target state="translated">Start Processing</target>
       </trans-unit>
       <trans-unit id="14">
         <source>Отмена / Закрыть</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Cancel / Close</target>
+        <target state="translated">Cancel / Close</target>
       </trans-unit>
       <trans-unit id="15">
         <source>Обработано {value} из {total}</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Processed by {value} from {total}</target>
+        <target state="translated">Processed {value} of {total}</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Название шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Template name</target>
+        <target state="translated">Template Name</target>
       </trans-unit>
       <trans-unit id="17">
         <source>Укажите уникальное название для шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Specify a unique name for the template</target>
+        <target state="translated">Specify a unique name for the template</target>
       </trans-unit>
       <trans-unit id="18">
         <source>Активировать шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Activate template</target>
+        <target state="translated">Activate Template</target>
       </trans-unit>
       <trans-unit id="19">
         <source>Автор новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The author of the news story</target>
+        <target state="translated">News Author</target>
       </trans-unit>
       <trans-unit id="20">
         <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Using tags, fill in the template. Or specify author ID</target>
+        <target state="translated">Using tags, fill in the template. Or specify the author ID</target>
       </trans-unit>
       <trans-unit id="21">
         <source>Заголовок новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">News header</target>
+        <target state="translated">News Title</target>
       </trans-unit>
       <trans-unit id="22">
         <source>Используя теги заполните шаблон для заголовка новости.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Using tags fill in the template for the headline of the news.</target>
+        <target state="translated">Using tags, fill in the template for the news title.</target>
       </trans-unit>
       <trans-unit id="23">
         <source>Категория новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Category news</target>
+        <target state="translated">News Category</target>
       </trans-unit>
       <trans-unit id="24">
         <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Using tags fill the template for the news category. Or specify category IDs</target>
+        <target state="translated">Using tags, fill in the template for the news category. Or specify category IDs</target>
       </trans-unit>
       <trans-unit id="25">
         <source>Дата публикации, начало</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Date of publication, beginning</target>
+        <target state="translated">Publication Date, Start</target>
       </trans-unit>
       <trans-unit id="26">
         <source>Укажите начальную дату для случайного значения</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Specify the start date for the random value</target>
+        <target state="translated">Specify the start date for the random value</target>
       </trans-unit>
       <trans-unit id="27">
         <source>Дата публикации, начало (Альтернатива)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Date of publication, beginning (Alternative)</target>
+        <target state="translated">Publication Date, Start (Alternative)</target>
       </trans-unit>
       <trans-unit id="28">
         <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Specify the start date for the random value. If a value is specified, the value above will not be considered. Tags Allowed. If the Tags do not match those put in, this field will be invalid.</target>
+        <target state="translated">Specify the start date for the random value. If a value is specified, the above value will not be considered. Tags are allowed. If the tags do not match the expected, this field will be invalid.</target>
       </trans-unit>
       <trans-unit id="29">
         <source>Дата публикации, конец</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Date of publication, end</target>
+        <target state="translated">Publication Date, End</target>
       </trans-unit>
       <trans-unit id="30">
         <source>Укажите конечную дату для случайного значения</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Specify the end date for the random value</target>
+        <target state="translated">Specify the end date for the random value</target>
       </trans-unit>
       <trans-unit id="31">
         <source>Дата публикации, конец (Альтернатива)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Date of publication, end (Alternative)</target>
+        <target state="translated">Publication Date, End (Alternative)</target>
       </trans-unit>
       <trans-unit id="32">
         <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Specify the end date for the random value. If a value is specified, the value above will not be considered. Tags Allowed. If the Tags do not match those put in, this field will be invalid.</target>
+        <target state="translated">Specify the end date for the random value. If a value is specified, the above value will not be considered. Tags are allowed. If the tags do not match the expected, this field will be invalid.</target>
       </trans-unit>
       <trans-unit id="33">
         <source>Краткое содержание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Summary</target>
+        <target state="translated">Summary</target>
       </trans-unit>
       <trans-unit id="34">
         <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generate a description using the generation tags</target>
+        <target state="translated">Generate a description using generation tags</target>
       </trans-unit>
       <trans-unit id="35">
         <source>Полное содержание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Full Content</target>
+        <target state="translated">Full Content</target>
       </trans-unit>
       <trans-unit id="36">
         <source>Дополнительное поле:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Additional field:</target>
+        <target state="translated">Additional Field:</target>
       </trans-unit>
       <trans-unit id="37">
         <source>&lt;b class=&quot;ui warning text&quot;&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;b class="ui warning text"&gt;!!!PICTURES, FILES, AUDIO, VIDEO and OTHER INCLUSIONS ARE NOT SUPPORTED!!!!&lt;/b&gt;&lt;br&gt;Content for field</target>
+        <target state="translated">&lt;b class="ui warning text"&gt;!!!IMAGES, FILES, AUDIO, VIDEO and OTHER ATTACHMENTS ARE NOT SUPPORTED!!!&lt;/b&gt;&lt;br&gt;Content for the field</target>
       </trans-unit>
       <trans-unit id="38">
         <source>Включить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Enable</target>
+        <target state="translated">Enable</target>
       </trans-unit>
       <trans-unit id="39">
         <source>Выключить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Off</target>
+        <target state="translated">Disable</target>
       </trans-unit>
       <trans-unit id="40">
         <source>Случайно</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Accidentally</target>
+        <target state="translated">Random</target>
       </trans-unit>
       <trans-unit id="41">
         <source>Следующие параметры будут учитываться:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The following parameters will be considered:</target>
+        <target state="translated">The following parameters will be considered:</target>
       </trans-unit>
       <trans-unit id="42">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Enable&lt;/b&gt; - Option enables option&lt;/div&gt;</target>
+        <target state="translated">&lt;div class="item"&gt;&lt;b&gt;Enable&lt;/b&gt; - Option enables the option&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="43">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables option&lt;/div&gt;</target>
+        <target state="translated">&lt;div class="item"&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables the option&lt;/div&gt;</target>
       </trans-unit>
       <trans-unit id="44">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Random&lt;/b&gt; - Programmatically decides whether to enable the option or not&lt;/div&gt;&lt;br&gt;&lt;i&gt;Default: Random&lt;/i&gt;</target>
+        <target state="translated">&lt;div class="item"&gt;&lt;b&gt;Random&lt;/b&gt; - Programmatically decides whether to enable the option or not&lt;/div&gt;&lt;br&gt;&lt;i&gt;Default: Random&lt;/i&gt;</target>
       </trans-unit>
       <trans-unit id="45">
         <source>Публиковать на главной</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Publish on the main page</target>
+        <target state="translated">Publish on the main page</target>
       </trans-unit>
       <trans-unit id="46">
         <source>Опубликовать новость на сайте</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Publish the news on the website</target>
+        <target state="translated">Publish the news on the website</target>
       </trans-unit>
       <trans-unit id="47">
         <source>Зафиксировать новость</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Record the news</target>
+        <target state="translated">Pin the news</target>
       </trans-unit>
       <trans-unit id="48">
         <source>Разрешить комментарии</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Allow comments</target>
+        <target state="translated">Allow Comments</target>
       </trans-unit>
       <trans-unit id="49">
         <source>Разрешить рейтинг статьи</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Allow article rating</target>
+        <target state="translated">Allow Article Rating</target>
       </trans-unit>
       <trans-unit id="50">
         <source>Запретить индексацию для поисковиков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Prohibit indexing for search engines</target>
+        <target state="translated">Prohibit indexing for search engines</target>
       </trans-unit>
       <trans-unit id="51">
         <source>Исключить из поиска по сайту</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Exclude from site search</target>
+        <target state="translated">Prohibit indexing for search engines</target>
       </trans-unit>
       <trans-unit id="52">
         <source>Опубликовать новость в RSS потоке</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Publish news in RSS feed</target>
+        <target state="translated">Exclude from site search</target>
       </trans-unit>
       <trans-unit id="53">
         <source>Использовать в Яндекс Турбо</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Use in Yandex Turbo</target>
+        <target state="translated">Use in Yandex Turbo</target>
       </trans-unit>
       <trans-unit id="54">
         <source>Использовать в Яндекс Дзен</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Use in Yandex Zen</target>
+        <target state="translated">Use in Yandex Zen</target>
       </trans-unit>
       <trans-unit id="55">
         <source>Сохранить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Save</target>
+        <target state="translated">Save</target>
       </trans-unit>
       <trans-unit id="56">
         <source>Всё отлично!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Everything's great!</target>
+        <target state="translated">Everything's great!</target>
       </trans-unit>
       <trans-unit id="57">
         <source>Данные были сохранены!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The data has been saved!</target>
+        <target state="translated">The data has been saved!</target>
       </trans-unit>
       <trans-unit id="58">
         <source>шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">template</target>
+        <target state="translated">template</target>
       </trans-unit>
       <trans-unit id="59">
         <source>Название</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Title</target>
+        <target state="translated">Title</target>
       </trans-unit>
       <trans-unit id="60">
         <source>Включён?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Is it on?</target>
+        <target state="translated">active?</target>
       </trans-unit>
       <trans-unit id="61">
         <source>Выбор действия</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Action selection</target>
+        <target state="translated">Action selection</target>
       </trans-unit>
       <trans-unit id="62">
         <source>Изменить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Modify</target>
+        <target state="translated">Modify</target>
       </trans-unit>
       <trans-unit id="63">
         <source>Удалить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Delete</target>
+        <target state="translated">Delete</target>
       </trans-unit>
       <trans-unit id="64">
         <source>Отключить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Disconnect</target>
+        <target state="translated">Deactivate</target>
       </trans-unit>
       <trans-unit id="65">
         <source>Создать</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Create</target>
+        <target state="translated">Create</target>
       </trans-unit>
       <trans-unit id="66">
         <source>Теги для генерации пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tags for generating users</target>
+        <target state="translated">Tags for user generation</target>
       </trans-unit>
       <trans-unit id="67">
         <source>Тег</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tag</target>
+        <target state="translated">Tag</target>
       </trans-unit>
       <trans-unit id="68">
         <source>Описание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Description</target>
+        <target state="translated">Description</target>
       </trans-unit>
       <trans-unit id="69">
         <source>Теги для генерации новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tags for news generation</target>
+        <target state="translated">Tags for news generation</target>
       </trans-unit>
       <trans-unit id="70">
         <source>Вспомогательные теги, которые доступны для всех генераторов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Auxiliary tags that are available for all generators</target>
+        <target state="translated">Additional tags available for all generators</target>
       </trans-unit>
       <trans-unit id="71">
         <source>Настройки</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Settings</target>
+        <target state="translated">Settings</target>
       </trans-unit>
       <trans-unit id="72">
         <source>Язык генерации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generation language</target>
+        <target state="translated">Generation language</target>
       </trans-unit>
       <trans-unit id="73">
         <source>Список пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">User list</target>
+        <target state="translated">User list</target>
       </trans-unit>
       <trans-unit id="74">
         <source>Список категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">List of categories</target>
+        <target state="translated">Category list</target>
       </trans-unit>
       <trans-unit id="75">
         <source>Количество категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Number of categories</target>
+        <target state="translated">Number of categories</target>
       </trans-unit>
       <trans-unit id="76">
         <source>Шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Template</target>
+        <target state="translated">Template</target>
       </trans-unit>
       <trans-unit id="77">
         <source>Кол-во новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Number of news items</target>
+        <target state="translated">Number of news</target>
       </trans-unit>
       <trans-unit id="78">
         <source>Генератор новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">News generator</target>
+        <target state="translated">News generator</target>
       </trans-unit>
       <trans-unit id="79">
         <source>Генерация новостей на основе шаблонов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generating news based on templates</target>
+        <target state="translated">News generation based on templates</target>
       </trans-unit>
       <trans-unit id="80">
         <source>Перейти</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Go to</target>
+        <target state="translated">Go</target>
       </trans-unit>
       <trans-unit id="81">
         <source>Генератор пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">User Generator</target>
+        <target state="translated">User generator</target>
       </trans-unit>
       <trans-unit id="82">
         <source>Генерация случайных пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generation of random users</target>
+        <target state="translated">Random user generation</target>
       </trans-unit>
       <trans-unit id="83">
         <source>Случайный псевдоним, пример: coolcat123</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Random alias, example: coolcat123</target>
+        <target state="translated">Random alias, example: coolcat123</target>
       </trans-unit>
       <trans-unit id="84">
         <source>Полное имя, пример: Проф. Артём Волков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Full name, example: Prof. Artyom Volkov</target>
+        <target state="translated">Full name, example: Prof. Artyom Volkov</target>
       </trans-unit>
       <trans-unit id="85">
         <source>Имя, пример: Артём</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Name, example: Artyom</target>
+        <target state="translated">Name, example: Artyom</target>
       </trans-unit>
       <trans-unit id="86">
         <source>Мужское имя, пример: Артём</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Male name, example: Artyom</target>
+        <target state="translated">Male name, example: Artyom</target>
       </trans-unit>
       <trans-unit id="87">
         <source>Женское имя, пример: Анна</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Female name, example: Anna</target>
+        <target state="translated">Female name, example: Anna</target>
       </trans-unit>
       <trans-unit id="88">
         <source>Фамилия, пример: Волков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Surname, example: Volkov</target>
+        <target state="translated">Last name, example: Volkov</target>
       </trans-unit>
       <trans-unit id="89">
         <source>Суффикс, пример: Мл.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Suffix, example: ml.</target>
+        <target state="translated">Suffix, example: Jr.</target>
       </trans-unit>
       <trans-unit id="90">
         <source>Мужское обращение, пример: Господин. В русском нет аналога для Mr.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Male address, example: Mr. In Russian there is no equivalent for Mr.</target>
+        <target state="translated">Male salutation, example: Mister. There is no equivalent for Mr. in Russian.</target>
       </trans-unit>
       <trans-unit id="91">
         <source>Генерирует строку, содержащую случайное одно слово.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a string containing a random single word.</target>
+        <target state="translated">Generates a string containing a random single word.</target>
       </trans-unit>
       <trans-unit id="92">
         <source>Генерирует строку, содержащую случайное предложение.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a string containing a random sentence.</target>
+        <target state="translated">Generates a string containing a random sentence.</target>
       </trans-unit>
       <trans-unit id="93">
         <source>Параметр max указывает количество символов.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The max parameter specifies the number of characters.</target>
+        <target state="translated">The parameter max indicates the number of characters.</target>
       </trans-unit>
       <trans-unit id="94">
         <source>Генерирует случайную дату и время</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random date and time</target>
+        <target state="translated">Generates a random date and time</target>
       </trans-unit>
       <trans-unit id="95">
         <source>Зависимости не были установлены!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dependencies have not been established!</target>
+        <target state="translated">Dependencies have not been established!</target>
       </trans-unit>
       <trans-unit id="96">
         <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Install them using the console yourself! PHP must be executable!</target>
+        <target state="translated">Install them using the console yourself! PHP must be executable!</target>
       </trans-unit>
       <trans-unit id="97">
         <source>Генерирует случайный эмодзи</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random emoji</target>
+        <target state="translated">Generates a random emoji</target>
       </trans-unit>
       <trans-unit id="98">
         <source>Генерирует случайное целое число от 0 до 9.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random integer from 0 to 9.</target>
+        <target state="translated">Generates a random whole number from 0 to 9.</target>
       </trans-unit>
       <trans-unit id="99">
         <source>Генерирует случайное число с плавающей запятой</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random floating point number</target>
+        <target state="translated">Generates a random floating-point number</target>
       </trans-unit>
       <trans-unit id="100">
         <source>Параметр min задаёт нижнюю границу.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The min parameter sets the lower limit.</target>
+        <target state="translated">The parameter min sets the lower boundary.</target>
       </trans-unit>
       <trans-unit id="101">
         <source>Параметр max задаёт верхнюю границу.</source>
@@ -424,7 +424,7 @@
       </trans-unit>
       <trans-unit id="106">
         <source>Бангла [Bangla (Bangladesh)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bangla [Bangladesh].</target>
+        <target state="translated">Bangla [Bangladesh]</target>
       </trans-unit>
       <trans-unit id="107">
         <source>Чешский [Czech (Czech Republic)]</source>
@@ -432,7 +432,7 @@
       </trans-unit>
       <trans-unit id="108">
         <source>Датский [Danish (Denmark)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Danish [Danish (Denmark)].</target>
+        <target state="translated">Danish [Danish (Denmark)]</target>
       </trans-unit>
       <trans-unit id="109">
         <source>Немецкий [German (Austria)]</source>
@@ -516,7 +516,7 @@
       </trans-unit>
       <trans-unit id="129">
         <source>Персидский [Persian (Iran)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Persian [Persian (Iran)].</target>
+        <target state="translated">Persian [Persian (Iran)]</target>
       </trans-unit>
       <trans-unit id="130">
         <source>Финский [Finnish (Finland)]</source>
@@ -540,11 +540,11 @@
       </trans-unit>
       <trans-unit id="135">
         <source>Иврит [Hebrew (Israel)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hebrew [Hebrew (Israel)].</target>
+        <target state="translated">Hebrew [Hebrew (Israel)]</target>
       </trans-unit>
       <trans-unit id="136">
         <source>Хорватский [Croatian (Croatia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Croatian [Croatian (Croatia)].</target>
+        <target state="translated">Croatian [Croatian (Croatia)]</target>
       </trans-unit>
       <trans-unit id="137">
         <source>Венгерский [Hungarian (Hungary)]</source>
@@ -556,7 +556,7 @@
       </trans-unit>
       <trans-unit id="139">
         <source>Исландский [Icelandic (Iceland)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Icelandic [Icelandic (Iceland)].</target>
+        <target state="translated">Icelandic [Icelandic (Iceland)]</target>
       </trans-unit>
       <trans-unit id="140">
         <source>Итальянский [Italian (Switzerland)]</source>
@@ -624,7 +624,7 @@
       </trans-unit>
       <trans-unit id="156">
         <source>Сербский [Serbian (Serbia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Serbian [Serbian (Serbia)].</target>
+        <target state="translated">Serbian [Serbian (Serbia)]</target>
       </trans-unit>
       <trans-unit id="157">
         <source>Шведский [Swedish (Sweden)]</source>
