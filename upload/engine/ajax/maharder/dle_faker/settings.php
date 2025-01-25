@@ -44,6 +44,11 @@ try {
 	echo (new SuccessResponseAjax())->setData([__('mhadmin', 'Настройки сохранены')])->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([__('mhadmin', 'Ошибка в сохранении настроек'), $e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/settings',
+		$e->getMessage()
+	);
 }
 
 exit;

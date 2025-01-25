@@ -177,13 +177,28 @@ try {
 
 	} catch (Exception $e) {
 		echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+		LogGenerator::generateLog(
+			'DLE Faker',
+			'ajax/generator_create_post/create_post',
+			$e->getMessage()
+		);
 		exit;
 	}
 
 
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/generator_create_post/exception',
+		$e->getMessage()
+	);
 } catch (Throwable $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/generator_create_post/throwable',
+		$e->getMessage()
+	);
 }
 exit;

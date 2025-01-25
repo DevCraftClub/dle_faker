@@ -30,5 +30,10 @@ try {
 	echo (new SuccessResponseAjax(201))->setData([$method == 'activate_template' ? __('dle_faker', 'Шаблон был включён') : __('dle_faker', 'Шаблон был выключён')])->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/templates_change_status',
+		$e->getMessage()
+	);
 }
 exit;
