@@ -10,7 +10,7 @@ $fakerConfig  = DataManager::getConfig('dle_faker');
 $mhConfig     = DataManager::getConfig('maharder');
 $twigFilter   = new TwigFilter($repo);
 
-$mh->setBreadcrumb(new BreadCrumb(__(\'Шаблоны\'), THIS_SELF . '?' . http_build_query($GET_DATA)));
+$mh->setBreadcrumb(new BreadCrumb(__('Шаблоны'), THIS_SELF . '?' . http_build_query($GET_DATA)));
 
 
 switch ($GET_DATA['action']) {

@@ -21,7 +21,7 @@ use Symfony\Bridge\Twig\Extension\TranslationExtension;
 $modInfo = [
 	'module_name'        => 'DLE Faker',
 	'module_version'     => '173.1.0',
-	'module_description' => __(\'$2\'),
+	'module_description' => __('Генерирует случайные данные для наполнения сайта'),
 	'module_code'        => 'dle_faker',
 	'module_id'          => 29,
 	'module_icon'        => 'engine/inc/maharder/_modules/dle_faker/assets/icon.png',
@@ -38,19 +38,19 @@ require_once DLEPlugins::Check(MH_ROOT . '/_modules/dle_faker/utils/init.php');
 
 $mh->setLink(
 	new AdminLink(
-		'template', __(\'$2\'), '?mod=' . $modInfo['module_code'] . '&sites=template'
+		'template', __('Шаблоны'), '?mod=' . $modInfo['module_code'] . '&sites=template'
 	),
 	'template'
 );
 $mh->setLink(
 	new AdminLink(
-		'generator', __(\'$2\'),  '?mod=' . $modInfo['module_code'] . '&sites=generator'
+		'generator', __('Генератор'),  '?mod=' . $modInfo['module_code'] . '&sites=generator'
 	),
 	'generator'
 );
 $mh->setLink(
 	new AdminLink(
-		'tags', __(\'$2\'), '?mod=' . $modInfo['module_code'] . '&sites=tags'
+		'tags', __('Теги'), '?mod=' . $modInfo['module_code'] . '&sites=tags'
 	),
 	'tags'
 );
@@ -90,7 +90,7 @@ $mh->setVars($modInfo);
 $mh->setVars($xtraVariable);
 $mh->setVars($modVars);
 
-$mh_template->addExtension(new TranslationExtension(MhTranslation::getTranslator('dle_faker')));
+$mh_template->addExtension(new TranslationExtension(MhTranslation::getTranslator()));
 
 // Загружаем шаблон
 $template = $mh_template->load($htmlTemplate);
