@@ -772,87 +772,87 @@
       </trans-unit>
       <trans-unit id="193">
         <source>Страница %page%</source>
-        <target state="needs-translation">Страница %page%</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Сторінка %page%</target>
       </trans-unit>
       <trans-unit id="194">
         <source>Редактирование шаблона: :name</source>
-        <target state="needs-translation">Редактирование шаблона: :name</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Редагування шаблону: :name</target>
       </trans-unit>
       <trans-unit id="195">
         <source>Генерирует случайное значение да или нет (true / false)</source>
-        <target state="needs-translation">Генерирует случайное значение да или нет (true / false)</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове значення так чи ні (true / false)</target>
       </trans-unit>
       <trans-unit id="196">
         <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
-        <target state="needs-translation">Генерирует случайное целое число, содержащее от 0 до nums цифр.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число, що містить від 0 до nums цифр.</target>
       </trans-unit>
       <trans-unit id="197">
         <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
-        <target state="needs-translation">Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Коли параметр strict встановлений у значення true, функція повертатиме тільки цілі числа, що містять рівно nums цифр.</target>
       </trans-unit>
       <trans-unit id="198">
         <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
-        <target state="needs-translation">Генерирует случайное целое число от 0 до 9, исключая заданное число.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число від 0 до 9, виключаючи задане число.</target>
       </trans-unit>
       <trans-unit id="199">
         <source>Параметр float отвечает за количество десятичных знаков.</source>
-        <target state="needs-translation">Параметр float отвечает за количество десятичных знаков.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр float відповідає за кількість десяткових знаків.</target>
       </trans-unit>
       <trans-unit id="200">
         <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
-        <target state="needs-translation">Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число в діапазоні від min до max. За замовчуванням генерується число в діапазоні від 0 до 2 147 483 647.</target>
       </trans-unit>
       <trans-unit id="201">
         <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
-        <target state="needs-translation">Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повертає випадковий елемент із заданого масиву, ітерованого об'єкта або перерахування. За замовчуванням параметр $count встановлено в 1, а якщо передано значення null, повертається випадкова кількість елементів.&lt;br&gt;Масив має бути простим без додаткових лапок.</target>
       </trans-unit>
       <trans-unit id="202">
         <source>Параметр count установлен в 1, а если передано значение null, возвращается случайное количество элементов.</source>
-        <target state="needs-translation">Параметр count установлен в 1, а если передано значение null, возвращается случайное количество элементов.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр count встановлено в 1, а якщо передано значення null, повертається випадкова кількість елементів.</target>
       </trans-unit>
       <trans-unit id="203">
         <source>Параметр connector установлен на _. Он отвечает за объединение элементов списка.</source>
-        <target state="needs-translation">Параметр connector установлен на _. Он отвечает за объединение элементов списка.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр connector встановлено на _. Він відповідає за об'єднання елементів списку.</target>
       </trans-unit>
       <trans-unit id="204">
         <source>Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
-        <target state="needs-translation">Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибирає випадкового користувача, зазначеного в налаштуваннях. Налаштувань за замовчуванням немає, тому їх потрібно зберегти!</target>
       </trans-unit>
       <trans-unit id="205">
         <source>Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
-        <target state="needs-translation">Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибирає випадкову категорію, зазначену в налаштуваннях. Налаштувань за замовчуванням немає, тому їх потрібно зберегти!</target>
       </trans-unit>
       <trans-unit id="206">
         <source>Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</source>
-        <target state="needs-translation">Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкові речення. Параметр max встановлює кількість</target>
       </trans-unit>
       <trans-unit id="207">
         <source>Генерирует абзац текста, содержащий заданное количество предложений. По умолчанию генерируется 3 предложения.</source>
-        <target state="needs-translation">Генерирует абзац текста, содержащий заданное количество предложений. По умолчанию генерируется 3 предложения.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує абзац тексту, що містить задану кількість речень. За замовчуванням генерується 3 речення.</target>
       </trans-unit>
       <trans-unit id="208">
         <source>Параметр max указывает сколько предложений генерировать. По умолчанию: 3</source>
-        <target state="needs-translation">Параметр max указывает сколько предложений генерировать. По умолчанию: 3</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр max вказує скільки пропозицій генерувати. За замовчуванням: 3</target>
       </trans-unit>
       <trans-unit id="209">
         <source>Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</source>
-        <target state="needs-translation">Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий текстовий рядок. Перший параметр задає максимальну кількість символів, яку має містити рядок (за замовчуванням 200).</target>
       </trans-unit>
       <trans-unit id="210">
         <source>Генерирует случайную дату и время со своим форматированием.</source>
-        <target state="needs-translation">Генерирует случайную дату и время со своим форматированием.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкову дату і час зі своїм форматуванням.</target>
       </trans-unit>
       <trans-unit id="211">
         <source>Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
-        <target state="needs-translation">Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Звернення, приклад: Пані або Дівчина. У російській немає аналога для Ms. або Mrs.</target>
       </trans-unit>
       <trans-unit id="212">
         <source>Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
-        <target state="needs-translation">Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Жіноче звернення, приклад: Пані або Дівчина. У російській немає аналога для Ms. або Mrs.</target>
       </trans-unit>
       <trans-unit id="213">
         <source>Случайная электронная почта, пример: walter.sophia@hotmail.com. Связи с именем никакой нет!</source>
-        <target state="needs-translation">Случайная электронная почта, пример: walter.sophia@hotmail.com. Связи с именем никакой нет!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадкова електронна пошта, приклад: walter.sophia@hotmail.com. Зв'язку з ім'ям жодного немає!</target>
       </trans-unit>
     </body>
   </file>
