@@ -10,7 +10,7 @@ foreach ($repo->getActive() as $template) {
 }
 
 $modVars = [
-	'title'       => __(\'Генератор новостей\'),
+	'title'       => __('Генератор новостей'),
 	'templates'   => $templates
 ];
 
