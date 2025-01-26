@@ -38,27 +38,27 @@ $inputData['xfields'] = $inputData['xfields'] !== false ?: $parsedData['xfields'
 
 if (empty($inputData['name'])) {
 	echo (new ErrorResponseAjax())
-		->setData([__('dle_faker', 'Название шаблона не может быть пустым')])->setMeta(['name'])->send();
+		->setData([__(\'$2\')])->setMeta(['name'])->send();
 	exit;
 }
 if (empty($inputData['autor'])) {
 	echo (new ErrorResponseAjax())
-		->setData([__('dle_faker', 'Автор не может быть пустым')])->setMeta(['autor'])->send();
+		->setData([__(\'$2\')])->setMeta(['autor'])->send();
 	exit;
 }
 if (empty($inputData['title'])) {
 	echo (new ErrorResponseAjax())
-		->setData([__('dle_faker', 'Заголовок не может быть пустым')])->setMeta(['title'])->send();
+		->setData([__(\'$2\')])->setMeta(['title'])->send();
 	exit;
 }
 if (empty($inputData['category'])) {
 	echo (new ErrorResponseAjax())
-		->setData([__('dle_faker', 'Категория не может быть пустой')])->setMeta(['category'])->send();
+		->setData([__(\'$2\')])->setMeta(['category'])->send();
 	exit;
 }
 if (empty($inputData['short_story'])) {
 	echo (new ErrorResponseAjax())
-		->setData([__('dle_faker', 'Короткое описание не может быть пустой')])->setMeta(['short_story'])->send();
+		->setData([__(\'$2\')])->setMeta(['short_story'])->send();
 	exit;
 }
 if (empty($inputData['allow_main'])) $inputData['allow_main'] = 'random';
@@ -89,13 +89,13 @@ try {
 	if ($id) {
 		$MHDB->update($template);
 		echo (new SuccessResponseAjax(201))
-			->setData([__('dle_faker', 'Шаблон успешно изменен')])->setRedirect(
+			->setData([__(\'$2\')])->setRedirect(
 				$mh_admin->getDleUrl() . '?mod=dle_faker&sites=template'
 			)->send();
 	} else {
 		$MHDB->create($template);
 		echo (new SuccessResponseAjax())
-			->setData([__('dle_faker', 'Шаблон успешно создан')])->setRedirect(
+			->setData([__(\'$2\')])->setRedirect(
 				$mh_admin->getDleUrl() . '?mod=dle_faker&sites=template'
 			)->send();
 	}

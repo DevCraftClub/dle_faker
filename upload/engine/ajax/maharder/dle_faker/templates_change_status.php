@@ -20,14 +20,14 @@ if (!$id) {
 $template = $MHDB->get(FakerTemplate::class, $id);
 
 if (!$template) {
-	echo (new ErrorResponseAjax(404))->setData([__('dle_faker', 'Такого шаблона не существует!')])->send();
+	echo (new ErrorResponseAjax(404))->setData([__(\'$2\')])->send();
 	exit;
 }
 
 try {
 	$template->active = $method == 'activate_template';
 	$MHDB->update($template);
-	echo (new SuccessResponseAjax(201))->setData([$method == 'activate_template' ? __('dle_faker', 'Шаблон был включён') : __('dle_faker', 'Шаблон был выключён')])->send();
+	echo (new SuccessResponseAjax(201))->setData([$method == 'activate_template' ? __(\'$2\') : __(\'$2\')])->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
 	LogGenerator::generateLog(
