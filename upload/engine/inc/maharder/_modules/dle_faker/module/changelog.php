@@ -17,12 +17,12 @@ global $mh;
 
 $logs = [
 	'173.1.0' => [
-		__('mhadmin', 'Основной релиз'),
+		__('Основной релиз'),
 	],
 ];
 
 $modVars = [
-	'title' => __('mhadmin', 'История изменений'),
+	'title' => __('История изменений'),
 	'module_icon' => 'fad fa-robot',
 	'logs' => $logs,
 ];

@@ -5,7 +5,7 @@ global $mh, $MHDB, $GET_DATA;
 $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 $settings = [];
-$title = __('dle_faker', 'Создание нового шаблона');
+$title = __(\'Создание нового шаблона\');
 
 if ($id) {
 	$template = $MHDB->get(FakerTemplate::class, $id);

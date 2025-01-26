@@ -19,7 +19,7 @@ if (!$id) {
 
 try {
 	$template = $MHDB->delete(FakerTemplate::class, $id);
-	echo (new SuccessResponseAjax(201))->setData([$method == 'activate_template' ? __('dle_faker', 'Шаблон был включён') : __('dle_faker', 'Шаблон был выключён')])->send();
+	echo (new SuccessResponseAjax(201))->setData([$method == 'activate_template' ? __(\'$2\') : __(\'$2\')])->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
 	LogGenerator::generateLog(

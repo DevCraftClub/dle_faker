@@ -23,21 +23,21 @@ $filter = [
 $inputData            = filter_var_array($parsedData, $filter);
 
 if (empty($inputData['name'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Шаблон для псевдонима не может быть пустым')])
+	echo (new ErrorResponseAjax())->setData([__(\'$2\')])
 								  ->setMeta(['name'])
 								  ->send();
 	exit;
 }
 
 if (empty($inputData['email'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Шаблон для электронной почты не может быть пустым')])
+	echo (new ErrorResponseAjax())->setData([__(\'$2\')])
 								  ->setMeta(['email'])
 								  ->send();
 	exit;
 }
 
 if (empty($inputData['password'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Шаблон для пароля не может быть пустым')])
+	echo (new ErrorResponseAjax())->setData([__(\'$2\')])
 								  ->setMeta(['password'])
 								  ->send();
 	exit;
@@ -79,7 +79,7 @@ try {
 				]
 			)->send();
 		} else {
-			echo (new ErrorResponseAjax(404))->setData([__('dle_faker', 'Пользователь не был найден!')])->send();
+			echo (new ErrorResponseAjax(404))->setData([__(\'$2\')])->send();
 		}
 	} elseif ($create_user === -1) {
 		echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Псевдоним пользователя (:uname) уже занят!', [':uname' => $username])])->send();
