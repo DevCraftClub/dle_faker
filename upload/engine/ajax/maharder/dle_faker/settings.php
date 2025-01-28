@@ -23,14 +23,14 @@ try {
 	if (empty($filteredData['language']) || $filteredData['language'] === 'site') $filteredData['language'] = MhTranslation::getLocale();
 
 	if(empty($filteredData['users'])) {
-		echo (new ErrorResponseAjax())->setData([__('mhadmin', 'Нужно указать хотя бы одного пользователя!')])
+		echo (new ErrorResponseAjax())->setData([__('Нужно указать хотя бы одного пользователя!')])
 									  ->setMeta(['users'])
 									  ->send();
 		exit;
 	}
 
 	if(empty($filteredData['categories'])) {
-		echo (new ErrorResponseAjax())->setData([__('mhadmin', 'Нужно указать хотя бы одну категорию!')])
+		echo (new ErrorResponseAjax())->setData([__('Нужно указать хотя бы одну категорию!')])
 									  ->setMeta(['categories'])
 									  ->send();
 		exit;
@@ -41,9 +41,14 @@ try {
 	file_put_contents($configFile, json_encode($filteredData, JSON_UNESCAPED_UNICODE));
 	clear_cache();
 
-	echo (new SuccessResponseAjax())->setData([__('mhadmin', 'Настройки сохранены')])->send();
+	echo (new SuccessResponseAjax())->setData([__('Настройки сохранены')])->send();
 } catch (Exception $e) {
-	echo (new ErrorResponseAjax())->setData([__('mhadmin', 'Ошибка в сохранении настроек'), $e->getMessage()])->send();
+	echo (new ErrorResponseAjax())->setData([__('Ошибка в сохранении настроек'), $e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/settings',
+		$e->getMessage()
+	);
 }
 
 exit;
