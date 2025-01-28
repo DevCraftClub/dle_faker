@@ -20,7 +20,7 @@ $inputData = filter_var_array($parsedData, $filter);
 
 if (!$inputData['template']) {
 	echo (new ErrorResponseAjax())
-		->setData([__(\'Шаблон не может быть пустым\')])->setMeta(['template'])->send();
+		->setData([__('Шаблон не может быть пустым')])->setMeta(['template'])->send();
 	exit;
 }
 if (!$inputData['count']) $inputData['count'] = 1;
@@ -29,7 +29,7 @@ try {
 	$templateData = $MHDB->get(FakerTemplate::class, $inputData['template']);
 
 	if (!$templateData) {
-		echo (new ErrorResponseAjax(404))->setData([__(\'Такого шаблона не существует\')])->send();
+		echo (new ErrorResponseAjax(404))->setData([__('Такого шаблона не существует')])->send();
 		exit;
 	}
 
