@@ -34,20 +34,20 @@ $paginator      = new Paginator($mhConfig['list_count']);
 $paginator->withPage($cur_page)->paginate($fakerTemplates);
 
 $modVars = [
-	'title'       => __('dle_faker', 'Шаблоны'),
+	'title'       => __('Шаблоны'),
 	'templates'   => $fakerTemplates->fetchAll(),
 	'total_pages' => $total_pages,
 	'page'        => $cur_page,
 	'order'       => $order,
 	'sort'        => $sort,
 	'filters'     => array_merge(
-		$twigFilter->createFilter('name', 'text', __('dle_faker', 'Название')),
-		$twigFilter->createFilter('active', 'select', __('dle_faker', 'Активные'), choices: ['' => __('mhadmin', 'Все'), 'no' => __('mhadmin', 'Нет'), 'yes' => __('mhadmin', 'Да')]),
+		$twigFilter->createFilter('name', 'text', __('Название')),
+		$twigFilter->createFilter('active', 'select', __('Активные'), choices: ['' => __('Все'), 'no' => __('Нет'), 'yes' => __('Да')]),
 	)
 ];
 
 if ($cur_page > 1) {
-	$mh->setBreadcrumb(new BreadCrumb(__('mhadmin', 'Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
+	$mh->setBreadcrumb(new BreadCrumb(__('Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
 
 }
 
