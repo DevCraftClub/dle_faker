@@ -1,6 +1,6 @@
 {
 	"version": "173.1.0",
-	"status": "dev",
+	"status": "stable",
 	"dle": [
 		"17.x"
 	],
