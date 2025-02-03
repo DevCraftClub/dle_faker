@@ -106,12 +106,12 @@
 				})
 			}}
 
-			{% for type, name in xfields %}
+			{% for name, field xfields %}
 
 				{{ include('templateIncludes/segRow.html', {
-					id: 'xfields['~type ~ ']',
-					name: 'Дополнительное поле: '|trans|raw ~ name,
-					descr: '<b class="ui warning text">!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!</b><br>Содержимое для поля '|trans|html_entity_decode ~ type,
+					id: 'xfields[' ~ field[type] ~ ']',
+					name: 'Дополнительное поле: '|trans|raw ~ field[description],
+					descr: '<b class="ui warning text">!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!</b><br>Содержимое для поля '|trans|html_entity_decode ~ field[type],
 					type: 'text',
 					variable: settings
 					})
