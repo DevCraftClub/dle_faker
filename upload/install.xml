@@ -1,65 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <dleplugin>
-<name>DLE Faker</name>
-<description>Генерирует случайные данные для наполнения сайта</description>
-<icon>engine/inc/maharder/_modules/dle_faker/assets/icon.png</icon>
-<version>173.1.0</version>
-<dleversion>17.3</dleversion>
-<versioncompare>greater</versioncompare>
-<upgradeurl/>
-<filedelete>1</filedelete>
-<needplugin/>
-<mnotice>0</mnotice>
-<mysqlinstall>
-	<![CDATA[ ]]>
-</mysqlinstall>
-<mysqlupgrade>
-	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v173.1.0', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v173.1.0'; ]]>
-</mysqlupgrade>
-<mysqlenable>
-	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v173.1.0', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v173.1.0'; ]]>
-</mysqlenable>
-<mysqldisable>
-	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
-</mysqldisable>
-<mysqldelete>
-	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
-</mysqldelete>
-<phpinstall>
-	<![CDATA[ ]]>
-</phpinstall>
-<phpupgrade>
-	<![CDATA[ ]]>
-</phpupgrade>
-<phpenable>
-	<![CDATA[ ]]>
-</phpenable>
-<phpdisable>
-	<![CDATA[ ]]>
-</phpdisable>
-<phpdelete>
-	<![CDATA[ ]]>
-</phpdelete>
-<notice>
-	<![CDATA[ ]]>
-</notice>
-<file name="engine/inc/maharder/_includes/extras/paths.php">
-	<operation action="before">
-		<searchcode>
-			<![CDATA[ // Custom models // ]]>
-		</searchcode>
-		<replacecode>
-			<![CDATA[ // DLE Faker MH_ROOT . '/_modules/dle_faker/models', // DLE Faker ]]>
-		</replacecode>
-		<enabled>1</enabled>
-	</operation>
-	<operation action="before">
-		<searchcode>
-			<![CDATA[ // Custom paths // ]]>
-		</searchcode>
-		<replacecode>
-			<![CDATA[ // DLE Faker MH_ROOT . '/_modules/dle_faker/repositories', // DLE Faker ]]>
-		</replacecode>
-		<enabled>1</enabled>
-	</operation>
-</file>
+	<name>DLE Faker</name>
+	<description>Генерирует случайные данные для наполнения сайта</description>
+	<icon>engine/inc/maharder/_modules/dle_faker/assets/icon.png</icon>
+	<version>173.1.1</version>
+	<dleversion>17.3</dleversion>
+	<versioncompare>greater</versioncompare>
+	<upgradeurl></upgradeurl>
+	<filedelete>1</filedelete>
+	<needplugin>MH Admin</needplugin>
+	<mnotice>0</mnotice>
+	<mysqlinstall><![CDATA[]]></mysqlinstall>
+	<mysqlupgrade><![CDATA[INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v173.1.1', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v173.1.1';]]></mysqlupgrade>
+	<mysqlenable><![CDATA[INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v173.1.1', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v173.1.1';]]></mysqlenable>
+	<mysqldisable><![CDATA[DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';]]></mysqldisable>
+	<mysqldelete><![CDATA[DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';]]></mysqldelete>
+	<phpinstall><![CDATA[]]></phpinstall>
+	<phpupgrade><![CDATA[]]></phpupgrade>
+	<phpenable><![CDATA[]]></phpenable>
+	<phpdisable><![CDATA[]]></phpdisable>
+	<phpdelete><![CDATA[]]></phpdelete>
+	<notice><![CDATA[]]></notice>
+	<file name="engine/inc/maharder/_includes/extras/paths.php">
+		<operation action="before">
+			<searchcode><![CDATA[			 // Custom models //
+		]]></searchcode>
+			<replacecode><![CDATA[// DLE Faker
+	MH_MODULES . '/dle_faker/models',
+	// DLE Faker]]></replacecode>
+			<enabled>1</enabled>
+		</operation>
+		<operation action="before">
+			<searchcode><![CDATA[			 // Custom paths //
+		]]></searchcode>
+			<replacecode><![CDATA[// DLE Faker
+	MH_MODULES . '/dle_faker/repositories',
+	// DLE Faker]]></replacecode>
+			<enabled>1</enabled>
+		</operation>
+	</file>
 </dleplugin>

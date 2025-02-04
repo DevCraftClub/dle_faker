@@ -37,6 +37,16 @@ try {
 
 	$parse = new ParseFilter();
 
+	if (empty($fakerConfig['users'])) {
+		echo (new ErrorResponseAjax())->setData([__("Не проставлена настройка для автора новости!")])->send();
+		exit;
+	}
+
+	if (empty($fakerConfig['categories'])) {
+		echo (new ErrorResponseAjax())->setData([__("Не проставлена настройка для категорий!")])->send();
+		exit;
+	}
+
 	$title          = $parse->process(
 		filter_var(parseNewsValues($template['title']), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
 	);
@@ -150,7 +160,7 @@ try {
 			}
 		}
 		$xfSearchWords = implode( ", ", $xfSearch );
-		$db->query( "INSERT INTO " . PREFIX . "_xfsearch (news_id, tagname, tagvalue) VALUES {$xfSearchWords}" );
+		if(!empty($xfSearchWords)) $db->query( "INSERT INTO " . PREFIX . "_xfsearch (news_id, tagname, tagvalue) VALUES {$xfSearchWords}" );
 
 
 		clear_cache( array('news_', 'tagscloud_', 'archives_', 'calendar_', 'topnews_', 'rss', 'stats') );
