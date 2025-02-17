@@ -22,25 +22,25 @@
         <source>Пароль</source>
         <target state="translated">Автор новини</target>
       </trans-unit>
-      <trans-unit id="6">
+      <trans-unit id="6" approved="yes">
         <source>Кол-во пользователей</source>
-        <target state="translated">Використовуючи теги, заповніть шаблон. Або вкажіть ID автора</target>
+        <target state="final">Використовуючи теги, заповніть шаблон. Або вкажіть ID автора</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Генерировать</source>
         <target state="translated">Заголовок новини</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="8" approved="yes">
         <source>Сводка информации</source>
-        <target state="translated">Використовуючи теги, заповніть шаблон для заголовка новини.</target>
+        <target state="final">Використовуючи теги, заповніть шаблон для заголовка новини.</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Кол-во объектов</source>
         <target state="translated">Категорія новини</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="10" approved="yes">
         <source>Прогресс</source>
-        <target state="translated">Використовуючи теги, заповніть шаблон для категорії новини. Або вкажіть ID категорій</target>
+        <target state="final">Використовуючи теги, заповніть шаблон для категорії новини. Або вкажіть ID категорій</target>
       </trans-unit>
       <trans-unit id="11">
         <source>Ожидаем начала...</source>
@@ -264,23 +264,23 @@
       </trans-unit>
       <trans-unit id="66">
         <source>Теги для генерации пользователей</source>
-        <target state="translated">Теги для генерации пользователей</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги для генерації користувачів</target>
       </trans-unit>
       <trans-unit id="67">
         <source>Тег</source>
-        <target state="translated">notify-on-install</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Тег</target>
       </trans-unit>
       <trans-unit id="68">
         <source>Описание</source>
-        <target state="translated">Описание</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опис</target>
       </trans-unit>
       <trans-unit id="69">
         <source>Теги для генерации новостей</source>
-        <target state="translated">Теги для генерации новостей</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги для генерації новин</target>
       </trans-unit>
       <trans-unit id="70">
         <source>Вспомогательные теги, которые доступны для всех генераторов</source>
-        <target state="translated">Вспомогательные теги, которые доступны для всех генераторов</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Допоміжні теги, які доступні для всіх генераторів</target>
       </trans-unit>
       <trans-unit id="71">
         <source>Настройки</source>
