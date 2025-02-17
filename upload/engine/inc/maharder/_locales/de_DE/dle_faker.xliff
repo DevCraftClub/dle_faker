@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="6">
         <source>Кол-во пользователей</source>
-        <target state="translated">Füllen Sie die Vorlage mit Tags aus. Oder geben Sie die Autoren-ID an</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anzahl der Benutzer</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Генерировать</source>
@@ -32,7 +32,7 @@
       </trans-unit>
       <trans-unit id="8">
         <source>Сводка информации</source>
-        <target state="translated">Füllen Sie mit Hilfe von Tags die Vorlage für die Schlagzeile der Nachricht aus.</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zusammenfassung der Informationen</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Кол-во объектов</source>
@@ -40,11 +40,11 @@
       </trans-unit>
       <trans-unit id="10">
         <source>Прогресс</source>
-        <target state="translated">Füllen Sie mit Hilfe von Tags die Vorlage für die Nachrichtenkategorie aus. Oder geben Sie Kategorie-IDs an</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fortschritt</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="11" approved="yes">
         <source>Ожидаем начала...</source>
-        <target state="translated">Datum der Veröffentlichung, Beginn</target>
+        <target state="final">Es wird auf den Anfang gewartet...</target>
       </trans-unit>
       <trans-unit id="12">
         <source>Вывод</source>
@@ -60,11 +60,11 @@
       </trans-unit>
       <trans-unit id="15">
         <source>Обработано {value} из {total}</source>
-        <target state="translated">Zusammenfassung</target>
+        <target state="translated">{value} von {total} verarbeitet</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Название шаблона</source>
-        <target state="translated">Generieren Sie eine Beschreibung mit Hilfe der Generierungs-Tags</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Name der Vorlage</target>
       </trans-unit>
       <trans-unit id="17">
         <source>Укажите уникальное название для шаблона</source>
@@ -72,7 +72,7 @@
       </trans-unit>
       <trans-unit id="18">
         <source>Активировать шаблон</source>
-        <target state="translated">Zusätzliches Feld:</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vorlage aktivieren</target>
       </trans-unit>
       <trans-unit id="19">
         <source>Автор новости</source>
@@ -92,27 +92,27 @@
       </trans-unit>
       <trans-unit id="23">
         <source>Категория новости</source>
-        <target state="translated">Dabei werden die folgenden Parameter berücksichtigt:</target>
+        <target state="translated">Kategorie der Nachricht</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="24" approved="yes">
         <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="translated">&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;div class="item" b Ausschalten /b - Option schaltet die Option aus /div</target>
+        <target state="final">Füllen Sie mit Hilfe von Tags die Vorlage für die Nachrichtenkategorie. Oder geben Sie Kategorie-IDs an</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="25" approved="yes">
         <source>Дата публикации, начало</source>
-        <target state="translated">&gt;&lt;&gt;&lt;&gt;&lt;&gt;b Ausschalten /b - Option schaltet die Option /div aus</target>
+        <target state="final">Datum der Veröffentlichung, Beginn</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="26" approved="yes">
         <source>Укажите начальную дату для случайного значения</source>
-        <target state="translated">&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;b Zufällig /b - Programmatisch entscheidet, ob die Option aktiviert werden soll oder nicht /div br i Standard: Zufällig /i</target>
+        <target state="final">Geben Sie das Startdatum für den Zufallswert an</target>
       </trans-unit>
       <trans-unit id="27">
         <source>Дата публикации, начало (Альтернатива)</source>
-        <target state="translated">Auf der Hauptseite veröffentlichen</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datum der Veröffentlichung, Beginn (Alternative)</target>
       </trans-unit>
       <trans-unit id="28">
         <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="translated">Veröffentlichen Sie die Nachrichten auf der Website</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Geben Sie das Startdatum für den Zufallswert an. Wenn ein Wert angegeben wird, wird der obige Wert nicht berücksichtigt. Erlaubte Tags. Wenn die Tags nicht mit den eingegebenen übereinstimmen, ist dieses Feld ungültig.</target>
       </trans-unit>
       <trans-unit id="29">
         <source>Дата публикации, конец</source>
@@ -124,19 +124,19 @@
       </trans-unit>
       <trans-unit id="31">
         <source>Дата публикации, конец (Альтернатива)</source>
-        <target state="translated">Artikelbewertung zulassen</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datum der Veröffentlichung, Ende (Alternative)</target>
       </trans-unit>
-      <trans-unit id="32">
+      <trans-unit id="32" approved="yes">
         <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="translated">Indizierung für Suchmaschinen verbieten</target>
+        <target state="final">Indizierung für Suchmaschinen verbieten</target>
       </trans-unit>
       <trans-unit id="33">
         <source>Краткое содержание</source>
         <target state="translated">Von der Site-Suche ausschließen</target>
       </trans-unit>
-      <trans-unit id="34">
+      <trans-unit id="34" approved="yes">
         <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="translated">Nachrichten im RSS-Feed veröffentlichen</target>
+        <target state="final">Generieren Sie eine Beschreibung mit Hilfe der Generierungs-Tags</target>
       </trans-unit>
       <trans-unit id="35">
         <source>Полное содержание</source>
@@ -144,19 +144,19 @@
       </trans-unit>
       <trans-unit id="36">
         <source>Дополнительное поле:</source>
-        <target state="translated">Verwendung in Yandex Zen</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zusätzliches Feld:</target>
       </trans-unit>
-      <trans-unit id="37">
+      <trans-unit id="37" approved="yes">
         <source>&lt;b class=&quot;ui warning text&quot;&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
-        <target state="translated">&lt;b class="ui warning text"&gt;!!!BILDER, DATEIEN, AUDIO, VIDEO und ANDERE ANHÄNGE WERDEN NICHT UNTERSTÜTZT!!!&lt;/b&gt;&lt;br&gt;Inhalt für das Feld</target>
+        <target state="final">&lt;b class="ui warning text"&gt;!!!BILDER, DATEIEN, AUDIO, VIDEO und ANDERE ANHÄNGE WERDEN NICHT UNTERSTÜTZT!!!&lt;/b&gt;&lt;br&gt;Inhalt für das Feld</target>
       </trans-unit>
-      <trans-unit id="38">
+      <trans-unit id="38" approved="yes">
         <source>Включить</source>
-        <target state="translated">Alles ist großartig!</target>
+        <target state="final">Aktivieren</target>
       </trans-unit>
-      <trans-unit id="39">
+      <trans-unit id="39" approved="yes">
         <source>Выключить</source>
-        <target state="translated">Die Daten wurden gespeichert!</target>
+        <target state="final">Deaktivieren</target>
       </trans-unit>
       <trans-unit id="40">
         <source>Случайно</source>
@@ -164,7 +164,7 @@
       </trans-unit>
       <trans-unit id="41">
         <source>Следующие параметры будут учитываться:</source>
-        <target state="translated">Vorlage</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Die folgenden Parameter werden berücksichtigt:</target>
       </trans-unit>
       <trans-unit id="42" approved="yes">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
@@ -224,11 +224,11 @@
       </trans-unit>
       <trans-unit id="56">
         <source>Всё отлично!</source>
-        <target state="translated">Ein Autor kann nicht leer sein</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Alles ist großartig!</target>
       </trans-unit>
-      <trans-unit id="57">
+      <trans-unit id="57" approved="yes">
         <source>Данные были сохранены!</source>
-        <target state="translated">Die Kopfzeile kann nicht leer sein</target>
+        <target state="final">Die Daten wurden gespeichert!</target>
       </trans-unit>
       <trans-unit id="58">
         <source>шаблон</source>
@@ -240,11 +240,11 @@
       </trans-unit>
       <trans-unit id="60">
         <source>Включён?</source>
-        <target state="translated">Die Vorlage wurde erfolgreich erstellt</target>
+        <target state="translated">Eingeschaltet?</target>
       </trans-unit>
       <trans-unit id="61">
         <source>Выбор действия</source>
-        <target state="translated">Eine solche Vorlage gibt es nicht!</target>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Auswahl der Aktion</target>
       </trans-unit>
       <trans-unit id="62">
         <source>Изменить</source>
@@ -354,9 +354,9 @@
         <source>Фамилия, пример: Волков</source>
         <target state="final">Nachname, Beispiel: Volkov</target>
       </trans-unit>
-      <trans-unit id="89">
+      <trans-unit id="89" approved="yes">
         <source>Суффикс, пример: Мл.</source>
-        <target state="translated">Suffix, Beispiel: jr.</target>
+        <target state="final">Suffix, Beispiel: jr.</target>
       </trans-unit>
       <trans-unit id="90">
         <source>Мужское обращение, пример: Господин. В русском нет аналога для Mr.</source>
@@ -422,9 +422,9 @@
         <source>Болгарский [Bulgarian (Bulgaria)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Bulgarisch [Bulgarisch (Bulgarien)]</target>
       </trans-unit>
-      <trans-unit id="106">
+      <trans-unit id="106" approved="yes">
         <source>Бангла [Bangla (Bangladesh)]</source>
-        <target state="translated">Bangla [Bangla (Bangladesch)].</target>
+        <target state="final">Bangla [Bangla (Bangladesch)].</target>
       </trans-unit>
       <trans-unit id="107">
         <source>Чешский [Czech (Czech Republic)]</source>
@@ -506,17 +506,17 @@
         <source>Испанский [Spanish (Spain)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Spanisch [Spanisch (Spanien)]</target>
       </trans-unit>
-      <trans-unit id="127">
+      <trans-unit id="127" approved="yes">
         <source>Испанский [Spanish (Peru)]</source>
-        <target state="translated">Spanisch [Spanisch (Peru)].</target>
+        <target state="final">Spanisch [Spanisch (Peru)].</target>
       </trans-unit>
-      <trans-unit id="128">
+      <trans-unit id="128" approved="yes">
         <source>Испанский [Spanish (Venezuela)]</source>
-        <target state="translated">Spanisch [Spanisch (Venezuela)].</target>
+        <target state="final">Spanisch [Spanisch (Venezuela)].</target>
       </trans-unit>
-      <trans-unit id="129">
+      <trans-unit id="129" approved="yes">
         <source>Персидский [Persian (Iran)]</source>
-        <target state="translated">Persisch [Persisch (Iran)].</target>
+        <target state="final">Persisch [Persisch (Iran)].</target>
       </trans-unit>
       <trans-unit id="130">
         <source>Финский [Finnish (Finland)]</source>
@@ -538,13 +538,13 @@
         <source>Французский [French (France)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Französisch [Französisch (Frankreich)]</target>
       </trans-unit>
-      <trans-unit id="135">
+      <trans-unit id="135" approved="yes">
         <source>Иврит [Hebrew (Israel)]</source>
-        <target state="translated">Hebräisch [Hebräisch (Israel)].</target>
+        <target state="final">Hebräisch [Hebräisch (Israel)].</target>
       </trans-unit>
-      <trans-unit id="136">
+      <trans-unit id="136" approved="yes">
         <source>Хорватский [Croatian (Croatia)]</source>
-        <target state="translated">Kroatisch [Kroatisch (Kroatien)].</target>
+        <target state="final">Kroatisch [Kroatisch (Kroatien)].</target>
       </trans-unit>
       <trans-unit id="137">
         <source>Венгерский [Hungarian (Hungary)]</source>
@@ -554,9 +554,9 @@
         <source>Индонезийский [Indonesian (Indonesia)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Indonesisch [Indonesisch (Indonesien)]</target>
       </trans-unit>
-      <trans-unit id="139">
+      <trans-unit id="139" approved="yes">
         <source>Исландский [Icelandic (Iceland)]</source>
-        <target state="translated">Isländisch [Isländisch (Island)].</target>
+        <target state="final">Isländisch [Isländisch (Island)].</target>
       </trans-unit>
       <trans-unit id="140">
         <source>Итальянский [Italian (Switzerland)]</source>
@@ -618,13 +618,13 @@
         <source>Словацкий [Slovak (Slovakia)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Slowakisch [Slowakisch (Slowakei)</target>
       </trans-unit>
-      <trans-unit id="155">
+      <trans-unit id="155" approved="yes">
         <source>Словенский [Slovenian (Slovenia)]</source>
-        <target state="translated">Slowenisch [Slowenisch (Slowenien)].</target>
+        <target state="final">Slowenisch [Slowenisch (Slowenien)].</target>
       </trans-unit>
-      <trans-unit id="156">
+      <trans-unit id="156" approved="yes">
         <source>Сербский [Serbian (Serbia)]</source>
-        <target state="translated">Serbisch [Serbisch (Serbien)].</target>
+        <target state="final">Serbisch [Serbisch (Serbien)].</target>
       </trans-unit>
       <trans-unit id="157">
         <source>Шведский [Swedish (Sweden)]</source>
@@ -772,47 +772,47 @@
       </trans-unit>
       <trans-unit id="193">
         <source>Страница %page%</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">%page%Seite</target>
+        <target state="translated">Seite %page%</target>
       </trans-unit>
-      <trans-unit id="194">
+      <trans-unit id="194" approved="yes">
         <source>Редактирование шаблона: :name</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vorlage bearbeiten: :name</target>
+        <target state="final">Vorlage bearbeiten: :name</target>
       </trans-unit>
       <trans-unit id="195">
         <source>Генерирует случайное значение да или нет (true / false)</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt einen zufälligen Ja- oder Nein-Wert (wahr/falsch)</target>
       </trans-unit>
-      <trans-unit id="196">
+      <trans-unit id="196" approved="yes">
         <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt eine zufällige Ganzzahl mit 0 bis nums Ziffern.</target>
+        <target state="final">Erzeugt eine zufällige Ganzzahl mit 0 bis nums Ziffern.</target>
       </trans-unit>
-      <trans-unit id="197">
+      <trans-unit id="197" approved="yes">
         <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Wenn der Parameter strict auf true gesetzt ist, gibt die Funktion nur Ganzzahlen zurück, die genau nums Ziffern enthalten.</target>
+        <target state="final">Wenn der Parameter strict auf true gesetzt ist, gibt die Funktion nur Ganzzahlen zurück, die genau nums Ziffern enthalten.</target>
       </trans-unit>
       <trans-unit id="198">
         <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt eine zufällige ganze Zahl von 0 bis 9, ausgenommen die angegebene Zahl.</target>
       </trans-unit>
-      <trans-unit id="199">
+      <trans-unit id="199" approved="yes">
         <source>Параметр float отвечает за количество десятичных знаков.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Der Parameter float ist für die Anzahl der Dezimalstellen verantwortlich.</target>
+        <target state="final">Der Parameter float ist für die Anzahl der Dezimalstellen verantwortlich.</target>
       </trans-unit>
-      <trans-unit id="200">
+      <trans-unit id="200" approved="yes">
         <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt eine zufällige Ganzzahl im Bereich von min bis max. Standardmäßig wird eine Zahl zwischen 0 und 2.147.483.647 erzeugt.</target>
+        <target state="final">Erzeugt eine zufällige Ganzzahl im Bereich von min bis max. Standardmäßig wird eine Zahl zwischen 0 und 2.147.483.647 erzeugt.</target>
       </trans-unit>
       <trans-unit id="201">
         <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Gibt ein zufälliges Element aus dem angegebenen Array, dem iterierten Objekt oder der Aufzählung zurück. $count Standardmäßig wird der Parameter auf 1 gesetzt. Wenn null übergeben wird, wird eine zufällige Anzahl von Elementen zurückgegeben.&lt;&gt;br Das Array muss einfach sein, ohne zusätzliche Anführungszeichen.</target>
       </trans-unit>
-      <trans-unit id="202">
+      <trans-unit id="202" approved="yes">
         <source>Параметр count установлен в 1, а если передано значение null, возвращается случайное количество элементов.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Der Parameter count wird auf 1 gesetzt, und wenn null übergeben wird, wird eine zufällige Anzahl von Elementen zurückgegeben.</target>
+        <target state="final">Der Parameter count wird auf 1 gesetzt, und wenn null übergeben wird, wird eine zufällige Anzahl von Elementen zurückgegeben.</target>
       </trans-unit>
-      <trans-unit id="203">
+      <trans-unit id="203" approved="yes">
         <source>Параметр connector установлен на _. Он отвечает за объединение элементов списка.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Der Parameter connector ist auf _ gesetzt. Er ist für die Verbindung der Elemente der Liste zuständig.</target>
+        <target state="final">Der Parameter connector ist auf _ gesetzt. Er ist für die Verbindung der Elemente der Liste zuständig.</target>
       </trans-unit>
       <trans-unit id="204">
         <source>Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
@@ -822,17 +822,17 @@
         <source>Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Wählt eine zufällige Kategorie aus, die in den Einstellungen angegeben ist. Es gibt keine Standardeinstellungen, Sie müssen sie also speichern!</target>
       </trans-unit>
-      <trans-unit id="206">
+      <trans-unit id="206" approved="yes">
         <source>Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt eine Zeichenkette mit zufälligen Sätzen. Der Parameter max legt die Anzahl der</target>
+        <target state="final">Erzeugt eine Zeichenkette mit zufälligen Sätzen. Der Parameter max legt die Anzahl der</target>
       </trans-unit>
       <trans-unit id="207">
         <source>Генерирует абзац текста, содержащий заданное количество предложений. По умолчанию генерируется 3 предложения.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt einen Textabsatz, der die angegebene Anzahl von Sätzen enthält. Standardmäßig werden 3 Sätze erzeugt.</target>
       </trans-unit>
-      <trans-unit id="208">
+      <trans-unit id="208" approved="yes">
         <source>Параметр max указывает сколько предложений генерировать. По умолчанию: 3</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Der Parameter max gibt an, wie viele Sätze generiert werden sollen. Voreinstellung: 3</target>
+        <target state="final">Der Parameter max gibt an, wie viele Sätze generiert werden sollen. Voreinstellung: 3</target>
       </trans-unit>
       <trans-unit id="209">
         <source>Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</source>
@@ -842,9 +842,9 @@
         <source>Генерирует случайную дату и время со своим форматированием.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Erzeugt ein zufälliges Datum und eine zufällige Uhrzeit mit eigener Formatierung.</target>
       </trans-unit>
-      <trans-unit id="211">
+      <trans-unit id="211" approved="yes">
         <source>Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Adresse, Beispiel: Mistress oder Girl. Im Russischen gibt es keine Entsprechung für Frau oder Mrs..</target>
+        <target state="final">Adresse, Beispiel: Mistress oder Girl. Im Russischen gibt es keine Entsprechung für Frau oder Mrs..</target>
       </trans-unit>
       <trans-unit id="212">
         <source>Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
