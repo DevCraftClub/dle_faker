@@ -288,7 +288,7 @@
       </trans-unit>
       <trans-unit id="72">
         <source>Язык генерации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Мова генерації</target>
+        <target state="translated">Язык генерации</target>
       </trans-unit>
       <trans-unit id="73" approved="yes">
         <source>Список пользователей</source>
@@ -308,7 +308,7 @@
       </trans-unit>
       <trans-unit id="77">
         <source>Кол-во новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість новин</target>
+        <target state="translated">Кол-во новостей</target>
       </trans-unit>
       <trans-unit id="78" approved="yes">
         <source>Генератор новостей</source>
