@@ -187,6 +187,8 @@ function extractRandomElementsParams(string $text): string {
 			$connector = $connectorMatch[1];
 		}
 
+		$count = min(count($items), $count);
+
 		$text = str_replace($original, implode($connector, $faker->randomElements($items, $count, false)), $text);
 	}
 
