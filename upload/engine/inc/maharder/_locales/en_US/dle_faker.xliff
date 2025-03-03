@@ -24,27 +24,27 @@
       </trans-unit>
       <trans-unit id="6">
         <source>Кол-во пользователей</source>
-        <target state="translated">Using tags, fill in the template. Or specify author ID</target>
+        <target state="translated">Number of Users</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Генерировать</source>
         <target state="translated">News headline</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="8" approved="yes">
         <source>Сводка информации</source>
-        <target state="translated">Using tags, fill in the template for the news headline.</target>
+        <target state="final">Using tags, fill in the template for the news headline.</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Кол-во объектов</source>
         <target state="translated">News Category</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="10" approved="yes">
         <source>Прогресс</source>
-        <target state="translated">Using tags, fill in the template for the news category. Or specify category IDs</target>
+        <target state="final">Using tags, fill in the template for the news category. Or specify category IDs</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="11" approved="yes">
         <source>Ожидаем начала...</source>
-        <target state="translated">Date of publication, beginning</target>
+        <target state="final">Date of publication, beginning</target>
       </trans-unit>
       <trans-unit id="12">
         <source>Вывод</source>
@@ -58,9 +58,9 @@
         <source>Отмена / Закрыть</source>
         <target state="translated">Specify the end date for the random value</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="15" approved="yes">
         <source>Обработано {value} из {total}</source>
-        <target state="translated">Summary</target>
+        <target state="final">Summary</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Название шаблона</source>
@@ -70,9 +70,9 @@
         <source>Укажите уникальное название для шаблона</source>
         <target state="translated">Full Content</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="18" approved="yes">
         <source>Активировать шаблон</source>
-        <target state="translated">Additional field:</target>
+        <target state="final">Additional field:</target>
       </trans-unit>
       <trans-unit id="19">
         <source>Автор новости</source>
@@ -86,33 +86,33 @@
         <source>Заголовок новости</source>
         <target state="translated">Off</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="22" approved="yes">
         <source>Используя теги заполните шаблон для заголовка новости.</source>
-        <target state="translated">Accidentally</target>
+        <target state="final">Accidentally</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="23" approved="yes">
         <source>Категория новости</source>
-        <target state="translated">The following parameters will be considered:</target>
+        <target state="final">The following parameters will be considered:</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="24" approved="yes">
         <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="translated">&lt;div class="item"&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables option&lt;/div&gt;</target>
+        <target state="final">&lt;div class="item"&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables option&lt;/div&gt;</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="25" approved="yes">
         <source>Дата публикации, начало</source>
-        <target state="translated">&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables the option&lt;/div&gt;</target>
+        <target state="final">&gt;&lt;b&gt;Disable&lt;/b&gt; - Option disables the option&lt;/div&gt;</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="26" approved="yes">
         <source>Укажите начальную дату для случайного значения</source>
-        <target state="translated">&gt;&lt;b&gt;Random&lt;/b&gt; - Programmatically decides whether to enable the option or not&lt;/div&gt;&lt;br&gt;&lt;i&gt;Default: Random&lt;/i&gt;</target>
+        <target state="final">&gt;&lt;b&gt;Random&lt;/b&gt; - Programmatically decides whether to enable the option or not&lt;/div&gt;&lt;br&gt;&lt;i&gt;Default: Random&lt;/i&gt;</target>
       </trans-unit>
-      <trans-unit id="27">
+      <trans-unit id="27" approved="yes">
         <source>Дата публикации, начало (Альтернатива)</source>
-        <target state="translated">Publish on the main page</target>
+        <target state="final">Publish on the main page</target>
       </trans-unit>
-      <trans-unit id="28">
+      <trans-unit id="28" approved="yes">
         <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="translated">Publish the news on the website</target>
+        <target state="final">Publish the news on the website</target>
       </trans-unit>
       <trans-unit id="29">
         <source>Дата публикации, конец</source>
@@ -122,61 +122,61 @@
         <source>Укажите конечную дату для случайного значения</source>
         <target state="translated">Allow comments</target>
       </trans-unit>
-      <trans-unit id="31">
+      <trans-unit id="31" approved="yes">
         <source>Дата публикации, конец (Альтернатива)</source>
-        <target state="translated">Allow article rating</target>
+        <target state="final">Allow article rating</target>
       </trans-unit>
-      <trans-unit id="32">
+      <trans-unit id="32" approved="yes">
         <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="translated">Prohibit indexing for search engines</target>
+        <target state="final">Prohibit indexing for search engines</target>
       </trans-unit>
       <trans-unit id="33">
         <source>Краткое содержание</source>
         <target state="translated">Exclude from site search</target>
       </trans-unit>
-      <trans-unit id="34">
+      <trans-unit id="34" approved="yes">
         <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="translated">Publish news in RSS feed</target>
+        <target state="final">Publish news in RSS feed</target>
       </trans-unit>
       <trans-unit id="35">
         <source>Полное содержание</source>
         <target state="translated">Use in Yandex Turbo</target>
       </trans-unit>
-      <trans-unit id="36">
+      <trans-unit id="36" approved="yes">
         <source>Дополнительное поле:</source>
-        <target state="translated">Use in Yandex Zen</target>
+        <target state="final">Use in Yandex Zen</target>
       </trans-unit>
-      <trans-unit id="37">
+      <trans-unit id="37" approved="yes">
         <source>&lt;b class=&quot;ui warning text&quot;&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
-        <target state="translated">Save</target>
+        <target state="final">Save</target>
       </trans-unit>
-      <trans-unit id="38">
+      <trans-unit id="38" approved="yes">
         <source>Включить</source>
-        <target state="translated">Everything's great!</target>
+        <target state="final">Everything's great!</target>
       </trans-unit>
-      <trans-unit id="39">
+      <trans-unit id="39" approved="yes">
         <source>Выключить</source>
-        <target state="translated">The data has been saved!</target>
+        <target state="final">The data has been saved!</target>
       </trans-unit>
-      <trans-unit id="40">
+      <trans-unit id="40" approved="yes">
         <source>Случайно</source>
-        <target state="translated">template</target>
+        <target state="final">template</target>
       </trans-unit>
-      <trans-unit id="41">
+      <trans-unit id="41" approved="yes">
         <source>Следующие параметры будут учитываться:</source>
-        <target state="translated">template</target>
+        <target state="final">template</target>
       </trans-unit>
-      <trans-unit id="42">
+      <trans-unit id="42" approved="yes">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="translated">templates</target>
+        <target state="final">templates</target>
       </trans-unit>
-      <trans-unit id="43">
+      <trans-unit id="43" approved="yes">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target state="translated">Title</target>
+        <target state="final">Title</target>
       </trans-unit>
-      <trans-unit id="44">
+      <trans-unit id="44" approved="yes">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target state="translated">Is it on?</target>
+        <target state="final">Is it on?</target>
       </trans-unit>
       <trans-unit id="45">
         <source>Публиковать на главной</source>
@@ -222,29 +222,29 @@
         <source>Сохранить</source>
         <target state="translated">The name of the template cannot be empty</target>
       </trans-unit>
-      <trans-unit id="56">
+      <trans-unit id="56" approved="yes">
         <source>Всё отлично!</source>
-        <target state="translated">An author can't be blank</target>
+        <target state="final">An author can't be blank</target>
       </trans-unit>
-      <trans-unit id="57">
+      <trans-unit id="57" approved="yes">
         <source>Данные были сохранены!</source>
-        <target state="translated">The header cannot be blank</target>
+        <target state="final">The header cannot be blank</target>
       </trans-unit>
-      <trans-unit id="58">
+      <trans-unit id="58" approved="yes">
         <source>шаблон</source>
-        <target state="translated">A category cannot be empty</target>
+        <target state="final">A category cannot be empty</target>
       </trans-unit>
       <trans-unit id="59">
         <source>Название</source>
         <target state="translated">A short description can't be empty</target>
       </trans-unit>
-      <trans-unit id="60">
+      <trans-unit id="60" approved="yes">
         <source>Включён?</source>
-        <target state="translated">The template was successfully created</target>
+        <target state="final">The template was successfully created</target>
       </trans-unit>
-      <trans-unit id="61">
+      <trans-unit id="61" approved="yes">
         <source>Выбор действия</source>
-        <target state="translated">There is no such template!</target>
+        <target state="final">There is no such template!</target>
       </trans-unit>
       <trans-unit id="62">
         <source>Изменить</source>
@@ -334,25 +334,25 @@
         <source>Случайный псевдоним, пример: coolcat123</source>
         <target state="translated">Random alias, example: coolcat123</target>
       </trans-unit>
-      <trans-unit id="84">
+      <trans-unit id="84" approved="yes">
         <source>Полное имя, пример: Проф. Артём Волков</source>
-        <target state="translated">Full name, example: Prof. Artyom Volkov</target>
+        <target state="final">Full name, example: Prof. Artyom Volkov</target>
       </trans-unit>
-      <trans-unit id="85">
+      <trans-unit id="85" approved="yes">
         <source>Имя, пример: Артём</source>
-        <target state="translated">Name, example: Artyom</target>
+        <target state="final">Name, example: Artyom</target>
       </trans-unit>
-      <trans-unit id="86">
+      <trans-unit id="86" approved="yes">
         <source>Мужское имя, пример: Артём</source>
-        <target state="translated">Male name, example: Artyom</target>
+        <target state="final">Male name, example: Artyom</target>
       </trans-unit>
       <trans-unit id="87">
         <source>Женское имя, пример: Анна</source>
         <target state="translated">Female name, example: Anna</target>
       </trans-unit>
-      <trans-unit id="88">
+      <trans-unit id="88" approved="yes">
         <source>Фамилия, пример: Волков</source>
-        <target state="translated">Surname, example: Volkov</target>
+        <target state="final">Surname, example: Volkov</target>
       </trans-unit>
       <trans-unit id="89">
         <source>Суффикс, пример: Мл.</source>
@@ -422,9 +422,9 @@
         <source>Болгарский [Bulgarian (Bulgaria)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Bulgarian [Bulgarian (Bulgaria)]</target>
       </trans-unit>
-      <trans-unit id="106">
+      <trans-unit id="106" approved="yes">
         <source>Бангла [Bangla (Bangladesh)]</source>
-        <target state="translated">Bangla [Bangladesh]</target>
+        <target state="final">Bangla [Bangladesh]</target>
       </trans-unit>
       <trans-unit id="107">
         <source>Чешский [Czech (Czech Republic)]</source>
@@ -508,7 +508,7 @@
       </trans-unit>
       <trans-unit id="127">
         <source>Испанский [Spanish (Peru)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Spanish [Spanish (Peru)].</target>
+        <target state="translated">Spanish [Spanish (Peru)]</target>
       </trans-unit>
       <trans-unit id="128">
         <source>Испанский [Spanish (Venezuela)]</source>
@@ -620,7 +620,7 @@
       </trans-unit>
       <trans-unit id="155">
         <source>Словенский [Slovenian (Slovenia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Slovenian [Slovenian (Slovenia)].</target>
+        <target state="translated">Slovenian [Slovenian (Slovenia)]</target>
       </trans-unit>
       <trans-unit id="156">
         <source>Сербский [Serbian (Serbia)]</source>
@@ -782,13 +782,13 @@
         <source>Генерирует случайное значение да или нет (true / false)</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random yes or no value (true / false)</target>
       </trans-unit>
-      <trans-unit id="196">
+      <trans-unit id="196" approved="yes">
         <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random integer containing 0 to nums digits.</target>
+        <target state="final">Generates a random integer containing 0 to nums digits.</target>
       </trans-unit>
-      <trans-unit id="197">
+      <trans-unit id="197" approved="yes">
         <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">When the strict parameter is set to true, the function will only return integers containing exactly nums digits.</target>
+        <target state="final">When the "strict" parameter is set to true, the function will only return integers containing exactly "nums" digits.</target>
       </trans-unit>
       <trans-unit id="198">
         <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
@@ -798,13 +798,13 @@
         <source>Параметр float отвечает за количество десятичных знаков.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">The float parameter is responsible for the number of decimal places.</target>
       </trans-unit>
-      <trans-unit id="200">
+      <trans-unit id="200" approved="yes">
         <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random integer in the range from min to max. By default, a number between 0 and 2,147,483,647 is generated.</target>
+        <target state="final">Generates a random integer in the range from min to max. By default, a number between 0 and 2,147,483,647 is generated.</target>
       </trans-unit>
-      <trans-unit id="201">
+      <trans-unit id="201" approved="yes">
         <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Returns a random element from the given array, iterated object or enumeration. By default, the $count parameter is set to 1, and if null is passed, a random number of elements is returned.&lt;br&gt;The array must be simple without additional quotation marks.</target>
+        <target state="final">Returns a random element from the given array, iterated object or enumeration. By default, the $count parameter is set to 1, and if null is passed, a random number of elements is returned.&lt;br&gt;The array must be simple without additional quotation marks.</target>
       </trans-unit>
       <trans-unit id="202">
         <source>Параметр count установлен в 1, а если передано значение null, возвращается случайное количество элементов.</source>
