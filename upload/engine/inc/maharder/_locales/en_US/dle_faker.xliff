@@ -402,385 +402,385 @@
         <source>Параметр min задаёт нижнюю границу.</source>
         <target state="translated">The min parameter sets the lower limit.</target>
       </trans-unit>
-      <trans-unit id="101">
+      <trans-unit id="101" approved="yes">
         <source>Параметр max задаёт верхнюю границу.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The max parameter sets the upper limit.</target>
+        <target state="final">The max parameter sets the upper limit.</target>
       </trans-unit>
-      <trans-unit id="102">
+      <trans-unit id="102" approved="yes">
         <source>Генерирует случайный символ из алфавита.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random character from the alphabet.</target>
+        <target state="final">Generates a random character from the alphabet.</target>
       </trans-unit>
-      <trans-unit id="103">
+      <trans-unit id="103" approved="yes">
         <source>Как админка MH Admin</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Like the MH Admin</target>
+        <target state="final">Like the MH Admin</target>
       </trans-unit>
-      <trans-unit id="104">
+      <trans-unit id="104" approved="yes">
         <source>Арабский [Arabic (Saudi Arabia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Arabic [Arabic (Saudi Arabia)</target>
+        <target state="final">Arabic [Arabic (Saudi Arabia)</target>
       </trans-unit>
-      <trans-unit id="105">
+      <trans-unit id="105" approved="yes">
         <source>Болгарский [Bulgarian (Bulgaria)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Bulgarian [Bulgarian (Bulgaria)]</target>
+        <target state="final">Bulgarian [Bulgarian (Bulgaria)]</target>
       </trans-unit>
       <trans-unit id="106" approved="yes">
         <source>Бангла [Bangla (Bangladesh)]</source>
         <target state="final">Bangla [Bangladesh]</target>
       </trans-unit>
-      <trans-unit id="107">
+      <trans-unit id="107" approved="yes">
         <source>Чешский [Czech (Czech Republic)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Czech [Czech (Czech Republic)</target>
+        <target state="final">Czech [Czech (Czech Republic)</target>
       </trans-unit>
-      <trans-unit id="108">
+      <trans-unit id="108" approved="yes">
         <source>Датский [Danish (Denmark)]</source>
-        <target state="translated">Danish [Danish (Denmark)]</target>
+        <target state="final">Danish [Danish (Denmark)]</target>
       </trans-unit>
-      <trans-unit id="109">
+      <trans-unit id="109" approved="yes">
         <source>Немецкий [German (Austria)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">German [German (Austria)</target>
+        <target state="final">German [German (Austria)</target>
       </trans-unit>
-      <trans-unit id="110">
+      <trans-unit id="110" approved="yes">
         <source>Немецкий [German (Switzerland)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">German [German (Switzerland)</target>
+        <target state="final">German [German (Switzerland)</target>
       </trans-unit>
-      <trans-unit id="111">
+      <trans-unit id="111" approved="yes">
         <source>Немецкий [German (Germany)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">German [German (Germany)</target>
+        <target state="final">German [German (Germany)</target>
       </trans-unit>
-      <trans-unit id="112">
+      <trans-unit id="112" approved="yes">
         <source>Греческий [Greek (Cyprus)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Greek [Greek (Cyprus)</target>
+        <target state="final">Greek [Greek (Cyprus)</target>
       </trans-unit>
-      <trans-unit id="113">
+      <trans-unit id="113" approved="yes">
         <source>Греческий [Greek (Greece)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Greek [Greek (Greece)]</target>
+        <target state="final">Greek [Greek (Greece)]</target>
       </trans-unit>
-      <trans-unit id="114">
+      <trans-unit id="114" approved="yes">
         <source>Английский [English (Australia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Australia)</target>
+        <target state="final">English [English (Australia)</target>
       </trans-unit>
-      <trans-unit id="115">
+      <trans-unit id="115" approved="yes">
         <source>Английский [English (Canada)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Canada)]</target>
+        <target state="final">English [English (Canada)]</target>
       </trans-unit>
-      <trans-unit id="116">
+      <trans-unit id="116" approved="yes">
         <source>Английский [English (United Kingdom)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (United Kingdom)]</target>
+        <target state="final">English [English (United Kingdom)]</target>
       </trans-unit>
-      <trans-unit id="117">
+      <trans-unit id="117" approved="yes">
         <source>Английский [English (Hong Kong SAR China)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Hong Kong SAR China)]</target>
+        <target state="final">English [English (Hong Kong SAR China)]</target>
       </trans-unit>
-      <trans-unit id="118">
+      <trans-unit id="118" approved="yes">
         <source>Английский [English (India)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (India)</target>
+        <target state="final">English [English (India)</target>
       </trans-unit>
-      <trans-unit id="119">
+      <trans-unit id="119" approved="yes">
         <source>Английский [English (Nigeria)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Nigeria)</target>
+        <target state="final">English [English (Nigeria)</target>
       </trans-unit>
-      <trans-unit id="120">
+      <trans-unit id="120" approved="yes">
         <source>Английский [English (New Zealand)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (New Zealand)</target>
+        <target state="final">English [English (New Zealand)</target>
       </trans-unit>
-      <trans-unit id="121">
+      <trans-unit id="121" approved="yes">
         <source>Английский [English (Philippines)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Philippines)]</target>
+        <target state="final">English [English (Philippines)]</target>
       </trans-unit>
-      <trans-unit id="122">
+      <trans-unit id="122" approved="yes">
         <source>Английский [English (Singapore)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Singapore)]</target>
+        <target state="final">English [English (Singapore)]</target>
       </trans-unit>
-      <trans-unit id="123">
+      <trans-unit id="123" approved="yes">
         <source>Английский [English (Uganda)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (Uganda)</target>
+        <target state="final">English [English (Uganda)</target>
       </trans-unit>
-      <trans-unit id="124">
+      <trans-unit id="124" approved="yes">
         <source>Английский [English (United States)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (United States)]</target>
+        <target state="final">English [English (United States)]</target>
       </trans-unit>
-      <trans-unit id="125">
+      <trans-unit id="125" approved="yes">
         <source>Английский [English (South Africa)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">English [English (South Africa)</target>
+        <target state="final">English [English (South Africa)</target>
       </trans-unit>
-      <trans-unit id="126">
+      <trans-unit id="126" approved="yes">
         <source>Испанский [Spanish (Spain)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Spanish [Spanish (Spain)]</target>
+        <target state="final">Spanish [Spanish (Spain)]</target>
       </trans-unit>
-      <trans-unit id="127">
+      <trans-unit id="127" approved="yes">
         <source>Испанский [Spanish (Peru)]</source>
-        <target state="translated">Spanish [Spanish (Peru)]</target>
+        <target state="final">Spanish [Spanish (Peru)]</target>
       </trans-unit>
-      <trans-unit id="128">
+      <trans-unit id="128" approved="yes">
         <source>Испанский [Spanish (Venezuela)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Spanish [Spanish (Venezuela)]</target>
+        <target state="final">Spanish [Spanish (Venezuela)]</target>
       </trans-unit>
-      <trans-unit id="129">
+      <trans-unit id="129" approved="yes">
         <source>Персидский [Persian (Iran)]</source>
-        <target state="translated">Persian [Persian (Iran)]</target>
+        <target state="final">Persian [Persian (Iran)]</target>
       </trans-unit>
-      <trans-unit id="130">
+      <trans-unit id="130" approved="yes">
         <source>Финский [Finnish (Finland)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Finnish [Finnish (Finland)]</target>
+        <target state="final">Finnish [Finnish (Finland)]</target>
       </trans-unit>
-      <trans-unit id="131">
+      <trans-unit id="131" approved="yes">
         <source>Французский [French (Belgium)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">French [French (Belgium)]</target>
+        <target state="final">French [French (Belgium)]</target>
       </trans-unit>
-      <trans-unit id="132">
+      <trans-unit id="132" approved="yes">
         <source>Французский [French (Canada)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">French [French (Canada)]</target>
+        <target state="final">French [French (Canada)]</target>
       </trans-unit>
-      <trans-unit id="133">
+      <trans-unit id="133" approved="yes">
         <source>Французский [French (Switzerland)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">French [French (Switzerland)</target>
+        <target state="final">French [French (Switzerland)</target>
       </trans-unit>
-      <trans-unit id="134">
+      <trans-unit id="134" approved="yes">
         <source>Французский [French (France)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">French [French (France)]</target>
+        <target state="final">French [French (France)]</target>
       </trans-unit>
-      <trans-unit id="135">
+      <trans-unit id="135" approved="yes">
         <source>Иврит [Hebrew (Israel)]</source>
-        <target state="translated">Hebrew [Hebrew (Israel)]</target>
+        <target state="final">Hebrew [Hebrew (Israel)]</target>
       </trans-unit>
-      <trans-unit id="136">
+      <trans-unit id="136" approved="yes">
         <source>Хорватский [Croatian (Croatia)]</source>
-        <target state="translated">Croatian [Croatian (Croatia)]</target>
+        <target state="final">Croatian [Croatian (Croatia)]</target>
       </trans-unit>
-      <trans-unit id="137">
+      <trans-unit id="137" approved="yes">
         <source>Венгерский [Hungarian (Hungary)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Hungarian [Hungarian (Hungary)]</target>
+        <target state="final">Hungarian [Hungarian (Hungary)]</target>
       </trans-unit>
-      <trans-unit id="138">
+      <trans-unit id="138" approved="yes">
         <source>Индонезийский [Indonesian (Indonesia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Indonesian [Indonesian (Indonesia)]</target>
+        <target state="final">Indonesian [Indonesian (Indonesia)]</target>
       </trans-unit>
-      <trans-unit id="139">
+      <trans-unit id="139" approved="yes">
         <source>Исландский [Icelandic (Iceland)]</source>
-        <target state="translated">Icelandic [Icelandic (Iceland)]</target>
+        <target state="final">Icelandic [Icelandic (Iceland)]</target>
       </trans-unit>
-      <trans-unit id="140">
+      <trans-unit id="140" approved="yes">
         <source>Итальянский [Italian (Switzerland)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Italian [Italian (Switzerland)]</target>
+        <target state="final">Italian [Italian (Switzerland)]</target>
       </trans-unit>
-      <trans-unit id="141">
+      <trans-unit id="141" approved="yes">
         <source>Итальянский [Italian (Italy)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Italian [Italian (Italy)]</target>
+        <target state="final">Italian [Italian (Italy)]</target>
       </trans-unit>
-      <trans-unit id="142">
+      <trans-unit id="142" approved="yes">
         <source>Японский [Japanese (Japan)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Japanese [Japanese (Japan)]</target>
+        <target state="final">Japanese [Japanese (Japan)]</target>
       </trans-unit>
-      <trans-unit id="143">
+      <trans-unit id="143" approved="yes">
         <source>Корейский [Korean (South Korea)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Korean [Korean (South Korea)]</target>
+        <target state="final">Korean [Korean (South Korea)]</target>
       </trans-unit>
-      <trans-unit id="144">
+      <trans-unit id="144" approved="yes">
         <source>Литовский [Lithuanian (Lithuania)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Lithuanian [Lithuanian (Lithuania)]</target>
+        <target state="final">Lithuanian [Lithuanian (Lithuania)]</target>
       </trans-unit>
-      <trans-unit id="145">
+      <trans-unit id="145" approved="yes">
         <source>Латышский [Latvian (Latvia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Latvian [Latvian (Latvia)]</target>
+        <target state="final">Latvian [Latvian (Latvia)]</target>
       </trans-unit>
-      <trans-unit id="146">
+      <trans-unit id="146" approved="yes">
         <source>Норвежский [Norwegian (Norway)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Norwegian [Norwegian (Norway)]</target>
+        <target state="final">Norwegian [Norwegian (Norway)]</target>
       </trans-unit>
-      <trans-unit id="147">
+      <trans-unit id="147" approved="yes">
         <source>Голландский [Dutch (Belgium)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dutch [Dutch (Belgium)]</target>
+        <target state="final">Dutch [Dutch (Belgium)]</target>
       </trans-unit>
-      <trans-unit id="148">
+      <trans-unit id="148" approved="yes">
         <source>Голландский [Dutch (Netherlands)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Dutch [Dutch (Netherlands)</target>
+        <target state="final">Dutch [Dutch (Netherlands)</target>
       </trans-unit>
-      <trans-unit id="149">
+      <trans-unit id="149" approved="yes">
         <source>Польский [Polish (Poland)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Polish [Polish (Poland)</target>
+        <target state="final">Polish [Polish (Poland)</target>
       </trans-unit>
-      <trans-unit id="150">
+      <trans-unit id="150" approved="yes">
         <source>Португальский [Portuguese (Brazil)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Portuguese [Portuguese (Brazil)</target>
+        <target state="final">Portuguese [Portuguese (Brazil)</target>
       </trans-unit>
-      <trans-unit id="151">
+      <trans-unit id="151" approved="yes">
         <source>Португальский [Portuguese (Portugal)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Portuguese [Portuguese (Portugal)</target>
+        <target state="final">Portuguese [Portuguese (Portugal)</target>
       </trans-unit>
-      <trans-unit id="152">
+      <trans-unit id="152" approved="yes">
         <source>Румынский [Romanian (Romania)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Romanian [Romanian (Romania)</target>
+        <target state="final">Romanian [Romanian (Romania)</target>
       </trans-unit>
-      <trans-unit id="153">
+      <trans-unit id="153" approved="yes">
         <source>Русский [Russian (Russia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Russian [Russian (Russia)</target>
+        <target state="final">Russian [Russian (Russia)</target>
       </trans-unit>
-      <trans-unit id="154">
+      <trans-unit id="154" approved="yes">
         <source>Словацкий [Slovak (Slovakia)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Slovak [Slovak (Slovakia)</target>
+        <target state="final">Slovak [Slovak (Slovakia)</target>
       </trans-unit>
-      <trans-unit id="155">
+      <trans-unit id="155" approved="yes">
         <source>Словенский [Slovenian (Slovenia)]</source>
-        <target state="translated">Slovenian [Slovenian (Slovenia)]</target>
+        <target state="final">Slovenian [Slovenian (Slovenia)]</target>
       </trans-unit>
-      <trans-unit id="156">
+      <trans-unit id="156" approved="yes">
         <source>Сербский [Serbian (Serbia)]</source>
-        <target state="translated">Serbian [Serbian (Serbia)]</target>
+        <target state="final">Serbian [Serbian (Serbia)]</target>
       </trans-unit>
-      <trans-unit id="157">
+      <trans-unit id="157" approved="yes">
         <source>Шведский [Swedish (Sweden)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Swedish [Swedish (Sweden)</target>
+        <target state="final">Swedish [Swedish (Sweden)</target>
       </trans-unit>
-      <trans-unit id="158">
+      <trans-unit id="158" approved="yes">
         <source>Турецкий [Turkish (Turkey)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Turkish [Turkish (Turkey)</target>
+        <target state="final">Turkish [Turkish (Turkey)</target>
       </trans-unit>
-      <trans-unit id="159">
+      <trans-unit id="159" approved="yes">
         <source>Украинский [Ukrainian (Ukraine)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ukrainian [Ukrainian (Ukraine)</target>
+        <target state="final">Ukrainian [Ukrainian (Ukraine)</target>
       </trans-unit>
-      <trans-unit id="160">
+      <trans-unit id="160" approved="yes">
         <source>Вьетнамский [Vietnamese (Vietnam)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vietnamese [Vietnamese (Vietnam)]</target>
+        <target state="final">Vietnamese [Vietnamese (Vietnam)]</target>
       </trans-unit>
-      <trans-unit id="161">
+      <trans-unit id="161" approved="yes">
         <source>Китайский [Chinese (Simplified, China)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Chinese [Chinese (Simplified, China)]</target>
+        <target state="final">Chinese [Chinese (Simplified, China)]</target>
       </trans-unit>
-      <trans-unit id="162">
+      <trans-unit id="162" approved="yes">
         <source>Китайский [Chinese (Traditional, Taiwan)]</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Chinese [Chinese (Traditional, Taiwan)]</target>
+        <target state="final">Chinese [Chinese (Traditional, Taiwan)]</target>
       </trans-unit>
-      <trans-unit id="163">
+      <trans-unit id="163" approved="yes">
         <source>Шаблоны</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Templates</target>
+        <target state="final">Templates</target>
       </trans-unit>
-      <trans-unit id="164">
+      <trans-unit id="164" approved="yes">
         <source>Активные</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Active</target>
+        <target state="final">Active</target>
       </trans-unit>
-      <trans-unit id="165">
+      <trans-unit id="165" approved="yes">
         <source>Создание нового шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Creating a new template</target>
+        <target state="final">Creating a new template</target>
       </trans-unit>
-      <trans-unit id="166">
+      <trans-unit id="166" approved="yes">
         <source>Доступные генераторы</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Available generators</target>
+        <target state="final">Available generators</target>
       </trans-unit>
-      <trans-unit id="167">
+      <trans-unit id="167" approved="yes">
         <source>Настройки модуля</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Module settings</target>
+        <target state="final">Module settings</target>
       </trans-unit>
-      <trans-unit id="168">
+      <trans-unit id="168" approved="yes">
         <source>Основной релиз</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Main release</target>
+        <target state="final">Main release</target>
       </trans-unit>
-      <trans-unit id="169">
+      <trans-unit id="169" approved="yes">
         <source>История изменений</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Change history</target>
+        <target state="final">Change history</target>
       </trans-unit>
-      <trans-unit id="170">
+      <trans-unit id="170" approved="yes">
         <source>Перечень тегов для генерации данных</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">List of tags for data generation</target>
+        <target state="final">List of tags for data generation</target>
       </trans-unit>
-      <trans-unit id="171">
+      <trans-unit id="171" approved="yes">
         <source>Генерирует случайные данные для наполнения сайта</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates random data to populate the site</target>
+        <target state="final">Generates random data to populate the site</target>
       </trans-unit>
-      <trans-unit id="172">
+      <trans-unit id="172" approved="yes">
         <source>Генератор</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generator</target>
+        <target state="final">Generator</target>
       </trans-unit>
-      <trans-unit id="173">
+      <trans-unit id="173" approved="yes">
         <source>Теги</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Tags</target>
+        <target state="final">Tags</target>
       </trans-unit>
-      <trans-unit id="174">
+      <trans-unit id="174" approved="yes">
         <source>Нужно указать хотя бы одного пользователя!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">You have to specify at least one user!</target>
+        <target state="final">You have to specify at least one user!</target>
       </trans-unit>
-      <trans-unit id="175">
+      <trans-unit id="175" approved="yes">
         <source>Нужно указать хотя бы одну категорию!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">You have to specify at least one category!</target>
+        <target state="final">You have to specify at least one category!</target>
       </trans-unit>
-      <trans-unit id="176">
+      <trans-unit id="176" approved="yes">
         <source>Настройки сохранены</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Settings saved</target>
+        <target state="final">Settings saved</target>
       </trans-unit>
-      <trans-unit id="177">
+      <trans-unit id="177" approved="yes">
         <source>Ошибка в сохранении настроек</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Error in saving settings</target>
+        <target state="final">Error in saving settings</target>
       </trans-unit>
-      <trans-unit id="178">
+      <trans-unit id="178" approved="yes">
         <source>Шаблон для псевдонима не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template for an alias cannot be blank</target>
+        <target state="final">The template for an alias cannot be blank</target>
       </trans-unit>
-      <trans-unit id="179">
+      <trans-unit id="179" approved="yes">
         <source>Шаблон для электронной почты не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The email template cannot be blank</target>
+        <target state="final">The email template cannot be blank</target>
       </trans-unit>
-      <trans-unit id="180">
+      <trans-unit id="180" approved="yes">
         <source>Шаблон для пароля не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template for the password cannot be empty</target>
+        <target state="final">The template for the password cannot be empty</target>
       </trans-unit>
-      <trans-unit id="181">
+      <trans-unit id="181" approved="yes">
         <source>Пользователь не был найден!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The user was not found!</target>
+        <target state="final">The user was not found!</target>
       </trans-unit>
-      <trans-unit id="182">
+      <trans-unit id="182" approved="yes">
         <source>Название шаблона не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The name of the template cannot be empty</target>
+        <target state="final">The name of the template cannot be empty</target>
       </trans-unit>
-      <trans-unit id="183">
+      <trans-unit id="183" approved="yes">
         <source>Автор не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">An author can't be blank</target>
+        <target state="final">An author can't be blank</target>
       </trans-unit>
-      <trans-unit id="184">
+      <trans-unit id="184" approved="yes">
         <source>Заголовок не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The header cannot be blank</target>
+        <target state="final">The header cannot be blank</target>
       </trans-unit>
-      <trans-unit id="185">
+      <trans-unit id="185" approved="yes">
         <source>Категория не может быть пустой</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">A category cannot be empty</target>
+        <target state="final">A category cannot be empty</target>
       </trans-unit>
-      <trans-unit id="186">
+      <trans-unit id="186" approved="yes">
         <source>Короткое описание не может быть пустой</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">A short description can't be empty</target>
+        <target state="final">A short description can't be empty</target>
       </trans-unit>
-      <trans-unit id="187">
+      <trans-unit id="187" approved="yes">
         <source>Шаблон успешно изменен</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template has been successfully modified</target>
+        <target state="final">The template has been successfully modified</target>
       </trans-unit>
-      <trans-unit id="188">
+      <trans-unit id="188" approved="yes">
         <source>Шаблон успешно создан</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template was successfully created</target>
+        <target state="final">The template was successfully created</target>
       </trans-unit>
-      <trans-unit id="189">
+      <trans-unit id="189" approved="yes">
         <source>Такого шаблона не существует!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">There is no such template!</target>
+        <target state="final">There is no such template!</target>
       </trans-unit>
-      <trans-unit id="190">
+      <trans-unit id="190" approved="yes">
         <source>Шаблон был включён</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template was included</target>
+        <target state="final">The template was included</target>
       </trans-unit>
-      <trans-unit id="191">
+      <trans-unit id="191" approved="yes">
         <source>Шаблон не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The template cannot be empty</target>
+        <target state="final">The template cannot be empty</target>
       </trans-unit>
-      <trans-unit id="192">
+      <trans-unit id="192" approved="yes">
         <source>Такого шаблона не существует</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">There is no such template</target>
+        <target state="final">There is no such template</target>
       </trans-unit>
-      <trans-unit id="193">
+      <trans-unit id="193" approved="yes">
         <source>Страница %page%</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Page %page%</target>
+        <target state="final">Page %page%</target>
       </trans-unit>
-      <trans-unit id="194">
+      <trans-unit id="194" approved="yes">
         <source>Редактирование шаблона: :name</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Template edit: :name</target>
+        <target state="final">Template edit: :name</target>
       </trans-unit>
-      <trans-unit id="195">
+      <trans-unit id="195" approved="yes">
         <source>Генерирует случайное значение да или нет (true / false)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random yes or no value (true / false)</target>
+        <target state="final">Generates a random yes or no value (true / false)</target>
       </trans-unit>
       <trans-unit id="196" approved="yes">
         <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
@@ -790,13 +790,13 @@
         <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
         <target state="final">When the "strict" parameter is set to true, the function will only return integers containing exactly "nums" digits.</target>
       </trans-unit>
-      <trans-unit id="198">
+      <trans-unit id="198" approved="yes">
         <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random integer from 0 to 9, excluding the given number.</target>
+        <target state="final">Generates a random integer from 0 to 9, excluding the given number.</target>
       </trans-unit>
-      <trans-unit id="199">
+      <trans-unit id="199" approved="yes">
         <source>Параметр float отвечает за количество десятичных знаков.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The float parameter is responsible for the number of decimal places.</target>
+        <target state="final">The float parameter is responsible for the number of decimal places.</target>
       </trans-unit>
       <trans-unit id="200" approved="yes">
         <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
@@ -806,53 +806,53 @@
         <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
         <target state="final">Returns a random element from the given array, iterated object or enumeration. By default, the $count parameter is set to 1, and if null is passed, a random number of elements is returned.&lt;br&gt;The array must be simple without additional quotation marks.</target>
       </trans-unit>
-      <trans-unit id="202">
+      <trans-unit id="202" approved="yes">
         <source>Параметр count установлен в 1, а если передано значение null, возвращается случайное количество элементов.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The count parameter is set to 1, and if passed a value of null, a random number of items is returned.</target>
+        <target state="final">The count parameter is set to 1, and if passed a value of null, a random number of items is returned.</target>
       </trans-unit>
-      <trans-unit id="203">
+      <trans-unit id="203" approved="yes">
         <source>Параметр connector установлен на _. Он отвечает за объединение элементов списка.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The connector parameter is set to _. It is responsible for connecting the list elements.</target>
+        <target state="final">The connector parameter is set to _. It is responsible for connecting the list elements.</target>
       </trans-unit>
-      <trans-unit id="204">
+      <trans-unit id="204" approved="yes">
         <source>Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Selects a random user specified in the settings. There are no default settings, so you must save them!</target>
+        <target state="final">Selects a random user specified in the settings. There are no default settings, so you must save them!</target>
       </trans-unit>
-      <trans-unit id="205">
+      <trans-unit id="205" approved="yes">
         <source>Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Selects a random category specified in the settings. There are no default settings, so you need to save them!</target>
+        <target state="final">Selects a random category specified in the settings. There are no default settings, so you need to save them!</target>
       </trans-unit>
-      <trans-unit id="206">
+      <trans-unit id="206" approved="yes">
         <source>Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a string containing random sentences. The max parameter sets the number of</target>
+        <target state="final">Generates a string containing random sentences. The max parameter sets the number of</target>
       </trans-unit>
-      <trans-unit id="207">
+      <trans-unit id="207" approved="yes">
         <source>Генерирует абзац текста, содержащий заданное количество предложений. По умолчанию генерируется 3 предложения.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a paragraph of text containing the specified number of sentences. By default, 3 sentences are generated.</target>
+        <target state="final">Generates a paragraph of text containing the specified number of sentences. By default, 3 sentences are generated.</target>
       </trans-unit>
-      <trans-unit id="208">
+      <trans-unit id="208" approved="yes">
         <source>Параметр max указывает сколько предложений генерировать. По умолчанию: 3</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">The max parameter specifies how many sentences to generate. Default: 3</target>
+        <target state="final">The max parameter specifies how many sentences to generate. Default: 3</target>
       </trans-unit>
-      <trans-unit id="209">
+      <trans-unit id="209" approved="yes">
         <source>Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random text string. The first parameter specifies the maximum number of characters the string should contain (default is 200).</target>
+        <target state="final">Generates a random text string. The first parameter specifies the maximum number of characters the string should contain (default is 200).</target>
       </trans-unit>
-      <trans-unit id="210">
+      <trans-unit id="210" approved="yes">
         <source>Генерирует случайную дату и время со своим форматированием.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Generates a random date and time with its own formatting.</target>
+        <target state="final">Generates a random date and time with its own formatting.</target>
       </trans-unit>
-      <trans-unit id="211">
+      <trans-unit id="211" approved="yes">
         <source>Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Address, example: Mistress or Girl. There is no equivalent in Russian for Ms. or Mrs.</target>
+        <target state="final">Address, example: Mistress or Girl. There is no equivalent in Russian for Ms. or Mrs.</target>
       </trans-unit>
-      <trans-unit id="212">
+      <trans-unit id="212" approved="yes">
         <source>Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Feminine address, example: Mistress or Girl. There is no equivalent in Russian for Ms. or Mrs.</target>
+        <target state="final">Feminine address, example: Mistress or Girl. There is no equivalent in Russian for Ms. or Mrs.</target>
       </trans-unit>
-      <trans-unit id="213">
+      <trans-unit id="213" approved="yes">
         <source>Случайная электронная почта, пример: walter.sophia@hotmail.com. Связи с именем никакой нет!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Random email, example: walter.sophia@hotmail.com. There is no connection to the name!</target>
+        <target state="final">Random email, example: walter.sophia@hotmail.com. There is no connection to the name!</target>
       </trans-unit>
     </body>
   </file>
