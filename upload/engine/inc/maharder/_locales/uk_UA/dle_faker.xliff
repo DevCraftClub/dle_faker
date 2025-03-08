@@ -2,9 +2,9 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file original="dle_faker.ru_RU" datatype="plaintext" source-language="ru" target-language="uk">
     <body>
-      <trans-unit id="1" approved="yes">
+      <trans-unit id="1">
         <source>Псевдоним пользователя</source>
-        <target state="final">Назва шаблону</target>
+        <target state="translated">Назва шаблону</target>
       </trans-unit>
       <trans-unit id="2" approved="yes">
         <source>Полное имя пользователя</source>
