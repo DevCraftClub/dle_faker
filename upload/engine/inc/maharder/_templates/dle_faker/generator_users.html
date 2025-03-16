@@ -11,12 +11,12 @@
         <div class="ui four column grid">
             {% autoescape 'html' %}
 
-            {{ input('name', 'Псевдоним пользователя'|trans, 'Выберите откуда генерировать псевдоним пользователя. Имя будет преобразовано в латиницу. Используйте теги.', {name: '{{ userName }}'}) }}
-            {{ input('full_name', 'Полное имя пользователя'|trans, 'Выберите откуда генерировать полное имя пользователя. Используйте теги.', {full_name: '{{ name }}'}) }}
-            {{ input('email', 'Электронная почта пользователя'|trans, 'Выберите откуда генерировать электронную почту пользователя. Используйте теги.', {email: '{{ firstName }}.{{ lastName }}@example.com'}) }}
-            {{ multi('usergroup', 'Группа пользователя'|trans, 'Выберите какие группы использовать, куда определять пользователя', {}, usergroups) }}
-            {{ input('password', 'Пароль'|trans, 'Установите пароль для пользователей', {password: '123456789!Aa'}) }}
-            {{ number('count', 'Кол-во пользователей'|trans, 'Укажите кол-во пользователей, которые будут сгенерированы', {count: 10}) }}
+            {{ input('name', 'Псевдоним пользователя'|trans, 'Выберите откуда генерировать псевдоним пользователя. Имя будет преобразовано в латиницу. Используйте теги.'|trans, {name: '{{ userName }}'}) }}
+            {{ input('full_name', 'Полное имя пользователя'|trans, 'Выберите откуда генерировать полное имя пользователя. Используйте теги.'|trans, {full_name: '{{ name }}'}) }}
+            {{ input('email', 'Электронная почта пользователя'|trans, 'Выберите откуда генерировать электронную почту пользователя. Используйте теги.'|trans, {email: '{{ firstName }}.{{ lastName }}@example.com'}) }}
+            {{ multi('usergroup', 'Группа пользователя'|trans, 'Выберите какие группы использовать, куда определять пользователя'|trans, {}, usergroups) }}
+            {{ input('password', 'Пароль'|trans, 'Установите пароль для пользователей'|trans, {password: '123456789!Aa'}) }}
+            {{ number('count', 'Кол-во пользователей'|trans, 'Укажите кол-во пользователей, которые будут сгенерированы'|trans, {count: 10}) }}
 
             {% endautoescape %}
         </div>
@@ -159,14 +159,14 @@
 						try {
 							errorData = JSON.parse(errorResponse.responseText);
 						} catch (e) {
-							console.error('Ошибка при обработке ошибки AJAX:', e);
+							console.error(__('Ошибка при обработке ошибки AJAX:'), e);
 						}
 						console.error(errorData)
 						if (errorData) {
 							$('body').toast({
 								class: 'error',
 								title: errorData.message,
-								message: errorData.data?.join('<br>') || 'Неизвестная ошибка',
+								message: errorData.data?.join('<br>') || __('Неизвестная ошибка'),
 								showProgress: 'bottom'
 							});
 						}
