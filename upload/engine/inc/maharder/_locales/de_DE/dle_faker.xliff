@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="6">
         <source>Кол-во пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Anzahl der Benutzer</target>
+        <target state="translated">Füllen Sie die Vorlage mit Tags aus. Oder geben Sie die Autoren-ID an</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Генерировать</source>
@@ -32,7 +32,7 @@
       </trans-unit>
       <trans-unit id="8">
         <source>Сводка информации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zusammenfassung der Informationen</target>
+        <target state="translated">Füllen Sie mit Hilfe von Tags die Vorlage für die Schlagzeile der Nachricht aus.</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Кол-во объектов</source>
@@ -40,7 +40,7 @@
       </trans-unit>
       <trans-unit id="10">
         <source>Прогресс</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Fortschritt</target>
+        <target state="translated">Füllen Sie mit Hilfe von Tags die Vorlage für die Nachrichtenkategorie aus. Oder geben Sie Kategorie-IDs an</target>
       </trans-unit>
       <trans-unit id="11" approved="yes">
         <source>Ожидаем начала...</source>
@@ -60,11 +60,11 @@
       </trans-unit>
       <trans-unit id="15">
         <source>Обработано {value} из {total}</source>
-        <target state="translated">{value} von {total} verarbeitet</target>
+        <target state="translated">Zusammenfassung</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Название шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Name der Vorlage</target>
+        <target state="translated">Generieren Sie eine Beschreibung mit Hilfe der Generierungs-Tags</target>
       </trans-unit>
       <trans-unit id="17">
         <source>Укажите уникальное название для шаблона</source>
@@ -72,7 +72,7 @@
       </trans-unit>
       <trans-unit id="18">
         <source>Активировать шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vorlage aktivieren</target>
+        <target state="translated">Zusätzliches Feld:</target>
       </trans-unit>
       <trans-unit id="19">
         <source>Автор новости</source>
@@ -92,7 +92,7 @@
       </trans-unit>
       <trans-unit id="23">
         <source>Категория новости</source>
-        <target state="translated">Kategorie der Nachricht</target>
+        <target state="translated">Kategorie Nachrichten</target>
       </trans-unit>
       <trans-unit id="24" approved="yes">
         <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
@@ -108,11 +108,11 @@
       </trans-unit>
       <trans-unit id="27">
         <source>Дата публикации, начало (Альтернатива)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datum der Veröffentlichung, Beginn (Alternative)</target>
+        <target state="translated">Auf der Hauptseite veröffentlichen</target>
       </trans-unit>
       <trans-unit id="28">
         <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Geben Sie das Startdatum für den Zufallswert an. Wenn ein Wert angegeben wird, wird der obige Wert nicht berücksichtigt. Erlaubte Tags. Wenn die Tags nicht mit den eingegebenen übereinstimmen, ist dieses Feld ungültig.</target>
+        <target state="translated">Veröffentlichen Sie die Nachrichten auf der Website</target>
       </trans-unit>
       <trans-unit id="29">
         <source>Дата публикации, конец</source>
@@ -124,7 +124,7 @@
       </trans-unit>
       <trans-unit id="31">
         <source>Дата публикации, конец (Альтернатива)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Datum der Veröffentlichung, Ende (Alternative)</target>
+        <target state="translated">Artikelbewertung zulassen</target>
       </trans-unit>
       <trans-unit id="32" approved="yes">
         <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
@@ -144,7 +144,7 @@
       </trans-unit>
       <trans-unit id="36">
         <source>Дополнительное поле:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Zusätzliches Feld:</target>
+        <target state="translated">Verwendung in Yandex Zen</target>
       </trans-unit>
       <trans-unit id="37" approved="yes">
         <source>&lt;b class=&quot;ui warning text&quot;&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
@@ -164,7 +164,7 @@
       </trans-unit>
       <trans-unit id="41">
         <source>Следующие параметры будут учитываться:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Die folgenden Parameter werden berücksichtigt:</target>
+        <target state="translated">Vorlage</target>
       </trans-unit>
       <trans-unit id="42" approved="yes">
         <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
@@ -224,7 +224,7 @@
       </trans-unit>
       <trans-unit id="56">
         <source>Всё отлично!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Alles ist großartig!</target>
+        <target state="translated">Ein Autor kann nicht leer sein</target>
       </trans-unit>
       <trans-unit id="57" approved="yes">
         <source>Данные были сохранены!</source>
@@ -244,7 +244,7 @@
       </trans-unit>
       <trans-unit id="61">
         <source>Выбор действия</source>
-        <target state="translated">Aktion wählen</target>
+        <target state="translated">Eine solche Vorlage gibt es nicht!</target>
       </trans-unit>
       <trans-unit id="62">
         <source>Изменить</source>
