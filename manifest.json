@@ -1,12 +1,14 @@
 {
-	"version": "173.1.0",
-	"status": "dev",
+	"version": "180.1.2",
+	"status": "stable",
 	"dle": [
-		"17.x"
+		"17.x",
+		"18.0"
 	],
 	"php": [
 		"8.3"
 	],
 	"name": "DLE Faker",
-	"description": "Генератор фиктивных новостей на сайте"
+	"description": "Генератор фиктивных новостей на сайте",
+	"mhadmin": "180.3.5"
 }

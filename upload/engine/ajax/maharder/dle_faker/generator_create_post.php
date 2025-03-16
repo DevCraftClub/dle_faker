@@ -20,7 +20,7 @@ $inputData = filter_var_array($parsedData, $filter);
 
 if (!$inputData['template']) {
 	echo (new ErrorResponseAjax())
-		->setData([__('dle_faker', 'Шаблон не может быть пустым')])->setMeta(['template'])->send();
+		->setData([__('Шаблон не может быть пустым')])->setMeta(['template'])->send();
 	exit;
 }
 if (!$inputData['count']) $inputData['count'] = 1;
@@ -29,13 +29,23 @@ try {
 	$templateData = $MHDB->get(FakerTemplate::class, $inputData['template']);
 
 	if (!$templateData) {
-		echo (new ErrorResponseAjax(404))->setData([__('dle_faker', 'Такого шаблона не существует')])->send();
+		echo (new ErrorResponseAjax(404))->setData([__('Такого шаблона не существует')])->send();
 		exit;
 	}
 
 	$template = json_decode($templateData->template, true);
 
 	$parse = new ParseFilter();
+
+	if (empty($fakerConfig['users'])) {
+		echo (new ErrorResponseAjax())->setData([__("Не проставлена настройка для автора новости!")])->send();
+		exit;
+	}
+
+	if (empty($fakerConfig['categories'])) {
+		echo (new ErrorResponseAjax())->setData([__("Не проставлена настройка для категорий!")])->send();
+		exit;
+	}
 
 	$title          = $parse->process(
 		filter_var(parseNewsValues($template['title']), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
@@ -52,15 +62,10 @@ try {
 	$date_to   = !empty($template['date_to_alt']) ? $template['date_to_alt'] : $template['date_to'];
 	$date      = getRandomDateBetween(parseNewsValues($date_from), parseNewsValues($date_to));
 
-	$short_story = $parse->process(
-		filter_var(parseNewsValues($template['short_story']), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
-	);
-	$full_story  = $parse->process(
-		filter_var(parseNewsValues($template['full_story']), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
-	);
+	$short_story = $parse->process(parseNewsValues($template['short_story']));
+	$full_story  = $parse->process(parseNewsValues($template['full_story']));
+
 	if (empty($full_story)) $full_story = $short_story;
-
-
 
 	$xfields = [];
 
@@ -89,7 +94,7 @@ try {
 
 		do {
 			// Используем подготовленные запросы для повышения безопасности
-			$stmt = $db->query("SELECT id FROM " . PREFIX . "_post WHERE alt_name = '" . $db->safesql($alt_name) . "'");
+			$stmt = $db->query("SELECT id FROM " . PREFIX . "_post WHERE alt_name = '{$db->safesql($alt_name)}'");
 
 			$foundNews = $db->get_row($stmt);
 
@@ -114,12 +119,12 @@ try {
 	$catalog_url = $config['create_catalog'] ? $db->safesql( dle_substr( htmlspecialchars( strip_tags( stripslashes( $title ) ), ENT_QUOTES, 'UTF-8' ), 0, 1 ) ) : '';
 
 	$user = $mh_admin->getUser($author);
-	$exclAuthor = [strval($author)];
+	$exclAuthor = [(string) $author];
 
 	while (!$user) {
 		$author         = filter_var(getRandomValue(explode(',', $template['autor']), exclude: $exclAuthor), FILTER_VALIDATE_INT);
 		$user = $mh_admin->getUser($author);
-		$exclAuthor[] = strval($author);
+		$exclAuthor[] = (string) $author;
 	}
 
 	try {
@@ -150,7 +155,7 @@ try {
 			}
 		}
 		$xfSearchWords = implode( ", ", $xfSearch );
-		$db->query( "INSERT INTO " . PREFIX . "_xfsearch (news_id, tagname, tagvalue) VALUES {$xfSearchWords}" );
+		if(!empty($xfSearchWords)) $db->query( "INSERT INTO " . PREFIX . "_xfsearch (news_id, tagname, tagvalue) VALUES {$xfSearchWords}" );
 
 
 		clear_cache( array('news_', 'tagscloud_', 'archives_', 'calendar_', 'topnews_', 'rss', 'stats') );
@@ -177,13 +182,28 @@ try {
 
 	} catch (Exception $e) {
 		echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+		LogGenerator::generateLog(
+			'DLE Faker',
+			'ajax/generator_create_post/create_post',
+			$e->getMessage()
+		);
 		exit;
 	}
 
 
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/generator_create_post/exception',
+		$e->getMessage()
+	);
 } catch (Throwable $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/generator_create_post/throwable',
+		$e->getMessage()
+	);
 }
 exit;

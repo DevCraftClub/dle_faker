@@ -23,21 +23,21 @@ $filter = [
 $inputData            = filter_var_array($parsedData, $filter);
 
 if (empty($inputData['name'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Шаблон для псевдонима не может быть пустым')])
+	echo (new ErrorResponseAjax())->setData([__('Шаблон для псевдонима не может быть пустым')])
 								  ->setMeta(['name'])
 								  ->send();
 	exit;
 }
 
 if (empty($inputData['email'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Шаблон для электронной почты не может быть пустым')])
+	echo (new ErrorResponseAjax())->setData([__('Шаблон для электронной почты не может быть пустым')])
 								  ->setMeta(['email'])
 								  ->send();
 	exit;
 }
 
 if (empty($inputData['password'])) {
-	echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Шаблон для пароля не может быть пустым')])
+	echo (new ErrorResponseAjax())->setData([__('Шаблон для пароля не может быть пустым')])
 								  ->setMeta(['password'])
 								  ->send();
 	exit;
@@ -79,19 +79,27 @@ try {
 				]
 			)->send();
 		} else {
-			echo (new ErrorResponseAjax(404))->setData([__('dle_faker', 'Пользователь не был найден!')])->send();
+			echo (new ErrorResponseAjax(404))->setData([__('Пользователь не был найден!')])->send();
 		}
 	} elseif ($create_user === -1) {
-		echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Псевдоним пользователя (:uname) уже занят!', [':uname' => $username])])->send();
+		echo (new ErrorResponseAjax())->setData([__('Псевдоним пользователя (:uname) уже занят!', [':uname' => $username])])->send();
 	} elseif ($create_user === -2) {
-		echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Электронная почта (:email) пользователя уже занята!', [':email' => $email])])->send();
+		echo (new ErrorResponseAjax())->setData([__('Электронная почта (:email) пользователя уже занята!', [':email' => $email])])->send();
 	} elseif ($create_user === -3) {
-		echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Электронная почта (:email) не подлежит нужному формату!', [':email' => $email])])->send();
+		echo (new ErrorResponseAjax())->setData([__('Электронная почта (:email) не подлежит нужному формату!', [':email' => $email])])->send();
 	} elseif ($create_user === -4) {
-		echo (new ErrorResponseAjax())->setData([__('dle_faker', 'Установленной группы (:group) не существует!', [':group' => $usergroup])])->send();
+		echo (new ErrorResponseAjax())->setData([__('Установленной группы (:group) не существует!', [':group' => $usergroup])])->send();
 	}
 
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+<<<<<<< HEAD
+=======
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/generator_create_users',
+		$e->getMessage()
+	);
+>>>>>>> refs/remotes/origin/releases/173.1.0
 }
 exit;

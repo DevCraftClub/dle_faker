@@ -5,14 +5,14 @@ global $mh, $MHDB, $GET_DATA;
 $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 $settings = [];
-$title = __('dle_faker', 'Создание нового шаблона');
+$title = __('Создание нового шаблона');
 
 if ($id) {
 	$template = $MHDB->get(FakerTemplate::class, $id);
-	$settings = json_decode($template->template, true);
+	$settings = json_decode($template->template, true, 512, JSON_THROW_ON_ERROR);
 	$settings['name'] = $template->name;
 	$settings['active_template'] = $template->active;
-	$title = __('dle_faker', 'Редактирование шаблона: :name', [':name' => $template->name]);
+	$title = __('Редактирование шаблона: :name', [':name' => $template->name]);
 }
 
 $modVars = [

@@ -41,14 +41,13 @@ $modVars = [
 	'order'       => $order,
 	'sort'        => $sort,
 	'filters'     => array_merge(
-		$twigFilter->createFilter('name', 'text', __('dle_faker', 'Название')),
-		$twigFilter->createFilter('active', 'select', __('dle_faker', 'Активные'), choices: ['' => __('mhadmin', 'Все'), 'no' => __('mhadmin', 'Нет'), 'yes' => __('mhadmin', 'Да')]),
+		$twigFilter->createFilter('name', 'text', __('Название')),
+		$twigFilter->createFilter('active', 'select', __('Активные'), choices: ['' => __('Все'), 'no' => __('Нет'), 'yes' => __( 'Да')]),
 	)
 ];
 
 if ($cur_page > 1) {
-	$mh->setBreadcrumb(new BreadCrumb(__('mhadmin', 'Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
-
+	$mh->setBreadcrumb(new BreadCrumb(__(Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
 }
 
 $htmlTemplate = 'dle_faker/templates_all.html';

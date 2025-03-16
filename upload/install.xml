@@ -2,7 +2,7 @@
 <name>DLE Faker</name>
 <description>Генерирует случайные данные для наполнения сайта</description>
 <icon>engine/inc/maharder/_modules/dle_faker/assets/icon.png</icon>
-<version>173.1.0</version>
+<version>180.1.2</version>
 <dleversion>17.3</dleversion>
 <versioncompare>greater</versioncompare>
 <upgradeurl/>
@@ -13,10 +13,10 @@
 	<![CDATA[ ]]>
 </mysqlinstall>
 <mysqlupgrade>
-	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v173.1.0', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v173.1.0'; ]]>
+	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v180.1.2', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v180.1.2'; ]]>
 </mysqlupgrade>
 <mysqlenable>
-	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v173.1.0', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v173.1.0'; ]]>
+	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v180.1.2', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v180.1.2'; ]]>
 </mysqlenable>
 <mysqldisable>
 	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
