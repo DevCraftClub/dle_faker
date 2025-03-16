@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="6">
         <source>Кол-во пользователей</source>
-        <target state="translated">Number of users</target>
+        <target state="translated">Using tags, fill in the template. Or specify author ID</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Генерировать</source>
