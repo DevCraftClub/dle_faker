@@ -20,10 +20,10 @@ use Symfony\Bridge\Twig\Extension\TranslationExtension;
 
 $modInfo = [
 	'module_name'        => 'DLE Faker',
-	'module_version'     => '173.1.0',
+	'module_version'     => '180.1.2',
 	'module_description' => __('dle_faker', 'Генерирует случайные данные для наполнения сайта'),
 	'module_code'        => 'dle_faker',
-	'module_id'          => 4,
+	'module_id'          => 29,
 	'module_icon'        => 'engine/inc/maharder/_modules/dle_faker/assets/icon.png',
 	'site_link'          => 'https://devcraft.club',
 	'docs_link'          => 'https://readme.devcraft.club',

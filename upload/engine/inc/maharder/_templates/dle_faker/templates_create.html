@@ -1,6 +1,6 @@
 {% from "_macros/select.twig" import multi, select %}
 {% from "_macros/checkbox.twig" import checkbox %}
-{% from "_macros/input.twig" import hidden %}
+{% from "_macros/input.twig" import hidden, arrayInput %}
 
 
 {% extends 'base.html' %} {% block content %}
@@ -106,16 +106,9 @@
 				})
 			}}
 
-			{% for type, name in xfields %}
+			{% for xf in xfields %}
 
-				{{ include('templateIncludes/segRow.html', {
-					id: 'xfields['~type ~ ']',
-					name: 'Дополнительное поле: '|trans|raw ~ name,
-					descr: '<b class="ui warning text">!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!</b><br>Содержимое для поля '|trans|html_entity_decode ~ type,
-					type: 'text',
-					variable: settings
-					})
-				}}
+				{{ arrayInput('xfields[' ~ xf.type ~ ']', 'Дополнительное поле: '|trans|raw ~ xf.description, '<b class="ui warning text">!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!</b><br>Содержимое для поля '|trans|html_entity_decode ~ xf.name, settings.xfields, 'xfields') }}
 
 			{% endfor %}
 
@@ -160,6 +153,12 @@
 	$(() => {
 		$(document).on('click', '.save', function () {
 			startLoading();
+			let formData = $('.form').serializeArray();
+			let shortStoryField = formData.findIndex(field => field.name === 'short_story');
+			let fullStoryField = formData.findIndex(field => field.name === 'full_story');
+			formData[shortStoryField].value = tinymce.get('short_story_editor').getContent();
+			formData[fullStoryField].value = tinymce.get('full_story_editor').getContent();
+
 			$.ajax({
 				url: 'engine/ajax/controller.php?mod=maharder',
 				data: {
@@ -167,7 +166,7 @@
 					module: '{{module_code}}',
 					file: 'master',
 					method: 'create_template',
-					data: $('.form').serialize()
+					data: $.param(formData)
 				},
 				type: 'POST',
 				success: function (data) {
