@@ -3,7 +3,7 @@
 global $links, $GET_DATA;
 
 $modVars = [
-	'title' => __('Доступные генераторы'),
+	'title' => __('dle_faker', 'Доступные генераторы'),
 ];
 
 $htmlTemplate = 'dle_faker/generator_all.html';

@@ -11,8 +11,8 @@
         <div class="ui four column grid">
             {% autoescape 'html' %}
 
-            {{ select('template', 'Шаблон'|trans, 'Выберите шаблон для генерации новостей'|trans, {}, templates) }}
-            {{ number('count', 'Кол-во новостей'|trans, 'Укажите кол-во новостей, которые будут сгенерированы'|trans, {count: 10}) }}
+            {{ select('template', 'Шаблон'|trans, 'Выберите шаблон для генерации новостей', {}, templates) }}
+            {{ number('count', 'Кол-во новостей'|trans, 'Укажите кол-во новостей, которые будут сгенерированы', {count: 10}) }}
 
             {% endautoescape %}
         </div>

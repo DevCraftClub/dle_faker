@@ -6,7 +6,7 @@ $available_languages = include DLEPlugins::Check(MH_MODULES . '/dle_faker/utils/
 $fakerConfig         = DataManager::getConfig('dle_faker');
 
 $modVars = [
-	'title'               => __('Настройки модуля'),
+	'title'               => __('mhadmin', 'Настройки модуля'),
 	'users'               => $mh->getUsers(),
 	'categories'          => $mh->getCats(),
 	'available_languages' => $available_languages,

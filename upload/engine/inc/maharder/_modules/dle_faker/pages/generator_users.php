@@ -3,7 +3,7 @@
 global $GET_DATA, $MHDB, $mh, $breadcrumbs;
 
 $modVars = [
-	'title'       => __('Генератор пользователей'),
+	'title'       => __('dle_faker', 'Генератор пользователей'),
 	'usergroups'   => $mh->getUserGroups()
 ];
 
