@@ -93,5 +93,13 @@ try {
 
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
+<<<<<<< HEAD
+=======
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/generator_create_users',
+		$e->getMessage()
+	);
+>>>>>>> refs/remotes/origin/releases/173.1.0
 }
 exit;

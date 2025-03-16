@@ -16,6 +16,7 @@
       </trans-unit>
       <trans-unit id="4">
         <source>Группа пользователя</source>
+<<<<<<< HEAD
         <target state="translated">Група користувачів</target>
       </trans-unit>
       <trans-unit id="5">
@@ -201,6 +202,193 @@
       <trans-unit id="50">
         <source>Запретить индексацию для поисковиков</source>
         <target state="translated">Заборонити індексацію для пошукових систем</target>
+=======
+        <target state="translated">При увімкненому параметрі можна буде використовувати цей шаблон для створення новини</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Пароль</source>
+        <target state="translated">Автор новини</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Кол-во пользователей</source>
+        <target state="translated">Використовуючи теги, заповніть шаблон. Або вкажіть ID автора</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Генерировать</source>
+        <target state="translated">Заголовок новини</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Сводка информации</source>
+        <target state="translated">Використовуючи теги, заповніть шаблон для заголовка новини.</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Кол-во объектов</source>
+        <target state="translated">Категорія новини</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Прогресс</source>
+        <target state="translated">Використовуючи теги, заповніть шаблон для категорії новини. Або вкажіть ID категорій</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Ожидаем начала...</source>
+        <target state="translated">Дата публікації, початок</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Вывод</source>
+        <target state="translated">Вкажіть початкову дату для випадкового значення</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Начать обработку</source>
+        <target state="translated">Дата публікації, кінець</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Отмена / Закрыть</source>
+        <target state="translated">Вкажіть кінцеву дату для випадкового значення</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Обработано {value} из {total}</source>
+        <target state="translated">Короткий зміст</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Название шаблона</source>
+        <target state="translated">Згенеруйте опис, використовуючи теги генерації</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Укажите уникальное название для шаблона</source>
+        <target state="translated">Повний зміст</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Активировать шаблон</source>
+        <target state="translated">Додаткове поле:</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Автор новости</source>
+        <target state="translated">Вміст для поля</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
+        <target state="translated">Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Заголовок новости</source>
+        <target state="translated">Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Используя теги заполните шаблон для заголовка новости.</source>
+        <target state="translated">Випадково</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Категория новости</source>
+        <target state="translated">Наступні параметри будуть враховуватися:</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
+        <target state="translated">&lt;div class="item"&gt;&lt;b&gt;Вимкнути&lt;/b&gt; - Опція вимикає опцію&lt;/div&gt;</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Дата публикации, начало</source>
+        <target state="translated">&gt;&lt;b&gt;Вимкнути&lt;/b&gt; - Опція вимикає опцію&lt;/div&gt;</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>Укажите начальную дату для случайного значения</source>
+        <target state="translated">&gt;&lt;b&gt;Випадково&lt;/b&gt; - Програмно вирішує, увімкнути опцію чи ні&lt;/div&gt;&lt;br&gt;&lt;i&gt;За замовчуванням: Випадково&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Дата публикации, начало (Альтернатива)</source>
+        <target state="translated">Публікувати на головній</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
+        <target state="translated">Опублікувати новину на сайті</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>Дата публикации, конец</source>
+        <target state="translated">Зафіксувати новину</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>Укажите конечную дату для случайного значения</source>
+        <target state="translated">Дозволити коментарі</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Дата публикации, конец (Альтернатива)</source>
+        <target state="translated">Дозволити рейтинг статті</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
+        <target state="translated">Заборонити індексацію для пошукових систем</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Краткое содержание</source>
+        <target state="translated">Виключити з пошуку по сайту</target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>Сгенерируйте описание используя теги генерации</source>
+        <target state="translated">Опублікувати новину в RSS потоці</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Полное содержание</source>
+        <target state="translated">Використовувати в Яндекс Турбо</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Дополнительное поле:</source>
+        <target state="translated">Використовувати в Яндекс Дзен</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>&lt;b class=&quot;ui warning text&quot;&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
+        <target state="translated">Зберегти</target>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>Включить</source>
+        <target state="translated">Все чудово!</target>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>Выключить</source>
+        <target state="translated">Дані було збережено!</target>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>Случайно</source>
+        <target state="translated">шаблон</target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>Следующие параметры будут учитываться:</source>
+        <target state="translated">шаблону</target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
+        <target state="translated">шаблонів</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
+        <target state="translated">Назва</target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>&lt;div class=&quot;item&quot;&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
+        <target state="translated">Увімкнено?</target>
+      </trans-unit>
+      <trans-unit id="45">
+        <source>Публиковать на главной</source>
+        <target state="translated">Вибір дії</target>
+      </trans-unit>
+      <trans-unit id="46">
+        <source>Опубликовать новость на сайте</source>
+        <target state="translated">Змінити</target>
+      </trans-unit>
+      <trans-unit id="47">
+        <source>Зафиксировать новость</source>
+        <target state="translated">Видалити</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>Разрешить комментарии</source>
+        <target state="translated">Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>Разрешить рейтинг статьи</source>
+        <target state="translated">Налаштування</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>Запретить индексацию для поисковиков</source>
+        <target state="translated">Активні</target>
+>>>>>>> refs/remotes/origin/releases/173.1.0
       </trans-unit>
       <trans-unit id="51">
         <source>Исключить из поиска по сайту</source>
@@ -224,7 +412,11 @@
       </trans-unit>
       <trans-unit id="56">
         <source>Всё отлично!</source>
+<<<<<<< HEAD
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Все чудово!</target>
+=======
+        <target state="translated">Автор не може бути порожнім</target>
+>>>>>>> refs/remotes/origin/releases/173.1.0
       </trans-unit>
       <trans-unit id="57">
         <source>Данные были сохранены!</source>
@@ -770,6 +962,93 @@
         <source>Такого шаблона не существует</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Такого шаблону не існує</target>
       </trans-unit>
+<<<<<<< HEAD
+=======
+      <trans-unit id="193">
+        <source>Страница %page%</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Сторінка %page%</target>
+      </trans-unit>
+      <trans-unit id="194">
+        <source>Редактирование шаблона: :name</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Редагування шаблону: :name</target>
+      </trans-unit>
+      <trans-unit id="195">
+        <source>Генерирует случайное значение да или нет (true / false)</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове значення так чи ні (true / false)</target>
+      </trans-unit>
+      <trans-unit id="196">
+        <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число, що містить від 0 до nums цифр.</target>
+      </trans-unit>
+      <trans-unit id="197">
+        <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Коли параметр strict встановлений у значення true, функція повертатиме тільки цілі числа, що містять рівно nums цифр.</target>
+      </trans-unit>
+      <trans-unit id="198">
+        <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число від 0 до 9, виключаючи задане число.</target>
+      </trans-unit>
+      <trans-unit id="199">
+        <source>Параметр float отвечает за количество десятичных знаков.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр float відповідає за кількість десяткових знаків.</target>
+      </trans-unit>
+      <trans-unit id="200">
+        <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число в діапазоні від min до max. За замовчуванням генерується число в діапазоні від 0 до 2 147 483 647.</target>
+      </trans-unit>
+      <trans-unit id="201">
+        <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повертає випадковий елемент із заданого масиву, ітерованого об'єкта або перерахування. За замовчуванням параметр $count встановлено в 1, а якщо передано значення null, повертається випадкова кількість елементів.&lt;br&gt;Масив має бути простим без додаткових лапок.</target>
+      </trans-unit>
+      <trans-unit id="202">
+        <source>Параметр count установлен в 1, а если передано значение null, возвращается случайное количество элементов.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр count встановлено в 1, а якщо передано значення null, повертається випадкова кількість елементів.</target>
+      </trans-unit>
+      <trans-unit id="203">
+        <source>Параметр connector установлен на _. Он отвечает за объединение элементов списка.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр connector встановлено на _. Він відповідає за об'єднання елементів списку.</target>
+      </trans-unit>
+      <trans-unit id="204">
+        <source>Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибирає випадкового користувача, зазначеного в налаштуваннях. Налаштувань за замовчуванням немає, тому їх потрібно зберегти!</target>
+      </trans-unit>
+      <trans-unit id="205">
+        <source>Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибирає випадкову категорію, зазначену в налаштуваннях. Налаштувань за замовчуванням немає, тому їх потрібно зберегти!</target>
+      </trans-unit>
+      <trans-unit id="206">
+        <source>Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкові речення. Параметр max встановлює кількість</target>
+      </trans-unit>
+      <trans-unit id="207">
+        <source>Генерирует абзац текста, содержащий заданное количество предложений. По умолчанию генерируется 3 предложения.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує абзац тексту, що містить задану кількість речень. За замовчуванням генерується 3 речення.</target>
+      </trans-unit>
+      <trans-unit id="208">
+        <source>Параметр max указывает сколько предложений генерировать. По умолчанию: 3</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр max вказує скільки пропозицій генерувати. За замовчуванням: 3</target>
+      </trans-unit>
+      <trans-unit id="209">
+        <source>Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий текстовий рядок. Перший параметр задає максимальну кількість символів, яку має містити рядок (за замовчуванням 200).</target>
+      </trans-unit>
+      <trans-unit id="210">
+        <source>Генерирует случайную дату и время со своим форматированием.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкову дату і час зі своїм форматуванням.</target>
+      </trans-unit>
+      <trans-unit id="211">
+        <source>Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Звернення, приклад: Пані або Дівчина. У російській немає аналога для Ms. або Mrs.</target>
+      </trans-unit>
+      <trans-unit id="212">
+        <source>Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Жіноче звернення, приклад: Пані або Дівчина. У російській немає аналога для Ms. або Mrs.</target>
+      </trans-unit>
+      <trans-unit id="213">
+        <source>Случайная электронная почта, пример: walter.sophia@hotmail.com. Связи с именем никакой нет!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадкова електронна пошта, приклад: walter.sophia@hotmail.com. Зв'язку з ім'ям жодного немає!</target>
+      </trans-unit>
+>>>>>>> refs/remotes/origin/releases/173.1.0
     </body>
   </file>
 </xliff>

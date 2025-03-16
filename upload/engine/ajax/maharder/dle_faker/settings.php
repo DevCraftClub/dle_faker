@@ -44,6 +44,14 @@ try {
 	echo (new SuccessResponseAjax())->setData([__('Настройки сохранены')])->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([__('Ошибка в сохранении настроек'), $e->getMessage()])->send();
+<<<<<<< HEAD
+=======
+	LogGenerator::generateLog(
+		'DLE Faker',
+		'ajax/settings',
+		$e->getMessage()
+	);
+>>>>>>> refs/remotes/origin/releases/173.1.0
 }
 
 exit;
