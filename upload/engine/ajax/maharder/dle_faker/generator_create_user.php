@@ -1,5 +1,5 @@
 <?php
-global $is_logged, $dle_login_hash, $parsedData, $MHDB, $mh_admin, $db, $config, $fakerConfig;
+global $is_logged, $dle_login_hash, $parsedData, $MHDB, $mh_admin, $db, $config, $fakerConfig, $_TIME;
 
 
 if (!$is_logged) {
@@ -67,7 +67,7 @@ try {
 		$user = $dle_api->take_user_by_email($email, 'user_id, name, email, fullname');
 		if ($user) {
 
-			$db->query("UPDATE " . USERPREFIX . "_users SET fullname = '{$full_name}' WHERE user_id = {$user['user_id']}");
+			$db->query("UPDATE " . USERPREFIX . "_users SET fullname = '{$full_name}', lastdate = '{$_TIME}' WHERE user_id = {$user['user_id']}");
 
 			echo (new SuccessResponseAjax())->setData(
 				[
@@ -93,13 +93,10 @@ try {
 
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
-<<<<<<< HEAD
-=======
 	LogGenerator::generateLog(
 		'DLE Faker',
 		'ajax/generator_create_users',
 		$e->getMessage()
 	);
->>>>>>> refs/remotes/origin/releases/173.1.0
 }
 exit;
