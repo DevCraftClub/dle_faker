@@ -19,11 +19,6 @@ if (!$id) {
 
 try {
 	$template = $MHDB->delete(FakerTemplate::class, $id);
-<<<<<<< HEAD
-	echo (new SuccessResponseAjax(201))->setData([$method == 'activate_template' ? __('Шаблон был включён') : __('Шаблон был выключён')])->send();
-} catch (Exception $e) {
-	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
-=======
 	echo (new SuccessResponseAjax(201))->setData([__('Шаблон удалён')])->send();
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
@@ -32,6 +27,5 @@ try {
 		'ajax/templates_delete',
 		$e->getMessage()
 	);
->>>>>>> refs/remotes/origin/releases/173.1.0
 }
 exit;

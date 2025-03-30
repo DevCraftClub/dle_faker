@@ -22,7 +22,8 @@
 	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
 </mysqldisable>
 <mysqldelete>
-	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
+	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';
+DROP TABLE {prefix}_faker_templates]]>
 </mysqldelete>
 <phpinstall>
 	<![CDATA[ ]]>
@@ -48,7 +49,9 @@
 			<![CDATA[ // Custom models // ]]>
 		</searchcode>
 		<replacecode>
-			<![CDATA[ // DLE Faker MH_ROOT . '/_modules/dle_faker/models', // DLE Faker ]]>
+			<![CDATA[			// DLE Faker
+			MH_ROOT . '/_modules/dle_faker/models',
+			// DLE Faker ]]>
 		</replacecode>
 		<enabled>1</enabled>
 	</operation>
@@ -57,7 +60,9 @@
 			<![CDATA[ // Custom paths // ]]>
 		</searchcode>
 		<replacecode>
-			<![CDATA[ // DLE Faker MH_ROOT . '/_modules/dle_faker/repositories', // DLE Faker ]]>
+			<![CDATA[			// DLE Faker
+			MH_ROOT . '/_modules/dle_faker/repositories',
+			// DLE Faker ]]>
 		</replacecode>
 		<enabled>1</enabled>
 	</operation>

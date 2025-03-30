@@ -3,7 +3,7 @@
 	//===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===
 	// Mod: DLE Faker
 	// File: main.php
-	// Path: /home/wrw-dev/Dev/Projects/dle171/engine/ajax/maharder/dle_faker/master.php
+	// Path: /engine/ajax/maharder/dle_faker/master.php
 	// ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  =
 	// Author: Maxim Harder <dev@devcraft.club> (c) 2025
 	// Website: https://devcraft.club
