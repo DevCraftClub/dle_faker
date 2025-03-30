@@ -2,413 +2,213 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file original="dle_faker.ru_RU" datatype="plaintext" source-language="ru" target-language="uk">
     <body>
-      <trans-unit id="63397568cdbbd3b75ede15c7c341310b">
-        <source>Псевдоним пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Псевдонім користувача</target>
-      </trans-unit>
-      <trans-unit id="5c974ed146bb807b2aeb8af539a2af1d">
-        <source>Полное имя пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повне ім'я користувача</target>
-      </trans-unit>
-      <trans-unit id="26f332a2f55853627c09e209e868a3a0">
-        <source>Электронная почта пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Електронна пошта користувача</target>
-      </trans-unit>
-      <trans-unit id="ab294e734c8915464405651a30d99b8b">
-        <source>Группа пользователя</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Група користувача</target>
-      </trans-unit>
-      <trans-unit id="5ebe553e01799a927b1d045924bbd4fd">
-        <source>Пароль</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Пароль</target>
-      </trans-unit>
-      <trans-unit id="d5ba6e7bb55149331b100758477939ca">
-        <source>Кол-во пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість користувачів</target>
-      </trans-unit>
-      <trans-unit id="9264bc52b6109d28a1564e1d62d85e28">
-        <source>Генерировать</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерувати</target>
-      </trans-unit>
-      <trans-unit id="3af89ff4af056859059df5f712ea8151">
-        <source>Сводка информации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зведення інформації</target>
-      </trans-unit>
-      <trans-unit id="a3e79be8ac0b6b45fc3b758ff79b25ee">
-        <source>Кол-во объектов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість об'єктів</target>
-      </trans-unit>
-      <trans-unit id="875bb32fedf39f0d37eb156e1996c2d1">
-        <source>Прогресс</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Прогрес</target>
-      </trans-unit>
-      <trans-unit id="6f4e97bcc4b115088da7102032741196">
-        <source>Ожидаем начала...</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Очікуємо початку...</target>
-      </trans-unit>
-      <trans-unit id="79cabd47b2d0ccb186db8f058c6f4a4a">
-        <source>Вывод</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Висновок</target>
-      </trans-unit>
-      <trans-unit id="824076494f528268338ad74d645a8a48">
-        <source>Начать обработку</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Почати обробку</target>
-      </trans-unit>
-      <trans-unit id="e7a5d4fb073f59759b13a7ddd12b5b58">
-        <source>Отмена / Закрыть</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Скасувати / Закрити</target>
-      </trans-unit>
-      <trans-unit id="55f65ea9f141d4f6455e7da3e783cb52">
-        <source>Обработано {value} из {total}</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Оброблено {value} з {total}</target>
-      </trans-unit>
-      <trans-unit id="674d0134b22ed3901ab606d22de07279">
-        <source>Название шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва шаблону</target>
-      </trans-unit>
-      <trans-unit id="998ad0e69972a3126b75f027fdfe77ad">
-        <source>Укажите уникальное название для шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть унікальну назву для шаблону</target>
-      </trans-unit>
-      <trans-unit id="64d28261282600c69815684b9cae00cb">
-        <source>Активировать шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Активувати шаблон</target>
-      </trans-unit>
-      <trans-unit id="c4f66907b710d6fe08fb697f5096a2ba">
-        <source>Автор новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Автор новини</target>
-      </trans-unit>
-      <trans-unit id="9ef78d093f0f76350dde5d35ae0eaad5">
-        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон. Або вкажіть ID автора</target>
-      </trans-unit>
-      <trans-unit id="ea5e8f3aeaeffa79a3f5c44bf5266670">
-        <source>Заголовок новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заголовок новини</target>
-      </trans-unit>
-      <trans-unit id="4d0a630978dc1397c8a900c76824c61f">
-        <source>Используя теги заполните шаблон для заголовка новости.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги заповніть шаблон для заголовка новини.</target>
-      </trans-unit>
-      <trans-unit id="e06aec27008c31341a82a256fdb27b8b">
-        <source>Категория новости</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Категорія новини</target>
-      </trans-unit>
-      <trans-unit id="7e3b18e6645df03f1912f87b08b98fb7">
-        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон для категорії новини. Або вкажіть ID категорій</target>
-      </trans-unit>
-      <trans-unit id="e67077d39aee6a1900014ef46e643be5">
-        <source>Дата публикации, начало</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, початок</target>
-      </trans-unit>
-      <trans-unit id="a46ae946f618dd0375291a8d8dd5b6f1">
-        <source>Укажите начальную дату для случайного значения</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть початкову дату для випадкового значення</target>
-      </trans-unit>
-      <trans-unit id="578484942d6d2a4dcda1f1476368ac5b">
-        <source>Дата публикации, начало (Альтернатива)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, початок (Альтернатива)</target>
-      </trans-unit>
-      <trans-unit id="6bce37f39de842525636deee8c5d55c7">
-        <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть початкову дату для випадкового значення. Якщо значення вказано, то значення вище не враховуватиметься. Дозволено теги. Якщо Теги не відповідатимуть належним, то це поле буде не дійсним.</target>
-      </trans-unit>
-      <trans-unit id="31e16c44a697e9fd833f3ab8ad857e6f">
-        <source>Дата публикации, конец</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, кінець</target>
-      </trans-unit>
-      <trans-unit id="f25fc6959c65bfd7c0e26d4d64e4a474">
-        <source>Укажите конечную дату для случайного значения</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть кінцеву дату для випадкового значення</target>
-      </trans-unit>
-      <trans-unit id="4695abca4139701eee980f802e60f668">
-        <source>Дата публикации, конец (Альтернатива)</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, кінець (Альтернатива)</target>
-      </trans-unit>
-      <trans-unit id="f5391f967766e02af430ae91b1d531ba">
-        <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть кінцеву дату для випадкового значення. Якщо значення вказано, то значення вище не враховуватиметься. Дозволено теги. Якщо Теги не відповідатимуть належним, то це поле буде не дійсним.</target>
-      </trans-unit>
-      <trans-unit id="4fe9d76fccba1f173c41a97f76b12cd4">
-        <source>Краткое содержание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Короткий зміст</target>
-      </trans-unit>
-      <trans-unit id="1ea66338fa8913d8da2d857b2afb067f">
-        <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Згенеруйте опис, використовуючи теги генерації</target>
-      </trans-unit>
-      <trans-unit id="5a7ceb4db78e5ebe67854d7e30a00ca7">
-        <source>Полное содержание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повний зміст</target>
-      </trans-unit>
-      <trans-unit id="bf025a9d133531a426444d8a90836e95">
-        <source>Дополнительное поле:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Додаткове поле:</target>
-      </trans-unit>
-      <trans-unit id="2e51ae4b7b2cad37bcc276ea43b40a14">
-        <source>&lt;b class="ui warning text"&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;b class="ui warning text"&gt;!!!ЗІЗОБРАЖЕННЯ, ФАЙЛИ, АУДІО, ВІДЕО та ІНШІ ВКЛАДЕННЯ НЕ ПІДТРИМУЮТЬСЯ!!!&lt;/b&gt;&lt;br&gt;Вміст для поля</target>
-      </trans-unit>
-      <trans-unit id="417b334759a9581d16440d075aa1cd12">
-        <source>Включить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнути</target>
-      </trans-unit>
-      <trans-unit id="bbd43a7a61ce768a86c41b86662300b8">
-        <source>Выключить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнути</target>
-      </trans-unit>
-      <trans-unit id="0445bb6d13c0f7cc06265b9718d4ea91">
-        <source>Случайно</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадково</target>
-      </trans-unit>
-      <trans-unit id="256e43396389d380a88be7e7679c39ee">
-        <source>Следующие параметры будут учитываться:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Наступні параметри будуть враховуватися:</target>
-      </trans-unit>
-      <trans-unit id="ee9f7906d536a11846c717364105268a">
-        <source>&lt;div class="item"&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Включити&lt;/b&gt; - Опція включає опцію&lt;/div&gt;</target>
-      </trans-unit>
-      <trans-unit id="0e48f44171f91b815260e6986c6ba72b">
-        <source>&lt;div class="item"&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Вимкнути&lt;/b&gt; - Опція вимикає опцію&lt;/div&gt;</target>
-      </trans-unit>
-      <trans-unit id="79eb9964424715920c463b8a31f2e447">
-        <source>&lt;div class="item"&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">&lt;div class="item"&gt;&lt;b&gt;Випадково&lt;/b&gt; - Програмно вирішує, увімкнути опцію чи ні&lt;/div&gt;&lt;br&gt;&lt;i&gt;За замовчуванням: Випадково&lt;/i&gt;</target>
-      </trans-unit>
-      <trans-unit id="a48503b1216956d658850d5449a620eb">
-        <source>Публиковать на главной</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Публікувати на головній</target>
-      </trans-unit>
-      <trans-unit id="5464fdf47c5ed69718ddf795f1d4f0fb">
-        <source>Опубликовать новость на сайте</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опублікувати новину на сайті</target>
-      </trans-unit>
-      <trans-unit id="64b25fac6a9c2b185adfa1ded87c4409">
-        <source>Зафиксировать новость</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зафіксувати новину</target>
-      </trans-unit>
-      <trans-unit id="a94208dd57b1535ac8db57ee2ea3902e">
-        <source>Разрешить комментарии</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дозволити коментарі</target>
-      </trans-unit>
-      <trans-unit id="627bbd7112119f56ffbcbef9a6067145">
-        <source>Разрешить рейтинг статьи</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дозволити рейтинг статті</target>
-      </trans-unit>
-      <trans-unit id="4d8b7bf049e2660ec572713363b5cd25">
-        <source>Запретить индексацию для поисковиков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заборонити індексацію для пошукових систем</target>
-      </trans-unit>
-      <trans-unit id="e63f650662f5b8d27799094386d86877">
-        <source>Исключить из поиска по сайту</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Виключити з пошуку по сайту</target>
-      </trans-unit>
-      <trans-unit id="ee88cc85b31f7804932ce59c40128598">
-        <source>Опубликовать новость в RSS потоке</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опублікувати новину в RSS потоці</target>
-      </trans-unit>
-      <trans-unit id="7d66bab2d781955d5f3de0991076a6e3">
-        <source>Использовать в Яндекс Турбо</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовувати в Яндекс Турбо</target>
-      </trans-unit>
-      <trans-unit id="a190fd604143afba5adbbda32ece42e5">
-        <source>Использовать в Яндекс Дзен</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовувати в Яндекс Дзен</target>
-      </trans-unit>
-      <trans-unit id="74ea58b6a801f0dce4e5d34dbca034dc">
-        <source>Сохранить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зберегти</target>
-      </trans-unit>
-      <trans-unit id="148bbf94cef9e1e431bf97570eb0644d">
-        <source>Всё отлично!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Усе чудово!</target>
-      </trans-unit>
-      <trans-unit id="3a92eb91d4231b257e155f628ff13990">
-        <source>Данные были сохранены!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дані було збережено!</target>
-      </trans-unit>
-      <trans-unit id="36d5676900b3e6fbc03e1a0b359341bc">
-        <source>шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">шаблон</target>
-      </trans-unit>
-      <trans-unit id="602680ed8916dcc039882172ef089256">
-        <source>Название</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва</target>
-      </trans-unit>
-      <trans-unit id="5d77d19db17a374c62a62daf29c685fd">
-        <source>Включён?</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнено?</target>
-      </trans-unit>
-      <trans-unit id="21bca7e624ad26e2a9ef8162c812bb2a">
-        <source>Выбор действия</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибір дії</target>
-      </trans-unit>
-      <trans-unit id="47e2436e5560837160a70c64466ea22b">
-        <source>Изменить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Змінити</target>
-      </trans-unit>
-      <trans-unit id="ed2bbfbc53d83d3ad81f7fd6485ac6e8">
-        <source>Удалить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Видалити</target>
-      </trans-unit>
-      <trans-unit id="b278285aeff5cffad70c9838b3566f5d">
-        <source>Отключить</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнути</target>
-      </trans-unit>
-      <trans-unit id="b059f7e15df06e3f864e61040ae3caba">
-        <source>Создать</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Створити</target>
-      </trans-unit>
-      <trans-unit id="a02a63a7206319230a329f87cbecb8d0">
-        <source>Теги для генерации пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги для генерації користувачів</target>
-      </trans-unit>
-      <trans-unit id="c4aa5053dcaa0ed0a2160691f7345ec6">
-        <source>Тег</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Тег</target>
-      </trans-unit>
-      <trans-unit id="38ca0af80cd7bd241500e81ba2e6efff">
-        <source>Описание</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опис</target>
-      </trans-unit>
-      <trans-unit id="33373ff91e73ccb40752d9b4a3b73566">
-        <source>Теги для генерации новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги для генерації новин</target>
-      </trans-unit>
-      <trans-unit id="61e2c4b6c709da7543559930d557ff64">
-        <source>Вспомогательные теги, которые доступны для всех генераторов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Допоміжні теги, які доступні для всіх генераторів</target>
-      </trans-unit>
-      <trans-unit id="c919d65bd95698af8f15fa8133bf490d">
-        <source>Настройки</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування</target>
-      </trans-unit>
-      <trans-unit id="8393121bc96887e4b04f074897c9072c">
-        <source>Язык генерации</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Мова генерації</target>
-      </trans-unit>
-      <trans-unit id="edfcaae069a411092c29763be004b640">
-        <source>Список пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Список користувачів</target>
-      </trans-unit>
-      <trans-unit id="7ab5eae2ca53fa8d5a6ee5e5722b6c65">
-        <source>Список категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Список категорій</target>
-      </trans-unit>
-      <trans-unit id="3e117b47955d8bcb67b6303344dc6056">
-        <source>Количество категорий</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість категорій</target>
-      </trans-unit>
-      <trans-unit id="802515cb78a6a13a069f913d2643bd97">
-        <source>Шаблон</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон</target>
-      </trans-unit>
-      <trans-unit id="8fdd696c731a3e43d3138ee9f0b7a0d4">
-        <source>Кол-во новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість новин</target>
+      <trans-unit id="d2f70a77d369eba7b169678caf88d9f3">
+        <source>Шаблон не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="850b19899322ec1ecb1ec89a49e1423b">
+        <source>Такого шаблона не существует</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Такого шаблону не існує</target>
+      </trans-unit>
+      <trans-unit id="5ec4c68aee45a5fd65448ae9bbbf7fce">
+        <source>Не проставлена настройка для автора новости!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Не проставлено налаштування для автора новини!</target>
+      </trans-unit>
+      <trans-unit id="33956d00416c2e769e301063d852b284">
+        <source>Не проставлена настройка для категорий!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Не проставлено налаштування для категорій!</target>
+      </trans-unit>
+      <trans-unit id="c7dbc908bbee2bc38d4993936f827321">
+        <source>Шаблон для псевдонима не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон для псевдоніма не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="057c13628261bff49195134e539207c1">
+        <source>Шаблон для электронной почты не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон для електронної пошти не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="dcbd6dce35f0f102250be973f41de8c5">
+        <source>Шаблон для пароля не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон для пароля не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="192a6a3e0445399f439c2853a2686c92">
+        <source>Пользователь не был найден!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Користувач не був знайдений!</target>
+      </trans-unit>
+      <trans-unit id="b7bc548eca7c74fb12c7584f078c527b">
+        <source>Псевдоним пользователя (:uname) уже занят!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Псевдонім користувача (:uname) уже зайнятий!</target>
+      </trans-unit>
+      <trans-unit id="51624850b048642f9c79e116b0d891a6">
+        <source>Электронная почта (:email) пользователя уже занята!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Електронна пошта (:email) користувача вже зайнята!</target>
+      </trans-unit>
+      <trans-unit id="5d16e6dabbe630bb223962469c37359a">
+        <source>Электронная почта (:email) не подлежит нужному формату!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Електронна пошта (:email) не підлягає потрібному формату!</target>
+      </trans-unit>
+      <trans-unit id="1c59f2f69b0332dfc99e0530ce7b4c9f">
+        <source>Установленной группы (:group) не существует!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Встановленої групи (:group) не існує!</target>
+      </trans-unit>
+      <trans-unit id="d004b754d773ae760f282c0affe57e18">
+        <source>Нужно указать хотя бы одного пользователя!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Потрібно вказати хоча б одного користувача!</target>
+      </trans-unit>
+      <trans-unit id="2acccbb3f32004707f46e2659a755a50">
+        <source>Нужно указать хотя бы одну категорию!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Потрібно вказати хоча б одну категорію!</target>
+      </trans-unit>
+      <trans-unit id="22d8ff492a13fa906407341fb129ccfc">
+        <source>Настройки сохранены</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування збережено</target>
+      </trans-unit>
+      <trans-unit id="322b47b2a53dfeca3da6b0cbc6bffb42">
+        <source>Ошибка в сохранении настроек</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Помилка в збереженні налаштувань</target>
+      </trans-unit>
+      <trans-unit id="92a4262898dbed87add330a31555b77d">
+        <source>Некорректные данные: :data.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Некоректні дані: :data.</target>
+      </trans-unit>
+      <trans-unit id="57003040d6fa6faa295f7c391199a232">
+        <source>Такого шаблона не существует!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Такого шаблону не існує!</target>
+      </trans-unit>
+      <trans-unit id="47edc4669d56a0155b00098de59642f6">
+        <source>Шаблон был включён</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон було ввімкнено</target>
+      </trans-unit>
+      <trans-unit id="14c1d474b69de34ed3608c64e60beaf6">
+        <source>Название шаблона не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва шаблону не може бути порожньою</target>
+      </trans-unit>
+      <trans-unit id="ff0dcc861251d9b0aaa5e6ff04cbde3b">
+        <source>Автор не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Автор не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="71c4d1615f5b7432d3c7c86c0f2acb78">
+        <source>Заголовок не может быть пустым</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заголовок не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="31b6da2af9e32c0caa5abe42597ed557">
+        <source>Категория не может быть пустой</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Категорія не може бути порожньою</target>
+      </trans-unit>
+      <trans-unit id="8ca19bf9331d794db740e07c631116a3">
+        <source>Короткое описание не может быть пустой</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Короткий опис не може бути порожнім</target>
+      </trans-unit>
+      <trans-unit id="f3b0d733cc49a86b44e1ff1b65b4b539">
+        <source>Шаблон успешно изменен</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон успішно змінено</target>
+      </trans-unit>
+      <trans-unit id="fd64d478887f8c638bc78991972be997">
+        <source>Шаблон успешно создан</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон успішно створено</target>
+      </trans-unit>
+      <trans-unit id="972e54dae9ea3a879708fcd1c27e5235">
+        <source>Шаблон удалён</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон видалено</target>
+      </trans-unit>
+      <trans-unit id="d43a904173f6cee5872a334c014ca901">
+        <source>Генерирует случайные данные для наполнения сайта</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкові дані для наповнення сайту</target>
+      </trans-unit>
+      <trans-unit id="fd4a65755652573907656d02b16b58a4">
+        <source>Шаблоны</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблони</target>
+      </trans-unit>
+      <trans-unit id="9c542a8b820cdcc77d37b26135b713a8">
+        <source>Генератор</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генератор</target>
+      </trans-unit>
+      <trans-unit id="54f067a401b1d97fb64ed2e6767094e0">
+        <source>Теги</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги</target>
+      </trans-unit>
+      <trans-unit id="7a3a7f6f4edd3a9f9d820a813d492288">
+        <source>[FIX] Исправлены ошибки в добавлении пользователей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено помилки в додаванні користувачів</target>
+      </trans-unit>
+      <trans-unit id="7295bc15ee71bd6bec1aee51cf381a43">
+        <source>[FIX] Исправлены ошибки в миграции данных на гитхабе</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено помилки в міграції даних на гітхабі</target>
+      </trans-unit>
+      <trans-unit id="66681135311147c1f2dffd5ebfc69476">
+        <source>[FIX] Исправлена итерация в templates_create.html</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено ітерацію в templates_create.html</target>
+      </trans-unit>
+      <trans-unit id="a9d26e11c618ac5c2584fbc46949fd07">
+        <source>[FIX] Исправлены языковые функции</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено мовні функції</target>
+      </trans-unit>
+      <trans-unit id="48be3064a5d2f261381c51b3d05c78d9">
+        <source>[UPDATE] В файле generator_create_post.php логика вставки данных в базу данных обновлена. Она будет исполняться только в случае, если $xfSearchWords не пуст</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[UPDATE] У файлі generator_create_post.php логіку вставки даних у базу даних оновлено. Вона буде виконуватися тільки в разі, якщо $xfSearchWords не порожній</target>
+      </trans-unit>
+      <trans-unit id="a6d56affb34b13dd04b2b2d66a179c79">
+        <source>[UPDATE] В init.php управление зависимостями упрощено с целью сосредоточения на регистрации отсутствуюших зависимостей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[UPDATE] В init.php управління залежностями спрощено з метою зосередження на реєстрації відсутніх залежностей</target>
+      </trans-unit>
+      <trans-unit id="4c67cb51fa12be21222786efb72e2102">
+        <source>[UPDATE] HTML-шаблон изменен для улучшения обработки переменных в цикле templates_create.html.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[UPDATE] HTML-шаблон змінено для поліпшення обробки змінних у циклі templates_create.html.</target>
+      </trans-unit>
+      <trans-unit id="8b59ec3c01c0157dfd5901e185e72447">
+        <source>[FIX] Исправлена обработка данных при генерации новостей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено обробку даних під час генерації новин</target>
+      </trans-unit>
+      <trans-unit id="d559361c3a8a846f5e976c3351638f50">
+        <source>[FIX] Исправлен скрипт установки</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено скрипт встановлення</target>
+      </trans-unit>
+      <trans-unit id="1afbfb509050909fea9ac2ba73ac2366">
+        <source>Основной релиз</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Основний реліз</target>
+      </trans-unit>
+      <trans-unit id="0de733bff24bb8215fb1f0cc839d8db3">
+        <source>История изменений</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Історія змін</target>
+      </trans-unit>
+      <trans-unit id="fc9b043bdb2a370509aa192475522cf0">
+        <source>Доступные генераторы</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Доступні генератори</target>
+      </trans-unit>
+      <trans-unit id="b475317d4d28461ae61ccf975b1c98f2">
+        <source>Настройки модуля</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування модуля</target>
+      </trans-unit>
+      <trans-unit id="052db5db08b3ad3b99e2205870e29d2e">
+        <source>Перечень тегов для генерации данных</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Перелік тегів для генерації даних</target>
       </trans-unit>
       <trans-unit id="034c06f315de8aba999c080d4cb48de7">
         <source>Генератор новостей</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генератор новин</target>
       </trans-unit>
-      <trans-unit id="dd3390573f0c3aa4dadbcd3b0c011a83">
-        <source>Генерация новостей на основе шаблонов</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерація новин на основі шаблонів</target>
-      </trans-unit>
-      <trans-unit id="c2b06a006d468ccc5b5242f15ee2f05c">
-        <source>Перейти</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Перейти</target>
-      </trans-unit>
       <trans-unit id="6374224bede1b93f937399507f97b7af">
         <source>Генератор пользователей</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генератор користувачів</target>
       </trans-unit>
-      <trans-unit id="b1cc330603c1351e26c1ffe6b50ee6fe">
-        <source>Генерация случайных пользователей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерація випадкових користувачів</target>
+      <trans-unit id="602680ed8916dcc039882172ef089256">
+        <source>Название</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва</target>
       </trans-unit>
-      <trans-unit id="4e18436448f5c60cb75eda54a42e3c3a">
-        <source>Случайный псевдоним, пример: coolcat123</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадковий псевдонім, приклад: coolcat123</target>
+      <trans-unit id="c83f7ab515c5cf6bed69213f55f917c7">
+        <source>Активные</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Активні</target>
       </trans-unit>
-      <trans-unit id="b8ca4d47a7eb94ae160d0e119356ffea">
-        <source>Полное имя, пример: Проф. Артём Волков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повне ім'я, приклад: Проф. Артем Волков</target>
+      <trans-unit id="2db281c93395da574576e224c17375a2">
+        <source>Страница %page%</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Сторінка %page%</target>
       </trans-unit>
-      <trans-unit id="8082e79b5dde1c401954e1f035e27151">
-        <source>Имя, пример: Артём</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ім'я, приклад: Артем</target>
+      <trans-unit id="ad9dc723c755a2a7da2e99130d429a11">
+        <source>Создание нового шаблона</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Створення нового шаблону</target>
       </trans-unit>
-      <trans-unit id="77ed448d1cb9ebe74da6b0fe886cfa45">
-        <source>Мужское имя, пример: Артём</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Чоловіче ім'я, приклад: Артем</target>
-      </trans-unit>
-      <trans-unit id="2baac42df2b7b4764469b8d37fbdc542">
-        <source>Женское имя, пример: Анна</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Жіноче ім'я, приклад: Анна</target>
-      </trans-unit>
-      <trans-unit id="9bacf7f01c2fa42a079261cd019b4926">
-        <source>Фамилия, пример: Волков</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Прізвище, приклад: Волков</target>
-      </trans-unit>
-      <trans-unit id="57dc0069f484ce7c26311fee11b65f5c">
-        <source>Суффикс, пример: Мл.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Суфікс, приклад: Мл.</target>
-      </trans-unit>
-      <trans-unit id="4cf2d9a2f030c7cd4f596e8a3a539afa">
-        <source>Мужское обращение, пример: Господин. В русском нет аналога для Mr.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Чоловіче звернення, приклад: Господин. У російській немає аналога для Mr.</target>
-      </trans-unit>
-      <trans-unit id="da486b266984e64885112f250ef573a6">
-        <source>Генерирует строку, содержащую случайное одно слово.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкове одне слово.</target>
-      </trans-unit>
-      <trans-unit id="43405cb444cb998f8da9770666c8444f">
-        <source>Генерирует строку, содержащую случайное предложение.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкове речення.</target>
-      </trans-unit>
-      <trans-unit id="efb5d905d228959252364c8ef6a4485e">
-        <source>Параметр max указывает количество символов.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр max вказує кількість символів.</target>
-      </trans-unit>
-      <trans-unit id="601c9447d644ba2ae13b48372369982f">
-        <source>Генерирует случайную дату и время</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкову дату і час</target>
-      </trans-unit>
-      <trans-unit id="b328fffdc57d6431fc2c1cf217ef3dd2">
-        <source>Зависимости не были установлены!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Залежності не було встановлено!</target>
-      </trans-unit>
-      <trans-unit id="bebfb4a8fac05bd34c8175f8991cb14b">
-        <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Встановіть їх за допомогою консолі самі! PHP повинен бути виконуваним!</target>
-      </trans-unit>
-      <trans-unit id="fd54a5d85bf2a5caee724cfdb5c1f166">
-        <source>Генерирует случайный эмодзи</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий емодзі</target>
-      </trans-unit>
-      <trans-unit id="249861c28e5bec1800883125fd84539b">
-        <source>Генерирует случайное целое число от 0 до 9.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число від 0 до 9.</target>
-      </trans-unit>
-      <trans-unit id="d1770a1309a3588a85b60a811a9a645d">
-        <source>Генерирует случайное число с плавающей запятой</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове число з плаваючою комою</target>
-      </trans-unit>
-      <trans-unit id="8b446b63a69921afa880c6de34042521">
-        <source>Параметр min задаёт нижнюю границу.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр min задає нижню межу.</target>
-      </trans-unit>
-      <trans-unit id="facf4aef6a95b712f8a0aebe214bacd7">
-        <source>Параметр max задаёт верхнюю границу.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр max задає верхню межу.</target>
-      </trans-unit>
-      <trans-unit id="16f7f231033967745458d280ec157982">
-        <source>Генерирует случайный символ из алфавита.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий символ з алфавіту.</target>
+      <trans-unit id="58dd8d6145cd9a1fd624bcd8446c1c6b">
+        <source>Редактирование шаблона: :name</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Редагування шаблону: :name</target>
       </trans-unit>
       <trans-unit id="bfdc1c28174ac69ff3bbc12daef90bf1">
         <source>Как админка MH Admin</source>
@@ -650,189 +450,13 @@
         <source>Китайский [Chinese (Traditional, Taiwan)]</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Китайська [Chinese (Traditional, Taiwan)]</target>
       </trans-unit>
-      <trans-unit id="fd4a65755652573907656d02b16b58a4">
-        <source>Шаблоны</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблони</target>
-      </trans-unit>
-      <trans-unit id="c83f7ab515c5cf6bed69213f55f917c7">
-        <source>Активные</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Активні</target>
-      </trans-unit>
-      <trans-unit id="ad9dc723c755a2a7da2e99130d429a11">
-        <source>Создание нового шаблона</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Створення нового шаблону</target>
-      </trans-unit>
-      <trans-unit id="fc9b043bdb2a370509aa192475522cf0">
-        <source>Доступные генераторы</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Доступні генератори</target>
-      </trans-unit>
-      <trans-unit id="b475317d4d28461ae61ccf975b1c98f2">
-        <source>Настройки модуля</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування модуля</target>
-      </trans-unit>
-      <trans-unit id="1afbfb509050909fea9ac2ba73ac2366">
-        <source>Основной релиз</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Основний реліз</target>
-      </trans-unit>
-      <trans-unit id="0de733bff24bb8215fb1f0cc839d8db3">
-        <source>История изменений</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Історія змін</target>
-      </trans-unit>
-      <trans-unit id="052db5db08b3ad3b99e2205870e29d2e">
-        <source>Перечень тегов для генерации данных</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Перелік тегів для генерації даних</target>
-      </trans-unit>
-      <trans-unit id="d43a904173f6cee5872a334c014ca901">
-        <source>Генерирует случайные данные для наполнения сайта</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкові дані для наповнення сайту</target>
-      </trans-unit>
-      <trans-unit id="9c542a8b820cdcc77d37b26135b713a8">
-        <source>Генератор</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генератор</target>
-      </trans-unit>
-      <trans-unit id="54f067a401b1d97fb64ed2e6767094e0">
-        <source>Теги</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги</target>
-      </trans-unit>
-      <trans-unit id="d004b754d773ae760f282c0affe57e18">
-        <source>Нужно указать хотя бы одного пользователя!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Потрібно вказати хоча б одного користувача!</target>
-      </trans-unit>
-      <trans-unit id="2acccbb3f32004707f46e2659a755a50">
-        <source>Нужно указать хотя бы одну категорию!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Потрібно вказати хоча б одну категорію!</target>
-      </trans-unit>
-      <trans-unit id="22d8ff492a13fa906407341fb129ccfc">
-        <source>Настройки сохранены</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування збережено</target>
-      </trans-unit>
-      <trans-unit id="322b47b2a53dfeca3da6b0cbc6bffb42">
-        <source>Ошибка в сохранении настроек</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Помилка в збереженні налаштувань</target>
-      </trans-unit>
-      <trans-unit id="c7dbc908bbee2bc38d4993936f827321">
-        <source>Шаблон для псевдонима не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон для псевдоніма не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="057c13628261bff49195134e539207c1">
-        <source>Шаблон для электронной почты не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон для електронної пошти не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="dcbd6dce35f0f102250be973f41de8c5">
-        <source>Шаблон для пароля не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон для пароля не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="192a6a3e0445399f439c2853a2686c92">
-        <source>Пользователь не был найден!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Користувач не був знайдений!</target>
-      </trans-unit>
-      <trans-unit id="14c1d474b69de34ed3608c64e60beaf6">
-        <source>Название шаблона не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва шаблону не може бути порожньою</target>
-      </trans-unit>
-      <trans-unit id="ff0dcc861251d9b0aaa5e6ff04cbde3b">
-        <source>Автор не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Автор не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="71c4d1615f5b7432d3c7c86c0f2acb78">
-        <source>Заголовок не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заголовок не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="31b6da2af9e32c0caa5abe42597ed557">
-        <source>Категория не может быть пустой</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Категорія не може бути порожньою</target>
-      </trans-unit>
-      <trans-unit id="8ca19bf9331d794db740e07c631116a3">
-        <source>Короткое описание не может быть пустой</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Короткий опис не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="f3b0d733cc49a86b44e1ff1b65b4b539">
-        <source>Шаблон успешно изменен</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон успішно змінено</target>
-      </trans-unit>
-      <trans-unit id="fd64d478887f8c638bc78991972be997">
-        <source>Шаблон успешно создан</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон успішно створено</target>
-      </trans-unit>
-      <trans-unit id="57003040d6fa6faa295f7c391199a232">
-        <source>Такого шаблона не существует!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Такого шаблону не існує!</target>
-      </trans-unit>
-      <trans-unit id="47edc4669d56a0155b00098de59642f6">
-        <source>Шаблон был включён</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон було ввімкнено</target>
-      </trans-unit>
-      <trans-unit id="d2f70a77d369eba7b169678caf88d9f3">
-        <source>Шаблон не может быть пустым</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон не може бути порожнім</target>
-      </trans-unit>
-      <trans-unit id="850b19899322ec1ecb1ec89a49e1423b">
-        <source>Такого шаблона не существует</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Такого шаблону не існує</target>
-      </trans-unit>
-      <trans-unit id="5ec4c68aee45a5fd65448ae9bbbf7fce">
-        <source>Не проставлена настройка для автора новости!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Не проставлено налаштування для автора новини!</target>
-      </trans-unit>
-      <trans-unit id="33956d00416c2e769e301063d852b284">
-        <source>Не проставлена настройка для категорий!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Не проставлено налаштування для категорій!</target>
-      </trans-unit>
-      <trans-unit id="b7bc548eca7c74fb12c7584f078c527b">
-        <source>Псевдоним пользователя (:uname) уже занят!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Псевдонім користувача (:uname) уже зайнятий!</target>
-      </trans-unit>
-      <trans-unit id="51624850b048642f9c79e116b0d891a6">
-        <source>Электронная почта (:email) пользователя уже занята!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Електронна пошта (:email) користувача вже зайнята!</target>
-      </trans-unit>
-      <trans-unit id="5d16e6dabbe630bb223962469c37359a">
-        <source>Электронная почта (:email) не подлежит нужному формату!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Електронна пошта (:email) не підлягає потрібному формату!</target>
-      </trans-unit>
-      <trans-unit id="1c59f2f69b0332dfc99e0530ce7b4c9f">
-        <source>Установленной группы (:group) не существует!</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Встановленої групи (:group) не існує!</target>
-      </trans-unit>
-      <trans-unit id="92a4262898dbed87add330a31555b77d">
-        <source>Некорректные данные: :data.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Некоректні дані: :data.</target>
-      </trans-unit>
-      <trans-unit id="66681135311147c1f2dffd5ebfc69476">
-        <source>[FIX] Исправлена итерация в templates_create.html</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено ітерацію в templates_create.html</target>
-      </trans-unit>
-      <trans-unit id="a9d26e11c618ac5c2584fbc46949fd07">
-        <source>[FIX] Исправлены языковые функции</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено мовні функції</target>
-      </trans-unit>
-      <trans-unit id="48be3064a5d2f261381c51b3d05c78d9">
-        <source>[UPDATE] В файле generator_create_post.php логика вставки данных в базу данных обновлена. Она будет исполняться только в случае, если $xfSearchWords не пуст</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[UPDATE] У файлі generator_create_post.php логіку вставки даних у базу даних оновлено. Вона буде виконуватися тільки в разі, якщо $xfSearchWords не порожній</target>
-      </trans-unit>
-      <trans-unit id="a6d56affb34b13dd04b2b2d66a179c79">
-        <source>[UPDATE] В init.php управление зависимостями упрощено с целью сосредоточения на регистрации отсутствуюших зависимостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[UPDATE] В init.php управління залежностями спрощено з метою зосередження на реєстрації відсутніх залежностей</target>
-      </trans-unit>
-      <trans-unit id="4c67cb51fa12be21222786efb72e2102">
-        <source>[UPDATE] HTML-шаблон изменен для улучшения обработки переменных в цикле templates_create.html.</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[UPDATE] HTML-шаблон змінено для поліпшення обробки змінних у циклі templates_create.html.</target>
-      </trans-unit>
-      <trans-unit id="8b59ec3c01c0157dfd5901e185e72447">
-        <source>[FIX] Исправлена обработка данных при генерации новостей</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено обробку даних під час генерації новин</target>
-      </trans-unit>
-      <trans-unit id="d559361c3a8a846f5e976c3351638f50">
-        <source>[FIX] Исправлен скрипт установки</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Виправлено скрипт встановлення</target>
-      </trans-unit>
-      <trans-unit id="58dd8d6145cd9a1fd624bcd8446c1c6b">
-        <source>Редактирование шаблона: :name</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Редагування шаблону: :name</target>
-      </trans-unit>
       <trans-unit id="b3215dfdb24971a503722202725876f7">
         <source>Генерирует случайное значение да или нет (true / false)</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове значення так чи ні (true / false)</target>
+      </trans-unit>
+      <trans-unit id="fd54a5d85bf2a5caee724cfdb5c1f166">
+        <source>Генерирует случайный эмодзи</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий емодзі</target>
       </trans-unit>
       <trans-unit id="97ddaabab2ceacb807bd65fef6184c6b">
         <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
@@ -842,17 +466,37 @@
         <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Коли параметр strict встановлений у значення true, функція повертатиме тільки цілі числа, що містять рівно nums цифр.</target>
       </trans-unit>
+      <trans-unit id="249861c28e5bec1800883125fd84539b">
+        <source>Генерирует случайное целое число от 0 до 9.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число від 0 до 9.</target>
+      </trans-unit>
       <trans-unit id="0442d4dbf85045f17845c3b6d03bd2d9">
         <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число від 0 до 9, виключаючи задане число.</target>
+      </trans-unit>
+      <trans-unit id="d1770a1309a3588a85b60a811a9a645d">
+        <source>Генерирует случайное число с плавающей запятой</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове число з плаваючою комою</target>
       </trans-unit>
       <trans-unit id="8392abd509e37cc7c42344706374590e">
         <source>Параметр float отвечает за количество десятичных знаков.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр float відповідає за кількість десяткових знаків.</target>
       </trans-unit>
+      <trans-unit id="8b446b63a69921afa880c6de34042521">
+        <source>Параметр min задаёт нижнюю границу.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр min задає нижню межу.</target>
+      </trans-unit>
+      <trans-unit id="facf4aef6a95b712f8a0aebe214bacd7">
+        <source>Параметр max задаёт верхнюю границу.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр max задає верхню межу.</target>
+      </trans-unit>
       <trans-unit id="c2f36b3f621f3dfe09965d750de07b87">
         <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкове ціле число в діапазоні від min до max. За замовчуванням генерується число в діапазоні від 0 до 2 147 483 647.</target>
+      </trans-unit>
+      <trans-unit id="16f7f231033967745458d280ec157982">
+        <source>Генерирует случайный символ из алфавита.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий символ з алфавіту.</target>
       </trans-unit>
       <trans-unit id="0b14e3275d598e5ec63e29b5e49979f4">
         <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
@@ -866,6 +510,14 @@
         <source>Параметр connector установлен на _. Он отвечает за объединение элементов списка.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр connector встановлено на _. Він відповідає за об'єднання елементів списку.</target>
       </trans-unit>
+      <trans-unit id="b328fffdc57d6431fc2c1cf217ef3dd2">
+        <source>Зависимости не были установлены!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Залежності не було встановлено!</target>
+      </trans-unit>
+      <trans-unit id="bebfb4a8fac05bd34c8175f8991cb14b">
+        <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Встановіть їх за допомогою консолі самі! PHP повинен бути виконуваним!</target>
+      </trans-unit>
       <trans-unit id="bf1216a2a0f55e40e1878dbcb7391913">
         <source>Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибирає випадкового користувача, зазначеного в налаштуваннях. Налаштувань за замовчуванням немає, тому їх потрібно зберегти!</target>
@@ -874,9 +526,17 @@
         <source>Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибирає випадкову категорію, зазначену в налаштуваннях. Налаштувань за замовчуванням немає, тому їх потрібно зберегти!</target>
       </trans-unit>
+      <trans-unit id="da486b266984e64885112f250ef573a6">
+        <source>Генерирует строку, содержащую случайное одно слово.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкове одне слово.</target>
+      </trans-unit>
       <trans-unit id="6cc8b4ce45ae3a77229cca3b40846203">
         <source>Генерирует строку, содержащую случайное кол-во слов. Параметр max устанавливает кол-во.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкову кількість слів. Параметр max встановлює кількість.</target>
+      </trans-unit>
+      <trans-unit id="43405cb444cb998f8da9770666c8444f">
+        <source>Генерирует строку, содержащую случайное предложение.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує рядок, що містить випадкове речення.</target>
       </trans-unit>
       <trans-unit id="2032d410ede8be41a7440d9134dfb897">
         <source>Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</source>
@@ -894,13 +554,53 @@
         <source>Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадковий текстовий рядок. Перший параметр задає максимальну кількість символів, яку має містити рядок (за замовчуванням 200).</target>
       </trans-unit>
+      <trans-unit id="efb5d905d228959252364c8ef6a4485e">
+        <source>Параметр max указывает количество символов.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Параметр max вказує кількість символів.</target>
+      </trans-unit>
+      <trans-unit id="601c9447d644ba2ae13b48372369982f">
+        <source>Генерирует случайную дату и время</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкову дату і час</target>
+      </trans-unit>
       <trans-unit id="a3c06ff3c9413e73e026d4c28b6e3222">
         <source>Генерирует случайную дату и время со своим форматированием.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерує випадкову дату і час зі своїм форматуванням.</target>
       </trans-unit>
+      <trans-unit id="4e18436448f5c60cb75eda54a42e3c3a">
+        <source>Случайный псевдоним, пример: coolcat123</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадковий псевдонім, приклад: coolcat123</target>
+      </trans-unit>
+      <trans-unit id="b8ca4d47a7eb94ae160d0e119356ffea">
+        <source>Полное имя, пример: Проф. Артём Волков</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повне ім'я, приклад: Проф. Артем Волков</target>
+      </trans-unit>
+      <trans-unit id="8082e79b5dde1c401954e1f035e27151">
+        <source>Имя, пример: Артём</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Ім'я, приклад: Артем</target>
+      </trans-unit>
+      <trans-unit id="77ed448d1cb9ebe74da6b0fe886cfa45">
+        <source>Мужское имя, пример: Артём</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Чоловіче ім'я, приклад: Артем</target>
+      </trans-unit>
+      <trans-unit id="2baac42df2b7b4764469b8d37fbdc542">
+        <source>Женское имя, пример: Анна</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Жіноче ім'я, приклад: Анна</target>
+      </trans-unit>
+      <trans-unit id="9bacf7f01c2fa42a079261cd019b4926">
+        <source>Фамилия, пример: Волков</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Прізвище, приклад: Волков</target>
+      </trans-unit>
+      <trans-unit id="57dc0069f484ce7c26311fee11b65f5c">
+        <source>Суффикс, пример: Мл.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Суфікс, приклад: Мл.</target>
+      </trans-unit>
       <trans-unit id="3c3f6bccf02db4db89e8daaa880dc76c">
         <source>Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Звернення, приклад: Пані або Дівчина. У російській немає аналога для Ms. або Mrs.</target>
+      </trans-unit>
+      <trans-unit id="4cf2d9a2f030c7cd4f596e8a3a539afa">
+        <source>Мужское обращение, пример: Господин. В русском нет аналога для Mr.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Чоловіче звернення, приклад: Господин. У російській немає аналога для Mr.</target>
       </trans-unit>
       <trans-unit id="7952f9794a1a143d392de1612baddafc">
         <source>Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
@@ -910,13 +610,301 @@
         <source>Случайная электронная почта, пример: walter.sophia@hotmail.com. Связи с именем никакой нет!</source>
         <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадкова електронна пошта, приклад: walter.sophia@hotmail.com. Зв'язку з ім'ям жодного немає!</target>
       </trans-unit>
-      <trans-unit id="08cdf33fcdb9bd580cd2f9502860f8fa">
-        <source>Ошибка при обработке ошибки AJAX:</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Помилка під час обробки помилки AJAX:</target>
+      <trans-unit id="dd3390573f0c3aa4dadbcd3b0c011a83">
+        <source>Генерация новостей на основе шаблонов</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерація новин на основі шаблонів</target>
       </trans-unit>
-      <trans-unit id="ab2630021015478c54c9c5fa3cbb5b18">
-        <source>Неизвестная ошибка</source>
-        <target state="needs-review-translation" state-qualifier="leveraged-mt">Невідома помилка</target>
+      <trans-unit id="c2b06a006d468ccc5b5242f15ee2f05c">
+        <source>Перейти</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Перейти</target>
+      </trans-unit>
+      <trans-unit id="b1cc330603c1351e26c1ffe6b50ee6fe">
+        <source>Генерация случайных пользователей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерація випадкових користувачів</target>
+      </trans-unit>
+      <trans-unit id="802515cb78a6a13a069f913d2643bd97">
+        <source>Шаблон</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Шаблон</target>
+      </trans-unit>
+      <trans-unit id="8fdd696c731a3e43d3138ee9f0b7a0d4">
+        <source>Кол-во новостей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість новин</target>
+      </trans-unit>
+      <trans-unit id="9264bc52b6109d28a1564e1d62d85e28">
+        <source>Генерировать</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Генерувати</target>
+      </trans-unit>
+      <trans-unit id="3af89ff4af056859059df5f712ea8151">
+        <source>Сводка информации</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зведення інформації</target>
+      </trans-unit>
+      <trans-unit id="a3e79be8ac0b6b45fc3b758ff79b25ee">
+        <source>Кол-во объектов</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість об'єктів</target>
+      </trans-unit>
+      <trans-unit id="875bb32fedf39f0d37eb156e1996c2d1">
+        <source>Прогресс</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Прогрес</target>
+      </trans-unit>
+      <trans-unit id="6f4e97bcc4b115088da7102032741196">
+        <source>Ожидаем начала...</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Очікуємо початку...</target>
+      </trans-unit>
+      <trans-unit id="79cabd47b2d0ccb186db8f058c6f4a4a">
+        <source>Вывод</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Висновок</target>
+      </trans-unit>
+      <trans-unit id="824076494f528268338ad74d645a8a48">
+        <source>Начать обработку</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Почати обробку</target>
+      </trans-unit>
+      <trans-unit id="e7a5d4fb073f59759b13a7ddd12b5b58">
+        <source>Отмена / Закрыть</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Скасувати / Закрити</target>
+      </trans-unit>
+      <trans-unit id="55f65ea9f141d4f6455e7da3e783cb52">
+        <source>Обработано {value} из {total}</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Оброблено {value} з {total}</target>
+      </trans-unit>
+      <trans-unit id="63397568cdbbd3b75ede15c7c341310b">
+        <source>Псевдоним пользователя</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Псевдонім користувача</target>
+      </trans-unit>
+      <trans-unit id="5c974ed146bb807b2aeb8af539a2af1d">
+        <source>Полное имя пользователя</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повне ім'я користувача</target>
+      </trans-unit>
+      <trans-unit id="26f332a2f55853627c09e209e868a3a0">
+        <source>Электронная почта пользователя</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Електронна пошта користувача</target>
+      </trans-unit>
+      <trans-unit id="ab294e734c8915464405651a30d99b8b">
+        <source>Группа пользователя</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Група користувача</target>
+      </trans-unit>
+      <trans-unit id="5ebe553e01799a927b1d045924bbd4fd">
+        <source>Пароль</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Пароль</target>
+      </trans-unit>
+      <trans-unit id="d5ba6e7bb55149331b100758477939ca">
+        <source>Кол-во пользователей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість користувачів</target>
+      </trans-unit>
+      <trans-unit id="c919d65bd95698af8f15fa8133bf490d">
+        <source>Настройки</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Налаштування</target>
+      </trans-unit>
+      <trans-unit id="8393121bc96887e4b04f074897c9072c">
+        <source>Язык генерации</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Мова генерації</target>
+      </trans-unit>
+      <trans-unit id="edfcaae069a411092c29763be004b640">
+        <source>Список пользователей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Список користувачів</target>
+      </trans-unit>
+      <trans-unit id="7ab5eae2ca53fa8d5a6ee5e5722b6c65">
+        <source>Список категорий</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Список категорій</target>
+      </trans-unit>
+      <trans-unit id="3e117b47955d8bcb67b6303344dc6056">
+        <source>Количество категорий</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Кількість категорій</target>
+      </trans-unit>
+      <trans-unit id="74ea58b6a801f0dce4e5d34dbca034dc">
+        <source>Сохранить</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зберегти</target>
+      </trans-unit>
+      <trans-unit id="a02a63a7206319230a329f87cbecb8d0">
+        <source>Теги для генерации пользователей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги для генерації користувачів</target>
+      </trans-unit>
+      <trans-unit id="c4aa5053dcaa0ed0a2160691f7345ec6">
+        <source>Тег</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Тег</target>
+      </trans-unit>
+      <trans-unit id="38ca0af80cd7bd241500e81ba2e6efff">
+        <source>Описание</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опис</target>
+      </trans-unit>
+      <trans-unit id="33373ff91e73ccb40752d9b4a3b73566">
+        <source>Теги для генерации новостей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Теги для генерації новин</target>
+      </trans-unit>
+      <trans-unit id="61e2c4b6c709da7543559930d557ff64">
+        <source>Вспомогательные теги, которые доступны для всех генераторов</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Допоміжні теги, які доступні для всіх генераторів</target>
+      </trans-unit>
+      <trans-unit id="36d5676900b3e6fbc03e1a0b359341bc">
+        <source>шаблон</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">шаблон</target>
+      </trans-unit>
+      <trans-unit id="5d77d19db17a374c62a62daf29c685fd">
+        <source>Включён?</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнено?</target>
+      </trans-unit>
+      <trans-unit id="21bca7e624ad26e2a9ef8162c812bb2a">
+        <source>Выбор действия</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вибір дії</target>
+      </trans-unit>
+      <trans-unit id="47e2436e5560837160a70c64466ea22b">
+        <source>Изменить</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Змінити</target>
+      </trans-unit>
+      <trans-unit id="ed2bbfbc53d83d3ad81f7fd6485ac6e8">
+        <source>Удалить</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Видалити</target>
+      </trans-unit>
+      <trans-unit id="b278285aeff5cffad70c9838b3566f5d">
+        <source>Отключить</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="417b334759a9581d16440d075aa1cd12">
+        <source>Включить</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Увімкнути</target>
+      </trans-unit>
+      <trans-unit id="b059f7e15df06e3f864e61040ae3caba">
+        <source>Создать</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Створити</target>
+      </trans-unit>
+      <trans-unit id="674d0134b22ed3901ab606d22de07279">
+        <source>Название шаблона</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Назва шаблону</target>
+      </trans-unit>
+      <trans-unit id="998ad0e69972a3126b75f027fdfe77ad">
+        <source>Укажите уникальное название для шаблона</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть унікальну назву для шаблону</target>
+      </trans-unit>
+      <trans-unit id="64d28261282600c69815684b9cae00cb">
+        <source>Активировать шаблон</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Активувати шаблон</target>
+      </trans-unit>
+      <trans-unit id="c4f66907b710d6fe08fb697f5096a2ba">
+        <source>Автор новости</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Автор новини</target>
+      </trans-unit>
+      <trans-unit id="9ef78d093f0f76350dde5d35ae0eaad5">
+        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон. Або вкажіть ID автора</target>
+      </trans-unit>
+      <trans-unit id="ea5e8f3aeaeffa79a3f5c44bf5266670">
+        <source>Заголовок новости</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заголовок новини</target>
+      </trans-unit>
+      <trans-unit id="4d0a630978dc1397c8a900c76824c61f">
+        <source>Используя теги заполните шаблон для заголовка новости.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги заповніть шаблон для заголовка новини.</target>
+      </trans-unit>
+      <trans-unit id="e06aec27008c31341a82a256fdb27b8b">
+        <source>Категория новости</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Категорія новини</target>
+      </trans-unit>
+      <trans-unit id="7e3b18e6645df03f1912f87b08b98fb7">
+        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовуючи теги, заповніть шаблон для категорії новини. Або вкажіть ID категорій</target>
+      </trans-unit>
+      <trans-unit id="e67077d39aee6a1900014ef46e643be5">
+        <source>Дата публикации, начало</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, початок</target>
+      </trans-unit>
+      <trans-unit id="a46ae946f618dd0375291a8d8dd5b6f1">
+        <source>Укажите начальную дату для случайного значения</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть початкову дату для випадкового значення</target>
+      </trans-unit>
+      <trans-unit id="578484942d6d2a4dcda1f1476368ac5b">
+        <source>Дата публикации, начало (Альтернатива)</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, початок (Альтернатива)</target>
+      </trans-unit>
+      <trans-unit id="6bce37f39de842525636deee8c5d55c7">
+        <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть початкову дату для випадкового значення. Якщо значення вказано, то значення вище не враховуватиметься. Дозволено теги. Якщо Теги не відповідатимуть належним, то це поле буде не дійсним.</target>
+      </trans-unit>
+      <trans-unit id="31e16c44a697e9fd833f3ab8ad857e6f">
+        <source>Дата публикации, конец</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, кінець</target>
+      </trans-unit>
+      <trans-unit id="f25fc6959c65bfd7c0e26d4d64e4a474">
+        <source>Укажите конечную дату для случайного значения</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть кінцеву дату для випадкового значення</target>
+      </trans-unit>
+      <trans-unit id="4695abca4139701eee980f802e60f668">
+        <source>Дата публикации, конец (Альтернатива)</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дата публікації, кінець (Альтернатива)</target>
+      </trans-unit>
+      <trans-unit id="f5391f967766e02af430ae91b1d531ba">
+        <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вкажіть кінцеву дату для випадкового значення. Якщо значення вказано, то значення вище не враховуватиметься. Дозволено теги. Якщо Теги не відповідатимуть належним, то це поле буде не дійсним.</target>
+      </trans-unit>
+      <trans-unit id="4fe9d76fccba1f173c41a97f76b12cd4">
+        <source>Краткое содержание</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Короткий зміст</target>
+      </trans-unit>
+      <trans-unit id="1ea66338fa8913d8da2d857b2afb067f">
+        <source>Сгенерируйте описание используя теги генерации</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Згенеруйте опис, використовуючи теги генерації</target>
+      </trans-unit>
+      <trans-unit id="5a7ceb4db78e5ebe67854d7e30a00ca7">
+        <source>Полное содержание</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Повний зміст</target>
+      </trans-unit>
+      <trans-unit id="bf025a9d133531a426444d8a90836e95">
+        <source>Дополнительное поле:</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Додаткове поле:</target>
+      </trans-unit>
+      <trans-unit id="bbd43a7a61ce768a86c41b86662300b8">
+        <source>Выключить</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Вимкнути</target>
+      </trans-unit>
+      <trans-unit id="0445bb6d13c0f7cc06265b9718d4ea91">
+        <source>Случайно</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Випадково</target>
+      </trans-unit>
+      <trans-unit id="a48503b1216956d658850d5449a620eb">
+        <source>Публиковать на главной</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Публікувати на головній</target>
+      </trans-unit>
+      <trans-unit id="5464fdf47c5ed69718ddf795f1d4f0fb">
+        <source>Опубликовать новость на сайте</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опублікувати новину на сайті</target>
+      </trans-unit>
+      <trans-unit id="64b25fac6a9c2b185adfa1ded87c4409">
+        <source>Зафиксировать новость</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Зафіксувати новину</target>
+      </trans-unit>
+      <trans-unit id="a94208dd57b1535ac8db57ee2ea3902e">
+        <source>Разрешить комментарии</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дозволити коментарі</target>
+      </trans-unit>
+      <trans-unit id="627bbd7112119f56ffbcbef9a6067145">
+        <source>Разрешить рейтинг статьи</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дозволити рейтинг статті</target>
+      </trans-unit>
+      <trans-unit id="4d8b7bf049e2660ec572713363b5cd25">
+        <source>Запретить индексацию для поисковиков</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Заборонити індексацію для пошукових систем</target>
+      </trans-unit>
+      <trans-unit id="e63f650662f5b8d27799094386d86877">
+        <source>Исключить из поиска по сайту</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Виключити з пошуку по сайту</target>
+      </trans-unit>
+      <trans-unit id="ee88cc85b31f7804932ce59c40128598">
+        <source>Опубликовать новость в RSS потоке</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Опублікувати новину в RSS потоці</target>
+      </trans-unit>
+      <trans-unit id="7d66bab2d781955d5f3de0991076a6e3">
+        <source>Использовать в Яндекс Турбо</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовувати в Яндекс Турбо</target>
+      </trans-unit>
+      <trans-unit id="a190fd604143afba5adbbda32ece42e5">
+        <source>Использовать в Яндекс Дзен</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Використовувати в Яндекс Дзен</target>
+      </trans-unit>
+      <trans-unit id="148bbf94cef9e1e431bf97570eb0644d">
+        <source>Всё отлично!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Усе чудово!</target>
+      </trans-unit>
+      <trans-unit id="3a92eb91d4231b257e155f628ff13990">
+        <source>Данные были сохранены!</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Дані було збережено!</target>
       </trans-unit>
     </body>
   </file>
