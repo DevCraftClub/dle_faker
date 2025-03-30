@@ -2,413 +2,213 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file original="dle_faker.ru_RU" datatype="plaintext" source-language="ru" target-language="de">
     <body>
-      <trans-unit id="63397568cdbbd3b75ede15c7c341310b" approved="yes">
-        <source>Псевдоним пользователя</source>
-        <target state="final">Benutzer-Alias</target>
-      </trans-unit>
-      <trans-unit id="5c974ed146bb807b2aeb8af539a2af1d" approved="yes">
-        <source>Полное имя пользователя</source>
-        <target state="final">Vollständiger Benutzername</target>
-      </trans-unit>
-      <trans-unit id="26f332a2f55853627c09e209e868a3a0" approved="yes">
-        <source>Электронная почта пользователя</source>
-        <target state="final">Benutzer-E-Mail</target>
-      </trans-unit>
-      <trans-unit id="ab294e734c8915464405651a30d99b8b" approved="yes">
-        <source>Группа пользователя</source>
-        <target state="final">Benutzergruppe</target>
-      </trans-unit>
-      <trans-unit id="5ebe553e01799a927b1d045924bbd4fd" approved="yes">
-        <source>Пароль</source>
-        <target state="final">Passwort</target>
-      </trans-unit>
-      <trans-unit id="d5ba6e7bb55149331b100758477939ca" approved="yes">
-        <source>Кол-во пользователей</source>
-        <target state="final">Anzahl der Benutzer</target>
-      </trans-unit>
-      <trans-unit id="9264bc52b6109d28a1564e1d62d85e28" approved="yes">
-        <source>Генерировать</source>
-        <target state="final">Erzeugen Sie</target>
-      </trans-unit>
-      <trans-unit id="3af89ff4af056859059df5f712ea8151" approved="yes">
-        <source>Сводка информации</source>
-        <target state="final">Zusammenfassung der Informationen</target>
-      </trans-unit>
-      <trans-unit id="a3e79be8ac0b6b45fc3b758ff79b25ee" approved="yes">
-        <source>Кол-во объектов</source>
-        <target state="final">Anzahl der Objekte</target>
-      </trans-unit>
-      <trans-unit id="875bb32fedf39f0d37eb156e1996c2d1" approved="yes">
-        <source>Прогресс</source>
-        <target state="final">Fortschritt</target>
-      </trans-unit>
-      <trans-unit id="6f4e97bcc4b115088da7102032741196" approved="yes">
-        <source>Ожидаем начала...</source>
-        <target state="final">Warten auf den Anfang...</target>
-      </trans-unit>
-      <trans-unit id="79cabd47b2d0ccb186db8f058c6f4a4a" approved="yes">
-        <source>Вывод</source>
-        <target state="final">Fazit</target>
-      </trans-unit>
-      <trans-unit id="824076494f528268338ad74d645a8a48" approved="yes">
-        <source>Начать обработку</source>
-        <target state="final">Verarbeitung beginnen</target>
-      </trans-unit>
-      <trans-unit id="e7a5d4fb073f59759b13a7ddd12b5b58" approved="yes">
-        <source>Отмена / Закрыть</source>
-        <target state="final">Abbrechen / Schließen</target>
-      </trans-unit>
-      <trans-unit id="55f65ea9f141d4f6455e7da3e783cb52" approved="yes">
-        <source>Обработано {value} из {total}</source>
-        <target state="final">Verarbeitet von {value} von {total}</target>
-      </trans-unit>
-      <trans-unit id="674d0134b22ed3901ab606d22de07279" approved="yes">
-        <source>Название шаблона</source>
-        <target state="final">Name der Vorlage</target>
-      </trans-unit>
-      <trans-unit id="998ad0e69972a3126b75f027fdfe77ad" approved="yes">
-        <source>Укажите уникальное название для шаблона</source>
-        <target state="final">Geben Sie einen eindeutigen Namen für die Vorlage an</target>
-      </trans-unit>
-      <trans-unit id="64d28261282600c69815684b9cae00cb" approved="yes">
-        <source>Активировать шаблон</source>
-        <target state="final">Vorlage aktivieren</target>
-      </trans-unit>
-      <trans-unit id="c4f66907b710d6fe08fb697f5096a2ba" approved="yes">
-        <source>Автор новости</source>
-        <target state="final">Autor der Nachricht</target>
-      </trans-unit>
-      <trans-unit id="9ef78d093f0f76350dde5d35ae0eaad5" approved="yes">
-        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
-        <target state="final">Füllen Sie die Vorlage mit Tags. Oder geben Sie die Autoren-ID an</target>
-      </trans-unit>
-      <trans-unit id="ea5e8f3aeaeffa79a3f5c44bf5266670" approved="yes">
-        <source>Заголовок новости</source>
-        <target state="final">Nachrichtenüberschrift</target>
-      </trans-unit>
-      <trans-unit id="4d0a630978dc1397c8a900c76824c61f" approved="yes">
-        <source>Используя теги заполните шаблон для заголовка новости.</source>
-        <target state="final">Füllen Sie mit Hilfe von Tags die Vorlage für die Schlagzeile der Nachricht aus.</target>
-      </trans-unit>
-      <trans-unit id="e06aec27008c31341a82a256fdb27b8b" approved="yes">
-        <source>Категория новости</source>
-        <target state="final">Kategorie Nachrichten</target>
-      </trans-unit>
-      <trans-unit id="7e3b18e6645df03f1912f87b08b98fb7" approved="yes">
-        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
-        <target state="final">Verwenden Sie Tags, um die Vorlage für die Nachrichtenkategorie zu füllen. Oder geben Sie Kategorie-IDs an</target>
-      </trans-unit>
-      <trans-unit id="e67077d39aee6a1900014ef46e643be5" approved="yes">
-        <source>Дата публикации, начало</source>
-        <target state="final">Datum der Veröffentlichung, Beginn</target>
-      </trans-unit>
-      <trans-unit id="a46ae946f618dd0375291a8d8dd5b6f1" approved="yes">
-        <source>Укажите начальную дату для случайного значения</source>
-        <target state="final">Geben Sie das Startdatum für einen Zufallswert an</target>
-      </trans-unit>
-      <trans-unit id="578484942d6d2a4dcda1f1476368ac5b" approved="yes">
-        <source>Дата публикации, начало (Альтернатива)</source>
-        <target state="final">Datum der Veröffentlichung, Beginn (Alternative)</target>
-      </trans-unit>
-      <trans-unit id="6bce37f39de842525636deee8c5d55c7" approved="yes">
-        <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="final">Geben Sie das Startdatum für den Zufallswert an. Wenn ein Wert angegeben wird, wird der obige Wert nicht berücksichtigt. Erlaubte Tags. Wenn die Tags nicht geeignet sind, ist dieses Feld ungültig.</target>
-      </trans-unit>
-      <trans-unit id="31e16c44a697e9fd833f3ab8ad857e6f" approved="yes">
-        <source>Дата публикации, конец</source>
-        <target state="final">Datum der Veröffentlichung, Ende</target>
-      </trans-unit>
-      <trans-unit id="f25fc6959c65bfd7c0e26d4d64e4a474" approved="yes">
-        <source>Укажите конечную дату для случайного значения</source>
-        <target state="final">Geben Sie das Enddatum für den Zufallswert an</target>
-      </trans-unit>
-      <trans-unit id="4695abca4139701eee980f802e60f668" approved="yes">
-        <source>Дата публикации, конец (Альтернатива)</source>
-        <target state="final">Datum der Veröffentlichung, Ende (Alternative)</target>
-      </trans-unit>
-      <trans-unit id="f5391f967766e02af430ae91b1d531ba" approved="yes">
-        <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
-        <target state="final">Geben Sie das Enddatum für den Zufallswert an. Wenn ein Wert angegeben wird, wird der obige Wert nicht berücksichtigt. Erlaubte Tags. Wenn die Tags nicht geeignet sind, ist dieses Feld ungültig.</target>
-      </trans-unit>
-      <trans-unit id="4fe9d76fccba1f173c41a97f76b12cd4" approved="yes">
-        <source>Краткое содержание</source>
-        <target state="final">Zusammenfassung</target>
-      </trans-unit>
-      <trans-unit id="1ea66338fa8913d8da2d857b2afb067f" approved="yes">
-        <source>Сгенерируйте описание используя теги генерации</source>
-        <target state="final">Beschreibung mit Generierungs-Tags generieren</target>
-      </trans-unit>
-      <trans-unit id="5a7ceb4db78e5ebe67854d7e30a00ca7" approved="yes">
-        <source>Полное содержание</source>
-        <target state="final">Vollständiger Inhalt</target>
-      </trans-unit>
-      <trans-unit id="bf025a9d133531a426444d8a90836e95" approved="yes">
-        <source>Дополнительное поле:</source>
-        <target state="final">Zusätzliches Feld:</target>
-      </trans-unit>
-      <trans-unit id="2e51ae4b7b2cad37bcc276ea43b40a14" approved="yes">
-        <source>&lt;b class="ui warning text"&gt;!!!ИЗОБРАЖЕНИЯ, ФАЙЛЫ, АУДИО, ВИДЕО и ПРОЧИЕ ВЛОЖЕНИЯ НЕ ПОДДЕРЖИВАЮТСЯ!!!&lt;/b&gt;&lt;br&gt;Содержимое для поля</source>
-        <target state="final">&lt;b class="ui warning text"&gt;!!!BILDER, DATEIEN, AUDIO, VIDEO und ANDERE EINSCHLÜSSE WERDEN NICHT UNTERSTÜTZT!!!!&lt;/b&gt;&lt;br&gt;Inhalt für das Feld</target>
-      </trans-unit>
-      <trans-unit id="417b334759a9581d16440d075aa1cd12" approved="yes">
-        <source>Включить</source>
-        <target state="final">Aktivieren Sie</target>
-      </trans-unit>
-      <trans-unit id="bbd43a7a61ce768a86c41b86662300b8" approved="yes">
-        <source>Выключить</source>
-        <target state="final">Ausschalten</target>
-      </trans-unit>
-      <trans-unit id="0445bb6d13c0f7cc06265b9718d4ea91" approved="yes">
-        <source>Случайно</source>
-        <target state="final">Versehentlich</target>
-      </trans-unit>
-      <trans-unit id="256e43396389d380a88be7e7679c39ee" approved="yes">
-        <source>Следующие параметры будут учитываться:</source>
-        <target state="final">Die folgenden Parameter werden dabei berücksichtigt:</target>
-      </trans-unit>
-      <trans-unit id="ee9f7906d536a11846c717364105268a" approved="yes">
-        <source>&lt;div class="item"&gt;&lt;b&gt;Включить&lt;/b&gt; - Опция включает опцию&lt;/div&gt;</source>
-        <target state="final">&lt;div class="item"&gt;&lt;b&gt;Aktivieren&lt;/b&gt; - Option aktiviert&lt;/div&gt;</target>
-      </trans-unit>
-      <trans-unit id="0e48f44171f91b815260e6986c6ba72b" approved="yes">
-        <source>&lt;div class="item"&gt;&lt;b&gt;Выключить&lt;/b&gt; - Опция выключает опцию&lt;/div&gt;</source>
-        <target state="final">&lt;div class="item"&gt;&lt;b&gt;Ausschalten&lt;/b&gt; - Option schaltet Option aus&lt;/div&gt;</target>
-      </trans-unit>
-      <trans-unit id="79eb9964424715920c463b8a31f2e447" approved="yes">
-        <source>&lt;div class="item"&gt;&lt;b&gt;Случайно&lt;/b&gt; - Программно решает, включить опцию или нет&lt;/div&gt;&lt;br&gt;&lt;i&gt;По умолчанию: Случайно&lt;/i&gt;</source>
-        <target state="final">&lt;div class="item"&gt;&lt;b&gt;Zufällig&lt;/b&gt; - Programmatisch entscheidet, ob die Option aktiviert wird oder nicht&lt;/div&gt;&lt;br&gt;&lt;i&gt;Standard: Zufällig&lt;/i&gt;</target>
-      </trans-unit>
-      <trans-unit id="a48503b1216956d658850d5449a620eb" approved="yes">
-        <source>Публиковать на главной</source>
-        <target state="final">Auf der Hauptseite veröffentlichen</target>
-      </trans-unit>
-      <trans-unit id="5464fdf47c5ed69718ddf795f1d4f0fb" approved="yes">
-        <source>Опубликовать новость на сайте</source>
-        <target state="final">Veröffentlichen Sie Nachrichten auf der Website</target>
-      </trans-unit>
-      <trans-unit id="64b25fac6a9c2b185adfa1ded87c4409" approved="yes">
-        <source>Зафиксировать новость</source>
-        <target state="final">Lesezeichen für die Nachrichten</target>
-      </trans-unit>
-      <trans-unit id="a94208dd57b1535ac8db57ee2ea3902e" approved="yes">
-        <source>Разрешить комментарии</source>
-        <target state="final">Kommentare zulassen</target>
-      </trans-unit>
-      <trans-unit id="627bbd7112119f56ffbcbef9a6067145" approved="yes">
-        <source>Разрешить рейтинг статьи</source>
-        <target state="final">Artikelbewertung zulassen</target>
-      </trans-unit>
-      <trans-unit id="4d8b7bf049e2660ec572713363b5cd25" approved="yes">
-        <source>Запретить индексацию для поисковиков</source>
-        <target state="final">Indizierung für Suchmaschinen verbieten</target>
-      </trans-unit>
-      <trans-unit id="e63f650662f5b8d27799094386d86877" approved="yes">
-        <source>Исключить из поиска по сайту</source>
-        <target state="final">Von der Site-Suche ausschließen</target>
-      </trans-unit>
-      <trans-unit id="ee88cc85b31f7804932ce59c40128598" approved="yes">
-        <source>Опубликовать новость в RSS потоке</source>
-        <target state="final">Nachrichten im RSS-Feed veröffentlichen</target>
-      </trans-unit>
-      <trans-unit id="7d66bab2d781955d5f3de0991076a6e3" approved="yes">
-        <source>Использовать в Яндекс Турбо</source>
-        <target state="final">Verwendung in Yandex Turbo</target>
-      </trans-unit>
-      <trans-unit id="a190fd604143afba5adbbda32ece42e5" approved="yes">
-        <source>Использовать в Яндекс Дзен</source>
-        <target state="final">Verwendung in Yandex Zen</target>
-      </trans-unit>
-      <trans-unit id="74ea58b6a801f0dce4e5d34dbca034dc" approved="yes">
-        <source>Сохранить</source>
-        <target state="final">Speichern Sie</target>
-      </trans-unit>
-      <trans-unit id="148bbf94cef9e1e431bf97570eb0644d" approved="yes">
-        <source>Всё отлично!</source>
-        <target state="final">Alles ist großartig!</target>
-      </trans-unit>
-      <trans-unit id="3a92eb91d4231b257e155f628ff13990" approved="yes">
-        <source>Данные были сохранены!</source>
-        <target state="final">Die Daten wurden gespeichert!</target>
-      </trans-unit>
-      <trans-unit id="36d5676900b3e6fbc03e1a0b359341bc" approved="yes">
-        <source>шаблон</source>
-        <target state="final">Vorlage</target>
-      </trans-unit>
-      <trans-unit id="602680ed8916dcc039882172ef089256" approved="yes">
-        <source>Название</source>
-        <target state="final">Titel</target>
-      </trans-unit>
-      <trans-unit id="5d77d19db17a374c62a62daf29c685fd" approved="yes">
-        <source>Включён?</source>
-        <target state="final">Aktiviert?</target>
-      </trans-unit>
-      <trans-unit id="21bca7e624ad26e2a9ef8162c812bb2a" approved="yes">
-        <source>Выбор действия</source>
-        <target state="final">Auswahl der Aktion</target>
-      </trans-unit>
-      <trans-unit id="47e2436e5560837160a70c64466ea22b" approved="yes">
-        <source>Изменить</source>
-        <target state="final">bearbeiten</target>
-      </trans-unit>
-      <trans-unit id="ed2bbfbc53d83d3ad81f7fd6485ac6e8" approved="yes">
-        <source>Удалить</source>
-        <target state="final">Löschen</target>
-      </trans-unit>
-      <trans-unit id="b278285aeff5cffad70c9838b3566f5d" approved="yes">
-        <source>Отключить</source>
-        <target state="final">Deaktivieren Sie</target>
-      </trans-unit>
-      <trans-unit id="b059f7e15df06e3f864e61040ae3caba" approved="yes">
-        <source>Создать</source>
-        <target state="final">erstellen</target>
-      </trans-unit>
-      <trans-unit id="a02a63a7206319230a329f87cbecb8d0" approved="yes">
-        <source>Теги для генерации пользователей</source>
-        <target state="final">Tags für die Benutzergenerierung</target>
-      </trans-unit>
-      <trans-unit id="c4aa5053dcaa0ed0a2160691f7345ec6" approved="yes">
-        <source>Тег</source>
-        <target state="final">Tag</target>
-      </trans-unit>
-      <trans-unit id="38ca0af80cd7bd241500e81ba2e6efff" approved="yes">
-        <source>Описание</source>
-        <target state="final">Beschreibung</target>
-      </trans-unit>
-      <trans-unit id="33373ff91e73ccb40752d9b4a3b73566" approved="yes">
-        <source>Теги для генерации новостей</source>
-        <target state="final">Tags für Nachrichtengenerierung</target>
-      </trans-unit>
-      <trans-unit id="61e2c4b6c709da7543559930d557ff64" approved="yes">
-        <source>Вспомогательные теги, которые доступны для всех генераторов</source>
-        <target state="final">Hilfs-Tags, die für alle Generatoren verfügbar sind</target>
-      </trans-unit>
-      <trans-unit id="c919d65bd95698af8f15fa8133bf490d" approved="yes">
-        <source>Настройки</source>
-        <target state="final">Einstellungen</target>
-      </trans-unit>
-      <trans-unit id="8393121bc96887e4b04f074897c9072c" approved="yes">
-        <source>Язык генерации</source>
-        <target state="final">Sprache der Generation</target>
-      </trans-unit>
-      <trans-unit id="edfcaae069a411092c29763be004b640" approved="yes">
-        <source>Список пользователей</source>
-        <target state="final">Liste der Benutzer</target>
-      </trans-unit>
-      <trans-unit id="7ab5eae2ca53fa8d5a6ee5e5722b6c65" approved="yes">
-        <source>Список категорий</source>
-        <target state="final">Liste der Kategorien</target>
-      </trans-unit>
-      <trans-unit id="3e117b47955d8bcb67b6303344dc6056" approved="yes">
-        <source>Количество категорий</source>
-        <target state="final">Anzahl der Kategorien</target>
-      </trans-unit>
-      <trans-unit id="802515cb78a6a13a069f913d2643bd97" approved="yes">
-        <source>Шаблон</source>
-        <target state="final">Vorlage</target>
-      </trans-unit>
-      <trans-unit id="8fdd696c731a3e43d3138ee9f0b7a0d4" approved="yes">
-        <source>Кол-во новостей</source>
-        <target state="final">Anzahl der Nachrichten</target>
+      <trans-unit id="d2f70a77d369eba7b169678caf88d9f3" approved="yes">
+        <source>Шаблон не может быть пустым</source>
+        <target state="final">Die Vorlage kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="850b19899322ec1ecb1ec89a49e1423b" approved="yes">
+        <source>Такого шаблона не существует</source>
+        <target state="final">Es gibt keine solche Vorlage</target>
+      </trans-unit>
+      <trans-unit id="5ec4c68aee45a5fd65448ae9bbbf7fce" approved="yes">
+        <source>Не проставлена настройка для автора новости!</source>
+        <target state="final">Der Schauplatz für den Autor der Nachricht wurde noch nicht festgelegt!</target>
+      </trans-unit>
+      <trans-unit id="33956d00416c2e769e301063d852b284" approved="yes">
+        <source>Не проставлена настройка для категорий!</source>
+        <target state="final">Die Einstellung für Kategorien wurde nicht festgelegt!</target>
+      </trans-unit>
+      <trans-unit id="c7dbc908bbee2bc38d4993936f827321" approved="yes">
+        <source>Шаблон для псевдонима не может быть пустым</source>
+        <target state="final">Die Vorlage für einen Alias kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="057c13628261bff49195134e539207c1" approved="yes">
+        <source>Шаблон для электронной почты не может быть пустым</source>
+        <target state="final">Die E-Mail-Vorlage kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="dcbd6dce35f0f102250be973f41de8c5" approved="yes">
+        <source>Шаблон для пароля не может быть пустым</source>
+        <target state="final">Die Passwortvorlage kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="192a6a3e0445399f439c2853a2686c92" approved="yes">
+        <source>Пользователь не был найден!</source>
+        <target state="final">Der Benutzer wurde nicht gefunden!</target>
+      </trans-unit>
+      <trans-unit id="b7bc548eca7c74fb12c7584f078c527b" approved="yes">
+        <source>Псевдоним пользователя (:uname) уже занят!</source>
+        <target state="final">Der Benutzer-Alias (:uname) ist bereits vergeben!</target>
+      </trans-unit>
+      <trans-unit id="51624850b048642f9c79e116b0d891a6" approved="yes">
+        <source>Электронная почта (:email) пользователя уже занята!</source>
+        <target state="final">Die E-Mail des Benutzers (:email) ist bereits belegt!</target>
+      </trans-unit>
+      <trans-unit id="5d16e6dabbe630bb223962469c37359a" approved="yes">
+        <source>Электронная почта (:email) не подлежит нужному формату!</source>
+        <target state="final">Die E-Mail (:email) unterliegt nicht dem vorgeschriebenen Format!</target>
+      </trans-unit>
+      <trans-unit id="1c59f2f69b0332dfc99e0530ce7b4c9f" approved="yes">
+        <source>Установленной группы (:group) не существует!</source>
+        <target state="final">Die eingestellte Gruppe (:group) existiert nicht!</target>
+      </trans-unit>
+      <trans-unit id="d004b754d773ae760f282c0affe57e18" approved="yes">
+        <source>Нужно указать хотя бы одного пользователя!</source>
+        <target state="final">Sie müssen mindestens einen Benutzer angeben!</target>
+      </trans-unit>
+      <trans-unit id="2acccbb3f32004707f46e2659a755a50" approved="yes">
+        <source>Нужно указать хотя бы одну категорию!</source>
+        <target state="final">Sie müssen mindestens eine Kategorie angeben!</target>
+      </trans-unit>
+      <trans-unit id="22d8ff492a13fa906407341fb129ccfc" approved="yes">
+        <source>Настройки сохранены</source>
+        <target state="final">Einstellungen gespeichert</target>
+      </trans-unit>
+      <trans-unit id="322b47b2a53dfeca3da6b0cbc6bffb42" approved="yes">
+        <source>Ошибка в сохранении настроек</source>
+        <target state="final">Fehler beim Speichern der Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="92a4262898dbed87add330a31555b77d" approved="yes">
+        <source>Некорректные данные: :data.</source>
+        <target state="final">Ungültige Daten: :data.</target>
+      </trans-unit>
+      <trans-unit id="57003040d6fa6faa295f7c391199a232" approved="yes">
+        <source>Такого шаблона не существует!</source>
+        <target state="final">Eine solche Vorlage gibt es nicht!</target>
+      </trans-unit>
+      <trans-unit id="47edc4669d56a0155b00098de59642f6" approved="yes">
+        <source>Шаблон был включён</source>
+        <target state="final">Die Vorlage war enthalten</target>
+      </trans-unit>
+      <trans-unit id="14c1d474b69de34ed3608c64e60beaf6" approved="yes">
+        <source>Название шаблона не может быть пустым</source>
+        <target state="final">Der Name der Vorlage darf nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="ff0dcc861251d9b0aaa5e6ff04cbde3b" approved="yes">
+        <source>Автор не может быть пустым</source>
+        <target state="final">Ein Autor kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="71c4d1615f5b7432d3c7c86c0f2acb78" approved="yes">
+        <source>Заголовок не может быть пустым</source>
+        <target state="final">Die Kopfzeile kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="31b6da2af9e32c0caa5abe42597ed557" approved="yes">
+        <source>Категория не может быть пустой</source>
+        <target state="final">Eine Kategorie kann nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="8ca19bf9331d794db740e07c631116a3" approved="yes">
+        <source>Короткое описание не может быть пустой</source>
+        <target state="final">Eine kurze Beschreibung darf nicht leer sein</target>
+      </trans-unit>
+      <trans-unit id="f3b0d733cc49a86b44e1ff1b65b4b539" approved="yes">
+        <source>Шаблон успешно изменен</source>
+        <target state="final">Die Vorlage wurde erfolgreich geändert</target>
+      </trans-unit>
+      <trans-unit id="fd64d478887f8c638bc78991972be997" approved="yes">
+        <source>Шаблон успешно создан</source>
+        <target state="final">Die Vorlage wurde erfolgreich erstellt</target>
+      </trans-unit>
+      <trans-unit id="972e54dae9ea3a879708fcd1c27e5235">
+        <source>Шаблон удалён</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Vorlage entfernt</target>
+      </trans-unit>
+      <trans-unit id="d43a904173f6cee5872a334c014ca901" approved="yes">
+        <source>Генерирует случайные данные для наполнения сайта</source>
+        <target state="final">Generiert zufällige Daten, um die Website zu füllen</target>
+      </trans-unit>
+      <trans-unit id="fd4a65755652573907656d02b16b58a4" approved="yes">
+        <source>Шаблоны</source>
+        <target state="final">Vorlagen</target>
+      </trans-unit>
+      <trans-unit id="9c542a8b820cdcc77d37b26135b713a8" approved="yes">
+        <source>Генератор</source>
+        <target state="final">Generator</target>
+      </trans-unit>
+      <trans-unit id="54f067a401b1d97fb64ed2e6767094e0" approved="yes">
+        <source>Теги</source>
+        <target state="final">Tags</target>
+      </trans-unit>
+      <trans-unit id="7a3a7f6f4edd3a9f9d820a813d492288">
+        <source>[FIX] Исправлены ошибки в добавлении пользователей</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Fehler beim Hinzufügen von Benutzern behoben</target>
+      </trans-unit>
+      <trans-unit id="7295bc15ee71bd6bec1aee51cf381a43">
+        <source>[FIX] Исправлены ошибки в миграции данных на гитхабе</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">[FIX] Fehler bei der Datenmigration auf github behoben</target>
+      </trans-unit>
+      <trans-unit id="66681135311147c1f2dffd5ebfc69476" approved="yes">
+        <source>[FIX] Исправлена итерация в templates_create.html</source>
+        <target state="final">[FIX] Iteration in templates_create.html korrigiert</target>
+      </trans-unit>
+      <trans-unit id="a9d26e11c618ac5c2584fbc46949fd07" approved="yes">
+        <source>[FIX] Исправлены языковые функции</source>
+        <target state="final">[FIX] Korrigierte Sprachfunktionen</target>
+      </trans-unit>
+      <trans-unit id="48be3064a5d2f261381c51b3d05c78d9" approved="yes">
+        <source>[UPDATE] В файле generator_create_post.php логика вставки данных в базу данных обновлена. Она будет исполняться только в случае, если $xfSearchWords не пуст</source>
+        <target state="final">[UPDATE] In generator_create_post.php wurde die Logik zum Einfügen von Daten in die Datenbank aktualisiert. Sie wird nur ausgeführt, wenn $xfSearchWords nicht leer ist.</target>
+      </trans-unit>
+      <trans-unit id="a6d56affb34b13dd04b2b2d66a179c79" approved="yes">
+        <source>[UPDATE] В init.php управление зависимостями упрощено с целью сосредоточения на регистрации отсутствуюших зависимостей</source>
+        <target state="final">[UPDATE] In init.php wurde die Verwaltung von Abhängigkeiten vereinfacht, um sich auf die Protokollierung von fehlenden Abhängigkeiten zu konzentrieren.</target>
+      </trans-unit>
+      <trans-unit id="4c67cb51fa12be21222786efb72e2102" approved="yes">
+        <source>[UPDATE] HTML-шаблон изменен для улучшения обработки переменных в цикле templates_create.html.</source>
+        <target state="final">[UPDATE] HTML-Vorlage geändert, um die Handhabung von Variablen in der templates_create.html-Schleife zu verbessern.</target>
+      </trans-unit>
+      <trans-unit id="8b59ec3c01c0157dfd5901e185e72447" approved="yes">
+        <source>[FIX] Исправлена обработка данных при генерации новостей</source>
+        <target state="final">[FIX] Datenverarbeitung bei der Nachrichtenerstellung korrigiert</target>
+      </trans-unit>
+      <trans-unit id="d559361c3a8a846f5e976c3351638f50" approved="yes">
+        <source>[FIX] Исправлен скрипт установки</source>
+        <target state="final">[FIX] Installations-Skript korrigiert</target>
+      </trans-unit>
+      <trans-unit id="1afbfb509050909fea9ac2ba73ac2366" approved="yes">
+        <source>Основной релиз</source>
+        <target state="final">Hauptversion</target>
+      </trans-unit>
+      <trans-unit id="0de733bff24bb8215fb1f0cc839d8db3" approved="yes">
+        <source>История изменений</source>
+        <target state="final">Geschichte der Änderungen</target>
+      </trans-unit>
+      <trans-unit id="fc9b043bdb2a370509aa192475522cf0" approved="yes">
+        <source>Доступные генераторы</source>
+        <target state="final">Verfügbare Generatoren</target>
+      </trans-unit>
+      <trans-unit id="b475317d4d28461ae61ccf975b1c98f2" approved="yes">
+        <source>Настройки модуля</source>
+        <target state="final">Modul-Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="052db5db08b3ad3b99e2205870e29d2e" approved="yes">
+        <source>Перечень тегов для генерации данных</source>
+        <target state="final">Liste der Tags für die Datenerstellung</target>
       </trans-unit>
       <trans-unit id="034c06f315de8aba999c080d4cb48de7" approved="yes">
         <source>Генератор новостей</source>
         <target state="final">Nachrichtengenerator</target>
       </trans-unit>
-      <trans-unit id="dd3390573f0c3aa4dadbcd3b0c011a83" approved="yes">
-        <source>Генерация новостей на основе шаблонов</source>
-        <target state="final">Generierung von Nachrichten auf der Grundlage von Vorlagen</target>
-      </trans-unit>
-      <trans-unit id="c2b06a006d468ccc5b5242f15ee2f05c" approved="yes">
-        <source>Перейти</source>
-        <target state="final">Gehen Sie zu</target>
-      </trans-unit>
       <trans-unit id="6374224bede1b93f937399507f97b7af" approved="yes">
         <source>Генератор пользователей</source>
         <target state="final">Benutzer-Generator</target>
       </trans-unit>
-      <trans-unit id="b1cc330603c1351e26c1ffe6b50ee6fe" approved="yes">
-        <source>Генерация случайных пользователей</source>
-        <target state="final">Generierung von Zufallsbenutzern</target>
+      <trans-unit id="602680ed8916dcc039882172ef089256" approved="yes">
+        <source>Название</source>
+        <target state="final">Titel</target>
       </trans-unit>
-      <trans-unit id="4e18436448f5c60cb75eda54a42e3c3a" approved="yes">
-        <source>Случайный псевдоним, пример: coolcat123</source>
-        <target state="final">Zufälliger Alias, Beispiel: coolcat123</target>
+      <trans-unit id="c83f7ab515c5cf6bed69213f55f917c7" approved="yes">
+        <source>Активные</source>
+        <target state="final">Aktiv</target>
       </trans-unit>
-      <trans-unit id="b8ca4d47a7eb94ae160d0e119356ffea" approved="yes">
-        <source>Полное имя, пример: Проф. Артём Волков</source>
-        <target state="final">Vollständiger Name, Beispiel: Prof. Artyom Volkov</target>
+      <trans-unit id="2db281c93395da574576e224c17375a2">
+        <source>Страница %page%</source>
+        <target state="needs-review-translation" state-qualifier="leveraged-mt">Seite %page%</target>
       </trans-unit>
-      <trans-unit id="8082e79b5dde1c401954e1f035e27151" approved="yes">
-        <source>Имя, пример: Артём</source>
-        <target state="final">Name, Beispiel: Artyom</target>
+      <trans-unit id="ad9dc723c755a2a7da2e99130d429a11" approved="yes">
+        <source>Создание нового шаблона</source>
+        <target state="final">Eine neue Vorlage erstellen</target>
       </trans-unit>
-      <trans-unit id="77ed448d1cb9ebe74da6b0fe886cfa45" approved="yes">
-        <source>Мужское имя, пример: Артём</source>
-        <target state="final">Männlicher Name, Beispiel: Artyom</target>
-      </trans-unit>
-      <trans-unit id="2baac42df2b7b4764469b8d37fbdc542" approved="yes">
-        <source>Женское имя, пример: Анна</source>
-        <target state="final">Weiblicher Name, Beispiel: Anna</target>
-      </trans-unit>
-      <trans-unit id="9bacf7f01c2fa42a079261cd019b4926" approved="yes">
-        <source>Фамилия, пример: Волков</source>
-        <target state="final">Nachname, Beispiel: Volkov</target>
-      </trans-unit>
-      <trans-unit id="57dc0069f484ce7c26311fee11b65f5c" approved="yes">
-        <source>Суффикс, пример: Мл.</source>
-        <target state="final">Suffix, Beispiel: ml.</target>
-      </trans-unit>
-      <trans-unit id="4cf2d9a2f030c7cd4f596e8a3a539afa" approved="yes">
-        <source>Мужское обращение, пример: Господин. В русском нет аналога для Mr.</source>
-        <target state="final">Männliche Anrede, Beispiel: Mister. Es gibt keine Entsprechung für Mr.</target>
-      </trans-unit>
-      <trans-unit id="da486b266984e64885112f250ef573a6" approved="yes">
-        <source>Генерирует строку, содержащую случайное одно слово.</source>
-        <target state="final">Erzeugt eine Zeichenkette, die ein zufälliges einzelnes Wort enthält.</target>
-      </trans-unit>
-      <trans-unit id="43405cb444cb998f8da9770666c8444f" approved="yes">
-        <source>Генерирует строку, содержащую случайное предложение.</source>
-        <target state="final">Erzeugt eine Zeichenkette, die einen zufälligen Satz enthält.</target>
-      </trans-unit>
-      <trans-unit id="efb5d905d228959252364c8ef6a4485e" approved="yes">
-        <source>Параметр max указывает количество символов.</source>
-        <target state="final">Der Parameter max gibt die Anzahl der Zeichen an.</target>
-      </trans-unit>
-      <trans-unit id="601c9447d644ba2ae13b48372369982f" approved="yes">
-        <source>Генерирует случайную дату и время</source>
-        <target state="final">Erzeugt ein zufälliges Datum und eine zufällige Uhrzeit</target>
-      </trans-unit>
-      <trans-unit id="b328fffdc57d6431fc2c1cf217ef3dd2" approved="yes">
-        <source>Зависимости не были установлены!</source>
-        <target state="final">Es wurden keine Abhängigkeiten festgestellt!</target>
-      </trans-unit>
-      <trans-unit id="bebfb4a8fac05bd34c8175f8991cb14b" approved="yes">
-        <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
-        <target state="final">Installieren Sie sie selbst über die Konsole! PHP muss ausführbar sein!</target>
-      </trans-unit>
-      <trans-unit id="fd54a5d85bf2a5caee724cfdb5c1f166" approved="yes">
-        <source>Генерирует случайный эмодзи</source>
-        <target state="final">Erzeugt ein zufälliges Emoji</target>
-      </trans-unit>
-      <trans-unit id="249861c28e5bec1800883125fd84539b" approved="yes">
-        <source>Генерирует случайное целое число от 0 до 9.</source>
-        <target state="final">Erzeugt eine zufällige Ganzzahl von 0 bis 9.</target>
-      </trans-unit>
-      <trans-unit id="d1770a1309a3588a85b60a811a9a645d" approved="yes">
-        <source>Генерирует случайное число с плавающей запятой</source>
-        <target state="final">Erzeugt eine Fließkommazufallszahl</target>
-      </trans-unit>
-      <trans-unit id="8b446b63a69921afa880c6de34042521" approved="yes">
-        <source>Параметр min задаёт нижнюю границу.</source>
-        <target state="final">Der Parameter min legt die untere Grenze fest.</target>
-      </trans-unit>
-      <trans-unit id="facf4aef6a95b712f8a0aebe214bacd7" approved="yes">
-        <source>Параметр max задаёт верхнюю границу.</source>
-        <target state="final">Der Parameter max legt die Obergrenze fest.</target>
-      </trans-unit>
-      <trans-unit id="16f7f231033967745458d280ec157982" approved="yes">
-        <source>Генерирует случайный символ из алфавита.</source>
-        <target state="final">Erzeugt ein zufälliges Zeichen aus dem Alphabet.</target>
+      <trans-unit id="58dd8d6145cd9a1fd624bcd8446c1c6b" approved="yes">
+        <source>Редактирование шаблона: :name</source>
+        <target state="final">Vorlage bearbeiten: :name</target>
       </trans-unit>
       <trans-unit id="bfdc1c28174ac69ff3bbc12daef90bf1" approved="yes">
         <source>Как админка MH Admin</source>
@@ -650,189 +450,13 @@
         <source>Китайский [Chinese (Traditional, Taiwan)]</source>
         <target state="final">Chinesisch [Chinesisch (traditionell, Taiwan)]</target>
       </trans-unit>
-      <trans-unit id="fd4a65755652573907656d02b16b58a4" approved="yes">
-        <source>Шаблоны</source>
-        <target state="final">Vorlagen</target>
-      </trans-unit>
-      <trans-unit id="c83f7ab515c5cf6bed69213f55f917c7" approved="yes">
-        <source>Активные</source>
-        <target state="final">Aktiv</target>
-      </trans-unit>
-      <trans-unit id="ad9dc723c755a2a7da2e99130d429a11" approved="yes">
-        <source>Создание нового шаблона</source>
-        <target state="final">Eine neue Vorlage erstellen</target>
-      </trans-unit>
-      <trans-unit id="fc9b043bdb2a370509aa192475522cf0" approved="yes">
-        <source>Доступные генераторы</source>
-        <target state="final">Verfügbare Generatoren</target>
-      </trans-unit>
-      <trans-unit id="b475317d4d28461ae61ccf975b1c98f2" approved="yes">
-        <source>Настройки модуля</source>
-        <target state="final">Modul-Einstellungen</target>
-      </trans-unit>
-      <trans-unit id="1afbfb509050909fea9ac2ba73ac2366" approved="yes">
-        <source>Основной релиз</source>
-        <target state="final">Hauptversion</target>
-      </trans-unit>
-      <trans-unit id="0de733bff24bb8215fb1f0cc839d8db3" approved="yes">
-        <source>История изменений</source>
-        <target state="final">Geschichte der Änderungen</target>
-      </trans-unit>
-      <trans-unit id="052db5db08b3ad3b99e2205870e29d2e" approved="yes">
-        <source>Перечень тегов для генерации данных</source>
-        <target state="final">Liste der Tags für die Datenerstellung</target>
-      </trans-unit>
-      <trans-unit id="d43a904173f6cee5872a334c014ca901" approved="yes">
-        <source>Генерирует случайные данные для наполнения сайта</source>
-        <target state="final">Generiert zufällige Daten, um die Website zu füllen</target>
-      </trans-unit>
-      <trans-unit id="9c542a8b820cdcc77d37b26135b713a8" approved="yes">
-        <source>Генератор</source>
-        <target state="final">Generator</target>
-      </trans-unit>
-      <trans-unit id="54f067a401b1d97fb64ed2e6767094e0" approved="yes">
-        <source>Теги</source>
-        <target state="final">Tags</target>
-      </trans-unit>
-      <trans-unit id="d004b754d773ae760f282c0affe57e18" approved="yes">
-        <source>Нужно указать хотя бы одного пользователя!</source>
-        <target state="final">Sie müssen mindestens einen Benutzer angeben!</target>
-      </trans-unit>
-      <trans-unit id="2acccbb3f32004707f46e2659a755a50" approved="yes">
-        <source>Нужно указать хотя бы одну категорию!</source>
-        <target state="final">Sie müssen mindestens eine Kategorie angeben!</target>
-      </trans-unit>
-      <trans-unit id="22d8ff492a13fa906407341fb129ccfc" approved="yes">
-        <source>Настройки сохранены</source>
-        <target state="final">Einstellungen gespeichert</target>
-      </trans-unit>
-      <trans-unit id="322b47b2a53dfeca3da6b0cbc6bffb42" approved="yes">
-        <source>Ошибка в сохранении настроек</source>
-        <target state="final">Fehler beim Speichern der Einstellungen</target>
-      </trans-unit>
-      <trans-unit id="c7dbc908bbee2bc38d4993936f827321" approved="yes">
-        <source>Шаблон для псевдонима не может быть пустым</source>
-        <target state="final">Die Vorlage für einen Alias kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="057c13628261bff49195134e539207c1" approved="yes">
-        <source>Шаблон для электронной почты не может быть пустым</source>
-        <target state="final">Die E-Mail-Vorlage kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="dcbd6dce35f0f102250be973f41de8c5" approved="yes">
-        <source>Шаблон для пароля не может быть пустым</source>
-        <target state="final">Die Passwortvorlage kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="192a6a3e0445399f439c2853a2686c92" approved="yes">
-        <source>Пользователь не был найден!</source>
-        <target state="final">Der Benutzer wurde nicht gefunden!</target>
-      </trans-unit>
-      <trans-unit id="14c1d474b69de34ed3608c64e60beaf6" approved="yes">
-        <source>Название шаблона не может быть пустым</source>
-        <target state="final">Der Name der Vorlage darf nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="ff0dcc861251d9b0aaa5e6ff04cbde3b" approved="yes">
-        <source>Автор не может быть пустым</source>
-        <target state="final">Ein Autor kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="71c4d1615f5b7432d3c7c86c0f2acb78" approved="yes">
-        <source>Заголовок не может быть пустым</source>
-        <target state="final">Die Kopfzeile kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="31b6da2af9e32c0caa5abe42597ed557" approved="yes">
-        <source>Категория не может быть пустой</source>
-        <target state="final">Eine Kategorie kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="8ca19bf9331d794db740e07c631116a3" approved="yes">
-        <source>Короткое описание не может быть пустой</source>
-        <target state="final">Eine kurze Beschreibung darf nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="f3b0d733cc49a86b44e1ff1b65b4b539" approved="yes">
-        <source>Шаблон успешно изменен</source>
-        <target state="final">Die Vorlage wurde erfolgreich geändert</target>
-      </trans-unit>
-      <trans-unit id="fd64d478887f8c638bc78991972be997" approved="yes">
-        <source>Шаблон успешно создан</source>
-        <target state="final">Die Vorlage wurde erfolgreich erstellt</target>
-      </trans-unit>
-      <trans-unit id="57003040d6fa6faa295f7c391199a232" approved="yes">
-        <source>Такого шаблона не существует!</source>
-        <target state="final">Eine solche Vorlage gibt es nicht!</target>
-      </trans-unit>
-      <trans-unit id="47edc4669d56a0155b00098de59642f6" approved="yes">
-        <source>Шаблон был включён</source>
-        <target state="final">Die Vorlage war enthalten</target>
-      </trans-unit>
-      <trans-unit id="d2f70a77d369eba7b169678caf88d9f3" approved="yes">
-        <source>Шаблон не может быть пустым</source>
-        <target state="final">Die Vorlage kann nicht leer sein</target>
-      </trans-unit>
-      <trans-unit id="850b19899322ec1ecb1ec89a49e1423b" approved="yes">
-        <source>Такого шаблона не существует</source>
-        <target state="final">Es gibt keine solche Vorlage</target>
-      </trans-unit>
-      <trans-unit id="5ec4c68aee45a5fd65448ae9bbbf7fce" approved="yes">
-        <source>Не проставлена настройка для автора новости!</source>
-        <target state="final">Der Schauplatz für den Autor der Nachricht wurde noch nicht festgelegt!</target>
-      </trans-unit>
-      <trans-unit id="33956d00416c2e769e301063d852b284" approved="yes">
-        <source>Не проставлена настройка для категорий!</source>
-        <target state="final">Die Einstellung für Kategorien wurde nicht festgelegt!</target>
-      </trans-unit>
-      <trans-unit id="b7bc548eca7c74fb12c7584f078c527b" approved="yes">
-        <source>Псевдоним пользователя (:uname) уже занят!</source>
-        <target state="final">Der Benutzer-Alias (:uname) ist bereits vergeben!</target>
-      </trans-unit>
-      <trans-unit id="51624850b048642f9c79e116b0d891a6" approved="yes">
-        <source>Электронная почта (:email) пользователя уже занята!</source>
-        <target state="final">Die E-Mail des Benutzers (:email) ist bereits belegt!</target>
-      </trans-unit>
-      <trans-unit id="5d16e6dabbe630bb223962469c37359a" approved="yes">
-        <source>Электронная почта (:email) не подлежит нужному формату!</source>
-        <target state="final">Die E-Mail (:email) unterliegt nicht dem vorgeschriebenen Format!</target>
-      </trans-unit>
-      <trans-unit id="1c59f2f69b0332dfc99e0530ce7b4c9f" approved="yes">
-        <source>Установленной группы (:group) не существует!</source>
-        <target state="final">Die eingestellte Gruppe (:group) existiert nicht!</target>
-      </trans-unit>
-      <trans-unit id="92a4262898dbed87add330a31555b77d" approved="yes">
-        <source>Некорректные данные: :data.</source>
-        <target state="final">Ungültige Daten: :data.</target>
-      </trans-unit>
-      <trans-unit id="66681135311147c1f2dffd5ebfc69476" approved="yes">
-        <source>[FIX] Исправлена итерация в templates_create.html</source>
-        <target state="final">[FIX] Iteration in templates_create.html korrigiert</target>
-      </trans-unit>
-      <trans-unit id="a9d26e11c618ac5c2584fbc46949fd07" approved="yes">
-        <source>[FIX] Исправлены языковые функции</source>
-        <target state="final">[FIX] Korrigierte Sprachfunktionen</target>
-      </trans-unit>
-      <trans-unit id="48be3064a5d2f261381c51b3d05c78d9" approved="yes">
-        <source>[UPDATE] В файле generator_create_post.php логика вставки данных в базу данных обновлена. Она будет исполняться только в случае, если $xfSearchWords не пуст</source>
-        <target state="final">[UPDATE] In generator_create_post.php wurde die Logik zum Einfügen von Daten in die Datenbank aktualisiert. Sie wird nur ausgeführt, wenn $xfSearchWords nicht leer ist.</target>
-      </trans-unit>
-      <trans-unit id="a6d56affb34b13dd04b2b2d66a179c79" approved="yes">
-        <source>[UPDATE] В init.php управление зависимостями упрощено с целью сосредоточения на регистрации отсутствуюших зависимостей</source>
-        <target state="final">[UPDATE] In init.php wurde die Verwaltung von Abhängigkeiten vereinfacht, um sich auf die Protokollierung von fehlenden Abhängigkeiten zu konzentrieren.</target>
-      </trans-unit>
-      <trans-unit id="4c67cb51fa12be21222786efb72e2102" approved="yes">
-        <source>[UPDATE] HTML-шаблон изменен для улучшения обработки переменных в цикле templates_create.html.</source>
-        <target state="final">[UPDATE] HTML-Vorlage geändert, um die Handhabung von Variablen in der templates_create.html-Schleife zu verbessern.</target>
-      </trans-unit>
-      <trans-unit id="8b59ec3c01c0157dfd5901e185e72447" approved="yes">
-        <source>[FIX] Исправлена обработка данных при генерации новостей</source>
-        <target state="final">[FIX] Datenverarbeitung bei der Nachrichtenerstellung korrigiert</target>
-      </trans-unit>
-      <trans-unit id="d559361c3a8a846f5e976c3351638f50" approved="yes">
-        <source>[FIX] Исправлен скрипт установки</source>
-        <target state="final">[FIX] Installations-Skript korrigiert</target>
-      </trans-unit>
-      <trans-unit id="58dd8d6145cd9a1fd624bcd8446c1c6b" approved="yes">
-        <source>Редактирование шаблона: :name</source>
-        <target state="final">Vorlage bearbeiten: :name</target>
-      </trans-unit>
       <trans-unit id="b3215dfdb24971a503722202725876f7" approved="yes">
         <source>Генерирует случайное значение да или нет (true / false)</source>
         <target state="final">Erzeugt einen zufälligen Ja- oder Nein-Wert (wahr/falsch)</target>
+      </trans-unit>
+      <trans-unit id="fd54a5d85bf2a5caee724cfdb5c1f166" approved="yes">
+        <source>Генерирует случайный эмодзи</source>
+        <target state="final">Erzeugt ein zufälliges Emoji</target>
       </trans-unit>
       <trans-unit id="97ddaabab2ceacb807bd65fef6184c6b" approved="yes">
         <source>Генерирует случайное целое число, содержащее от 0 до nums цифр.</source>
@@ -842,17 +466,37 @@
         <source>Когда параметр strict установлен в значение true, функция будет возвращать только целые числа, содержащие ровно nums цифр.</source>
         <target state="final">Wenn der Parameter strict auf true gesetzt ist, gibt die Funktion nur Ganzzahlen zurück, die genau nums Ziffern enthalten.</target>
       </trans-unit>
+      <trans-unit id="249861c28e5bec1800883125fd84539b" approved="yes">
+        <source>Генерирует случайное целое число от 0 до 9.</source>
+        <target state="final">Erzeugt eine zufällige Ganzzahl von 0 bis 9.</target>
+      </trans-unit>
       <trans-unit id="0442d4dbf85045f17845c3b6d03bd2d9" approved="yes">
         <source>Генерирует случайное целое число от 0 до 9, исключая заданное число.</source>
         <target state="final">Erzeugt eine zufällige ganze Zahl von 0 bis 9, ausgenommen die angegebene Zahl.</target>
+      </trans-unit>
+      <trans-unit id="d1770a1309a3588a85b60a811a9a645d" approved="yes">
+        <source>Генерирует случайное число с плавающей запятой</source>
+        <target state="final">Erzeugt eine Fließkommazufallszahl</target>
       </trans-unit>
       <trans-unit id="8392abd509e37cc7c42344706374590e" approved="yes">
         <source>Параметр float отвечает за количество десятичных знаков.</source>
         <target state="final">Der Parameter float ist für die Anzahl der Dezimalstellen verantwortlich.</target>
       </trans-unit>
+      <trans-unit id="8b446b63a69921afa880c6de34042521" approved="yes">
+        <source>Параметр min задаёт нижнюю границу.</source>
+        <target state="final">Der Parameter min legt die untere Grenze fest.</target>
+      </trans-unit>
+      <trans-unit id="facf4aef6a95b712f8a0aebe214bacd7" approved="yes">
+        <source>Параметр max задаёт верхнюю границу.</source>
+        <target state="final">Der Parameter max legt die Obergrenze fest.</target>
+      </trans-unit>
       <trans-unit id="c2f36b3f621f3dfe09965d750de07b87" approved="yes">
         <source>Генерирует случайное целое число в диапазоне от min до max. По умолчанию генерируется число в диапазоне от 0 до 2 147 483 647.</source>
         <target state="final">Erzeugt eine zufällige Ganzzahl im Bereich von min bis max. Standardmäßig wird eine Zahl zwischen 0 und 2.147.483.647 erzeugt.</target>
+      </trans-unit>
+      <trans-unit id="16f7f231033967745458d280ec157982" approved="yes">
+        <source>Генерирует случайный символ из алфавита.</source>
+        <target state="final">Erzeugt ein zufälliges Zeichen aus dem Alphabet.</target>
       </trans-unit>
       <trans-unit id="0b14e3275d598e5ec63e29b5e49979f4" approved="yes">
         <source>Возвращает случайный элемент из заданного массива, итерируемого объекта или перечисления. По умолчанию параметр $count установлен в 1, а если передано значение null, возвращается случайное количество элементов.&lt;br&gt;Массив должен быть простым без дополнительных ковычек.</source>
@@ -866,6 +510,14 @@
         <source>Параметр connector установлен на _. Он отвечает за объединение элементов списка.</source>
         <target state="final">Der Parameter connector ist auf _ gesetzt. Er ist für die Verbindung der Elemente der Liste zuständig.</target>
       </trans-unit>
+      <trans-unit id="b328fffdc57d6431fc2c1cf217ef3dd2" approved="yes">
+        <source>Зависимости не были установлены!</source>
+        <target state="final">Es wurden keine Abhängigkeiten festgestellt!</target>
+      </trans-unit>
+      <trans-unit id="bebfb4a8fac05bd34c8175f8991cb14b" approved="yes">
+        <source>Установите их при помощи консоли сами! PHP должен быть выполняемым!</source>
+        <target state="final">Installieren Sie sie selbst über die Konsole! PHP muss ausführbar sein!</target>
+      </trans-unit>
       <trans-unit id="bf1216a2a0f55e40e1878dbcb7391913" approved="yes">
         <source>Выбирает случайного пользователя, указанного в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
         <target state="final">Wählt einen zufälligen, in den Einstellungen angegebenen Benutzer aus. Es gibt keine Standardeinstellungen, Sie müssen sie also speichern!</target>
@@ -874,9 +526,17 @@
         <source>Выбирает случайную категорию, указанную в настройках. Настроек по умолчанию нет, поэтому их нужно сохранить!</source>
         <target state="final">Wählt eine zufällige Kategorie aus, die in den Einstellungen angegeben ist. Es gibt keine Standardeinstellungen, Sie müssen sie also speichern!</target>
       </trans-unit>
+      <trans-unit id="da486b266984e64885112f250ef573a6" approved="yes">
+        <source>Генерирует строку, содержащую случайное одно слово.</source>
+        <target state="final">Erzeugt eine Zeichenkette, die ein zufälliges einzelnes Wort enthält.</target>
+      </trans-unit>
       <trans-unit id="6cc8b4ce45ae3a77229cca3b40846203" approved="yes">
         <source>Генерирует строку, содержащую случайное кол-во слов. Параметр max устанавливает кол-во.</source>
         <target state="final">Erzeugt eine Zeichenkette, die eine zufällige Anzahl von Wörtern enthält. Der Parameter max legt die Anzahl der Wörter fest.</target>
+      </trans-unit>
+      <trans-unit id="43405cb444cb998f8da9770666c8444f" approved="yes">
+        <source>Генерирует строку, содержащую случайное предложение.</source>
+        <target state="final">Erzeugt eine Zeichenkette, die einen zufälligen Satz enthält.</target>
       </trans-unit>
       <trans-unit id="2032d410ede8be41a7440d9134dfb897" approved="yes">
         <source>Генерирует строку, содержащую случайные предложения. Параметр max устанавливает кол-во</source>
@@ -894,13 +554,53 @@
         <source>Генерирует случайную текстовую строку. Первый параметр задаёт максимальное количество символов, которое должна содержать строка (по умолчанию 200).</source>
         <target state="final">Erzeugt eine zufällige Zeichenkette. Der erste Parameter gibt die maximale Anzahl der Zeichen an, die die Zeichenkette enthalten soll (Standard ist 200).</target>
       </trans-unit>
+      <trans-unit id="efb5d905d228959252364c8ef6a4485e" approved="yes">
+        <source>Параметр max указывает количество символов.</source>
+        <target state="final">Der Parameter max gibt die Anzahl der Zeichen an.</target>
+      </trans-unit>
+      <trans-unit id="601c9447d644ba2ae13b48372369982f" approved="yes">
+        <source>Генерирует случайную дату и время</source>
+        <target state="final">Erzeugt ein zufälliges Datum und eine zufällige Uhrzeit</target>
+      </trans-unit>
       <trans-unit id="a3c06ff3c9413e73e026d4c28b6e3222" approved="yes">
         <source>Генерирует случайную дату и время со своим форматированием.</source>
         <target state="final">Erzeugt ein zufälliges Datum und eine zufällige Uhrzeit mit eigener Formatierung.</target>
       </trans-unit>
+      <trans-unit id="4e18436448f5c60cb75eda54a42e3c3a" approved="yes">
+        <source>Случайный псевдоним, пример: coolcat123</source>
+        <target state="final">Zufälliger Alias, Beispiel: coolcat123</target>
+      </trans-unit>
+      <trans-unit id="b8ca4d47a7eb94ae160d0e119356ffea" approved="yes">
+        <source>Полное имя, пример: Проф. Артём Волков</source>
+        <target state="final">Vollständiger Name, Beispiel: Prof. Artyom Volkov</target>
+      </trans-unit>
+      <trans-unit id="8082e79b5dde1c401954e1f035e27151" approved="yes">
+        <source>Имя, пример: Артём</source>
+        <target state="final">Name, Beispiel: Artyom</target>
+      </trans-unit>
+      <trans-unit id="77ed448d1cb9ebe74da6b0fe886cfa45" approved="yes">
+        <source>Мужское имя, пример: Артём</source>
+        <target state="final">Männlicher Name, Beispiel: Artyom</target>
+      </trans-unit>
+      <trans-unit id="2baac42df2b7b4764469b8d37fbdc542" approved="yes">
+        <source>Женское имя, пример: Анна</source>
+        <target state="final">Weiblicher Name, Beispiel: Anna</target>
+      </trans-unit>
+      <trans-unit id="9bacf7f01c2fa42a079261cd019b4926" approved="yes">
+        <source>Фамилия, пример: Волков</source>
+        <target state="final">Nachname, Beispiel: Volkov</target>
+      </trans-unit>
+      <trans-unit id="57dc0069f484ce7c26311fee11b65f5c" approved="yes">
+        <source>Суффикс, пример: Мл.</source>
+        <target state="final">Suffix, Beispiel: ml.</target>
+      </trans-unit>
       <trans-unit id="3c3f6bccf02db4db89e8daaa880dc76c" approved="yes">
         <source>Обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
         <target state="final">Adresse, Beispiel: Mistress oder Girl. Im Russischen gibt es keine Entsprechung für Frau oder Mrs..</target>
+      </trans-unit>
+      <trans-unit id="4cf2d9a2f030c7cd4f596e8a3a539afa" approved="yes">
+        <source>Мужское обращение, пример: Господин. В русском нет аналога для Mr.</source>
+        <target state="final">Männliche Anrede, Beispiel: Mister. Es gibt keine Entsprechung für Mr.</target>
       </trans-unit>
       <trans-unit id="7952f9794a1a143d392de1612baddafc" approved="yes">
         <source>Женское обращение, пример: Госпожа или Девушка. В русском нет аналога для Ms. или Mrs.</source>
@@ -910,13 +610,301 @@
         <source>Случайная электронная почта, пример: walter.sophia@hotmail.com. Связи с именем никакой нет!</source>
         <target state="final">Zufällige E-Mail, Beispiel: walter.sophia@hotmail.com. Es gibt keinen Zusammenhang mit dem Namen!</target>
       </trans-unit>
-      <trans-unit id="08cdf33fcdb9bd580cd2f9502860f8fa" approved="yes">
-        <source>Ошибка при обработке ошибки AJAX:</source>
-        <target state="final">Fehler bei der Verarbeitung von AJAX-Fehlern:</target>
+      <trans-unit id="dd3390573f0c3aa4dadbcd3b0c011a83" approved="yes">
+        <source>Генерация новостей на основе шаблонов</source>
+        <target state="final">Generierung von Nachrichten auf der Grundlage von Vorlagen</target>
       </trans-unit>
-      <trans-unit id="ab2630021015478c54c9c5fa3cbb5b18" approved="yes">
-        <source>Неизвестная ошибка</source>
-        <target state="final">Unbekannter Fehler</target>
+      <trans-unit id="c2b06a006d468ccc5b5242f15ee2f05c" approved="yes">
+        <source>Перейти</source>
+        <target state="final">Gehen Sie zu</target>
+      </trans-unit>
+      <trans-unit id="b1cc330603c1351e26c1ffe6b50ee6fe" approved="yes">
+        <source>Генерация случайных пользователей</source>
+        <target state="final">Generierung von Zufallsbenutzern</target>
+      </trans-unit>
+      <trans-unit id="802515cb78a6a13a069f913d2643bd97" approved="yes">
+        <source>Шаблон</source>
+        <target state="final">Vorlage</target>
+      </trans-unit>
+      <trans-unit id="8fdd696c731a3e43d3138ee9f0b7a0d4" approved="yes">
+        <source>Кол-во новостей</source>
+        <target state="final">Anzahl der Nachrichten</target>
+      </trans-unit>
+      <trans-unit id="9264bc52b6109d28a1564e1d62d85e28" approved="yes">
+        <source>Генерировать</source>
+        <target state="final">Erzeugen Sie</target>
+      </trans-unit>
+      <trans-unit id="3af89ff4af056859059df5f712ea8151" approved="yes">
+        <source>Сводка информации</source>
+        <target state="final">Zusammenfassung der Informationen</target>
+      </trans-unit>
+      <trans-unit id="a3e79be8ac0b6b45fc3b758ff79b25ee" approved="yes">
+        <source>Кол-во объектов</source>
+        <target state="final">Anzahl der Objekte</target>
+      </trans-unit>
+      <trans-unit id="875bb32fedf39f0d37eb156e1996c2d1" approved="yes">
+        <source>Прогресс</source>
+        <target state="final">Fortschritt</target>
+      </trans-unit>
+      <trans-unit id="6f4e97bcc4b115088da7102032741196" approved="yes">
+        <source>Ожидаем начала...</source>
+        <target state="final">Warten auf den Anfang...</target>
+      </trans-unit>
+      <trans-unit id="79cabd47b2d0ccb186db8f058c6f4a4a" approved="yes">
+        <source>Вывод</source>
+        <target state="final">Fazit</target>
+      </trans-unit>
+      <trans-unit id="824076494f528268338ad74d645a8a48" approved="yes">
+        <source>Начать обработку</source>
+        <target state="final">Verarbeitung beginnen</target>
+      </trans-unit>
+      <trans-unit id="e7a5d4fb073f59759b13a7ddd12b5b58" approved="yes">
+        <source>Отмена / Закрыть</source>
+        <target state="final">Abbrechen / Schließen</target>
+      </trans-unit>
+      <trans-unit id="55f65ea9f141d4f6455e7da3e783cb52" approved="yes">
+        <source>Обработано {value} из {total}</source>
+        <target state="final">Verarbeitet von {value} von {total}</target>
+      </trans-unit>
+      <trans-unit id="63397568cdbbd3b75ede15c7c341310b" approved="yes">
+        <source>Псевдоним пользователя</source>
+        <target state="final">Benutzer-Alias</target>
+      </trans-unit>
+      <trans-unit id="5c974ed146bb807b2aeb8af539a2af1d" approved="yes">
+        <source>Полное имя пользователя</source>
+        <target state="final">Vollständiger Benutzername</target>
+      </trans-unit>
+      <trans-unit id="26f332a2f55853627c09e209e868a3a0" approved="yes">
+        <source>Электронная почта пользователя</source>
+        <target state="final">Benutzer-E-Mail</target>
+      </trans-unit>
+      <trans-unit id="ab294e734c8915464405651a30d99b8b" approved="yes">
+        <source>Группа пользователя</source>
+        <target state="final">Benutzergruppe</target>
+      </trans-unit>
+      <trans-unit id="5ebe553e01799a927b1d045924bbd4fd" approved="yes">
+        <source>Пароль</source>
+        <target state="final">Passwort</target>
+      </trans-unit>
+      <trans-unit id="d5ba6e7bb55149331b100758477939ca" approved="yes">
+        <source>Кол-во пользователей</source>
+        <target state="final">Anzahl der Benutzer</target>
+      </trans-unit>
+      <trans-unit id="c919d65bd95698af8f15fa8133bf490d" approved="yes">
+        <source>Настройки</source>
+        <target state="final">Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="8393121bc96887e4b04f074897c9072c" approved="yes">
+        <source>Язык генерации</source>
+        <target state="final">Sprache der Generation</target>
+      </trans-unit>
+      <trans-unit id="edfcaae069a411092c29763be004b640" approved="yes">
+        <source>Список пользователей</source>
+        <target state="final">Liste der Benutzer</target>
+      </trans-unit>
+      <trans-unit id="7ab5eae2ca53fa8d5a6ee5e5722b6c65" approved="yes">
+        <source>Список категорий</source>
+        <target state="final">Liste der Kategorien</target>
+      </trans-unit>
+      <trans-unit id="3e117b47955d8bcb67b6303344dc6056" approved="yes">
+        <source>Количество категорий</source>
+        <target state="final">Anzahl der Kategorien</target>
+      </trans-unit>
+      <trans-unit id="74ea58b6a801f0dce4e5d34dbca034dc" approved="yes">
+        <source>Сохранить</source>
+        <target state="final">Speichern Sie</target>
+      </trans-unit>
+      <trans-unit id="a02a63a7206319230a329f87cbecb8d0" approved="yes">
+        <source>Теги для генерации пользователей</source>
+        <target state="final">Tags für die Benutzergenerierung</target>
+      </trans-unit>
+      <trans-unit id="c4aa5053dcaa0ed0a2160691f7345ec6" approved="yes">
+        <source>Тег</source>
+        <target state="final">Tag</target>
+      </trans-unit>
+      <trans-unit id="38ca0af80cd7bd241500e81ba2e6efff" approved="yes">
+        <source>Описание</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="33373ff91e73ccb40752d9b4a3b73566" approved="yes">
+        <source>Теги для генерации новостей</source>
+        <target state="final">Tags für Nachrichtengenerierung</target>
+      </trans-unit>
+      <trans-unit id="61e2c4b6c709da7543559930d557ff64" approved="yes">
+        <source>Вспомогательные теги, которые доступны для всех генераторов</source>
+        <target state="final">Hilfs-Tags, die für alle Generatoren verfügbar sind</target>
+      </trans-unit>
+      <trans-unit id="36d5676900b3e6fbc03e1a0b359341bc" approved="yes">
+        <source>шаблон</source>
+        <target state="final">Vorlage</target>
+      </trans-unit>
+      <trans-unit id="5d77d19db17a374c62a62daf29c685fd" approved="yes">
+        <source>Включён?</source>
+        <target state="final">Aktiviert?</target>
+      </trans-unit>
+      <trans-unit id="21bca7e624ad26e2a9ef8162c812bb2a" approved="yes">
+        <source>Выбор действия</source>
+        <target state="final">Auswahl der Aktion</target>
+      </trans-unit>
+      <trans-unit id="47e2436e5560837160a70c64466ea22b" approved="yes">
+        <source>Изменить</source>
+        <target state="final">bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="ed2bbfbc53d83d3ad81f7fd6485ac6e8" approved="yes">
+        <source>Удалить</source>
+        <target state="final">Löschen</target>
+      </trans-unit>
+      <trans-unit id="b278285aeff5cffad70c9838b3566f5d" approved="yes">
+        <source>Отключить</source>
+        <target state="final">Deaktivieren Sie</target>
+      </trans-unit>
+      <trans-unit id="417b334759a9581d16440d075aa1cd12" approved="yes">
+        <source>Включить</source>
+        <target state="final">Aktivieren Sie</target>
+      </trans-unit>
+      <trans-unit id="b059f7e15df06e3f864e61040ae3caba" approved="yes">
+        <source>Создать</source>
+        <target state="final">erstellen</target>
+      </trans-unit>
+      <trans-unit id="674d0134b22ed3901ab606d22de07279" approved="yes">
+        <source>Название шаблона</source>
+        <target state="final">Name der Vorlage</target>
+      </trans-unit>
+      <trans-unit id="998ad0e69972a3126b75f027fdfe77ad" approved="yes">
+        <source>Укажите уникальное название для шаблона</source>
+        <target state="final">Geben Sie einen eindeutigen Namen für die Vorlage an</target>
+      </trans-unit>
+      <trans-unit id="64d28261282600c69815684b9cae00cb" approved="yes">
+        <source>Активировать шаблон</source>
+        <target state="final">Vorlage aktivieren</target>
+      </trans-unit>
+      <trans-unit id="c4f66907b710d6fe08fb697f5096a2ba" approved="yes">
+        <source>Автор новости</source>
+        <target state="final">Autor der Nachricht</target>
+      </trans-unit>
+      <trans-unit id="9ef78d093f0f76350dde5d35ae0eaad5" approved="yes">
+        <source>Используя теги заполните шаблон. Либо укажите ID автора</source>
+        <target state="final">Füllen Sie die Vorlage mit Tags. Oder geben Sie die Autoren-ID an</target>
+      </trans-unit>
+      <trans-unit id="ea5e8f3aeaeffa79a3f5c44bf5266670" approved="yes">
+        <source>Заголовок новости</source>
+        <target state="final">Nachrichtenüberschrift</target>
+      </trans-unit>
+      <trans-unit id="4d0a630978dc1397c8a900c76824c61f" approved="yes">
+        <source>Используя теги заполните шаблон для заголовка новости.</source>
+        <target state="final">Füllen Sie mit Hilfe von Tags die Vorlage für die Schlagzeile der Nachricht aus.</target>
+      </trans-unit>
+      <trans-unit id="e06aec27008c31341a82a256fdb27b8b" approved="yes">
+        <source>Категория новости</source>
+        <target state="final">Kategorie Nachrichten</target>
+      </trans-unit>
+      <trans-unit id="7e3b18e6645df03f1912f87b08b98fb7" approved="yes">
+        <source>Используя теги заполните шаблон для категории новости. Либо укажите ID категорий</source>
+        <target state="final">Verwenden Sie Tags, um die Vorlage für die Nachrichtenkategorie zu füllen. Oder geben Sie Kategorie-IDs an</target>
+      </trans-unit>
+      <trans-unit id="e67077d39aee6a1900014ef46e643be5" approved="yes">
+        <source>Дата публикации, начало</source>
+        <target state="final">Datum der Veröffentlichung, Beginn</target>
+      </trans-unit>
+      <trans-unit id="a46ae946f618dd0375291a8d8dd5b6f1" approved="yes">
+        <source>Укажите начальную дату для случайного значения</source>
+        <target state="final">Geben Sie das Startdatum für einen Zufallswert an</target>
+      </trans-unit>
+      <trans-unit id="578484942d6d2a4dcda1f1476368ac5b" approved="yes">
+        <source>Дата публикации, начало (Альтернатива)</source>
+        <target state="final">Datum der Veröffentlichung, Beginn (Alternative)</target>
+      </trans-unit>
+      <trans-unit id="6bce37f39de842525636deee8c5d55c7" approved="yes">
+        <source>Укажите начальную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
+        <target state="final">Geben Sie das Startdatum für den Zufallswert an. Wenn ein Wert angegeben wird, wird der obige Wert nicht berücksichtigt. Erlaubte Tags. Wenn die Tags nicht geeignet sind, ist dieses Feld ungültig.</target>
+      </trans-unit>
+      <trans-unit id="31e16c44a697e9fd833f3ab8ad857e6f" approved="yes">
+        <source>Дата публикации, конец</source>
+        <target state="final">Datum der Veröffentlichung, Ende</target>
+      </trans-unit>
+      <trans-unit id="f25fc6959c65bfd7c0e26d4d64e4a474" approved="yes">
+        <source>Укажите конечную дату для случайного значения</source>
+        <target state="final">Geben Sie das Enddatum für den Zufallswert an</target>
+      </trans-unit>
+      <trans-unit id="4695abca4139701eee980f802e60f668" approved="yes">
+        <source>Дата публикации, конец (Альтернатива)</source>
+        <target state="final">Datum der Veröffentlichung, Ende (Alternative)</target>
+      </trans-unit>
+      <trans-unit id="f5391f967766e02af430ae91b1d531ba" approved="yes">
+        <source>Укажите конечную дату для случайного значения. Если значение указано, то значение выше не будет учитываться. Разрешены теги. Если Теги не будут соответствовать положенным, то это поле будет не действительным.</source>
+        <target state="final">Geben Sie das Enddatum für den Zufallswert an. Wenn ein Wert angegeben wird, wird der obige Wert nicht berücksichtigt. Erlaubte Tags. Wenn die Tags nicht geeignet sind, ist dieses Feld ungültig.</target>
+      </trans-unit>
+      <trans-unit id="4fe9d76fccba1f173c41a97f76b12cd4" approved="yes">
+        <source>Краткое содержание</source>
+        <target state="final">Zusammenfassung</target>
+      </trans-unit>
+      <trans-unit id="1ea66338fa8913d8da2d857b2afb067f" approved="yes">
+        <source>Сгенерируйте описание используя теги генерации</source>
+        <target state="final">Beschreibung mit Generierungs-Tags generieren</target>
+      </trans-unit>
+      <trans-unit id="5a7ceb4db78e5ebe67854d7e30a00ca7" approved="yes">
+        <source>Полное содержание</source>
+        <target state="final">Vollständiger Inhalt</target>
+      </trans-unit>
+      <trans-unit id="bf025a9d133531a426444d8a90836e95" approved="yes">
+        <source>Дополнительное поле:</source>
+        <target state="final">Zusätzliches Feld:</target>
+      </trans-unit>
+      <trans-unit id="bbd43a7a61ce768a86c41b86662300b8" approved="yes">
+        <source>Выключить</source>
+        <target state="final">Ausschalten</target>
+      </trans-unit>
+      <trans-unit id="0445bb6d13c0f7cc06265b9718d4ea91" approved="yes">
+        <source>Случайно</source>
+        <target state="final">Versehentlich</target>
+      </trans-unit>
+      <trans-unit id="a48503b1216956d658850d5449a620eb" approved="yes">
+        <source>Публиковать на главной</source>
+        <target state="final">Auf der Hauptseite veröffentlichen</target>
+      </trans-unit>
+      <trans-unit id="5464fdf47c5ed69718ddf795f1d4f0fb" approved="yes">
+        <source>Опубликовать новость на сайте</source>
+        <target state="final">Veröffentlichen Sie Nachrichten auf der Website</target>
+      </trans-unit>
+      <trans-unit id="64b25fac6a9c2b185adfa1ded87c4409" approved="yes">
+        <source>Зафиксировать новость</source>
+        <target state="final">Lesezeichen für die Nachrichten</target>
+      </trans-unit>
+      <trans-unit id="a94208dd57b1535ac8db57ee2ea3902e" approved="yes">
+        <source>Разрешить комментарии</source>
+        <target state="final">Kommentare zulassen</target>
+      </trans-unit>
+      <trans-unit id="627bbd7112119f56ffbcbef9a6067145" approved="yes">
+        <source>Разрешить рейтинг статьи</source>
+        <target state="final">Artikelbewertung zulassen</target>
+      </trans-unit>
+      <trans-unit id="4d8b7bf049e2660ec572713363b5cd25" approved="yes">
+        <source>Запретить индексацию для поисковиков</source>
+        <target state="final">Indizierung für Suchmaschinen verbieten</target>
+      </trans-unit>
+      <trans-unit id="e63f650662f5b8d27799094386d86877" approved="yes">
+        <source>Исключить из поиска по сайту</source>
+        <target state="final">Von der Site-Suche ausschließen</target>
+      </trans-unit>
+      <trans-unit id="ee88cc85b31f7804932ce59c40128598" approved="yes">
+        <source>Опубликовать новость в RSS потоке</source>
+        <target state="final">Nachrichten im RSS-Feed veröffentlichen</target>
+      </trans-unit>
+      <trans-unit id="7d66bab2d781955d5f3de0991076a6e3" approved="yes">
+        <source>Использовать в Яндекс Турбо</source>
+        <target state="final">Verwendung in Yandex Turbo</target>
+      </trans-unit>
+      <trans-unit id="a190fd604143afba5adbbda32ece42e5" approved="yes">
+        <source>Использовать в Яндекс Дзен</source>
+        <target state="final">Verwendung in Yandex Zen</target>
+      </trans-unit>
+      <trans-unit id="148bbf94cef9e1e431bf97570eb0644d" approved="yes">
+        <source>Всё отлично!</source>
+        <target state="final">Alles ist großartig!</target>
+      </trans-unit>
+      <trans-unit id="3a92eb91d4231b257e155f628ff13990" approved="yes">
+        <source>Данные были сохранены!</source>
+        <target state="final">Die Daten wurden gespeichert!</target>
       </trans-unit>
     </body>
   </file>
