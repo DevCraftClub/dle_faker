@@ -5,7 +5,7 @@ global $MHDB, $mh;
 
 $GET_DATA = filter_input_array(INPUT_GET);
 
-$mh->setBreadcrumb(new BreadCrumb(__('dle_faker', 'Доступные генераторы'), $mh->getLinkUrl('generator')));
+$mh->setBreadcrumb(new BreadCrumb(__('Доступные генераторы'), $mh->getLinkUrl('generator')));
 
 switch ($GET_DATA['action']) {
 

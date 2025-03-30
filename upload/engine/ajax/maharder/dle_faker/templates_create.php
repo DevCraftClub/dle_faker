@@ -102,15 +102,5 @@ try {
 
 } catch (Exception $e) {
 	echo (new ErrorResponseAjax())->setData([$e->getMessage()])->send();
-<<<<<<< HEAD
 }
 exit;
-=======
-	LogGenerator::generateLog(
-		'DLE Faker',
-		'ajax/templates_create',
-		$e->getMessage()
-	);
-}
-exit;
->>>>>>> refs/remotes/origin/releases/173.1.0

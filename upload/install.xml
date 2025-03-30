@@ -22,7 +22,8 @@
 	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
 </mysqldisable>
 <mysqldelete>
-	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
+	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';
+DROP TABLE {prefix}_faker_templates]]>
 </mysqldelete>
 <phpinstall>
 	<![CDATA[ ]]>

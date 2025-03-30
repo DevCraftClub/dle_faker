@@ -34,7 +34,7 @@ $paginator      = new Paginator($mhConfig['list_count']);
 $paginator->withPage($cur_page)->paginate($fakerTemplates);
 
 $modVars = [
-	'title'       => __('dle_faker', 'Шаблоны'),
+	'title'       => __('Шаблоны'),
 	'templates'   => $fakerTemplates->fetchAll(),
 	'total_pages' => $total_pages,
 	'page'        => $cur_page,
@@ -47,7 +47,7 @@ $modVars = [
 ];
 
 if ($cur_page > 1) {
-	$mh->setBreadcrumb(new BreadCrumb(__(Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
+	$mh->setBreadcrumb(new BreadCrumb(__('Страница %page%', ['%page%' => $cur_page]), THIS_SELF . '?' . http_build_query($GET_DATA)));
 }
 
 $htmlTemplate = 'dle_faker/templates_all.html';
