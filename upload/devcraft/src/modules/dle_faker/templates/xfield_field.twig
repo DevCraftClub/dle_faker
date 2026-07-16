@@ -93,9 +93,10 @@
 
         {% if field.allow_template_upload %}
             <div class="js-xfield-source-panel mt-2" data-panel="template_upload" {% if source != 'template_upload' %}style="display:none"{% endif %}>
+                <p class="text-small fg-gray">{{ 'Загрузка файла в этот шаблон; при генерации копия уходит в uploads новости. Удобно, когда один файл нужен всем новостям шаблона.'|trans }}</p>
                 <input type="hidden" name="xfields[{{ field.name }}][asset_id]" value="{{ value is iterable ? value.asset_id|default(0) : 0 }}" class="js-xfield-asset-id">
-                <input type="file" class="js-xfield-asset-file" data-kind="{{ media_kinds[field.type]|default('file') }}">
-                <div class="text-small fg-gray js-xfield-asset-label">
+                <input type="file" class="metro-input js-xfield-asset-file" data-role="file" data-mode="drop" data-kind="{{ media_kinds[field.type]|default('file') }}">
+                <div class="text-small fg-gray js-xfield-asset-label mt-2">
                     {% if value is iterable and value.asset_id|default(0) > 0 %}
                         {{ 'Вложение #'|trans }}{{ value.asset_id }}
                     {% else %}
@@ -104,10 +105,6 @@
                 </div>
             </div>
         {% endif %}
-
-        <div class="js-xfield-source-panel mt-2" data-panel="faker" {% if source != 'faker' %}style="display:none"{% endif %}>
-            <input class="metro-input" type="text" name="xfields[{{ field.name }}][value]" value="{{ value is iterable ? value.value|default('') : (value is iterable ? '' : value) }}">
-        </div>
     {% else %}
         <input class="metro-input" type="text" name="xfields[{{ field.name }}]" value="{{ value is iterable ? value.value|default('') : value }}">
     {% endif %}

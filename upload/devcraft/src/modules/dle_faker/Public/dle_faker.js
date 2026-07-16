@@ -310,13 +310,15 @@
 			}
 
 			function sync() {
-				const source = select.value;
+				const source = select.value || 'faker';
+
 				field.querySelectorAll('.js-xfield-source-panel').forEach(function (panel) {
 					panel.style.display = panel.getAttribute('data-panel') === source ? '' : 'none';
 				});
 			}
 
 			select.addEventListener('change', sync);
+			select.addEventListener('input', sync);
 			sync();
 		});
 	}
