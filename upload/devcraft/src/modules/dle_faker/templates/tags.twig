@@ -1,0 +1,31 @@
+<h2>{{ page_title|default('Перечень тегов'|trans) }}</h2>
+
+{% if user_tags is empty and post_tags is empty and helper_tags is empty %}
+    <p class="fg-gray">{{ 'Справочники тегов недоступны.'|trans }}</p>
+{% else %}
+    {% for title, items in {
+        ('Теги пользователей'|trans): user_tags,
+        ('Теги новостей'|trans): post_tags,
+        ('Вспомогательные теги'|trans): helper_tags
+    } %}
+        <div class="remark mb-4">
+            <h4 class="border-bottom bd-default pb-2 mb-3">{{ title }}</h4>
+            <table class="table striped">
+                <thead>
+                <tr>
+                    <th>{{ 'Тег'|trans }}</th>
+                    <th>{{ 'Описание'|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key, description in items %}
+                    <tr>
+                        <td><code>{{ key }}</code></td>
+                        <td>{{ description|raw }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endfor %}
+{% endif %}

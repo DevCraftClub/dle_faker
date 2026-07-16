@@ -1,70 +1,112 @@
 <dleplugin>
 <name>DLE Faker</name>
-<description>Генерирует случайные данные для наполнения сайта</description>
-<icon>engine/inc/maharder/_modules/dle_faker/assets/icon.png</icon>
-<version>180.1.3</version>
-<dleversion>17.3</dleversion>
+<description>Генерация тестовых пользователей, новостей и шаблонов для DLE</description>
+<icon>engine/inc/dle_faker.php</icon>
+<version>200.1.4</version>
+<dleversion>20.0</dleversion>
 <versioncompare>greater</versioncompare>
 <upgradeurl/>
 <filedelete>1</filedelete>
-<needplugin/>
+<needplugin>DevCraft Admin</needplugin>
 <mnotice>0</mnotice>
 <mysqlinstall>
-	<![CDATA[ ]]>
+	<![CDATA[
+CREATE TABLE IF NOT EXISTS {prefix}_faker_templates (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	name VARCHAR(191) NOT NULL,
+	template LONGTEXT NOT NULL,
+	active TINYINT(1) NOT NULL DEFAULT 1,
+	PRIMARY KEY (id),
+	UNIQUE KEY uniq_faker_templates_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS {prefix}_faker_static_files (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	kind VARCHAR(16) NOT NULL,
+	original_name VARCHAR(255) NOT NULL,
+	stored_name VARCHAR(255) NOT NULL,
+	mime VARCHAR(128) NOT NULL DEFAULT '',
+	size_bytes INT NOT NULL DEFAULT 0,
+	created_at DATETIME NOT NULL,
+	PRIMARY KEY (id),
+	KEY idx_faker_static_files_kind (kind)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS {prefix}_faker_template_assets (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	template_id INT NOT NULL DEFAULT 0,
+	kind VARCHAR(16) NOT NULL,
+	original_name VARCHAR(255) NOT NULL,
+	stored_name VARCHAR(255) NOT NULL,
+	mime VARCHAR(128) NOT NULL DEFAULT '',
+	size_bytes INT NOT NULL DEFAULT 0,
+	PRIMARY KEY (id),
+	KEY idx_faker_template_assets_template_id (template_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+]]>
 </mysqlinstall>
 <mysqlupgrade>
-	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v180.1.3', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v180.1.3'; ]]>
+	<![CDATA[
+CREATE TABLE IF NOT EXISTS {prefix}_faker_templates (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	name VARCHAR(191) NOT NULL,
+	template LONGTEXT NOT NULL,
+	active TINYINT(1) NOT NULL DEFAULT 1,
+	PRIMARY KEY (id),
+	UNIQUE KEY uniq_faker_templates_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS {prefix}_faker_static_files (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	kind VARCHAR(16) NOT NULL,
+	original_name VARCHAR(255) NOT NULL,
+	stored_name VARCHAR(255) NOT NULL,
+	mime VARCHAR(128) NOT NULL DEFAULT '',
+	size_bytes INT NOT NULL DEFAULT 0,
+	created_at DATETIME NOT NULL,
+	PRIMARY KEY (id),
+	KEY idx_faker_static_files_kind (kind)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS {prefix}_faker_template_assets (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	template_id INT NOT NULL DEFAULT 0,
+	kind VARCHAR(16) NOT NULL,
+	original_name VARCHAR(255) NOT NULL,
+	stored_name VARCHAR(255) NOT NULL,
+	mime VARCHAR(128) NOT NULL DEFAULT '',
+	size_bytes INT NOT NULL DEFAULT 0,
+	PRIMARY KEY (id),
+	KEY idx_faker_template_assets_template_id (template_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups)
+VALUES ('dle_faker', 'DLE Faker v200.1.4', 'Генерация тестовых данных для DLE', 'mif-magic-wand', '1,2')
+ON DUPLICATE KEY UPDATE title = 'DLE Faker v200.1.4', descr = 'Генерация тестовых данных для DLE', allow_groups = '1,2';
+]]>
 </mysqlupgrade>
 <mysqlenable>
-	<![CDATA[ INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups) VALUES ('dle_faker', 'DLE Faker v180.1.3', 'Генерирует случайные данные для наполнения сайта', '', '1, 2') ON DUPLICATE KEY UPDATE title = 'DLE Faker v180.1.3'; ]]>
+	<![CDATA[
+INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups)
+VALUES ('dle_faker', 'DLE Faker v200.1.4', 'Генерация тестовых данных для DLE', 'mif-magic-wand', '1,2')
+ON DUPLICATE KEY UPDATE title = 'DLE Faker v200.1.4', descr = 'Генерация тестовых данных для DLE', allow_groups = '1,2';
+]]>
 </mysqlenable>
 <mysqldisable>
-	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker'; ]]>
+	<![CDATA[
+DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';
+]]>
 </mysqldisable>
 <mysqldelete>
-	<![CDATA[ DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';
-DROP TABLE {prefix}_faker_templates]]>
+	<![CDATA[
+DELETE FROM {prefix}_admin_sections WHERE name = 'dle_faker';
+DROP TABLE IF EXISTS {prefix}_faker_template_assets;
+DROP TABLE IF EXISTS {prefix}_faker_static_files;
+DROP TABLE IF EXISTS {prefix}_faker_templates;
+]]>
 </mysqldelete>
-<phpinstall>
-	<![CDATA[ ]]>
-</phpinstall>
-<phpupgrade>
-	<![CDATA[ ]]>
-</phpupgrade>
-<phpenable>
-	<![CDATA[ ]]>
-</phpenable>
-<phpdisable>
-	<![CDATA[ ]]>
-</phpdisable>
-<phpdelete>
-	<![CDATA[ ]]>
-</phpdelete>
-<notice>
-	<![CDATA[ ]]>
-</notice>
-<file name="engine/inc/maharder/_includes/extras/paths.php">
-	<operation action="before">
-		<searchcode>
-			<![CDATA[ // Custom models // ]]>
-		</searchcode>
-		<replacecode>
-			<![CDATA[			// DLE Faker
-			MH_ROOT . '/_modules/dle_faker/models',
-			// DLE Faker ]]>
-		</replacecode>
-		<enabled>1</enabled>
-	</operation>
-	<operation action="before">
-		<searchcode>
-			<![CDATA[ // Custom paths // ]]>
-		</searchcode>
-		<replacecode>
-			<![CDATA[			// DLE Faker
-			MH_ROOT . '/_modules/dle_faker/repositories',
-			// DLE Faker ]]>
-		</replacecode>
-		<enabled>1</enabled>
-	</operation>
-</file>
+<phpinstall><![CDATA[]]></phpinstall>
+<phpupgrade><![CDATA[]]></phpupgrade>
+<phpenable><![CDATA[]]></phpenable>
+<phpdisable><![CDATA[]]></phpdisable>
+<phpdelete><![CDATA[]]></phpdelete>
+<notice><![CDATA[
+Требуется DevCraft Admin >= 200.4.0.
+После установки убедитесь, что пакет fakerphp/faker установлен через интерфейс Composer DevCraft, затем выполните composer dump-autoload.
+]]></notice>
 </dleplugin>

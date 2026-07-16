@@ -1,0 +1,38 @@
+<h2>{{ page_title|default('Шаблоны'|trans) }}</h2>
+
+<div class="mb-3">
+    <a class="button primary" href="?mod=dle_faker&action=templates&mode=create">{{ 'Создать шаблон'|trans }}</a>
+</div>
+
+{% if templates|length > 0 %}
+    <table class="table striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>{{ 'Название'|trans }}</th>
+            <th>{{ 'Активен'|trans }}</th>
+            <th>{{ 'Действия'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in templates %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.active ? 'Да'|trans : 'Нет'|trans }}</td>
+                <td>
+                    <div class="d-flex flex-wrap gap-1">
+                        <a class="button small" href="?mod=dle_faker&action=templates&mode=edit&id={{ item.id }}">{{ 'Редактировать'|trans }}</a>
+                        <button type="button" class="button small warning js-template-toggle" data-id="{{ item.id }}" data-active="{{ item.active ? '1' : '0' }}">
+                            {{ item.active ? 'Выключить'|trans : 'Включить'|trans }}
+                        </button>
+                        <button type="button" class="button small alert js-template-delete" data-id="{{ item.id }}">{{ 'Удалить'|trans }}</button>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p class="fg-gray">{{ 'Добавьте первый шаблон генерации новостей, чтобы использовать его в разделе «Генератор».'|trans }}</p>
+{% endif %}

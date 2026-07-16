@@ -1,0 +1,79 @@
+{% set media_kinds = {image: 'image', imagegalery: 'image', video: 'file', audio: 'file', file: 'file'} %}
+{% set is_media = field.is_media|default(false) %}
+{% set value = field.value|default('') %}
+{% set source = value.source|default('faker') %}
+{% if value is iterable and value.source is defined %}
+    {% set source = value.source %}
+{% elseif is_media %}
+    {% set source = 'faker' %}
+{% endif %}
+
+<div class="form-group mb-3 js-xfield-field" data-field="{{ field.name }}" data-type="{{ field.type }}">
+    <label class="form-label">
+        {{ field.label }}
+        {% if field.required %}<span class="fg-red">*</span>{% endif %}
+    </label>
+
+    {% if field.type == 'textarea' or field.type == 'htmljs' %}
+        <textarea class="metro-input" name="xfields[{{ field.name }}]" rows="4">{{ value is iterable ? value.value|default('') : value }}</textarea>
+    {% elseif field.type == 'select' %}
+        <select class="metro-input" name="xfields[{{ field.name }}]" data-role="select">
+            <option value="">{{ '—'|trans }}</option>
+            {% for opt_value, opt_label in field.options %}
+                <option value="{{ opt_value }}" {% if (value is iterable ? value.value|default('') : value) == opt_value %}selected{% endif %}>{{ opt_label }}</option>
+            {% endfor %}
+        </select>
+        <input class="metro-input mt-2" type="text" name="xfields[{{ field.name }}_faker]" value="" placeholder="{{ 'Или тег Faker'|trans }}" style="display:none">
+    {% elseif field.type == 'yesorno' %}
+        <select class="metro-input" name="xfields[{{ field.name }}]" data-role="select">
+            <option value="random" {% if value == 'random' or value == '' %}selected{% endif %}>{{ 'Случайно'|trans }}</option>
+            <option value="on" {% if value == 'on' or value == '1' %}selected{% endif %}>{{ 'Да'|trans }}</option>
+            <option value="off" {% if value == 'off' or value == '0' %}selected{% endif %}>{{ 'Нет'|trans }}</option>
+        </select>
+    {% elseif field.type == 'datetime' %}
+        <input class="metro-input" type="text" name="xfields[{{ field.name }}]" value="{{ value is iterable ? value.value|default('') : value }}" placeholder="{{ '{{ datetime }}'|trans }}">
+    {% elseif is_media %}
+        <select class="metro-input js-xfield-source" name="xfields[{{ field.name }}][source]" data-role="select">
+            <option value="static" {% if source == 'static' %}selected{% endif %}>{{ 'Библиотека статичных файлов'|trans }}</option>
+            {% if field.allow_template_upload %}
+                <option value="template_upload" {% if source == 'template_upload' %}selected{% endif %}>{{ 'Файл шаблона'|trans }}</option>
+            {% endif %}
+            <option value="faker" {% if source == 'faker' %}selected{% endif %}>{{ 'Текст / теги'|trans }}</option>
+        </select>
+
+        <div class="js-xfield-source-panel mt-2" data-panel="static" {% if source != 'static' %}style="display:none"{% endif %}>
+            <label class="checkbox">
+                <input type="checkbox" name="xfields[{{ field.name }}][random]" value="1" {% if value is iterable and value.random|default(false) %}checked{% endif %}>
+                <span class="check"></span>
+                {{ 'Случайный из пула'|trans }}
+            </label>
+            {% set pool = (media_kinds[field.type]|default('file') == 'image') ? field.static_images : field.static_files %}
+            <select class="metro-input mt-2" name="xfields[{{ field.name }}][static_id]" data-role="select">
+                <option value="0">{{ 'Выберите файл'|trans }}</option>
+                {% for item in pool %}
+                    <option value="{{ item.id }}" {% if value is iterable and value.static_id|default(0) == item.id %}selected{% endif %}>{{ item.original_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        {% if field.allow_template_upload %}
+            <div class="js-xfield-source-panel mt-2" data-panel="template_upload" {% if source != 'template_upload' %}style="display:none"{% endif %}>
+                <input type="hidden" name="xfields[{{ field.name }}][asset_id]" value="{{ value is iterable ? value.asset_id|default(0) : 0 }}" class="js-xfield-asset-id">
+                <input type="file" class="js-xfield-asset-file" data-kind="{{ media_kinds[field.type]|default('file') }}">
+                <div class="text-small fg-gray js-xfield-asset-label">
+                    {% if value is iterable and value.asset_id|default(0) > 0 %}
+                        {{ 'Вложение #'|trans }}{{ value.asset_id }}
+                    {% else %}
+                        {{ 'Файл ещё не загружен'|trans }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="js-xfield-source-panel mt-2" data-panel="faker" {% if source != 'faker' %}style="display:none"{% endif %}>
+            <input class="metro-input" type="text" name="xfields[{{ field.name }}][value]" value="{{ value is iterable ? value.value|default('') : (value is iterable ? '' : value) }}">
+        </div>
+    {% else %}
+        <input class="metro-input" type="text" name="xfields[{{ field.name }}]" value="{{ value is iterable ? value.value|default('') : value }}">
+    {% endif %}
+</div>

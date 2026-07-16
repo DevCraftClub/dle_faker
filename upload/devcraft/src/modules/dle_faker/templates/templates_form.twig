@@ -1,0 +1,112 @@
+<h2>{{ page_title|default('Шаблон'|trans) }}</h2>
+
+<form class="js-dle-faker-template-form">
+    <input type="hidden" name="id" value="{{ values.id|default(0) }}">
+
+    <div class="grid">
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Название шаблона'|trans }}</label>
+                <input type="text" name="name" value="{{ values.name|default('') }}">
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Активный шаблон'|trans }}</label>
+                <select name="active_template" data-role="select">
+                    <option value="1" {% if values.active_template|default(true) %}selected{% endif %}>{{ 'Да'|trans }}</option>
+                    <option value="0" {% if not values.active_template|default(true) %}selected{% endif %}>{{ 'Нет'|trans }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Автор'|trans }}</label>
+                <select name="autor" data-role="select">
+                    <option value="">{{ 'Выберите автора'|trans }}</option>
+                    {% for id, name in users %}
+                        <option value="{{ id }}" {% if values.autor|default('') == id %}selected{% endif %}>{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Категория'|trans }}</label>
+                <select name="category" data-role="select">
+                    <option value="">{{ 'Выберите категорию'|trans }}</option>
+                    {% for id, name in categories %}
+                        <option value="{{ id }}" {% if values.category|default('') == id %}selected{% endif %}>{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-12">
+                <label>{{ 'Заголовок'|trans }}</label>
+                <input type="text" name="title" value="{{ values.title|default('') }}">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Короткое описание'|trans }}</label>
+                <textarea name="short_story" rows="6">{{ values.short_story|default('') }}</textarea>
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Полная новость'|trans }}</label>
+                <textarea name="full_story" rows="6">{{ values.full_story|default('') }}</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-3">
+                <label>{{ 'Дата от'|trans }}</label>
+                <input type="text" name="date_from" value="{{ values.date_from|default('') }}">
+            </div>
+            <div class="cell-md-3">
+                <label>{{ 'Дата до'|trans }}</label>
+                <input type="text" name="date_to" value="{{ values.date_to|default('') }}">
+            </div>
+            <div class="cell-md-3">
+                <label>{{ 'Дата от (альт.)'|trans }}</label>
+                <input type="text" name="date_from_alt" value="{{ values.date_from_alt|default('') }}">
+            </div>
+            <div class="cell-md-3">
+                <label>{{ 'Дата до (альт.)'|trans }}</label>
+                <input type="text" name="date_to_alt" value="{{ values.date_to_alt|default('') }}">
+            </div>
+        </div>
+
+        {% if xfield_fields|default([])|length > 0 %}
+            <div class="row">
+                <div class="cell-12">
+                    <h4>{{ 'Дополнительные поля'|trans }}</h4>
+                </div>
+                {% for field in xfield_fields %}
+                    <div class="cell-md-6">
+                        {% include 'dle_faker/xfield_field.twig' with {field: field} only %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="row">
+            {% for field in ['allow_main', 'approve', 'fixed', 'allow_comm', 'allow_rate', 'disable_index', 'disable_search', 'allow_rss', 'allow_rss_turbo', 'allow_rss_dzen'] %}
+                <div class="cell-md-4">
+                    <label>{{ field }}</label>
+                    <select name="{{ field }}" data-role="select">
+                        {% for value, label in yes_no_random_options %}
+                            <option value="{{ value }}" {% if values[field]|default('random') == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="row mt-4">
+            <div class="cell-12">
+                <button type="submit" class="button primary">{{ 'Сохранить шаблон'|trans }}</button>
+                <a href="?mod=dle_faker&action=templates" class="button">{{ 'Назад к списку'|trans }}</a>
+            </div>
+        </div>
+    </div>
+</form>
