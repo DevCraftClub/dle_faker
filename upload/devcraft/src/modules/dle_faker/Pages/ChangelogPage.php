@@ -16,7 +16,7 @@ final class ChangelogPage extends AbstractPage {
 		$this->addBreadcrumb($pageName);
 
 		return [
-			'view' => 'dle_faker/changelog.twig',
+			'view' => 'pages/changelog.twig',
 			'data' => [
 				'page_title' => $pageName,
 			],

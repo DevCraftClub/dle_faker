@@ -29,14 +29,4 @@ final class FakerTemplateAssetRepository extends AbstractRepository {
 		return $entity;
 	}
 
-	/**
-	 * @return FakerTemplateAsset[]
-	 */
-	public function findOrphans(): array {
-		/** @var FakerTemplateAsset[] $items */
-		$items = $this->select()->where('template_id', 0)->fetchAll();
-
-		return $items;
-	}
-
 }

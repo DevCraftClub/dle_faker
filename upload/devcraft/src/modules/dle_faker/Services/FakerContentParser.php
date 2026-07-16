@@ -6,7 +6,6 @@ namespace DevCraft\Modules\dle_faker\Services;
 
 use DateTime;
 use DateTimeZone;
-use DevCraft\Core\I18n\Translation;
 
 /**
  * Парсер шаблонов Faker для генерации пользователей и новостей.
@@ -118,8 +117,9 @@ final class FakerContentParser {
 	 * @param array<string, mixed> $config
 	 */
 	private function faker(array $config): object {
-		$locale = trim((string) ($config['language'] ?? $config['lang'] ?? 'site'));
-		$locale = $locale !== '' && $locale !== 'site' ? $locale : Translation::getLocale();
+		$locale  = FakerLocaleOptions::resolve(
+			(string) ($config['language'] ?? $config['lang'] ?? ''),
+		);
 		$factory = '\\Faker\\Factory';
 
 		return $factory::create($locale);
@@ -166,24 +166,28 @@ final class FakerContentParser {
 			'random_category' => $type === 'post' ? (string) $this->randomValue((array) ($config['categories'] ?? []), config: $config) : '',
 			'static_image' => $this->resolveStaticTag('image'),
 			'static_file' => $this->resolveStaticTag('file'),
+			'static_audio' => $this->resolveStaticTag('audio'),
+			'static_video' => $this->resolveStaticTag('video'),
 			default => '{{ ' . $token . ' }}',
 		};
 	}
 
 	private function resolveStaticTag(string $kind): string {
-		try {
-			$resolver = new XfieldValueResolver($this);
-			$map      = $resolver->resolve(
-				['_tag' => ['source' => 'static', 'random' => true]],
-				['_tag' => ['name' => '_tag', 'type' => $kind === 'image' ? 'image' : 'file']],
-				[],
-				false,
-			);
+		$resolver = new XfieldValueResolver($this);
+		$fieldType = match($kind) {
+			'image' => 'image',
+			'audio' => 'audio',
+			'video' => 'video',
+			default => 'file',
+		};
+		$map = $resolver->resolve(
+			['_tag' => ['source' => 'static', 'random' => true, 'count' => 1]],
+			['_tag' => ['name' => '_tag', 'type' => $fieldType]],
+			[],
+			false,
+		);
 
-			return (string) ($map['_tag'] ?? '');
-		} catch(\Throwable) {
-			return '';
-		}
+		return (string) ($map['_tag'] ?? '');
 	}
 
 	/**

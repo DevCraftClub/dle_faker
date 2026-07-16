@@ -15,7 +15,7 @@ use DevCraft\Modules\dle_faker\Repositories\FakerStaticFileRepository;
  */
 #[Entity(role: 'faker_static_file', repository: FakerStaticFileRepository::class, table: 'faker_static_files')]
 #[Index(columns: ['kind'])]
-final class FakerStaticFile {
+class FakerStaticFile {
 
 	#[Column(type: 'bigPrimary')]
 	public int $id;

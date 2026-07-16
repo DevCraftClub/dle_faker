@@ -1,0 +1,43 @@
+<h2>{{ page_title|default('Категории'|trans) }}</h2>
+<p class="fg-gray">{{ 'Создаёт категории и подкатегории DLE. Дубликаты имени или alt_name в том же родителе пропускаются.'|trans }}</p>
+
+<form class="js-dle-faker-categories-form">
+    <div class="grid">
+        <div class="row">
+            <div class="cell-md-4">
+                <label>{{ 'Название'|trans }}</label>
+                <input type="text" name="name" value="{{ '{{ words max=3 }}' }}">
+            </div>
+            <div class="cell-md-4">
+                <label>{{ 'Alt name'|trans }}</label>
+                <input type="text" name="alt_name" value="" placeholder="{{ 'Авто из названия'|trans|e('html_attr') }}">
+            </div>
+            <div class="cell-md-4">
+                <label>{{ 'Родитель'|trans }}</label>
+                <select name="parentid" data-role="select" data-filter="true">
+                    <option value="0">{{ 'Корень'|trans }}</option>
+                    {% for id, label in parents %}
+                        <option value="{{ id }}">{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="cell-md-3">
+                <label>{{ 'Количество'|trans }}</label>
+                <input type="text"
+                       name="count"
+                       value="1"
+                       data-role="spinner"
+                       data-min-value="1"
+                       data-default-value="1"
+                       data-step="1">
+            </div>
+            <div class="cell-md-9 d-flex flex-align-end">
+                <button type="submit" class="button primary">{{ 'Сгенерировать'|trans }}</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="mt-4 js-dle-faker-categories-results"></div>

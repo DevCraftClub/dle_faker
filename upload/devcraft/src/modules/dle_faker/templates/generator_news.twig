@@ -15,7 +15,13 @@
             </div>
             <div class="cell-md-4">
                 <label>{{ 'Количество'|trans }}</label>
-                <input type="number" name="count" min="1" value="1">
+                <input type="text"
+                       name="count"
+                       value="1"
+                       data-role="spinner"
+                       data-min-value="1"
+                       data-default-value="1"
+                       data-step="1">
             </div>
         </div>
         <div class="row mt-4">

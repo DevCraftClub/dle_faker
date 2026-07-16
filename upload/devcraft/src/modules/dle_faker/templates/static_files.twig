@@ -1,41 +1,27 @@
-<h2>{{ page_title|default('Статичные файлы'|trans) }}</h2>
-<p class="fg-gray">{{ 'Загружайте изображения и файлы для медиа-полей генерации новостей и пользователей.'|trans }}</p>
+<h2>{{ page_title|default('Файлы'|trans) }}</h2>
+<p class="fg-gray">{{ 'Загружайте файлы для медиа-полей генерации новостей и пользователей.'|trans }}</p>
 
-<div class="grid">
-    <div class="row">
-        <div class="cell-md-6">
-            <h4>{{ 'Изображения'|trans }}</h4>
-            <form class="js-dle-faker-static-upload mb-3" data-kind="image">
-                <input type="file" name="file" accept="image/*" required>
-                <button type="submit" class="button primary mt-2">{{ 'Загрузить изображение'|trans }}</button>
-            </form>
-            <ul class="js-dle-faker-static-list" data-kind="image">
-                {% for item in images %}
-                    <li data-id="{{ item.id }}">
-                        {{ item.original_name }}
-                        <button type="button" class="button small alert js-dle-faker-static-delete" data-id="{{ item.id }}">{{ 'Удалить'|trans }}</button>
-                    </li>
-                {% else %}
-                    <li class="fg-gray">{{ 'Пока нет изображений'|trans }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="cell-md-6">
-            <h4>{{ 'Файлы'|trans }}</h4>
-            <form class="js-dle-faker-static-upload mb-3" data-kind="file">
-                <input type="file" name="file" required>
-                <button type="submit" class="button primary mt-2">{{ 'Загрузить файл'|trans }}</button>
-            </form>
-            <ul class="js-dle-faker-static-list" data-kind="file">
-                {% for item in files %}
-                    <li data-id="{{ item.id }}">
-                        {{ item.original_name }}
-                        <button type="button" class="button small alert js-dle-faker-static-delete" data-id="{{ item.id }}">{{ 'Удалить'|trans }}</button>
-                    </li>
-                {% else %}
-                    <li class="fg-gray">{{ 'Пока нет файлов'|trans }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
+{% set kind = kind|default('file') %}
+
+{% include 'core/includes/upload/drop_form.twig' with {
+    form_class: 'js-dle-faker-static-upload mb-3',
+    form_attrs: { 'data-kind': kind },
+    accept: accept|default(''),
+    multiple: true,
+    drop_title: drop_title|default('Перетащите файлы сюда'|trans),
+    upload_label: upload_label|default('Загрузить файл'|trans),
+    progress_class: 'js-dle-faker-static-progress',
+    progress_label_class: 'js-dle-faker-static-progress-label',
+    hint: ('Разрешено:'|trans) ~ ' ' ~ (allowed_ext|default([])|join(', '))
+} %}
+
+<ul class="js-dle-faker-static-list" data-kind="{{ kind }}" data-empty="{{ empty_label|default('Пока нет файлов'|trans)|e('html_attr') }}">
+    {% for item in items|default([]) %}
+        <li data-id="{{ item.id }}">
+            {{ item.original_name }}
+            <button type="button" class="button small alert js-dle-faker-static-delete" data-id="{{ item.id }}">{{ 'Удалить'|trans }}</button>
+        </li>
+    {% else %}
+        <li class="fg-gray js-dle-faker-static-empty">{{ empty_label|default('Пока нет файлов'|trans) }}</li>
+    {% endfor %}
+</ul>

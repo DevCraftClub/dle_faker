@@ -6,6 +6,7 @@ namespace DevCraft\Modules\dle_faker\Pages;
 
 use DevCraft\Core\Application;
 use DevCraft\Core\Abstracts\AbstractPage;
+use DevCraft\Modules\Admin\Services\DashboardPackageMetricService;
 
 /**
  * Главная страница модуля DLE Faker.
@@ -19,7 +20,13 @@ final class DashboardPage extends AbstractPage {
 		$context   = $this->adminContext();
 		$changelog = $plugin?->changelog() ?? [];
 		$latest    = isset($changelog[0]) ? $changelog[0]->toArray() : NULL;
+		$appCode   = 'dle_faker';
+		$metrics   = new DashboardPackageMetricService();
 		$menu      = [];
+
+		if($latest !== NULL) {
+			$latest['teaser_items'] = $changelog[0]->teaserItems(3);
+		}
 
 		foreach($context->menu() as $link) {
 			if($link->type !== 'link' || $link->action === NULL || $link->action === 'dashboard') {
@@ -27,14 +34,30 @@ final class DashboardPage extends AbstractPage {
 			}
 
 			$menu[] = [
-				'name' => $link->name,
-				'link' => $link->link,
-				'icon' => $link->extra,
+				'name'   => $link->name,
+				'link'   => $link->link,
+				'icon'   => $link->extra,
+				'action' => $link->action,
 			];
 		}
 
+		$composerPackages = $metrics->packagesForDashboard($appCode);
+		$composer         = $composerPackages !== []
+			? [
+				'url'              => '?mod=devcraft&action=composer&' . http_build_query([
+					'filter_rules' => [[
+						'field' => 'app_code',
+						'type'  => 'multi',
+						'value' => [$appCode],
+					]],
+				]),
+				'missing_required' => $metrics->missingRequiredCount($appCode),
+				'packages'         => $composerPackages,
+			]
+			: NULL;
+
 		return [
-			'view' => 'dle_faker/dashboard.twig',
+			'view' => 'pages/dashboard.twig',
 			'data' => [
 				'page_title' => (string) ($meta['name'] ?? 'DLE Faker'),
 				'dashboard'  => [
@@ -45,13 +68,17 @@ final class DashboardPage extends AbstractPage {
 						'icon'        => (string) ($meta['icon'] ?? ''),
 						'docs_link'   => (string) ($meta['docsLink'] ?? ''),
 						'site_link'   => (string) ($meta['siteLink'] ?? ''),
-						'code'        => (string) ($meta['module_code'] ?? 'dle_faker'),
+						'site_id'     => (int) ($meta['siteId'] ?? 0),
+						'code'        => (string) ($meta['module_code'] ?? $appCode),
 					],
 					'author'           => $context->author()->toArray(),
 					'lic_link'         => $context->licLink(),
 					'menu'             => $menu,
 					'changelog_latest' => $latest,
 					'changelog_url'    => '?mod=dle_faker&action=changelog',
+					'show_assets'      => false,
+					'show_update'      => false,
+					'composer'         => $composer,
 				],
 			],
 		];

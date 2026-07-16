@@ -14,7 +14,7 @@ use DevCraft\Modules\dle_faker\Repositories\FakerTemplateAssetRepository;
  */
 #[Entity(role: 'faker_template_asset', repository: FakerTemplateAssetRepository::class, table: 'faker_template_assets')]
 #[Index(columns: ['template_id'])]
-final class FakerTemplateAsset {
+class FakerTemplateAsset {
 
 	#[Column(type: 'bigPrimary')]
 	public int $id;

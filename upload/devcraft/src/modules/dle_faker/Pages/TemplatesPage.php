@@ -85,13 +85,13 @@ final class TemplatesPage extends AbstractPage {
 			'id'                => 0,
 			'name'              => '',
 			'active_template'   => true,
-			'autor'             => '',
+			'autor'             => 'random',
 			'title'             => '',
-			'category'          => '',
+			'category'          => 'random',
+			'category_ids'      => ['random'],
+			'categories_count'  => 1,
 			'date_from'         => '',
-			'date_from_alt'     => '',
 			'date_to'           => '',
-			'date_to_alt'       => '',
 			'short_story'       => '',
 			'full_story'        => '',
 			'allow_main'        => 'random',
@@ -102,7 +102,6 @@ final class TemplatesPage extends AbstractPage {
 			'disable_index'     => 'random',
 			'disable_search'    => 'random',
 			'allow_rss'         => 'random',
-			'allow_rss_turbo'   => 'random',
 			'allow_rss_dzen'    => 'random',
 			'xfields'           => [],
 		];
@@ -122,13 +121,15 @@ final class TemplatesPage extends AbstractPage {
 			}
 		}
 
+		$values['category_ids'] = $this->categoryIdsFromValue($values['category'] ?? 'random');
+
 		$dleData = Application::instance()->dleData();
 		$title   = $mode === 'edit' ? __('Редактирование шаблона') : __('Создание шаблона');
 		$this->addBreadcrumb($title);
 
 		/** @var FakerStaticFileRepository $staticRepo */
 		$staticRepo = Application::instance()->database()->repository(FakerStaticFile::class);
-		$images     = array_map(static fn(FakerStaticFile $f): array => [
+		$images = array_map(static fn(FakerStaticFile $f): array => [
 			'id'            => $f->id,
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('image'));
@@ -136,6 +137,14 @@ final class TemplatesPage extends AbstractPage {
 			'id'            => $f->id,
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('file'));
+		$audios = array_map(static fn(FakerStaticFile $f): array => [
+			'id'            => $f->id,
+			'original_name' => $f->original_name,
+		], $staticRepo->findByKind('audio'));
+		$videos = array_map(static fn(FakerStaticFile $f): array => [
+			'id'            => $f->id,
+			'original_name' => $f->original_name,
+		], $staticRepo->findByKind('video'));
 
 		$xfieldFields = (new XfieldFormService())->buildFields(
 			$dleData->postXfields(),
@@ -143,6 +152,8 @@ final class TemplatesPage extends AbstractPage {
 			true,
 			$images,
 			$files,
+			$audios,
+			$videos,
 		);
 
 		return [
@@ -154,6 +165,7 @@ final class TemplatesPage extends AbstractPage {
 				'users'      => $this->userOptions($dleData),
 				'categories' => $dleData->categories(),
 				'xfield_fields' => $xfieldFields,
+				'flag_field_labels' => $this->flagFieldLabels(),
 				'yes_no_random_options' => [
 					'random' => __('Случайно'),
 					'1'      => __('Да'),
@@ -161,6 +173,50 @@ final class TemplatesPage extends AbstractPage {
 				],
 			],
 		];
+	}
+
+	/**
+	 * Подписи флагов новости: «описание (id)» из adminpanel.lng.
+	 *
+	 * @return array<string, string>
+	 */
+	private function flagFieldLabels(): array {
+		global $lang;
+
+		$map = [
+			'allow_main'      => 'addnews_main',
+			'approve'         => 'addnews_mod',
+			'fixed'           => 'addnews_fix',
+			'allow_comm'      => 'addnews_comm',
+			'allow_rate'      => 'addnews_allow_rate',
+			'disable_index'   => 'add_disable_index',
+			'disable_search'  => 'cat_d_search',
+			'allow_rss'       => 'allow_rss_news',
+			'allow_rss_dzen'  => 'allow_rss_dzen',
+		];
+
+		$fallback = [
+			'allow_main'      => __('Публиковать на главной'),
+			'approve'         => __('Опубликовать новость на сайте'),
+			'fixed'           => __('Зафиксировать новость'),
+			'allow_comm'      => __('Разрешить комментарии'),
+			'allow_rate'      => __('Разрешить рейтинг статьи'),
+			'disable_index'   => __('Запретить индексацию для поисковиков'),
+			'disable_search'  => __('Исключить из поиска по сайту'),
+			'allow_rss'       => __('Опубликовать новость в RSS потоке'),
+			'allow_rss_dzen'  => __('Использовать в Яндекс Дзен'),
+		];
+
+		$out = [];
+
+		foreach($map as $field => $langKey) {
+			$descr = is_array($lang) && isset($lang[$langKey]) && (string) $lang[$langKey] !== ''
+				? (string) $lang[$langKey]
+				: ($fallback[$field] ?? $field);
+			$out[$field] = $descr . ' (' . $field . ')';
+		}
+
+		return $out;
 	}
 
 	private function loadFilterSchema(): FilterSchema {
@@ -188,6 +244,33 @@ final class TemplatesPage extends AbstractPage {
 		}
 
 		return $options;
+	}
+
+	/**
+	 * @return list<string>
+	 */
+	private function categoryIdsFromValue(mixed $category): array {
+		$raw = trim((string) $category);
+
+		if($raw === '' || $raw === 'random') {
+			return ['random'];
+		}
+
+		$ids = [];
+
+		foreach(preg_split('/[\s,]+/', $raw, -1, PREG_SPLIT_NO_EMPTY) ?: [] as $part) {
+			$part = trim((string) $part);
+
+			if($part === 'random') {
+				return ['random'];
+			}
+
+			if($part !== '') {
+				$ids[] = $part;
+			}
+		}
+
+		return $ids !== [] ? $ids : ['random'];
 	}
 
 }

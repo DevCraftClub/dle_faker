@@ -15,15 +15,15 @@ use DevCraft\Modules\dle_faker\Repositories\FakerTemplateRepository;
 final class GeneratorNewsPage extends AbstractPage {
 
 	public function handle(): array {
-		$this->addBreadcrumb(__('Генераторы'), '?mod=dle_faker&action=generator');
-		$this->addBreadcrumb(__('Генератор новостей'));
+		$this->addBreadcrumb(__('Генератор'), '?mod=dle_faker&action=generator-users');
+		$this->addBreadcrumb(__('Новости'));
 		/** @var FakerTemplateRepository $repository */
 		$repository = Application::instance()->database()->repository(FakerTemplate::class);
 
 		return [
 			'view' => 'dle_faker/generator_news.twig',
 			'data' => [
-				'page_title' => __('Генератор новостей'),
+				'page_title' => __('Новости'),
 				'templates'  => $repository->getActive(),
 			],
 		];

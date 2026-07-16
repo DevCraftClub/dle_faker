@@ -16,6 +16,8 @@ final class XfieldFormService {
 	 * @param array<string, mixed>                $values
 	 * @param array<int, array<string, mixed>>    $staticImages
 	 * @param array<int, array<string, mixed>>    $staticFiles
+	 * @param array<int, array<string, mixed>>    $staticAudios
+	 * @param array<int, array<string, mixed>>    $staticVideos
 	 *
 	 * @return list<array<string, mixed>>
 	 */
@@ -25,6 +27,8 @@ final class XfieldFormService {
 		bool $allowTemplateUpload = true,
 		array $staticImages = [],
 		array $staticFiles = [],
+		array $staticAudios = [],
+		array $staticVideos = [],
 	): array {
 		$fields = [];
 
@@ -46,8 +50,12 @@ final class XfieldFormService {
 				'allow_template_upload' => $allowTemplateUpload && in_array($type, self::MEDIA_TYPES, true),
 				'options'               => $this->selectOptions($info),
 				'value'                 => $this->normalizeValue($raw, $type),
+				'max_images'            => (int) ($info['max_images'] ?? 0),
+				'max_files'             => (int) ($info['max_files'] ?? 0),
 				'static_images'         => $staticImages,
 				'static_files'          => $staticFiles,
+				'static_audios'         => $staticAudios,
+				'static_videos'         => $staticVideos,
 			];
 		}
 
@@ -83,6 +91,12 @@ final class XfieldFormService {
 
 			if($required && $empty) {
 				$errors[$name] = __('Поле обязательно');
+				continue;
+			}
+
+			// Media-конфиг сохраняем всегда (даже без выбранного файла), чтобы source не сбрасывался в faker.
+			if(in_array($type, self::MEDIA_TYPES, true) && is_array($normalized)) {
+				$values[$name] = $normalized;
 				continue;
 			}
 
@@ -133,16 +147,23 @@ final class XfieldFormService {
 	private function normalizeValue(mixed $raw, string $type): mixed {
 		if(in_array($type, self::MEDIA_TYPES, true)) {
 			if(is_array($raw)) {
-				$source = (string) ($raw['source'] ?? 'faker');
+				$source = (string) ($raw['source'] ?? '');
 
-				if(!in_array($source, ['static', 'template_upload', 'faker'], true)) {
-					$source = 'faker';
+				if($source === '' || !in_array($source, ['static', 'template_upload', 'faker'], true)) {
+					if((int) ($raw['asset_id'] ?? 0) > 0) {
+						$source = 'template_upload';
+					} elseif((int) ($raw['static_id'] ?? 0) > 0 || filter_var($raw['random'] ?? false, FILTER_VALIDATE_BOOLEAN)) {
+						$source = 'static';
+					} else {
+						$source = 'faker';
+					}
 				}
 
 				return [
 					'source'    => $source,
 					'static_id' => (int) ($raw['static_id'] ?? 0),
 					'random'    => filter_var($raw['random'] ?? false, FILTER_VALIDATE_BOOLEAN),
+					'count'     => max(1, (int) ($raw['count'] ?? 1)),
 					'asset_id'  => (int) ($raw['asset_id'] ?? 0),
 					'value'     => trim((string) ($raw['value'] ?? '')),
 				];

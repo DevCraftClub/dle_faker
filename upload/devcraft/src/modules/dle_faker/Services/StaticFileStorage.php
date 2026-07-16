@@ -12,9 +12,21 @@ use RuntimeException;
  */
 final class StaticFileStorage {
 
-	private const IMAGE_EXT = ['gif', 'jpg', 'jpeg', 'png', 'webp', 'bmp', 'avif'];
+	/** Расширения изображений как в DLE UploadFile::$allowed_extensions. */
+	private const DLE_IMAGE_EXT = ['gif', 'jpg', 'jpeg', 'png', 'webp', 'bmp', 'avif', 'heic'];
 
-	private const FILE_EXT = ['pdf', 'zip', 'doc', 'docx', 'xls', 'xlsx', 'txt', 'csv', 'mp3', 'mp4', 'webm', 'ogg'];
+	/** Расширения video xfield как в engine/ajax/upload.php. */
+	private const DLE_VIDEO_EXT = ['mp4', 'm4v', 'm4a', 'mov', 'webm', 'm3u8', 'mkv'];
+
+	/** Расширения audio xfield как в engine/ajax/upload.php. */
+	private const DLE_AUDIO_EXT = ['mp3', 'flac', 'aac', 'ogg'];
+
+	private const KIND_SUBDIRS = [
+		'image' => 'images',
+		'file'  => 'files',
+		'audio' => 'audios',
+		'video' => 'videos',
+	];
 
 	public function libraryRoot(): string {
 		return rtrim(ROOT_DIR, '/') . '/uploads/dle_faker/static';
@@ -25,7 +37,67 @@ final class StaticFileStorage {
 	}
 
 	public function kindSubdir(string $kind): string {
-		return $kind === 'image' ? 'images' : 'files';
+		$kind = $this->normalizeKind($kind);
+
+		return self::KIND_SUBDIRS[$kind] ?? 'files';
+	}
+
+	/**
+	 * @return list<string>
+	 */
+	public function allowedImageExtensions(): array {
+		return self::DLE_IMAGE_EXT;
+	}
+
+	/**
+	 * @return list<string>
+	 */
+	public function allowedVideoExtensions(): array {
+		return self::DLE_VIDEO_EXT;
+	}
+
+	/**
+	 * @return list<string>
+	 */
+	public function allowedAudioExtensions(): array {
+		return self::DLE_AUDIO_EXT;
+	}
+
+	/**
+	 * Расширения файлов из настроек группы текущего пользователя DLE.
+	 *
+	 * @return list<string>
+	 */
+	public function allowedFileExtensions(): array {
+		global $member_id, $user_group;
+
+		$groupId = (int) ($member_id['user_group'] ?? 0);
+		$raw     = '';
+
+		if($groupId > 0 && isset($user_group[$groupId]) && is_array($user_group[$groupId])) {
+			$raw = (string) ($user_group[$groupId]['files_type'] ?? '');
+		}
+
+		$parts = preg_split('/\s*,\s*/', strtolower(str_replace('.', '', $raw)), -1, PREG_SPLIT_NO_EMPTY) ?: [];
+
+		return array_values(array_unique(array_filter($parts, static fn(string $ext): bool => $ext !== '')));
+	}
+
+	/**
+	 * @return list<string>
+	 */
+	public function allowedExtensionsForKind(string $kind): array {
+		$kind = $this->normalizeKind($kind);
+
+		return match($kind) {
+			'image' => $this->allowedImageExtensions(),
+			'video' => $this->allowedVideoExtensions(),
+			'audio' => $this->allowedAudioExtensions(),
+			default => array_values(array_unique(array_merge(
+				$this->allowedImageExtensions(),
+				$this->allowedFileExtensions(),
+			))),
+		};
 	}
 
 	/**
@@ -94,8 +166,42 @@ final class StaticFileStorage {
 		@rmdir($dir);
 	}
 
+	/**
+	 * Переносит файл вложения шаблона между каталогами templates/{from}/ → templates/{to}/.
+	 */
+	public function moveTemplateFile(int $fromTemplateId, int $toTemplateId, string $storedName): void {
+		$from = $this->templateAbsolutePath($fromTemplateId, $storedName);
+		$toId = max(0, $toTemplateId);
+		$toDir = $this->templatesRoot() . '/' . $toId;
+		$to   = $toDir . '/' . basename($storedName);
+
+		if($from === $to || !is_file($from)) {
+			return;
+		}
+
+		$this->ensureDir($toDir);
+
+		if(!rename($from, $to) && !(@copy($from, $to) && @unlink($from))) {
+			throw new RuntimeException(__('Не удалось перенести вложение шаблона'));
+		}
+	}
+
 	public function normalizeKind(string $kind): string {
-		return $kind === 'image' ? 'image' : 'file';
+		$kind = trim($kind);
+
+		return isset(self::KIND_SUBDIRS[$kind]) ? $kind : 'file';
+	}
+
+	/**
+	 * Kind из action меню (static-images → image).
+	 */
+	public function kindFromAction(string $action): string {
+		return match($action) {
+			'static-images' => 'image',
+			'static-audio'  => 'audio',
+			'static-video'  => 'video',
+			default         => 'file',
+		};
 	}
 
 	/**
@@ -118,11 +224,13 @@ final class StaticFileStorage {
 			throw new RuntimeException(__('Временный файл загрузки недоступен'));
 		}
 
-		$ext = strtolower(pathinfo($original, PATHINFO_EXTENSION));
-		$allowed = $kind === 'image' ? self::IMAGE_EXT : array_merge(self::IMAGE_EXT, self::FILE_EXT);
+		$ext     = strtolower(pathinfo($original, PATHINFO_EXTENSION));
+		$allowed = $this->allowedExtensionsForKind($kind);
 
-		if($ext === '' || !in_array($ext, $allowed, true)) {
-			throw new RuntimeException(__('Недопустимое расширение файла'));
+		if($ext === '' || $allowed === [] || !in_array($ext, $allowed, true)) {
+			$list = $allowed !== [] ? implode(', ', $allowed) : __('нет');
+
+			throw new RuntimeException(__('Недопустимое расширение файла. Разрешено: {ext}', ['{ext}' => $list]));
 		}
 
 		$stored = bin2hex(random_bytes(8)) . '.' . $ext;

@@ -6,7 +6,9 @@ namespace DevCraft\Modules\dle_faker\Services;
 
 use DLEPlugins;
 use ParseFilter;
+use RuntimeException;
 use DevCraft\Core\Application;
+use Throwable;
 
 /**
  * Генерирует новости DLE по шаблону DLE Faker.
@@ -19,11 +21,11 @@ final class NewsGeneratorService {
 
 	/**
 	 * @param array<string, mixed> $template
-	 * @param array<string, mixed> $config
+	 * @param array<string, mixed> $moduleConfig Конфиг модуля dle_faker
 	 *
 	 * @return array<string, mixed>
 	 */
-	public function generate(array $template, array $config): array {
+	public function generate(array $template, array $moduleConfig): array {
 		global $db, $config, $_TIME, $_IP;
 
 		if(!class_exists('ParseFilter')) {
@@ -33,77 +35,101 @@ final class NewsGeneratorService {
 		$parse = new ParseFilter();
 
 		$title = $parse->process(
-			filter_var($this->parser->parseNewsValue((string) ($template['title'] ?? ''), $config), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
+			filter_var($this->parser->parseNewsValue((string) ($template['title'] ?? ''), $moduleConfig), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
 		);
 
 		if($title === '') {
-			throw new \RuntimeException(__('Шаблон заголовка не может быть пустым'));
+			throw new RuntimeException(__('Шаблон заголовка не может быть пустым'));
 		}
 
-		$authorIds = array_filter(array_map('intval', explode(',', (string) $this->parser->parseNewsValue((string) ($template['autor'] ?? ''), $config))));
-		$authorIds = $authorIds !== [] ? $authorIds : array_map('intval', (array) ($config['users'] ?? []));
-		$authorId  = (int) ($this->parser->randomValue($authorIds, config: $config) ?? 0);
+		$autorRaw  = trim((string) ($template['autor'] ?? ''));
+		$authorIds = $autorRaw === 'random'
+			? array_map('intval', (array) ($moduleConfig['users'] ?? []))
+			: array_filter(array_map('intval', explode(',', (string) $this->parser->parseNewsValue($autorRaw, $moduleConfig))));
+		$authorIds = $authorIds !== [] ? $authorIds : array_map('intval', (array) ($moduleConfig['users'] ?? []));
+		$authorId  = (int) ($this->parser->randomValue($authorIds, config: $moduleConfig) ?? 0);
 		$author    = $this->loadUser($authorId);
 
 		if($author === []) {
-			throw new \RuntimeException(__('Не удалось определить автора для создаваемой новости'));
+			throw new RuntimeException(__('Не удалось определить автора для создаваемой новости'));
 		}
 
-		$categories = array_filter(array_map('intval', explode(',', (string) $this->parser->parseNewsValue((string) ($template['category'] ?? ''), $config))));
-		$categories = $categories !== [] ? $categories : array_map('intval', (array) ($config['categories'] ?? []));
-		$count      = max(1, (int) ($config['categories_count'] ?? 1));
-		$selected   = (array) $this->parser->randomValue($categories, $count, config: $config);
-		$selected   = array_values(array_filter(array_map('intval', $selected)));
+		$categoryRaw = trim((string) ($template['category'] ?? ''));
+		$categories  = $categoryRaw === 'random'
+			? array_map('intval', (array) ($moduleConfig['categories'] ?? []))
+			: array_filter(array_map('intval', explode(',', (string) $this->parser->parseNewsValue($categoryRaw, $moduleConfig))));
+		$categories  = $categories !== [] ? $categories : array_map('intval', (array) ($moduleConfig['categories'] ?? []));
+		$count       = max(1, (int) ($template['categories_count'] ?? 1));
+		$count       = min($count, max(1, count($categories)));
+		$selected    = (array) $this->parser->randomValue($categories, $count, config: $moduleConfig);
+		$selected    = array_values(array_filter(array_map('intval', $selected)));
 
 		if($selected === []) {
-			throw new \RuntimeException(__('Не удалось определить категории для создаваемой новости'));
+			throw new RuntimeException(__('Не удалось определить категории для создаваемой новости'));
 		}
 
-		$dateFrom   = (string) ($template['date_from_alt'] ?? $template['date_from'] ?? 'now');
-		$dateTo     = (string) ($template['date_to_alt'] ?? $template['date_to'] ?? 'now');
+		$dateFrom   = (string) ($template['date_from'] ?? 'now') ?: 'now';
+		$dateTo     = (string) ($template['date_to'] ?? 'now') ?: 'now';
 		$date       = $this->parser->randomDateBetween(
-			$this->parser->parseNewsValue($dateFrom, $config),
-			$this->parser->parseNewsValue($dateTo, $config),
+			$this->parser->parseNewsValue($dateFrom, $moduleConfig),
+			$this->parser->parseNewsValue($dateTo, $moduleConfig),
 		);
-		$shortStory = $this->parser->parseNewsValue((string) ($template['short_story'] ?? ''), $config);
-		$fullStory  = $this->parser->parseNewsValue((string) ($template['full_story'] ?? ''), $config);
+		$shortStory = $this->parser->parseNewsValue((string) ($template['short_story'] ?? ''), $moduleConfig);
+		$fullStory  = $this->parser->parseNewsValue((string) ($template['full_story'] ?? ''), $moduleConfig);
 		$fullStory  = $fullStory !== '' ? $fullStory : $shortStory;
 
-		$xfields = [];
-		$schema = Application::instance()->dleData()->postXfields();
-		$resolved = (new XfieldValueResolver($this->parser))->resolve(
-			(array) ($template['xfields'] ?? []),
-			$schema,
-			$config,
-			true,
-		);
-		$xfieldsString = (new XfieldValueEncoder())->encode($resolved, $schema);
-
-		$altName = totranslit(stripslashes($title), true, false, $config['translit_url']);
+		$schema  = Application::instance()->dleData()->postXfields();
+		$altName = totranslit(stripslashes($title), true, false, $config['translit_url'] ?? false);
 		$altName = $this->ensureUniqueAltName($altName);
 		$stories = $this->prepareStories($parse, $shortStory, $fullStory);
 		$metatags = create_metatags(dle_strlen($fullStory) > 12 ? $fullStory : $shortStory);
 		$categoryString = $db->safesql(implode(',', $selected));
-		$catalogUrl     = $config['create_catalog'] ? $db->safesql(dle_substr(htmlspecialchars(strip_tags(stripslashes($title)), ENT_QUOTES, 'UTF-8'), 0, 1)) : '';
+		$catalogUrl     = !empty($config['create_catalog']) ? $db->safesql(dle_substr(htmlspecialchars(strip_tags(stripslashes($title)), ENT_QUOTES, 'UTF-8'), 0, 1)) : '';
 
-		$db->query(
-			"INSERT INTO " . PREFIX . "_post (date, autor, short_story, full_story, xfields, title, descr, keywords, category, alt_name, allow_comm, approve, allow_main, fixed, allow_br, symbol, tags, metatitle) values ('{$date}', '{$db->safesql((string) $author['name'])}', '{$stories['short']}', '{$stories['full']}', '{$db->safesql($xfieldsString)}', '{$db->safesql($title)}', '{$db->safesql((string) $metatags['description'])}', '{$db->safesql((string) $metatags['keywords'])}', '{$categoryString}', '{$db->safesql($altName)}', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_comm'] ?? 'random'), $config) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['approve'] ?? 'random'), $config) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_main'] ?? 'random'), $config) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['fixed'] ?? 'random'), $config) . "', '1', '{$catalogUrl}', '', '{$db->safesql((string) $metatags['title'])}')"
-		);
+		$xfieldsConfigured = (array) ($template['xfields'] ?? []);
+		$postId            = 0;
 
-		$postId = (int) $db->insert_id();
+		try {
+			$this->queryOrFail(
+				"INSERT INTO " . PREFIX . "_post (date, autor, short_story, full_story, xfields, title, descr, keywords, category, alt_name, allow_comm, approve, allow_main, fixed, allow_br, symbol, tags, metatitle) values ('{$date}', '{$db->safesql((string) $author['name'])}', '{$stories['short']}', '{$stories['full']}', '', '{$db->safesql($title)}', '{$db->safesql((string) $metatags['description'])}', '{$db->safesql((string) $metatags['keywords'])}', '{$categoryString}', '{$db->safesql($altName)}', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_comm'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['approve'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_main'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['fixed'] ?? 'random'), $moduleConfig) . "', '1', '{$catalogUrl}', '', '{$db->safesql((string) $metatags['title'])}')"
+			);
 
-		$db->query(
-			"INSERT INTO " . PREFIX . "_post_extras (news_id, allow_rate, votes, disable_index, related_ids, access, user_id, disable_search, need_pass, allow_rss, allow_rss_turbo, allow_rss_dzen) VALUES('{$postId}', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rate'] ?? 'random'), $config) . "', 0, '" . (int) $this->parser->parseBoolValue((string) ($template['disable_index'] ?? 'random'), $config) . "', '', '', '" . (int) $author['user_id'] . "', '" . (int) $this->parser->parseBoolValue((string) ($template['disable_search'] ?? 'random'), $config) . "', '0', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss'] ?? 'random'), $config) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss_turbo'] ?? 'random'), $config) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss_dzen'] ?? 'random'), $config) . "')"
-		);
+			$postId = (int) $db->insert_id();
 
-		$catsIds = [];
-		foreach($selected as $categoryId) {
-			$catsIds[] = '(' . $postId . ', ' . (int) $categoryId . ')';
+			$resolved      = (new XfieldValueResolver($this->parser))->resolve(
+				$xfieldsConfigured,
+				$schema,
+				$moduleConfig,
+				true,
+				$postId,
+			);
+			$xfieldsString = (new XfieldValueEncoder())->encode($resolved, $schema);
+
+			if($xfieldsString !== '') {
+				$this->queryOrFail(
+					"UPDATE " . PREFIX . "_post SET xfields='{$db->safesql($xfieldsString)}' WHERE id='{$postId}'"
+				);
+			}
+
+			$this->queryOrFail(
+				"INSERT INTO " . PREFIX . "_post_extras (news_id, allow_rate, votes, disable_index, related_ids, access, user_id, disable_search, need_pass, allow_rss, allow_rss_dzen, allowed_country, not_allowed_country) VALUES('{$postId}', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rate'] ?? 'random'), $moduleConfig) . "', 0, '" . (int) $this->parser->parseBoolValue((string) ($template['disable_index'] ?? 'random'), $moduleConfig) . "', '', '', '" . (int) $author['user_id'] . "', '" . (int) $this->parser->parseBoolValue((string) ($template['disable_search'] ?? 'random'), $moduleConfig) . "', '0', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss_dzen'] ?? 'random'), $moduleConfig) . "', '', '')"
+			);
+
+			$catsIds = [];
+			foreach($selected as $categoryId) {
+				$catsIds[] = '(' . $postId . ', ' . (int) $categoryId . ')';
+			}
+
+			$this->queryOrFail("INSERT INTO " . PREFIX . "_post_extras_cats (news_id, cat_id) VALUES " . implode(', ', $catsIds));
+			$this->queryOrFail("UPDATE " . USERPREFIX . "_users SET news_num=news_num+1 WHERE user_id='" . (int) $author['user_id'] . "'");
+			$this->queryOrFail("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql((string) $author['name']) . "', '{$_TIME}', '{$_IP}', '1', '" . $db->safesql($title) . "')");
+		} catch (Throwable $e) {
+			if($postId > 0) {
+				$this->rollbackPost($postId, (int) $author['user_id']);
+			}
+
+			throw $e;
 		}
-
-		$db->query("INSERT INTO " . PREFIX . "_post_extras_cats (news_id, cat_id) VALUES " . implode(', ', $catsIds));
-		$db->query("UPDATE " . USERPREFIX . "_users SET news_num=news_num+1 WHERE user_id='" . (int) $author['user_id'] . "'");
-		$db->query("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql((string) $author['name']) . "', '{$_TIME}', '{$_IP}', '1', '" . $db->safesql($title) . "')");
 
 		clear_cache(['news_', 'tagscloud_', 'archives_', 'calendar_', 'topnews_', 'rss', 'stats']);
 
@@ -113,6 +139,35 @@ final class NewsGeneratorService {
 			'category' => implode(', ', $selected),
 			'date'     => $date,
 		];
+	}
+
+	/**
+	 * Удаляет частично созданную новость после ошибки.
+	 */
+	private function rollbackPost(int $postId, int $userId): void {
+		global $db;
+
+		$db->query("DELETE FROM " . PREFIX . "_post WHERE id='{$postId}'", false);
+		$db->query("DELETE FROM " . PREFIX . "_post_extras WHERE news_id='{$postId}'", false);
+		$db->query("DELETE FROM " . PREFIX . "_post_extras_cats WHERE news_id='{$postId}'", false);
+		$db->query("DELETE FROM " . PREFIX . "_files WHERE news_id='{$postId}'", false);
+		$db->query("DELETE FROM " . PREFIX . "_images WHERE news_id='{$postId}'", false);
+
+		if($userId > 0) {
+			$db->query("UPDATE " . USERPREFIX . "_users SET news_num=GREATEST(news_num-1, 0) WHERE user_id='{$userId}'", false);
+		}
+	}
+
+	/**
+	 * Выполняет SQL без HTML display_error; при ошибке бросает исключение для JSON-ответа.
+	 */
+	private function queryOrFail(string $sql): void {
+		global $db;
+
+		if($db->query($sql, false) === false) {
+			$last = end($db->query_errors_list);
+			throw new RuntimeException((string) ($last['error'] ?? __('Ошибка SQL при генерации новости')));
+		}
 	}
 
 	/**

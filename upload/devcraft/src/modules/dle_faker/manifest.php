@@ -7,16 +7,17 @@ use DevCraft\Modules\dle_faker\Pages\TagsPage;
 use DevCraft\Modules\dle_faker\Pages\DashboardPage;
 use DevCraft\Modules\dle_faker\Pages\SettingsPage;
 use DevCraft\Modules\dle_faker\Pages\TemplatesPage;
-use DevCraft\Modules\dle_faker\Pages\GeneratorPage;
 use DevCraft\Modules\dle_faker\Pages\ChangelogPage;
 use DevCraft\Modules\dle_faker\Pages\StaticFilesPage;
 use DevCraft\Modules\dle_faker\Pages\GeneratorNewsPage;
 use DevCraft\Modules\dle_faker\Pages\GeneratorUsersPage;
+use DevCraft\Modules\dle_faker\Pages\GeneratorCategoriesPage;
 use DevCraft\Modules\dle_faker\Ajax\SettingsHandler;
 use DevCraft\Modules\dle_faker\Ajax\CreateTemplateHandler;
 use DevCraft\Modules\dle_faker\Ajax\DeleteTemplateHandler;
 use DevCraft\Modules\dle_faker\Ajax\GeneratePostsHandler;
 use DevCraft\Modules\dle_faker\Ajax\GenerateUsersHandler;
+use DevCraft\Modules\dle_faker\Ajax\GenerateCategoriesHandler;
 use DevCraft\Modules\dle_faker\Ajax\ToggleTemplateHandler;
 use DevCraft\Modules\dle_faker\Ajax\UploadStaticFileHandler;
 use DevCraft\Modules\dle_faker\Ajax\DeleteStaticFileHandler;
@@ -37,7 +38,7 @@ return [
 		'version'     => '200.1.4',
 		'description' => __('Генерация тестовых пользователей, новостей и шаблонов для DLE'),
 		'icon'        => 'mif-magic-wand',
-		'docsLink'    => 'https://readme.devcraft.club/',
+		'docsLink'    => 'https://readme.devcraft.club/dev/dle_faker/install/',
 		'siteLink'    => 'https://devcraft.club/',
 		'siteId'      => 29,
 		'author'      => [
@@ -57,12 +58,25 @@ return [
 			extra   : 'mif-magic-wand',
 			action  : 'generator',
 			children: [
-				AdminLink::page(__('Генератор пользователей'), 'generator-users', GeneratorUsersPage::class, 'mif-users', 'dle_faker'),
-				AdminLink::page(__('Генератор новостей'), 'generator-news', GeneratorNewsPage::class, 'mif-file-text', 'dle_faker'),
-				AdminLink::page(__('Шаблоны'), 'templates', TemplatesPage::class, 'mif-files-empty', 'dle_faker'),
-				AdminLink::page(__('Статичные файлы'), 'static-files', StaticFilesPage::class, 'mif-images', 'dle_faker'),
+				AdminLink::page(__('Пользователи'), 'generator-users', GeneratorUsersPage::class, 'mif-users', 'dle_faker'),
+				AdminLink::page(__('Новости'), 'generator-news', GeneratorNewsPage::class, 'mif-file-text', 'dle_faker'),
+				AdminLink::page(__('Категории'), 'generator-categories', GeneratorCategoriesPage::class, 'mif-folder', 'dle_faker'),
 			],
 		),
+		new AdminLink(
+			name    : __('Файлы'),
+			link    : '?mod=dle_faker&action=static-images',
+			type    : 'dropdown',
+			extra   : 'mif-images',
+			action  : 'files',
+			children: [
+				AdminLink::page(__('Изображения'), 'static-images', StaticFilesPage::class, 'mif-image', 'dle_faker'),
+				AdminLink::page(__('Файлы'), 'static-files', StaticFilesPage::class, 'mif-file-text', 'dle_faker'),
+				AdminLink::page(__('Аудио'), 'static-audio', StaticFilesPage::class, 'mif-file-music', 'dle_faker'),
+				AdminLink::page(__('Видео'), 'static-video', StaticFilesPage::class, 'mif-file-video', 'dle_faker'),
+			],
+		),
+		AdminLink::page(__('Шаблоны'), 'templates', TemplatesPage::class, 'mif-files-empty', 'dle_faker'),
 		AdminLink::page(__('Теги'), 'tags', TagsPage::class, 'mif-price-tags', 'dle_faker'),
 		AdminLink::page(__('Настройки'), 'settings', SettingsPage::class, 'mif-cog', 'dle_faker'),
 		AdminLink::page(__('Журнал изменений'), 'changelog', ChangelogPage::class, 'mif-library', 'dle_faker'),
@@ -76,6 +90,7 @@ return [
 			'toggle_template'       => ToggleTemplateHandler::class,
 			'generate_users'        => GenerateUsersHandler::class,
 			'generate_posts'        => GeneratePostsHandler::class,
+			'generate_categories'   => GenerateCategoriesHandler::class,
 			'upload_static_file'    => UploadStaticFileHandler::class,
 			'delete_static_file'    => DeleteStaticFileHandler::class,
 			'upload_template_asset' => UploadTemplateAssetHandler::class,

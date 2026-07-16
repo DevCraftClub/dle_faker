@@ -8,6 +8,7 @@ use DateTimeImmutable;
 use DevCraft\Core\Application;
 use DevCraft\Core\Http\AjaxRequest;
 use DevCraft\Core\Http\JsonResponse;
+use DevCraft\Core\Http\UploadedFile;
 use DevCraft\Core\Interfaces\AjaxHandlerInterface;
 use DevCraft\Core\Interfaces\ResponseInterface;
 use DevCraft\Modules\dle_faker\Models\FakerStaticFile;
@@ -20,17 +21,12 @@ final class UploadStaticFileHandler implements AjaxHandlerInterface {
 
 	public function handle(AjaxRequest $request): ResponseInterface {
 		$kind = (string) ($request->data['kind'] ?? ($_POST['kind'] ?? 'file'));
-		$file = $_FILES['file'] ?? null;
-
-		if(!is_array($file)) {
-			return JsonResponse::fail(__('Ошибка'), __('Файл не передан'), 'validation', 422);
-		}
-
 		$storage = new StaticFileStorage();
 
 		try {
-			$stored = $storage->storeLibraryUpload($kind, $file);
-			$entity = new FakerStaticFile();
+			$uploaded = UploadedFile::fromFilesKey('file');
+			$stored   = $storage->storeLibraryUpload($kind, $uploaded->toArray());
+			$entity   = new FakerStaticFile();
 			$entity->kind          = $storage->normalizeKind($kind);
 			$entity->original_name = $stored['original_name'];
 			$entity->stored_name   = $stored['stored_name'];

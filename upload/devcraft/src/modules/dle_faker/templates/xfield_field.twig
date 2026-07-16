@@ -1,4 +1,4 @@
-{% set media_kinds = {image: 'image', imagegalery: 'image', video: 'file', audio: 'file', file: 'file'} %}
+{% set media_kinds = {image: 'image', imagegalery: 'image', video: 'video', audio: 'audio', file: 'file'} %}
 {% set is_media = field.is_media|default(false) %}
 {% set value = field.value|default('') %}
 {% set source = value.source|default('faker') %}
@@ -6,6 +6,20 @@
     {% set source = value.source %}
 {% elseif is_media %}
     {% set source = 'faker' %}
+{% endif %}
+{% set lib_kind = media_kinds[field.type]|default('file') %}
+{% if lib_kind == 'image' %}
+    {% set pool = field.static_images|default([]) %}
+    {% set library_action = 'static-images' %}
+{% elseif lib_kind == 'audio' %}
+    {% set pool = field.static_audios|default([]) %}
+    {% set library_action = 'static-audio' %}
+{% elseif lib_kind == 'video' %}
+    {% set pool = field.static_videos|default([]) %}
+    {% set library_action = 'static-video' %}
+{% else %}
+    {% set pool = field.static_files|default([]) %}
+    {% set library_action = 'static-files' %}
 {% endif %}
 
 <div class="form-group mb-3 js-xfield-field" data-field="{{ field.name }}" data-type="{{ field.type }}">
@@ -33,22 +47,43 @@
     {% elseif field.type == 'datetime' %}
         <input class="metro-input" type="text" name="xfields[{{ field.name }}]" value="{{ value is iterable ? value.value|default('') : value }}" placeholder="{{ '{{ datetime }}'|trans }}">
     {% elseif is_media %}
-        <select class="metro-input js-xfield-source" name="xfields[{{ field.name }}][source]" data-role="select">
-            <option value="static" {% if source == 'static' %}selected{% endif %}>{{ 'Библиотека статичных файлов'|trans }}</option>
+        {# Native select: Metro data-role=select ломает value/change и прячет панели #}
+        <select class="metro-input js-xfield-source" name="xfields[{{ field.name }}][source]">
+            <option value="faker" {% if source == 'faker' %}selected{% endif %}>{{ 'Текст / теги'|trans }}</option>
+            <option value="static" {% if source == 'static' %}selected{% endif %}>{{ 'Библиотека'|trans }}</option>
             {% if field.allow_template_upload %}
                 <option value="template_upload" {% if source == 'template_upload' %}selected{% endif %}>{{ 'Файл шаблона'|trans }}</option>
             {% endif %}
-            <option value="faker" {% if source == 'faker' %}selected{% endif %}>{{ 'Текст / теги'|trans }}</option>
         </select>
+        <p class="text-small fg-gray">{{ 'Откуда брать файл для этого доп. поля при генерации новости.'|trans }}</p>
+
+        <div class="js-xfield-source-panel mt-2" data-panel="faker" {% if source != 'faker' %}style="display:none"{% endif %}>
+            <input class="metro-input" type="text" name="xfields[{{ field.name }}][value]" value="{{ value is iterable ? value.value|default('') : (value is iterable ? '' : value) }}" data-role="input" placeholder="{{ 'Путь, URL или тег'|trans }}">
+            <p class="text-small fg-gray">{{ 'Вручную: путь/URL как в DLE, либо тег парсера вроде static_image / static_file — см. справочник тегов.'|trans }}</p>
+        </div>
 
         <div class="js-xfield-source-panel mt-2" data-panel="static" {% if source != 'static' %}style="display:none"{% endif %}>
+            <p class="text-small fg-gray">
+                {{ 'Файлы заранее загружаются в разделе «Статичные файлы». Можно выбрать конкретный или случайный из пула.'|trans }}
+                <a href="?mod=dle_faker&action={{ library_action }}">{{ 'Открыть библиотеку'|trans }}</a>
+            </p>
+            {% if pool|length == 0 %}
+                <p class="fg-orange text-small">{{ 'Пул пуст — сначала загрузите файлы в библиотеку, иначе поле останется пустым.'|trans }}</p>
+            {% endif %}
             <label class="checkbox">
                 <input type="checkbox" name="xfields[{{ field.name }}][random]" value="1" {% if value is iterable and value.random|default(false) %}checked{% endif %}>
                 <span class="check"></span>
                 {{ 'Случайный из пула'|trans }}
             </label>
-            {% set pool = (media_kinds[field.type]|default('file') == 'image') ? field.static_images : field.static_files %}
-            <select class="metro-input mt-2" name="xfields[{{ field.name }}][static_id]" data-role="select">
+            {% if field.type == 'image' %}
+                <p class="text-small fg-gray mt-2">{{ 'Для типа «Изображение» всегда один файл.'|trans }}</p>
+            {% else %}
+                <label class="mt-2 d-block">{{ 'Сколько файлов'|trans }}</label>
+                <input class="metro-input" type="number" min="1" name="xfields[{{ field.name }}][count]" value="{{ value is iterable ? value.count|default(1) : 1 }}" data-role="input">
+                <p class="text-small fg-gray">{{ 'Учитывается при «Случайный из пула». Лимит — схема поля и число файлов в библиотеке. Для типа «Файл» при нескольких — URL через запятую; приватный file всегда 1.'|trans }}</p>
+            {% endif %}
+            <label class="mt-2 d-block">{{ 'Конкретный файл'|trans }}</label>
+            <select class="metro-input mt-1" name="xfields[{{ field.name }}][static_id]">
                 <option value="0">{{ 'Выберите файл'|trans }}</option>
                 {% for item in pool %}
                     <option value="{{ item.id }}" {% if value is iterable and value.static_id|default(0) == item.id %}selected{% endif %}>{{ item.original_name }}</option>

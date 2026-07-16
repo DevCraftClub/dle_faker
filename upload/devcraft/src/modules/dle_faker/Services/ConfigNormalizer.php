@@ -15,10 +15,12 @@ final class ConfigNormalizer {
 	 * @return array<string, mixed>
 	 */
 	public function normalize(array $config): array {
-		$config['language']         = trim((string) ($config['language'] ?? 'site')) ?: 'site';
+		$config['language']         = FakerLocaleOptions::resolve(
+			isset($config['language']) ? (string) $config['language'] : null,
+		);
 		$config['users']            = $this->normalizeList($config['users'] ?? []);
 		$config['categories']       = $this->normalizeList($config['categories'] ?? []);
-		$config['categories_count'] = max(1, (int) ($config['categories_count'] ?? 1));
+		unset($config['categories_count']);
 		$config['user_xfields']     = is_array($config['user_xfields'] ?? null) ? $config['user_xfields'] : [];
 
 		return $config;

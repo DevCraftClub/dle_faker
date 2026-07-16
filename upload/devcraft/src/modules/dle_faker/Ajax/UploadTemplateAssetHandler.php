@@ -7,6 +7,7 @@ namespace DevCraft\Modules\dle_faker\Ajax;
 use DevCraft\Core\Application;
 use DevCraft\Core\Http\AjaxRequest;
 use DevCraft\Core\Http\JsonResponse;
+use DevCraft\Core\Http\UploadedFile;
 use DevCraft\Core\Interfaces\AjaxHandlerInterface;
 use DevCraft\Core\Interfaces\ResponseInterface;
 use DevCraft\Modules\dle_faker\Models\FakerTemplateAsset;
@@ -20,17 +21,12 @@ final class UploadTemplateAssetHandler implements AjaxHandlerInterface {
 	public function handle(AjaxRequest $request): ResponseInterface {
 		$templateId = (int) ($request->data['template_id'] ?? ($_POST['template_id'] ?? 0));
 		$kind       = (string) ($request->data['kind'] ?? ($_POST['kind'] ?? 'file'));
-		$file       = $_FILES['file'] ?? null;
-
-		if(!is_array($file)) {
-			return JsonResponse::fail(__('Ошибка'), __('Файл не передан'), 'validation', 422);
-		}
-
-		$storage = new StaticFileStorage();
+		$storage    = new StaticFileStorage();
 
 		try {
-			$stored = $storage->storeTemplateUpload($templateId, $kind, $file);
-			$entity = new FakerTemplateAsset();
+			$uploaded = UploadedFile::fromFilesKey('file');
+			$stored   = $storage->storeTemplateUpload($templateId, $kind, $uploaded->toArray());
+			$entity   = new FakerTemplateAsset();
 			$entity->template_id   = max(0, $templateId);
 			$entity->kind          = $storage->normalizeKind($kind);
 			$entity->original_name = $stored['original_name'];

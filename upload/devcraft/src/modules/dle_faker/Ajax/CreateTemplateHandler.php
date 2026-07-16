@@ -14,6 +14,7 @@ use DevCraft\Modules\dle_faker\Models\FakerTemplate;
 use DevCraft\Modules\dle_faker\Models\FakerTemplateAsset;
 use DevCraft\Modules\dle_faker\Repositories\FakerTemplateAssetRepository;
 use DevCraft\Modules\dle_faker\Repositories\FakerTemplateRepository;
+use DevCraft\Modules\dle_faker\Services\StaticFileStorage;
 use DevCraft\Modules\dle_faker\Services\XfieldFormService;
 
 /**
@@ -23,6 +24,7 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 
 	public function handle(AjaxRequest $request): ResponseInterface {
 		$data = $request->data;
+		$data['category'] = $this->normalizeCategory($data['category'] ?? null);
 
 		if(trim((string) ($data['name'] ?? '')) === '') {
 			return JsonResponse::fail(__('Ошибка'), __('Название шаблона не может быть пустым'), 'validation', 422, [
@@ -105,7 +107,16 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 	 */
 	private function templatePayload(array $data): array {
 		$payload = $data;
-		unset($payload['id'], $payload['name'], $payload['active_template'], $payload['xfields']);
+		unset(
+			$payload['id'],
+			$payload['name'],
+			$payload['active_template'],
+			$payload['xfields'],
+			$payload['category_ids'],
+			$payload['allow_rss_turbo'],
+			$payload['date_from_alt'],
+			$payload['date_to_alt'],
+		);
 
 		foreach([
 			'allow_main',
@@ -116,13 +127,62 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 			'disable_index',
 			'disable_search',
 			'allow_rss',
-			'allow_rss_turbo',
 			'allow_rss_dzen',
 		] as $field) {
 			$payload[$field] = trim((string) ($payload[$field] ?? 'random')) ?: 'random';
 		}
 
+		$payload['category'] = $this->normalizeCategory($payload['category'] ?? null);
+		$payload['categories_count'] = max(1, (int) ($payload['categories_count'] ?? 1));
+
 		return $payload;
+	}
+
+	/**
+	 * Нормализует category[] / строку в CSV или sentinel random.
+	 */
+	private function normalizeCategory(mixed $category): string {
+		if(is_array($category)) {
+			$parts = [];
+
+			foreach($category as $item) {
+				$item = trim((string) $item);
+
+				if($item === '') {
+					continue;
+				}
+
+				if($item === 'random') {
+					return 'random';
+				}
+
+				$parts[] = $item;
+			}
+
+			return implode(',', $parts);
+		}
+
+		$raw = trim((string) $category);
+
+		if($raw === '' || $raw === 'random') {
+			return $raw === 'random' ? 'random' : '';
+		}
+
+		$parts = [];
+
+		foreach(preg_split('/[\s,]+/', $raw, -1, PREG_SPLIT_NO_EMPTY) ?: [] as $item) {
+			$item = trim((string) $item);
+
+			if($item === 'random') {
+				return 'random';
+			}
+
+			if($item !== '') {
+				$parts[] = $item;
+			}
+		}
+
+		return implode(',', $parts);
 	}
 
 	/**
@@ -152,6 +212,13 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 
 			if($asset->template_id === $templateId) {
 				continue;
+			}
+
+			$storage = new StaticFileStorage();
+			$fromId  = (int) $asset->template_id;
+
+			if($fromId !== $templateId) {
+				$storage->moveTemplateFile($fromId, $templateId, $asset->stored_name);
 			}
 
 			$asset->template_id = $templateId;

@@ -28,7 +28,7 @@ final class XfieldValueResolver {
 	 *
 	 * @return array<string, string>
 	 */
-	public function resolve(array $configured, array $schema, array $config, bool $allowTemplateUpload = true): array {
+	public function resolve(array $configured, array $schema, array $config, bool $allowTemplateUpload = true, ?int $newsId = null): array {
 		$result = [];
 
 		foreach($schema as $name => $info) {
@@ -43,7 +43,7 @@ final class XfieldValueResolver {
 			}
 
 			$type  = (string) ($info['type'] ?? 'text');
-			$value = $this->resolveOne($configured[$name], $type, $config, $allowTemplateUpload);
+			$value = $this->resolveOne($configured[$name], $type, $info, $config, $allowTemplateUpload, $newsId);
 
 			if($value !== '') {
 				$result[$name] = $value;
@@ -53,7 +53,43 @@ final class XfieldValueResolver {
 		return $result;
 	}
 
-	private function resolveOne(mixed $configured, string $type, array $config, bool $allowTemplateUpload): string {
+	/**
+	 * Нужен ли news_id до публикации (приватный file).
+	 *
+	 * @param array<string, mixed>                $configured
+	 * @param array<string, array<string, mixed>> $schema
+	 */
+	public function needsNewsId(array $configured, array $schema): bool {
+		foreach($schema as $name => $info) {
+			if(!is_array($info)) {
+				continue;
+			}
+
+			$name = (string) ($info['name'] ?? $name);
+
+			if(!array_key_exists($name, $configured)) {
+				continue;
+			}
+
+			if((string) ($info['type'] ?? '') !== 'file') {
+				continue;
+			}
+
+			$rawPublic = $info['is_public'] ?? 1;
+
+			if($rawPublic === 0 || $rawPublic === '0') {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * @param array<string, mixed> $info
+	 * @param array<string, mixed> $config
+	 */
+	private function resolveOne(mixed $configured, string $type, array $info, array $config, bool $allowTemplateUpload, ?int $newsId): string {
 		$mediaTypes = ['image', 'imagegalery', 'video', 'audio', 'file'];
 
 		if(!in_array($type, $mediaTypes, true)) {
@@ -77,49 +113,132 @@ final class XfieldValueResolver {
 		$source = (string) ($configured['source'] ?? 'faker');
 
 		return match ($source) {
-			'static'          => $this->resolveStatic($configured, $type),
-			'template_upload' => $allowTemplateUpload ? $this->resolveTemplateAsset($configured, $type) : '',
+			'static'          => $this->resolveStatic($configured, $type, $info, $newsId),
+			'template_upload' => $allowTemplateUpload ? $this->resolveTemplateAsset($configured, $type, $info, $newsId) : '',
 			default           => $this->parser->parseNewsValue((string) ($configured['value'] ?? ''), $config),
 		};
 	}
 
 	/**
 	 * @param array<string, mixed> $configured
+	 * @param array<string, mixed> $info
 	 */
-	private function resolveStatic(array $configured, string $fieldType): string {
+	private function resolveStatic(array $configured, string $fieldType, array $info, ?int $newsId): string {
 		$database = Application::instance()->database();
 		/** @var FakerStaticFileRepository $repo */
 		$repo = $database->repository(FakerStaticFile::class);
-		$kind = in_array($fieldType, ['image', 'imagegalery'], true) ? 'image' : 'file';
+		$kind = match($fieldType) {
+			'image', 'imagegalery' => 'image',
+			'audio' => 'audio',
+			'video' => 'video',
+			default => 'file',
+		};
 
-		if(filter_var($configured['random'] ?? false, FILTER_VALIDATE_BOOLEAN)) {
-			$pool = $repo->findByKind($kind);
+		$files = $this->pickStaticFiles($repo, $kind, $configured, $fieldType, $info);
+		$parts = [];
 
-			if($pool === []) {
-				throw new RuntimeException(__('Библиотека статичных файлов пуста для выбранного типа'));
-			}
-
-			$file = $pool[array_rand($pool)];
-		} else {
-			$id = (int) ($configured['static_id'] ?? 0);
-			$file = $id > 0 ? $repo->findOneById($id) : null;
-
-			if($file === NULL) {
-				throw new RuntimeException(__('Выбранный статичный файл не найден'));
-			}
+		foreach($files as $file) {
+			$parts[] = $this->publisher->publishStatic($file, $fieldType, $info, $newsId);
 		}
 
-		return $this->publisher->publishStatic($file, $fieldType);
+		return implode(',', $parts);
 	}
 
 	/**
 	 * @param array<string, mixed> $configured
+	 * @param array<string, mixed> $info
+	 *
+	 * @return list<FakerStaticFile>
 	 */
-	private function resolveTemplateAsset(array $configured, string $fieldType): string {
+	private function pickStaticFiles(FakerStaticFileRepository $repo, string $kind, array $configured, string $fieldType, array $info): array {
+		if(!filter_var($configured['random'] ?? false, FILTER_VALIDATE_BOOLEAN)) {
+			$id = (int) ($configured['static_id'] ?? 0);
+
+			if($id <= 0) {
+				return [];
+			}
+
+			$file = $repo->findOneById($id);
+
+			if($file === NULL) {
+				throw new RuntimeException(__('Выбранный статичный файл не найден'));
+			}
+
+			return [$file];
+		}
+
+		$pool = $repo->findByKind($kind);
+
+		if($pool === []) {
+			throw new RuntimeException(__('Библиотека статичных файлов пуста для выбранного типа'));
+		}
+
+		$count = $this->clampCount((int) ($configured['count'] ?? 1), $fieldType, $info, count($pool));
+
+		if($count === 1) {
+			return [$pool[array_rand($pool)]];
+		}
+
+		$keys = array_rand($pool, $count);
+
+		if(is_int($keys)) {
+			return [$pool[$keys]];
+		}
+
+		$picked = [];
+
+		foreach($keys as $key) {
+			$picked[] = $pool[$key];
+		}
+
+		return $picked;
+	}
+
+	/**
+	 * @param array<string, mixed> $info
+	 */
+	private function clampCount(int $requested, string $fieldType, array $info, int $poolSize): int {
+		$requested = max(1, $requested);
+
+		if($fieldType === 'image') {
+			return 1;
+		}
+
+		if($fieldType === 'file') {
+			$rawPublic = $info['is_public'] ?? 1;
+
+			if($rawPublic === 0 || $rawPublic === '0') {
+				return 1;
+			}
+		}
+
+		if(!in_array($fieldType, ['imagegalery', 'video', 'audio', 'file'], true)) {
+			return 1;
+		}
+
+		$schemaMax = match ($fieldType) {
+			'imagegalery' => (int) ($info['max_images'] ?? 0),
+			default       => (int) ($info['max_files'] ?? 0),
+		};
+
+		$n = min($requested, $poolSize);
+
+		if($schemaMax > 0) {
+			$n = min($n, $schemaMax);
+		}
+
+		return max(1, $n);
+	}
+
+	/**
+	 * @param array<string, mixed> $configured
+	 * @param array<string, mixed> $info
+	 */
+	private function resolveTemplateAsset(array $configured, string $fieldType, array $info, ?int $newsId): string {
 		$id = (int) ($configured['asset_id'] ?? 0);
 
 		if($id <= 0) {
-			throw new RuntimeException(__('Не указано вложение шаблона'));
+			return '';
 		}
 
 		$database = Application::instance()->database();
@@ -131,7 +250,7 @@ final class XfieldValueResolver {
 			throw new RuntimeException(__('Вложение шаблона не найдено'));
 		}
 
-		return $this->publisher->publishTemplateAsset($asset, $fieldType);
+		return $this->publisher->publishTemplateAsset($asset, $fieldType, $info, $newsId);
 	}
 
 }

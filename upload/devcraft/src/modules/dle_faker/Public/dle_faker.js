@@ -32,13 +32,204 @@
 		}).then(DevCraftAjax.parseResponse);
 	}
 
-	function postMultipart(method, formData) {
-		formData.append('user_hash', DevCraftAjax.getUserHash());
+	function postMultipart(method, formData, onProgress) {
+		return DevCraftAjax.postMultipart(ajaxUrl(method), formData, onProgress);
+	}
 
-		return fetch(ajaxUrl(method), {
-			method: 'POST',
-			body: formData,
-		}).then(DevCraftAjax.parseResponse);
+	function setProgress(form, percent, label) {
+		const bar = form.querySelector('.js-dle-faker-static-progress');
+		const labelEl = form.querySelector('.js-dle-faker-static-progress-label');
+
+		if (bar) {
+			bar.classList.remove('d-none');
+			const plugin = window.Metro && typeof Metro.getPlugin === 'function'
+				? Metro.getPlugin(bar, 'progress')
+				: null;
+
+			if (plugin && typeof plugin.val === 'function') {
+				plugin.val(Math.max(0, Math.min(100, Math.round(percent))));
+			} else {
+				bar.setAttribute('data-value', String(Math.round(percent)));
+			}
+		}
+
+		if (labelEl) {
+			labelEl.classList.toggle('d-none', !label);
+			labelEl.textContent = label || '';
+		}
+	}
+
+	function hideProgress(form) {
+		const bar = form.querySelector('.js-dle-faker-static-progress');
+		const labelEl = form.querySelector('.js-dle-faker-static-progress-label');
+
+		if (bar) {
+			bar.classList.add('d-none');
+			const plugin = window.Metro && typeof Metro.getPlugin === 'function'
+				? Metro.getPlugin(bar, 'progress')
+				: null;
+
+			if (plugin && typeof plugin.val === 'function') {
+				plugin.val(0);
+			}
+		}
+
+		if (labelEl) {
+			labelEl.classList.add('d-none');
+			labelEl.textContent = '';
+		}
+	}
+
+	function appendStaticListItem(kind, item) {
+		const list = document.querySelector('.js-dle-faker-static-list[data-kind="' + kind + '"]');
+
+		if (!list || !item || !item.id) {
+			return;
+		}
+
+		const empty = list.querySelector('.js-dle-faker-static-empty');
+
+		if (empty) {
+			empty.remove();
+		}
+
+		const li = document.createElement('li');
+		li.setAttribute('data-id', String(item.id));
+		li.appendChild(document.createTextNode(item.original_name || ('#' + item.id) + ' '));
+
+		const btn = document.createElement('button');
+		btn.type = 'button';
+		btn.className = 'button small alert js-dle-faker-static-delete';
+		btn.dataset.id = String(item.id);
+		btn.textContent = 'Удалить';
+		li.appendChild(btn);
+		list.appendChild(li);
+	}
+
+	function removeStaticListItem(id) {
+		const li = document.querySelector('.js-dle-faker-static-list li[data-id="' + id + '"]');
+
+		if (!li) {
+			return;
+		}
+
+		const list = li.parentElement;
+		li.remove();
+
+		if (list && !list.querySelector('li[data-id]')) {
+			const empty = document.createElement('li');
+			empty.className = 'fg-gray js-dle-faker-static-empty';
+			empty.textContent = list.dataset.empty || 'Пока нет файлов';
+			list.appendChild(empty);
+		}
+	}
+
+	function initStaticFiles() {
+		document.querySelectorAll('.js-dle-faker-static-upload').forEach(function (form) {
+			form.addEventListener('submit', function (event) {
+				event.preventDefault();
+				const fileInput = form.querySelector('input[type="file"]');
+				const submitBtn = form.querySelector('button[type="submit"]');
+
+				if (!fileInput || !fileInput.files || !fileInput.files.length) {
+					return;
+				}
+
+				const kind = form.dataset.kind || 'file';
+				const files = Array.prototype.slice.call(fileInput.files);
+				const total = files.length;
+				let done = 0;
+				let failed = false;
+
+				if (submitBtn) {
+					submitBtn.disabled = true;
+				}
+
+				setProgress(form, 0, 'Загрузка 0/' + total);
+
+				let chain = Promise.resolve();
+
+				files.forEach(function (file, index) {
+					chain = chain.then(function () {
+						if (failed) {
+							return;
+						}
+
+						const fd = new FormData();
+						fd.append('data', JSON.stringify({kind: kind}));
+						fd.append('file', file);
+
+						return postMultipart('upload_static_file', fd, function (loaded, fileTotal) {
+							const fraction = fileTotal > 0 ? loaded / fileTotal : 0;
+							const percent = ((done + fraction) / total) * 100;
+							setProgress(form, percent, 'Загрузка ' + (index + 1) + '/' + total + ': ' + file.name);
+						}).then(function (response) {
+							DevCraftAjax.handleNotice(response);
+
+							if (!response.success) {
+								failed = true;
+								return;
+							}
+
+							done += 1;
+							appendStaticListItem(kind, response.data || {});
+							setProgress(form, (done / total) * 100, 'Загрузка ' + done + '/' + total);
+						}).catch(function (error) {
+							failed = true;
+							DevCraftMetro.notifyError('Ошибка', 'Не удалось загрузить файл', error);
+						});
+					});
+				});
+
+				chain.then(function () {
+					if (submitBtn) {
+						submitBtn.disabled = false;
+					}
+
+					const metroFile = window.Metro && typeof Metro.getPlugin === 'function'
+						? Metro.getPlugin(fileInput, 'file')
+						: null;
+
+					if (metroFile && typeof metroFile.clear === 'function') {
+						metroFile.clear();
+					} else {
+						fileInput.value = '';
+					}
+
+					if (!failed) {
+						setProgress(form, 100, 'Готово');
+						window.setTimeout(function () {
+							hideProgress(form);
+						}, 800);
+					} else {
+						hideProgress(form);
+					}
+				});
+			});
+		});
+
+		document.addEventListener('click', function (event) {
+			const button = event.target.closest('.js-dle-faker-static-delete');
+
+			if (!button) {
+				return;
+			}
+
+			if (!window.confirm('Удалить файл?')) {
+				return;
+			}
+
+			const id = button.dataset.id;
+
+			postAction('delete_static_file', {id: id})
+				.then(function (response) {
+					DevCraftAjax.handleNotice(response);
+
+					if (response.success) {
+						removeStaticListItem(id);
+					}
+				});
+		});
 	}
 
 	function assignNested(target, path, value) {
@@ -70,6 +261,12 @@
 
 	function collectFormPayload(form) {
 		const payload = {};
+
+		// Metro data-role=select часто disabled'ит исходный <select> — FormData его пропускает.
+		form.querySelectorAll('select[disabled]').forEach(function (el) {
+			el.disabled = false;
+		});
+
 		const formData = new FormData(form);
 
 		formData.forEach(function (value, key) {
@@ -86,6 +283,19 @@
 			}
 
 			payload[key] = value;
+		});
+
+		form.querySelectorAll('.js-xfield-source').forEach(function (select) {
+			const field = select.closest('.js-xfield-field');
+			const name = field ? field.getAttribute('data-field') : '';
+
+			if (!name) {
+				return;
+			}
+
+			payload.xfields = payload.xfields || {};
+			payload.xfields[name] = payload.xfields[name] || {};
+			payload.xfields[name].source = select.value;
 		});
 
 		return payload;
@@ -229,17 +439,15 @@
 
 			return postAction(method, payload)
 				.then(function (response) {
-					DevCraftAjax.handleNotice(response);
-
 					if (response.success) {
+						DevCraftAjax.handleNotice(response);
 						onItem(response.data || {}, index, limit);
+
+						return step();
 					}
 
-					if (!response.success) {
-						throw new Error('Batch stopped');
-					}
-
-					return step();
+					const err = (response.error && (response.error.message || response.error.title)) || 'Batch stopped';
+					throw new Error(err);
 				});
 		}
 
@@ -290,7 +498,7 @@
 					return '<div class="remark mb-2"><b>#' + item.id + '</b> ' + (item.username || '') + ' &lt;' + (item.email || '') + '&gt;</div>';
 				});
 			}).catch(function (error) {
-				DevCraftMetro.notifyError('Ошибка', 'Генерация пользователей была прервана', error);
+				DevCraftMetro.notifyError('Ошибка', (error && error.message) || 'Генерация пользователей была прервана', error);
 			});
 		});
 	}
@@ -317,53 +525,38 @@
 					return '<div class="remark mb-2"><b>#' + item.id + '</b> ' + (item.name || '') + ' <span class="fg-gray">(' + (item.date || '') + ')</span></div>';
 				});
 			}).catch(function (error) {
-				DevCraftMetro.notifyError('Ошибка', 'Генерация новостей была прервана', error);
+				DevCraftMetro.notifyError('Ошибка', (error && error.message) || 'Генерация новостей была прервана', error);
 			});
 		});
 	}
 
-	function initStaticFiles() {
-		document.querySelectorAll('.js-dle-faker-static-upload').forEach(function (form) {
-			form.addEventListener('submit', function (event) {
-				event.preventDefault();
-				const fileInput = form.querySelector('input[type="file"]');
+	function initCategoriesGenerator() {
+		const form = document.querySelector('.js-dle-faker-categories-form');
+		const results = document.querySelector('.js-dle-faker-categories-results');
 
-				if (!fileInput || !fileInput.files || !fileInput.files[0]) {
-					return;
-				}
+		if (!form) {
+			return;
+		}
 
-				const fd = new FormData();
-				fd.append('data', JSON.stringify({kind: form.dataset.kind || 'file'}));
-				fd.append('file', fileInput.files[0]);
+		form.addEventListener('submit', function (event) {
+			event.preventDefault();
 
-				postMultipart('upload_static_file', fd)
-					.then(function (response) {
-						DevCraftAjax.handleNotice(response);
+			const payload = collectFormPayload(form);
+			const count = parseInt(payload.count || '1', 10);
+			delete payload.count;
+			const rows = [];
 
-						if (response.success) {
-							window.location.reload();
-						}
-					})
-					.catch(function (error) {
-						DevCraftMetro.notifyError('Ошибка', 'Не удалось загрузить файл', error);
-					});
-			});
-		});
-
-		document.querySelectorAll('.js-dle-faker-static-delete').forEach(function (button) {
-			button.addEventListener('click', function () {
-				if (!window.confirm('Удалить файл?')) {
-					return;
-				}
-
-				postAction('delete_static_file', {id: button.dataset.id})
-					.then(function (response) {
-						DevCraftAjax.handleNotice(response);
-
-						if (response.success) {
-							window.location.reload();
-						}
-					});
+			runBatch('generate_categories', payload, count, function (data) {
+				rows.unshift(data.category || {});
+				renderResults(results, rows, function (item) {
+					const skipped = item.skipped ? ' <span class="fg-orange">[' + 'пропущено' + ']</span>' : '';
+					const id = item.id ? '#' + item.id + ' ' : '';
+					return '<div class="remark mb-2"><b>' + id + '</b>' + (item.name || '') +
+						' <span class="fg-gray">(' + (item.alt_name || '') + ', parent=' + (item.parentid || 0) + ')</span>' +
+						skipped + '</div>';
+				});
+			}).catch(function (error) {
+				DevCraftMetro.notifyError('Ошибка', (error && error.message) || 'Генерация категорий была прервана', error);
 			});
 		});
 	}
@@ -373,11 +566,9 @@
 		initTemplateList();
 		initUsersGenerator();
 		initNewsGenerator();
+		initCategoriesGenerator();
 		initStaticFiles();
 	}
-
-	window.DevCraft.Modules = window.DevCraft.Modules || {};
-	window.DevCraft.Modules.dleFaker = {batchState: null};
 
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', init);

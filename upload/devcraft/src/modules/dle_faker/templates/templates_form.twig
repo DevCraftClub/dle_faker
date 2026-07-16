@@ -7,7 +7,7 @@
         <div class="row">
             <div class="cell-md-6">
                 <label>{{ 'Название шаблона'|trans }}</label>
-                <input type="text" name="name" value="{{ values.name|default('') }}">
+                <input class="metro-input" type="text" name="name" value="{{ values.name|default('') }}" data-role="input">
             </div>
             <div class="cell-md-6">
                 <label>{{ 'Активный шаблон'|trans }}</label>
@@ -22,57 +22,57 @@
             <div class="cell-md-6">
                 <label>{{ 'Автор'|trans }}</label>
                 <select name="autor" data-role="select">
-                    <option value="">{{ 'Выберите автора'|trans }}</option>
+                    <option value="random" {% if values.autor|default('random') == 'random' or values.autor|default('') == '' %}selected{% endif %}>{{ 'Случайный пользователь'|trans }}</option>
                     {% for id, name in users %}
-                        <option value="{{ id }}" {% if values.autor|default('') == id %}selected{% endif %}>{{ name }}</option>
+                        <option value="{{ id }}" {% if values.autor|default('') == id or values.autor|default('') == (id ~ '') %}selected{% endif %}>{{ name }}</option>
                     {% endfor %}
                 </select>
             </div>
             <div class="cell-md-6">
                 <label>{{ 'Категория'|trans }}</label>
-                <select name="category" data-role="select">
-                    <option value="">{{ 'Выберите категорию'|trans }}</option>
+                <select name="category[]" multiple data-role="select">
+                    {% set selected = values.category_ids|default(['random']) %}
+                    <option value="random" {% if 'random' in selected %}selected{% endif %}>{{ 'Случайно'|trans }}</option>
                     {% for id, name in categories %}
-                        <option value="{{ id }}" {% if values.category|default('') == id %}selected{% endif %}>{{ name }}</option>
+                        <option value="{{ id }}" {% if (id ~ '') in selected %}selected{% endif %}>{{ name }}</option>
                     {% endfor %}
                 </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Категорий на новость'|trans }}</label>
+                <input class="metro-input" type="number" min="1" name="categories_count" value="{{ values.categories_count|default(1) }}" data-role="input">
             </div>
         </div>
 
         <div class="row">
             <div class="cell-md-12">
                 <label>{{ 'Заголовок'|trans }}</label>
-                <input type="text" name="title" value="{{ values.title|default('') }}">
+                <input class="metro-input" type="text" name="title" value="{{ values.title|default('') }}" data-role="input">
             </div>
         </div>
 
         <div class="row">
             <div class="cell-md-6">
                 <label>{{ 'Короткое описание'|trans }}</label>
-                <textarea name="short_story" rows="6">{{ values.short_story|default('') }}</textarea>
+                <textarea class="metro-input" name="short_story" rows="6">{{ values.short_story|default('') }}</textarea>
             </div>
             <div class="cell-md-6">
                 <label>{{ 'Полная новость'|trans }}</label>
-                <textarea name="full_story" rows="6">{{ values.full_story|default('') }}</textarea>
+                <textarea class="metro-input" name="full_story" rows="6">{{ values.full_story|default('') }}</textarea>
             </div>
         </div>
 
         <div class="row">
-            <div class="cell-md-3">
+            <div class="cell-md-6">
                 <label>{{ 'Дата от'|trans }}</label>
-                <input type="text" name="date_from" value="{{ values.date_from|default('') }}">
+                <input class="metro-input" type="text" name="date_from" value="{{ values.date_from|default('') }}" data-role="input">
             </div>
-            <div class="cell-md-3">
+            <div class="cell-md-6">
                 <label>{{ 'Дата до'|trans }}</label>
-                <input type="text" name="date_to" value="{{ values.date_to|default('') }}">
-            </div>
-            <div class="cell-md-3">
-                <label>{{ 'Дата от (альт.)'|trans }}</label>
-                <input type="text" name="date_from_alt" value="{{ values.date_from_alt|default('') }}">
-            </div>
-            <div class="cell-md-3">
-                <label>{{ 'Дата до (альт.)'|trans }}</label>
-                <input type="text" name="date_to_alt" value="{{ values.date_to_alt|default('') }}">
+                <input class="metro-input" type="text" name="date_to" value="{{ values.date_to|default('') }}" data-role="input">
             </div>
         </div>
 
@@ -83,16 +83,16 @@
                 </div>
                 {% for field in xfield_fields %}
                     <div class="cell-md-6">
-                        {% include 'dle_faker/xfield_field.twig' with {field: field} only %}
+                        {% include '@dle_faker/xfield_field.twig' with {field: field} only %}
                     </div>
                 {% endfor %}
             </div>
         {% endif %}
 
         <div class="row">
-            {% for field in ['allow_main', 'approve', 'fixed', 'allow_comm', 'allow_rate', 'disable_index', 'disable_search', 'allow_rss', 'allow_rss_turbo', 'allow_rss_dzen'] %}
+            {% for field in ['allow_main', 'approve', 'fixed', 'allow_comm', 'allow_rate', 'disable_index', 'disable_search', 'allow_rss', 'allow_rss_dzen'] %}
                 <div class="cell-md-4">
-                    <label>{{ field }}</label>
+                    <label>{{ flag_field_labels[field]|default(field) }}</label>
                     <select name="{{ field }}" data-role="select">
                         {% for value, label in yes_no_random_options %}
                             <option value="{{ value }}" {% if values[field]|default('random') == value %}selected{% endif %}>{{ label }}</option>
