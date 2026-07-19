@@ -1,0 +1,105 @@
+<h2>{{ page_title|default('Шаблон'|trans) }}</h2>
+
+<form class="js-dle-faker-template-form">
+    <input type="hidden" name="id" value="{{ values.id|default(0) }}">
+
+    <div class="grid">
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Название шаблона'|trans }}</label>
+                <input class="metro-input" type="text" name="name" value="{{ values.name|default('') }}" data-role="input">
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Активный шаблон'|trans }}</label>
+                <select name="active_template" data-role="select">
+                    <option value="1" {% if values.active_template|default(true) %}selected{% endif %}>{{ 'Да'|trans }}</option>
+                    <option value="0" {% if not values.active_template|default(true) %}selected{% endif %}>{{ 'Нет'|trans }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Автор'|trans }}</label>
+                <select name="autor" data-role="select">
+                    <option value="random" {% if values.autor|default('random') == 'random' or values.autor|default('') == '' %}selected{% endif %}>{{ 'Случайный пользователь'|trans }}</option>
+                    {% for id, name in users %}
+                        <option value="{{ id }}" {% if values.autor|default('') == id or values.autor|default('') == (id ~ '') %}selected{% endif %}>{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Категория'|trans }}</label>
+                <select name="category[]" multiple data-role="select">
+                    {% set selected = values.category_ids|default(['random']) %}
+                    <option value="random" {% if 'random' in selected %}selected{% endif %}>{{ 'Случайно'|trans }}</option>
+                    {% for id, name in categories %}
+                        <option value="{{ id }}" {% if (id ~ '') in selected %}selected{% endif %}>{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Категорий на новость'|trans }}</label>
+                <input class="metro-input" type="number" min="1" name="categories_count" value="{{ values.categories_count|default(1) }}" data-role="input">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-12">
+                <label>{{ 'Заголовок'|trans }}</label>
+                <input class="metro-input" type="text" name="title" value="{{ values.title|default('') }}" data-role="input">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Короткое описание'|trans }}</label>
+                <textarea class="metro-input" name="short_story" rows="6">{{ values.short_story|default('') }}</textarea>
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Полная новость'|trans }}</label>
+                <textarea class="metro-input" name="full_story" rows="6">{{ values.full_story|default('') }}</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell-md-6">
+                <label>{{ 'Дата от'|trans }}</label>
+                <input class="metro-input" type="text" name="date_from" value="{{ values.date_from|default('') }}" data-role="input">
+            </div>
+            <div class="cell-md-6">
+                <label>{{ 'Дата до'|trans }}</label>
+                <input class="metro-input" type="text" name="date_to" value="{{ values.date_to|default('') }}" data-role="input">
+            </div>
+        </div>
+
+        {% include '@dle_faker/xfields_accordion.twig' with {
+            title: 'Дополнительные поля'|trans,
+            xfield_fields: xfield_fields|default([]),
+            xfields_display_mode: xfields_display_mode|default('show_all')
+        } only %}
+
+        <div class="row">
+            {% for field in ['allow_main', 'approve', 'fixed', 'allow_comm', 'allow_rate', 'disable_index', 'disable_search', 'allow_rss', 'allow_rss_dzen'] %}
+                <div class="cell-md-4">
+                    <label>{{ flag_field_labels[field]|default(field) }}</label>
+                    <select name="{{ field }}" data-role="select">
+                        {% for value, label in yes_no_random_options %}
+                            <option value="{{ value }}" {% if values[field]|default('random') == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="row mt-4">
+            <div class="cell-12">
+                <button type="submit" class="button primary">{{ 'Сохранить шаблон'|trans }}</button>
+                <a href="?mod=dle_faker&action=templates" class="button">{{ 'Назад к списку'|trans }}</a>
+            </div>
+        </div>
+    </div>
+</form>

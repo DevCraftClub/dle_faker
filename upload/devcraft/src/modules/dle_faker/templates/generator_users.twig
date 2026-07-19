@@ -1,0 +1,63 @@
+<h2>{{ page_title|default('Генератор пользователей'|trans) }}</h2>
+<p class="fg-gray">{{ 'Добавьте шаблоны псевдонима, имени, email, пароля и выберите группы пользователей для генерации.'|trans }}</p>
+
+<form class="js-dle-faker-users-form">
+    <div class="grid">
+        <div class="row">
+            <div class="cell-md-4">
+                <label>{{ 'Псевдоним'|trans }}</label>
+                <input type="text" name="name" value="{{ '{{ userName }}' }}">
+            </div>
+            <div class="cell-md-4">
+                <label>{{ 'Полное имя'|trans }}</label>
+                <input type="text" name="full_name" value="{{ '{{ name }}' }}">
+            </div>
+            <div class="cell-md-4">
+                <label>{{ 'Email'|trans }}</label>
+                <input type="text" name="email" value="{{ '{{ userName }}@example.com' }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell-md-4">
+                <label>{{ 'Пароль'|trans }}</label>
+                <input type="text" name="password" value="test123456">
+            </div>
+            <div class="cell-md-4">
+                <label>{{ 'Группы пользователей'|trans }}</label>
+                <select name="usergroup[]" multiple data-role="select">
+                    {% for id, name in groups %}
+                        <option value="{{ id }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="cell-md-4">
+                <label>{{ 'Количество'|trans }}</label>
+                <input type="text"
+                       name="count"
+                       value="1"
+                       data-role="spinner"
+                       data-min-value="1"
+                       data-default-value="1"
+                       data-step="1">
+            </div>
+        </div>
+
+        {% include '@dle_faker/xfields_accordion.twig' with {
+            title: 'Дополнительные поля профиля'|trans,
+            xfield_fields: xfield_fields|default([]),
+            xfields_display_mode: xfields_display_mode|default('show_all'),
+            section_class: 'mt-2'
+        } only %}
+
+        <div class="row mt-4">
+            <div class="cell-12">
+                {% if xfield_fields|default([])|length > 0 %}
+                    <button type="button" class="button js-dle-faker-save-user-xfields">{{ 'Сохранить'|trans }}</button>
+                {% endif %}
+                <button type="submit" class="button primary">{{ 'Сгенерировать пользователей'|trans }}</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="mt-4 js-dle-faker-users-results"></div>
