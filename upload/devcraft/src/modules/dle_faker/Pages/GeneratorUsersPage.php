@@ -28,19 +28,19 @@ final class GeneratorUsersPage extends AbstractPage {
 		/** @var FakerStaticFileRepository $staticRepo */
 		$staticRepo = Application::instance()->database()->repository(FakerStaticFile::class);
 		$images     = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('image'));
 		$files = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('file'));
 		$audios = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('audio'));
 		$videos = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('video'));
 
@@ -60,6 +60,7 @@ final class GeneratorUsersPage extends AbstractPage {
 				'page_title'    => __('Пользователи'),
 				'groups'        => $dleData->groups(),
 				'xfield_fields' => $xfieldFields,
+				'xfields_display_mode' => $config['xfields_display_mode'],
 			],
 		];
 	}

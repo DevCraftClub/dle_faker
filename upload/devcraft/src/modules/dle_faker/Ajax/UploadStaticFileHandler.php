@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Ajax;
 
-use DateTimeImmutable;
 use DevCraft\Core\Application;
 use DevCraft\Core\Http\AjaxRequest;
 use DevCraft\Core\Http\JsonResponse;
@@ -32,7 +31,6 @@ final class UploadStaticFileHandler implements AjaxHandlerInterface {
 			$entity->stored_name   = $stored['stored_name'];
 			$entity->mime          = $stored['mime'];
 			$entity->size_bytes    = $stored['size_bytes'];
-			$entity->created_at    = new DateTimeImmutable();
 
 			Application::instance()->database()->create($entity);
 		} catch(\Throwable $e) {
@@ -40,7 +38,7 @@ final class UploadStaticFileHandler implements AjaxHandlerInterface {
 		}
 
 		return JsonResponse::toast(__('Файл загружен'), [
-			'id'            => $entity->id,
+			'id'            => $entity->id(),
 			'kind'          => $entity->kind,
 			'original_name' => $entity->original_name,
 			'url'           => '',

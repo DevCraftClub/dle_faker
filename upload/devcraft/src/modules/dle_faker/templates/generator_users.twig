@@ -42,18 +42,12 @@
             </div>
         </div>
 
-        {% if xfield_fields|default([])|length > 0 %}
-            <div class="row mt-2">
-                <div class="cell-12">
-                    <h4>{{ 'Дополнительные поля профиля'|trans }}</h4>
-                </div>
-                {% for field in xfield_fields %}
-                    <div class="cell-md-6">
-                        {% include '@dle_faker/xfield_field.twig' with {field: field} only %}
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
+        {% include '@dle_faker/xfields_accordion.twig' with {
+            title: 'Дополнительные поля профиля'|trans,
+            xfield_fields: xfield_fields|default([]),
+            xfields_display_mode: xfields_display_mode|default('show_all'),
+            section_class: 'mt-2'
+        } only %}
 
         <div class="row mt-4">
             <div class="cell-12">

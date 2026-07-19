@@ -9,6 +9,9 @@ namespace DevCraft\Modules\dle_faker\Services;
  */
 final class ConfigNormalizer {
 
+	/** @var list<string> */
+	private const XFIELDS_DISPLAY_MODES = ['show_all', 'single', 'multiple'];
+
 	/**
 	 * @param array<string, mixed> $config
 	 *
@@ -22,8 +25,20 @@ final class ConfigNormalizer {
 		$config['categories']       = $this->normalizeList($config['categories'] ?? []);
 		unset($config['categories_count']);
 		$config['user_xfields']     = is_array($config['user_xfields'] ?? null) ? $config['user_xfields'] : [];
+		$config['xfields_display_mode'] = $this->normalizeXfieldsDisplayMode(
+			$config['xfields_display_mode'] ?? null,
+		);
 
 		return $config;
+	}
+
+	/**
+	 * @param mixed $value
+	 */
+	private function normalizeXfieldsDisplayMode(mixed $value): string {
+		$mode = is_string($value) ? trim($value) : '';
+
+		return in_array($mode, self::XFIELDS_DISPLAY_MODES, true) ? $mode : 'show_all';
 	}
 
 	/**

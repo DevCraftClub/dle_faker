@@ -7,6 +7,7 @@ namespace DevCraft\Modules\dle_faker\Models;
 use Cycle\Annotated\Annotation\Column;
 use Cycle\Annotated\Annotation\Entity;
 use Cycle\Annotated\Annotation\Table\Index;
+use DevCraft\Core\Abstracts\AbstractEntity;
 use DevCraft\Modules\dle_faker\Repositories\FakerTemplateRepository;
 
 /**
@@ -14,10 +15,7 @@ use DevCraft\Modules\dle_faker\Repositories\FakerTemplateRepository;
  */
 #[Entity(role: 'faker_template', repository: FakerTemplateRepository::class, table: 'faker_templates')]
 #[Index(columns: ['name'], unique: true)]
-class FakerTemplate {
-
-	#[Column(type: 'bigPrimary')]
-	public int $id;
+class FakerTemplate extends AbstractEntity {
 
 	#[Column(type: 'string')]
 	public string $name = '';
@@ -28,9 +26,13 @@ class FakerTemplate {
 	#[Column(type: 'boolean', default: true)]
 	public bool $active = true;
 
+	public function __construct() {
+		$this->createdAt = new \DateTimeImmutable();
+	}
+
 	public function getColumnVal(string $name): mixed {
 		return match ($name) {
-			'id'       => $this->id,
+			'id'       => $this->id(),
 			'name'     => $this->name,
 			'template' => $this->template,
 			'active'   => $this->active,

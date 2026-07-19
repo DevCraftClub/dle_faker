@@ -40,7 +40,7 @@ final class UploadTemplateAssetHandler implements AjaxHandlerInterface {
 		}
 
 		return JsonResponse::toast(__('Вложение загружено'), [
-			'asset_id'      => $entity->id,
+			'asset_id'      => $entity->id(),
 			'kind'          => $entity->kind,
 			'original_name' => $entity->original_name,
 		]);

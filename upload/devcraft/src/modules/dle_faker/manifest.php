@@ -26,6 +26,20 @@ use DevCraft\Modules\dle_faker\Ajax\SaveUserXfieldsHandler;
 
 /**
  * Манифест модуля DLE Faker.
+ *
+ * Гидрируется в `ModuleManifest` через `ModuleManifest::fromManifest()` — сам
+ * файл возвращает массив в форме, ожидаемой этим методом.
+ *
+ * @return array{
+ *     mod: string,
+ *     code?: string,
+ *     composer_required?: list<array<string, mixed>>,
+ *     meta?: array<string, mixed>,
+ *     menu?: list<AdminLink>,
+ *     ajax?: array{controller?: string, methods?: array<string, class-string>},
+ *     changelog?: array<int, array<string, mixed>>,
+ *     assets?: array<string, list<string>>,
+ * }
  */
 return [
 	'mod'               => 'dle_faker',
@@ -39,15 +53,8 @@ return [
 		'description' => __('Генерация тестовых пользователей, новостей и шаблонов для DLE'),
 		'icon'        => 'mif-magic-wand',
 		'docsLink'    => 'https://readme.devcraft.club/dev/dle_faker/install/',
-		'siteLink'    => 'https://devcraft.club/',
+		'siteLink'    => 'https://devcraft.club/downloads/dle-faker.29/',
 		'siteId'      => 29,
-		'author'      => [
-			'name'     => 'Maxim Harder',
-			'contacts' => [
-				['name' => __('E-Mail'), 'link' => 'mailto:dev@devcraft.club'],
-				['name' => __('Telegram'), 'link' => 'https://t.me/MaHarder'],
-			],
-		],
 	],
 	'menu'              => [
 		AdminLink::page(__('Главная'), 'dashboard', DashboardPage::class, 'mif-home', 'dle_faker'),
@@ -56,25 +63,25 @@ return [
 			link    : '?mod=dle_faker&action=generator',
 			type    : 'dropdown',
 			extra   : 'mif-magic-wand',
-			action  : 'generator',
 			children: [
 				AdminLink::page(__('Пользователи'), 'generator-users', GeneratorUsersPage::class, 'mif-users', 'dle_faker'),
 				AdminLink::page(__('Новости'), 'generator-news', GeneratorNewsPage::class, 'mif-file-text', 'dle_faker'),
 				AdminLink::page(__('Категории'), 'generator-categories', GeneratorCategoriesPage::class, 'mif-folder', 'dle_faker'),
 			],
+			action  : 'generator',
 		),
 		new AdminLink(
 			name    : __('Файлы'),
 			link    : '?mod=dle_faker&action=static-images',
 			type    : 'dropdown',
 			extra   : 'mif-images',
-			action  : 'files',
 			children: [
 				AdminLink::page(__('Изображения'), 'static-images', StaticFilesPage::class, 'mif-image', 'dle_faker'),
 				AdminLink::page(__('Файлы'), 'static-files', StaticFilesPage::class, 'mif-file-text', 'dle_faker'),
 				AdminLink::page(__('Аудио'), 'static-audio', StaticFilesPage::class, 'mif-file-music', 'dle_faker'),
 				AdminLink::page(__('Видео'), 'static-video', StaticFilesPage::class, 'mif-file-video', 'dle_faker'),
 			],
+			action  : 'files',
 		),
 		AdminLink::page(__('Шаблоны'), 'templates', TemplatesPage::class, 'mif-files-empty', 'dle_faker'),
 		AdminLink::page(__('Теги'), 'tags', TagsPage::class, 'mif-price-tags', 'dle_faker'),

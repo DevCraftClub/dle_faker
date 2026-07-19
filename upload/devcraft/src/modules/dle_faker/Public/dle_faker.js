@@ -324,15 +324,22 @@
 	}
 
 	function initTemplateAssetUploads(root) {
-		(root || document).querySelectorAll('.js-xfield-asset-file').forEach(function (input) {
+		// Metro data-role=file переносит class на drop-zone — ищем именно input[type=file].
+		(root || document).querySelectorAll('.js-xfield-source-panel[data-panel="template_upload"]').forEach(function (wrap) {
+			const input = wrap.querySelector('input[type="file"]');
+
+			if (!input || input.dataset.uploadBound === '1') {
+				return;
+			}
+
+			input.dataset.uploadBound = '1';
 			input.addEventListener('change', function () {
 				if (!input.files || !input.files[0]) {
 					return;
 				}
 
-				const wrap = input.closest('.js-xfield-source-panel');
-				const idInput = wrap ? wrap.querySelector('.js-xfield-asset-id') : null;
-				const label = wrap ? wrap.querySelector('.js-xfield-asset-label') : null;
+				const idInput = wrap.querySelector('.js-xfield-asset-id');
+				const label = wrap.querySelector('.js-xfield-asset-label');
 				const templateId = (document.querySelector('.js-dle-faker-template-form input[name="id"]') || {}).value || 0;
 				const fd = new FormData();
 				fd.append('data', JSON.stringify({

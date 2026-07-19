@@ -35,7 +35,7 @@ final class DeleteTemplateHandler implements AjaxHandlerInterface {
 
 			foreach($assets->findByTemplateId($id) as $asset) {
 				$storage->deleteTemplateFile($asset->template_id, $asset->stored_name);
-				$database->delete(FakerTemplateAsset::class, $asset->id);
+				$database->delete(FakerTemplateAsset::class, $asset->id());
 			}
 
 			$storage->deleteTemplateDirectory($id);

@@ -19,8 +19,9 @@ final class DashboardPage extends AbstractPage {
 		$meta      = $plugin?->meta() ?? [];
 		$context   = $this->adminContext();
 		$changelog = $plugin?->changelog() ?? [];
-		$latest    = isset($changelog[0]) ? $changelog[0]->toArray() : NULL;
-		$appCode   = 'dle_faker';
+		$latest    = isset($changelog[0])? $changelog[0]->toArray() : NULL;
+		$mod       = $plugin?->mod() ?? 'dle_faker';
+		$appCode   = (string) ($meta['module_code'] ?? $mod);
 		$metrics   = new DashboardPackageMetricService();
 		$menu      = [];
 
@@ -45,12 +46,14 @@ final class DashboardPage extends AbstractPage {
 		$composer         = $composerPackages !== []
 			? [
 				'url'              => '?mod=devcraft&action=composer&' . http_build_query([
-					'filter_rules' => [[
-						'field' => 'app_code',
-						'type'  => 'multi',
-						'value' => [$appCode],
-					]],
-				]),
+						'filter_rules' => [
+							[
+								'field' => 'app_code',
+								'type'  => 'multi',
+								'value' => [$appCode],
+							],
+						],
+					]),
 				'missing_required' => $metrics->missingRequiredCount($appCode),
 				'packages'         => $composerPackages,
 			]
@@ -75,7 +78,7 @@ final class DashboardPage extends AbstractPage {
 					'lic_link'         => $context->licLink(),
 					'menu'             => $menu,
 					'changelog_latest' => $latest,
-					'changelog_url'    => '?mod=dle_faker&action=changelog',
+					'changelog_url'    => '?mod=' . $mod . '&action=changelog',
 					'show_assets'      => false,
 					'show_update'      => false,
 					'composer'         => $composer,

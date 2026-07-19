@@ -2,6 +2,17 @@
 
 declare(strict_types=1);
 
+/**
+ * Схема фильтрации и сортировки страницы шаблонов dle_faker.
+ *
+ * Гидрируется в `FilterSchema` через `FilterSchema::fromArray()` — сам файл
+ * возвращает массив в форме, ожидаемой этим методом.
+ *
+ * @return array{
+ *     sort: array{default: string, columns: array<string, string>},
+ *     sections: list<array{title: string, fields: list<array{id: string, type: string, label: string, options?: array<string, string>, metro?: array<string, mixed>}>}>,
+ * }
+ */
 return [
 	'sort'     => [
 		'default' => 'id',

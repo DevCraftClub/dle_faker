@@ -6,6 +6,7 @@ namespace DevCraft\Modules\dle_faker\Pages;
 
 use DLEPlugins;
 use DevCraft\Core\Application;
+use DevCraft\Core\Support\DataManager;
 use DevCraft\Core\Support\DleDataService;
 use DevCraft\Types\FilterSchema;
 use DevCraft\Core\Abstracts\AbstractPage;
@@ -14,6 +15,7 @@ use DevCraft\Modules\dle_faker\Models\FakerStaticFile;
 use DevCraft\Modules\dle_faker\Models\FakerTemplate;
 use DevCraft\Modules\dle_faker\Repositories\FakerStaticFileRepository;
 use DevCraft\Modules\dle_faker\Repositories\FakerTemplateRepository;
+use DevCraft\Modules\dle_faker\Services\ConfigNormalizer;
 use DevCraft\Modules\dle_faker\Services\XfieldFormService;
 
 /**
@@ -115,7 +117,7 @@ final class TemplatesPage extends AbstractPage {
 			if($template !== NULL) {
 				$decoded = json_decode($template->template, true);
 				$values  = is_array($decoded) ? array_merge($values, $decoded) : $values;
-				$values['id']              = $template->id;
+				$values['id']              = $template->id();
 				$values['name']            = $template->name;
 				$values['active_template'] = $template->active;
 			}
@@ -130,19 +132,19 @@ final class TemplatesPage extends AbstractPage {
 		/** @var FakerStaticFileRepository $staticRepo */
 		$staticRepo = Application::instance()->database()->repository(FakerStaticFile::class);
 		$images = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('image'));
 		$files = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('file'));
 		$audios = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('audio'));
 		$videos = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 		], $staticRepo->findByKind('video'));
 
@@ -156,6 +158,8 @@ final class TemplatesPage extends AbstractPage {
 			$videos,
 		);
 
+		$config = (new ConfigNormalizer())->normalize(DataManager::getConfig('dle_faker'));
+
 		return [
 			'view' => 'dle_faker/templates_form.twig',
 			'data' => [
@@ -165,6 +169,7 @@ final class TemplatesPage extends AbstractPage {
 				'users'      => $this->userOptions($dleData),
 				'categories' => $dleData->categories(),
 				'xfield_fields' => $xfieldFields,
+				'xfields_display_mode' => $config['xfields_display_mode'],
 				'flag_field_labels' => $this->flagFieldLabels(),
 				'yes_no_random_options' => [
 					'random' => __('Случайно'),
@@ -221,7 +226,7 @@ final class TemplatesPage extends AbstractPage {
 
 	private function loadFilterSchema(): FilterSchema {
 		/** @var array<string, mixed> $raw */
-		$raw = require DLEPlugins::Check(DEVCRAFT_MODULES . '/dle_faker/filter.schema.php');
+		$raw = require DLEPlugins::Check(DEVCRAFT_MODULES . '/dle_faker/Filter/filter.schema.php');
 
 		return FilterSchema::fromArray($raw);
 	}

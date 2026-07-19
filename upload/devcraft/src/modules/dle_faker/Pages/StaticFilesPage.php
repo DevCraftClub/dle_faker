@@ -34,11 +34,11 @@ final class StaticFilesPage extends AbstractPage {
 		/** @var FakerStaticFileRepository $repo */
 		$repo  = Application::instance()->database()->repository(FakerStaticFile::class);
 		$items = array_map(static fn(FakerStaticFile $f): array => [
-			'id'            => $f->id,
+			'id'            => $f->id(),
 			'original_name' => $f->original_name,
 			'mime'          => $f->mime,
 			'size_bytes'    => $f->size_bytes,
-			'created_at'    => $f->created_at instanceof DateTimeImmutable ? $f->created_at->format('Y-m-d H:i') : '',
+			'created_at'    => $f->createdAt instanceof DateTimeImmutable ? $f->createdAt->format('Y-m-d H:i') : '',
 		], $repo->findByKind($kind));
 
 		$ext = $storage->allowedExtensionsForKind($kind);

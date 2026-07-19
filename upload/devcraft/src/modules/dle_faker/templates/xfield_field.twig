@@ -23,10 +23,12 @@
 {% endif %}
 
 <div class="form-group mb-3 js-xfield-field" data-field="{{ field.name }}" data-type="{{ field.type }}">
-    <label class="form-label">
-        {{ field.label }}
-        {% if field.required %}<span class="fg-red">*</span>{% endif %}
-    </label>
+    {% if not hide_label|default(false) %}
+        <label class="form-label">
+            {{ field.label }}
+            {% if field.required %}<span class="fg-red">*</span>{% endif %}
+        </label>
+    {% endif %}
 
     {% if field.type == 'textarea' or field.type == 'htmljs' %}
         <textarea class="metro-input" name="xfields[{{ field.name }}]" rows="4">{{ value is iterable ? value.value|default('') : value }}</textarea>

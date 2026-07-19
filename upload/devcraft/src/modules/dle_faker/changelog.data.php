@@ -2,6 +2,15 @@
 
 declare(strict_types=1);
 
+/**
+ * Журнал изменений dle_faker.
+ *
+ * Гидрируется в `Changelog[]` через `Changelog::listFromManifest()` /
+ * `ModuleManifest::fromManifest()` — сам файл возвращает массив массивов
+ * (`items` — legacy-строки `[TYPE] текст`, `changes` — карта тип → список строк).
+ *
+ * @return array<int, array{version: string, date?: string, items?: list<string>, changes?: array<string, list<string>>}>
+ */
 return [
 	[
 		'version' => '200.1.4',

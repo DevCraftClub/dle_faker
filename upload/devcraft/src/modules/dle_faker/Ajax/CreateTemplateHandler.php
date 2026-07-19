@@ -88,14 +88,14 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 			$template->template = json_encode($templatePayload, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
 
 			$templateId > 0 ? $database->update($template) : $database->create($template);
-			$this->bindAssets($template->id, $xfResult['values']);
+			$this->bindAssets($template->id(), $xfResult['values']);
 		} catch(JsonException|\Throwable $e) {
 			return JsonResponse::fail(__('Ошибка'), $e->getMessage(), 'validation', 500);
 		}
 
 		return JsonResponse::toast(__('Шаблон сохранён'), [
 			'saved'    => true,
-			'id'       => $template->id,
+			'id'       => $template->id(),
 			'redirect' => '?mod=dle_faker&action=templates',
 		]);
 	}
@@ -215,7 +215,7 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 			}
 
 			$storage = new StaticFileStorage();
-			$fromId  = (int) $asset->template_id;
+			$fromId  = $asset->template_id;
 
 			if($fromId !== $templateId) {
 				$storage->moveTemplateFile($fromId, $templateId, $asset->stored_name);

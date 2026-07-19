@@ -76,18 +76,11 @@
             </div>
         </div>
 
-        {% if xfield_fields|default([])|length > 0 %}
-            <div class="row">
-                <div class="cell-12">
-                    <h4>{{ 'Дополнительные поля'|trans }}</h4>
-                </div>
-                {% for field in xfield_fields %}
-                    <div class="cell-md-6">
-                        {% include '@dle_faker/xfield_field.twig' with {field: field} only %}
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
+        {% include '@dle_faker/xfields_accordion.twig' with {
+            title: 'Дополнительные поля'|trans,
+            xfield_fields: xfield_fields|default([]),
+            xfields_display_mode: xfields_display_mode|default('show_all')
+        } only %}
 
         <div class="row">
             {% for field in ['allow_main', 'approve', 'fixed', 'allow_comm', 'allow_rate', 'disable_index', 'disable_search', 'allow_rss', 'allow_rss_dzen'] %}

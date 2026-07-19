@@ -1,0 +1,25 @@
+{% set mode = xfields_display_mode|default('show_all') %}
+{% if xfield_fields|default([])|length > 0 %}
+    <div class="row{% if section_class is defined %} {{ section_class }}{% endif %}">
+        <div class="cell-12">
+            <h4>{{ title|default('Дополнительные поля'|trans) }}</h4>
+            <div data-role="accordion"
+                 data-one-frame="{{ mode == 'single' ? 'true' : 'false' }}"
+                 data-show-active="{{ mode == 'single' ? 'false' : 'true' }}">
+                {% for field in xfield_fields %}
+                    <div class="frame{% if mode == 'show_all' %} active{% endif %}">
+                        <div class="heading">
+                            {{ field.label }}
+                            {% if field.required %}<span class="fg-red">*</span>{% endif %}
+                        </div>
+                        <div class="content">
+                            <div class="p-2">
+                                {% include '@dle_faker/xfield_field.twig' with {field: field, hide_label: true} only %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
