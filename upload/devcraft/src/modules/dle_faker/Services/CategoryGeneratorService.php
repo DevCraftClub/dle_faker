@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Services;
 
+use DevCraft\Modules\dle_faker\DleFakerIdentity;
+
 use DevCraft\Core\Config\DevCraftConfig;
+use DevCraft\Builders\QueryBuilder;
 use DevCraft\Core\Support\DataManager;
 
 /**
@@ -52,11 +55,13 @@ final class CategoryGeneratorService {
 			throw new \RuntimeException(__('Не удалось сгенерировать alt_name категории'));
 		}
 
-		$existingName = $db->super_query(
-			"SELECT id FROM " . PREFIX . "_category WHERE name='" . $db->safesql($name) . "' AND parentid='{$parentId}' LIMIT 1"
-		);
+		$existingName = QueryBuilder::create('category')
+			->withColumns(['id'])
+			->withConditions(['name' => $name, 'parentid' => $parentId])
+			->withLimit(1)
+			->first();
 
-		if(is_array($existingName) && !empty($existingName['id'])) {
+		if($existingName !== [] && !empty($existingName['id'])) {
 			return [
 				'name'     => html_entity_decode($name, ENT_QUOTES, 'UTF-8'),
 				'alt_name' => $altName,
@@ -65,11 +70,13 @@ final class CategoryGeneratorService {
 			];
 		}
 
-		$existingAlt = $db->super_query(
-			"SELECT id FROM " . PREFIX . "_category WHERE alt_name='" . $db->safesql($altName) . "' AND parentid='{$parentId}' LIMIT 1"
-		);
+		$existingAlt = QueryBuilder::create('category')
+			->withColumns(['id'])
+			->withConditions(['alt_name' => $altName, 'parentid' => $parentId])
+			->withLimit(1)
+			->first();
 
-		if(is_array($existingAlt) && !empty($existingAlt['id'])) {
+		if($existingAlt !== [] && !empty($existingAlt['id'])) {
 			return [
 				'name'     => html_entity_decode($name, ENT_QUOTES, 'UTF-8'),
 				'alt_name' => $altName,
@@ -161,7 +168,7 @@ final class CategoryGeneratorService {
 		}
 
 		$config['categories'] = $cats;
-		DataManager::saveConfig('dle_faker', $normalizer->normalize($config));
+		DataManager::saveConfig(DleFakerIdentity::code(), $normalizer->normalize($config));
 		DevCraftConfig::resetCache();
 	}
 

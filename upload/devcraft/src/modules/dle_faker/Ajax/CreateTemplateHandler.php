@@ -16,6 +16,7 @@ use DevCraft\Modules\dle_faker\Repositories\FakerTemplateAssetRepository;
 use DevCraft\Modules\dle_faker\Repositories\FakerTemplateRepository;
 use DevCraft\Modules\dle_faker\Services\StaticFileStorage;
 use DevCraft\Modules\dle_faker\Services\XfieldFormService;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Создаёт или обновляет шаблон генерации.
@@ -56,7 +57,7 @@ final class CreateTemplateHandler implements AjaxHandlerInterface {
 			]);
 		}
 
-		$schema = Application::instance()->dleData()->postXfields();
+		$schema = DleDataService::postXfields();
 		$xfieldsInput = $data['xfields'] ?? [];
 
 		if(!is_array($xfieldsInput)) {

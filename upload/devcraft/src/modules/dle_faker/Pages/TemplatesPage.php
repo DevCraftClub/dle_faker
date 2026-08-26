@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Pages;
 
+use DevCraft\Modules\dle_faker\DleFakerIdentity;
+
 use DLEPlugins;
 use DevCraft\Core\Application;
 use DevCraft\Core\Support\DataManager;
@@ -125,7 +127,6 @@ final class TemplatesPage extends AbstractPage {
 
 		$values['category_ids'] = $this->categoryIdsFromValue($values['category'] ?? 'random');
 
-		$dleData = Application::instance()->dleData();
 		$title   = $mode === 'edit' ? __('Редактирование шаблона') : __('Создание шаблона');
 		$this->addBreadcrumb($title);
 
@@ -149,7 +150,7 @@ final class TemplatesPage extends AbstractPage {
 		], $staticRepo->findByKind('video'));
 
 		$xfieldFields = (new XfieldFormService())->buildFields(
-			$dleData->postXfields(),
+			DleDataService::postXfields(),
 			is_array($values['xfields'] ?? null) ? $values['xfields'] : [],
 			true,
 			$images,
@@ -158,7 +159,7 @@ final class TemplatesPage extends AbstractPage {
 			$videos,
 		);
 
-		$config = (new ConfigNormalizer())->normalize(DataManager::getConfig('dle_faker'));
+		$config = (new ConfigNormalizer())->normalize(DataManager::getConfig(DleFakerIdentity::code()));
 
 		return [
 			'view' => 'dle_faker/templates_form.twig',
@@ -166,8 +167,8 @@ final class TemplatesPage extends AbstractPage {
 				'page_title' => $title,
 				'template'   => $template,
 				'values'     => $values,
-				'users'      => $this->userOptions($dleData),
-				'categories' => $dleData->categories(),
+				'users'      => $this->userOptions(),
+				'categories' => DleDataService::categories(),
 				'xfield_fields' => $xfieldFields,
 				'xfields_display_mode' => $config['xfields_display_mode'],
 				'flag_field_labels' => $this->flagFieldLabels(),
@@ -234,10 +235,10 @@ final class TemplatesPage extends AbstractPage {
 	/**
 	 * @return array<string, string>
 	 */
-	private function userOptions(DleDataService $dleData): array {
+	private function userOptions(): array {
 		$options = [];
 
-		foreach($dleData->users() as $row) {
+		foreach(DleDataService::users() as $row) {
 			$id   = (string) ((int) ($row['user_id'] ?? 0));
 			$name = trim((string) ($row['name'] ?? ''));
 

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Ajax;
 
+use DevCraft\Modules\dle_faker\DleFakerIdentity;
+
 use DevCraft\Core\Config\DevCraftConfig;
 use DevCraft\Core\Http\AjaxRequest;
 use DevCraft\Core\Http\JsonResponse;
@@ -13,6 +15,7 @@ use DevCraft\Core\Support\DataManager;
 use DevCraft\Core\Application;
 use DevCraft\Modules\dle_faker\Services\ConfigNormalizer;
 use DevCraft\Modules\dle_faker\Services\XfieldFormService;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Сохраняет пресеты user xfields в конфиг модуля.
@@ -20,7 +23,7 @@ use DevCraft\Modules\dle_faker\Services\XfieldFormService;
 final class SaveUserXfieldsHandler implements AjaxHandlerInterface {
 
 	public function handle(AjaxRequest $request): ResponseInterface {
-		$schema = Application::instance()->dleData()->userXfields();
+		$schema = DleDataService::userXfields();
 		$input  = $request->data['user_xfields'] ?? [];
 
 		if(!is_array($input)) {
@@ -37,9 +40,9 @@ final class SaveUserXfieldsHandler implements AjaxHandlerInterface {
 		}
 
 		$normalizer = new ConfigNormalizer();
-		$config     = $normalizer->normalize(DataManager::getConfig('dle_faker'));
+		$config     = $normalizer->normalize(DataManager::getConfig(DleFakerIdentity::code()));
 		$config['user_xfields'] = $result['values'];
-		DataManager::saveConfig('dle_faker', $normalizer->normalize($config));
+		DataManager::saveConfig(DleFakerIdentity::code(), $normalizer->normalize($config));
 		DevCraftConfig::resetCache();
 
 		return JsonResponse::toast(__('Доп. поля пользователей сохранены'), ['saved' => true]);

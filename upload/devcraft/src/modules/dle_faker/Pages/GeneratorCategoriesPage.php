@@ -7,6 +7,7 @@ namespace DevCraft\Modules\dle_faker\Pages;
 use DevCraft\Core\Abstracts\AbstractPage;
 use DevCraft\Core\Application;
 use DevCraft\Modules\dle_faker\Services\CategoryGeneratorService;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Страница генерации категорий DLE.
@@ -18,7 +19,7 @@ final class GeneratorCategoriesPage extends AbstractPage {
 		$this->addBreadcrumb(__('Категории'));
 
 		$parents = CategoryGeneratorService::buildParentTreeOptions(
-			Application::instance()->dleData()->categoriesFull(),
+			DleDataService::categoriesFull(),
 		);
 
 		return [

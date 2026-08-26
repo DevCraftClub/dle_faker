@@ -9,6 +9,8 @@ use ParseFilter;
 use RuntimeException;
 use DevCraft\Core\Application;
 use Throwable;
+use DevCraft\Builders\QueryBuilder;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Генерирует новости DLE по шаблону DLE Faker.
@@ -78,7 +80,7 @@ final class NewsGeneratorService {
 		$fullStory  = $this->parser->parseNewsValue((string) ($template['full_story'] ?? ''), $moduleConfig);
 		$fullStory  = $fullStory !== '' ? $fullStory : $shortStory;
 
-		$schema  = Application::instance()->dleData()->postXfields();
+		$schema  = DleDataService::postXfields();
 		$altName = totranslit(stripslashes($title), true, false, $config['translit_url'] ?? false);
 		$altName = $this->ensureUniqueAltName($altName);
 		$stories = $this->prepareStories($parse, $shortStory, $fullStory);
@@ -174,15 +176,13 @@ final class NewsGeneratorService {
 	 * @return array<string, mixed>
 	 */
 	private function loadUser(int $userId): array {
-		global $db;
-
 		if($userId <= 0) {
 			return [];
 		}
 
-		$row = $db->super_query("SELECT user_id, name FROM " . USERPREFIX . "_users WHERE user_id = '{$userId}'");
+		$row = DleDataService::user(id: $userId);
 
-		return is_array($row) ? $row : [];
+		return $row !== [] ? $row : [];
 	}
 
 	/**
@@ -215,13 +215,17 @@ final class NewsGeneratorService {
 		$counter  = 1;
 
 		do {
-			$found = $db->super_query("SELECT id FROM " . PREFIX . "_post WHERE alt_name = '" . $db->safesql($altName) . "'");
+			$found = QueryBuilder::create('post')
+				->withColumns(['id'])
+				->withConditionsItem('alt_name', $altName)
+				->withLimit(1)
+				->first();
 
-			if($found) {
+			if($found !== []) {
 				$altName = $original . '_' . $counter;
 				$counter++;
 			}
-		} while($found);
+		} while($found !== []);
 
 		return $altName;
 	}

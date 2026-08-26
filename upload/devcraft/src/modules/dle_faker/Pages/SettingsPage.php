@@ -7,6 +7,7 @@ namespace DevCraft\Modules\dle_faker\Pages;
 use DevCraft\Core\Application;
 use DevCraft\Core\Abstracts\AbstractPage;
 use DevCraft\Core\Interfaces\SettingsPageInterface;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Страница настроек модуля DLE Faker.
@@ -25,10 +26,9 @@ final class SettingsPage extends AbstractPage implements SettingsPageInterface {
 	}
 
 	public function supplementFormData(): array {
-		$dleData = Application::instance()->dleData();
 		$users   = [];
 
-		foreach($dleData->users() as $row) {
+		foreach(DleDataService::users() as $row) {
 			$id    = (string) ((int) ($row['user_id'] ?? 0));
 			$name  = trim((string) ($row['name'] ?? ''));
 			$email = trim((string) ($row['email'] ?? ''));
@@ -44,7 +44,7 @@ final class SettingsPage extends AbstractPage implements SettingsPageInterface {
 			'users'      => $users,
 			'categories' => array_map(
 				static fn(string $name): string => $name,
-				$dleData->categories(),
+				DleDataService::categories(),
 			),
 		];
 	}

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Ajax;
 
+use DevCraft\Modules\dle_faker\DleFakerIdentity;
+
 use DevCraft\Core\Config\DevCraftConfig;
 use DevCraft\Core\Support\DataManager;
 use DevCraft\Core\Http\AjaxRequest;
@@ -14,6 +16,7 @@ use DevCraft\Core\Application;
 use DevCraft\Modules\dle_faker\Services\ConfigNormalizer;
 use DevCraft\Modules\dle_faker\Services\UserGeneratorService;
 use DevCraft\Modules\dle_faker\Services\XfieldFormService;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Генерация пользователя по шаблонам DLE Faker.
@@ -22,11 +25,11 @@ final class GenerateUsersHandler implements AjaxHandlerInterface {
 
 	public function handle(AjaxRequest $request): ResponseInterface {
 		$normalizer = new ConfigNormalizer();
-		$config     = $normalizer->normalize(DataManager::getConfig('dle_faker'));
+		$config     = $normalizer->normalize(DataManager::getConfig(DleFakerIdentity::code()));
 		$data       = $request->data;
 
 		if(isset($data['user_xfields']) && is_array($data['user_xfields'])) {
-			$schema   = Application::instance()->dleData()->userXfields();
+			$schema   = DleDataService::userXfields();
 			$xfResult = (new XfieldFormService())->normalizeIncoming($data['user_xfields'], $schema, false);
 
 			if($xfResult['errors'] !== []) {
@@ -36,7 +39,7 @@ final class GenerateUsersHandler implements AjaxHandlerInterface {
 			}
 
 			$config['user_xfields'] = $xfResult['values'];
-			DataManager::saveConfig('dle_faker', $normalizer->normalize($config));
+			DataManager::saveConfig(DleFakerIdentity::code(), $normalizer->normalize($config));
 			DevCraftConfig::resetCache();
 			$data['user_xfields'] = $xfResult['values'];
 		}

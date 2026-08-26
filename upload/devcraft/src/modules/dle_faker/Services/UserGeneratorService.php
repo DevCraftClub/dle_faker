@@ -8,6 +8,7 @@ use DLEPlugins;
 use DLE_API;
 use DevCraft\Core\Application;
 use DevCraft\Core\Support\DataManager;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Генерирует пользователей DLE по шаблонам DLE Faker.
@@ -81,7 +82,7 @@ final class UserGeneratorService {
 		);
 
 		$userXfields = (array) ($payload['user_xfields'] ?? $config['user_xfields'] ?? []);
-		$schema      = Application::instance()->dleData()->userXfields();
+		$schema      = DleDataService::userXfields();
 
 		if($schema !== [] && $userXfields !== []) {
 			$resolved = (new XfieldValueResolver($this->parser))->resolve($userXfields, $schema, $config, false);

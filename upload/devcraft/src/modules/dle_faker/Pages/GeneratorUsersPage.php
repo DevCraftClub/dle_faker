@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Pages;
 
+use DevCraft\Modules\dle_faker\DleFakerIdentity;
+
 use DevCraft\Core\Application;
 use DevCraft\Core\Abstracts\AbstractPage;
 use DevCraft\Core\Support\DataManager;
@@ -11,6 +13,7 @@ use DevCraft\Modules\dle_faker\Models\FakerStaticFile;
 use DevCraft\Modules\dle_faker\Repositories\FakerStaticFileRepository;
 use DevCraft\Modules\dle_faker\Services\ConfigNormalizer;
 use DevCraft\Modules\dle_faker\Services\XfieldFormService;
+use DevCraft\Core\Support\DleDataService;
 
 /**
  * Страница генерации пользователей.
@@ -21,9 +24,8 @@ final class GeneratorUsersPage extends AbstractPage {
 		$this->addBreadcrumb(__('Генератор'), '?mod=dle_faker&action=generator-users');
 		$this->addBreadcrumb(__('Пользователи'));
 
-		$config = (new ConfigNormalizer())->normalize(DataManager::getConfig('dle_faker'));
-		$dleData = Application::instance()->dleData();
-		$schema  = $dleData->userXfields();
+		$config = (new ConfigNormalizer())->normalize(DataManager::getConfig(DleFakerIdentity::code()));
+		$schema  = DleDataService::userXfields();
 
 		/** @var FakerStaticFileRepository $staticRepo */
 		$staticRepo = Application::instance()->database()->repository(FakerStaticFile::class);
@@ -58,7 +60,7 @@ final class GeneratorUsersPage extends AbstractPage {
 			'view' => 'dle_faker/generator_users.twig',
 			'data' => [
 				'page_title'    => __('Пользователи'),
-				'groups'        => $dleData->groups(),
+				'groups'        => DleDataService::groups(),
 				'xfield_fields' => $xfieldFields,
 				'xfields_display_mode' => $config['xfields_display_mode'],
 			],
