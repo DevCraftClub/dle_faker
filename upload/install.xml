@@ -8,82 +8,19 @@
 <upgradeurl/>
 <filedelete>1</filedelete>
 <needplugin>DevCraft Admin</needplugin>
-<mnotice>0</mnotice>
-<mysqlinstall>
-	<![CDATA[
-CREATE TABLE IF NOT EXISTS {prefix}_faker_templates (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	name VARCHAR(191) NOT NULL,
-	template LONGTEXT NOT NULL,
-	active TINYINT(1) NOT NULL DEFAULT 1,
-	PRIMARY KEY (id),
-	UNIQUE KEY uniq_faker_templates_name (name)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-CREATE TABLE IF NOT EXISTS {prefix}_faker_static_files (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	kind VARCHAR(16) NOT NULL,
-	original_name VARCHAR(255) NOT NULL,
-	stored_name VARCHAR(255) NOT NULL,
-	mime VARCHAR(128) NOT NULL DEFAULT '',
-	size_bytes INT NOT NULL DEFAULT 0,
-	created_at DATETIME NOT NULL,
-	PRIMARY KEY (id),
-	KEY idx_faker_static_files_kind (kind)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-CREATE TABLE IF NOT EXISTS {prefix}_faker_template_assets (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	template_id INT NOT NULL DEFAULT 0,
-	kind VARCHAR(16) NOT NULL,
-	original_name VARCHAR(255) NOT NULL,
-	stored_name VARCHAR(255) NOT NULL,
-	mime VARCHAR(128) NOT NULL DEFAULT '',
-	size_bytes INT NOT NULL DEFAULT 0,
-	PRIMARY KEY (id),
-	KEY idx_faker_template_assets_template_id (template_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-]]>
-</mysqlinstall>
+<mnotice>1</mnotice>
+<mysqlinstall><![CDATA[]]></mysqlinstall>
 <mysqlupgrade>
 	<![CDATA[
-CREATE TABLE IF NOT EXISTS {prefix}_faker_templates (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	name VARCHAR(191) NOT NULL,
-	template LONGTEXT NOT NULL,
-	active TINYINT(1) NOT NULL DEFAULT 1,
-	PRIMARY KEY (id),
-	UNIQUE KEY uniq_faker_templates_name (name)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-CREATE TABLE IF NOT EXISTS {prefix}_faker_static_files (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	kind VARCHAR(16) NOT NULL,
-	original_name VARCHAR(255) NOT NULL,
-	stored_name VARCHAR(255) NOT NULL,
-	mime VARCHAR(128) NOT NULL DEFAULT '',
-	size_bytes INT NOT NULL DEFAULT 0,
-	created_at DATETIME NOT NULL,
-	PRIMARY KEY (id),
-	KEY idx_faker_static_files_kind (kind)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-CREATE TABLE IF NOT EXISTS {prefix}_faker_template_assets (
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	template_id INT NOT NULL DEFAULT 0,
-	kind VARCHAR(16) NOT NULL,
-	original_name VARCHAR(255) NOT NULL,
-	stored_name VARCHAR(255) NOT NULL,
-	mime VARCHAR(128) NOT NULL DEFAULT '',
-	size_bytes INT NOT NULL DEFAULT 0,
-	PRIMARY KEY (id),
-	KEY idx_faker_template_assets_template_id (template_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups)
-VALUES ('dle_faker', 'DLE Faker v200.1.4', 'Генерация тестовых данных для DLE', 'mif-magic-wand', '1,2')
+VALUES ('dle_faker', 'DLE Faker v200.1.4', 'Генерация тестовых данных для DLE', '', '1,2')
 ON DUPLICATE KEY UPDATE title = 'DLE Faker v200.1.4', descr = 'Генерация тестовых данных для DLE', allow_groups = '1,2';
 ]]>
 </mysqlupgrade>
 <mysqlenable>
 	<![CDATA[
 INSERT INTO {prefix}_admin_sections (name, title, descr, icon, allow_groups)
-VALUES ('dle_faker', 'DLE Faker v200.1.4', 'Генерация тестовых данных для DLE', 'mif-magic-wand', '1,2')
+VALUES ('dle_faker', 'DLE Faker v200.1.4', 'Генерация тестовых данных для DLE', '', '1,2')
 ON DUPLICATE KEY UPDATE title = 'DLE Faker v200.1.4', descr = 'Генерация тестовых данных для DLE', allow_groups = '1,2';
 ]]>
 </mysqlenable>
@@ -106,7 +43,6 @@ DROP TABLE IF EXISTS {prefix}_faker_templates;
 <phpdisable><![CDATA[]]></phpdisable>
 <phpdelete><![CDATA[]]></phpdelete>
 <notice><![CDATA[
-Требуется DevCraft Admin >= 200.4.0.
-После установки убедитесь, что пакет fakerphp/faker установлен через интерфейс Composer DevCraft, затем выполните composer dump-autoload.
+	<ul><li><b>На сайте автора</b>: <a href="https://devcraft.club/downloads/dle-faker.29/" target="_blank">Перейти</a></li><li><b>Документация</b>: <a href="https://readme.devcraft.club/dev/dle/dle_faker/200.1.4/getting_started" target="_blank">Перейти</a></li></ul>
 ]]></notice>
 </dleplugin>
