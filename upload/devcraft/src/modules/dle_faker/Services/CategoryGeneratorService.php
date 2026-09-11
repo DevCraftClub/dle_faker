@@ -7,7 +7,7 @@ namespace DevCraft\Modules\dle_faker\Services;
 use DevCraft\Modules\dle_faker\DleFakerIdentity;
 
 use DevCraft\Core\Config\DevCraftConfig;
-use DevCraft\Builders\QueryBuilder;
+use DcApi;
 use DevCraft\Core\Support\DataManager;
 
 /**
@@ -26,7 +26,7 @@ final class CategoryGeneratorService {
 	 * @return array{id?: int, name: string, alt_name: string, parentid: int, skipped: bool}
 	 */
 	public function generate(array $payload, array $moduleConfig): array {
-		global $db, $config;
+		global $config;
 
 		$nameTemplate = trim((string) ($payload['name'] ?? ''));
 		$parentId     = max(0, (int) ($payload['parentid'] ?? 0));
@@ -55,11 +55,7 @@ final class CategoryGeneratorService {
 			throw new \RuntimeException(__('Не удалось сгенерировать alt_name категории'));
 		}
 
-		$existingName = QueryBuilder::create('category')
-			->withColumns(['id'])
-			->withConditions(['name' => $name, 'parentid' => $parentId])
-			->withLimit(1)
-			->first();
+		$existingName = $this->findCategory('name', $name, $parentId);
 
 		if($existingName !== [] && !empty($existingName['id'])) {
 			return [
@@ -70,11 +66,7 @@ final class CategoryGeneratorService {
 			];
 		}
 
-		$existingAlt = QueryBuilder::create('category')
-			->withColumns(['id'])
-			->withConditions(['alt_name' => $altName, 'parentid' => $parentId])
-			->withLimit(1)
-			->first();
+		$existingAlt = $this->findCategory('alt_name', $altName, $parentId);
 
 		if($existingAlt !== [] && !empty($existingAlt['id'])) {
 			return [
@@ -85,11 +77,15 @@ final class CategoryGeneratorService {
 			];
 		}
 
-		$db->query(
-			"INSERT INTO " . PREFIX . "_category (parentid, name, alt_name, icon, skin, descr, keywords, news_sort, news_msort, news_number, short_tpl, full_tpl, metatitle, show_sub, allow_rss, fulldescr, disable_search, disable_main, disable_rating, disable_comments, enable_dzen, rating_type, schema_org, disable_index) values ('{$parentId}', '" . $db->safesql($name) . "', '" . $db->safesql($altName) . "', '', '', '', '', '', '', '0', '', '', '', '0', '1', '', '0', '0', '0', '0', '0', '-1', '1', '0')"
-		);
+		// Остальные колонки берутся из defaultMap CategorySchema; явно только отличающийся enable_dzen.
+		$category = DcApi::schema('category')
+			->with('parentid', $parentId)
+			->with('name', $name)
+			->with('alt_name', $altName)
+			->with('enable_dzen', 0)
+			->create();
 
-		$id = (int) $db->insert_id();
+		$id = (int) $category->asArray()['id'];
 
 		@unlink(ENGINE_DIR . '/cache/system/category.json');
 		clear_cache();
@@ -103,6 +99,22 @@ final class CategoryGeneratorService {
 			'parentid' => $parentId,
 			'skipped'  => false,
 		];
+	}
+
+	/**
+	 * Ищет категорию по колонке в пределах одного родителя.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private function findCategory(string $column, string $value, int $parentId): array {
+		$rows = DcApi::query('category')
+			->select(['id'])
+			->where($column, $value)
+			->where('parentid', (string) $parentId)
+			->limit(1)
+			->fetchAll();
+
+		return $rows[0] ?? [];
 	}
 
 	/**

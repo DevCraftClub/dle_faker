@@ -55,7 +55,7 @@ final class UserGeneratorService {
 		$result = $dleApi->external_register($username, $password, $email, $group);
 
 		return match ($result) {
-			1       => $this->completeSuccess($dleApi, $db, $email, $fullName, $_TIME, $group, $payload, $config),
+			1       => $this->completeSuccess($dleApi, $email, $fullName, $_TIME, $group, $payload, $config),
 			-1      => throw new \RuntimeException(__('Псевдоним пользователя уже занят: {username}', ['{username}' => $username])),
 			-2      => throw new \RuntimeException(__('Электронная почта пользователя уже занята: {email}', ['{email}' => $email])),
 			-3      => throw new \RuntimeException(__('Электронная почта имеет некорректный формат: {email}', ['{email}' => $email])),
@@ -70,27 +70,28 @@ final class UserGeneratorService {
 	 *
 	 * @return array<string, mixed>
 	 */
-	private function completeSuccess(DLE_API $dleApi, object $db, string $email, string $fullName, int $time, int $group, array $payload, array $config): array {
+	private function completeSuccess(DLE_API $dleApi, string $email, string $fullName, int $time, int $group, array $payload, array $config): array {
 		$user = $dleApi->take_user_by_email($email, 'user_id, name, email, fullname, user_group');
 
 		if(!is_array($user) || $user === []) {
 			throw new \RuntimeException(__('Пользователь был создан, но не найден для обновления'));
 		}
 
-		$db->query(
-			'UPDATE ' . USERPREFIX . "_users SET fullname = '" . $db->safesql($fullName) . "', lastdate = '{$time}' WHERE user_id = " . (int) $user['user_id']
-		);
+		$set = [
+			'fullname' => $fullName,
+			'lastdate' => $time,
+		];
 
 		$userXfields = (array) ($payload['user_xfields'] ?? $config['user_xfields'] ?? []);
 		$schema      = DleDataService::userXfields();
 
 		if($schema !== [] && $userXfields !== []) {
-			$resolved = (new XfieldValueResolver($this->parser))->resolve($userXfields, $schema, $config, false);
-			$encoded  = (new XfieldValueEncoder())->encode($resolved, $schema);
-			$db->query(
-				'UPDATE ' . USERPREFIX . "_users SET xfields = '" . $db->safesql($encoded) . "' WHERE user_id = " . (int) $user['user_id']
-			);
+			$resolved       = (new XfieldValueResolver($this->parser))->resolve($userXfields, $schema, $config, false);
+			$set['xfields'] = (new XfieldValueEncoder())->encode($resolved, $schema);
 		}
+
+		// SDK: prepared statements + корректный USERPREFIX для users.
+		dle_api_update_by_pk('users', (int) $user['user_id'], $set);
 
 		return [
 			'id'         => (int) $user['user_id'],

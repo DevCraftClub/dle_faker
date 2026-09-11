@@ -13,6 +13,20 @@ declare(strict_types=1);
  */
 return [
 	[
+		'version' => '200.1.5',
+		'date'    => '2026-09-11',
+		'changes' => [
+			'changed' => [
+				__('Генерация новостей, категорий и пользователей переведена на in-process SDK DevCraft Admin (`DcApi`): prepared statements вместо сырого SQL с ручным экранированием.'),
+				__('Новость создаётся одним вызовом `DcApi::news()->create()` — post, post_extras и post_extras_cats пишутся вместе; запись в журнал админки идёт через Schema `admin_logs`.'),
+				__('Требуется DevCraft Admin ≥ 200.4.1 (in-process SDK поставляется вместе с ядром).'),
+			],
+			'fixed'   => [
+				__('Тексты новостей больше не экранируются дважды: `safesql` убран с пути записи.'),
+			],
+		],
+	],
+	[
 		'version' => '200.1.4',
 		'date'    => '2026-07-16',
 		'changes' => [

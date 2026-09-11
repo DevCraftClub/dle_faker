@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace DevCraft\Modules\dle_faker\Services;
 
+use DcApi;
 use DLEPlugins;
 use ParseFilter;
 use RuntimeException;
-use DevCraft\Core\Application;
 use Throwable;
-use DevCraft\Builders\QueryBuilder;
 use DevCraft\Core\Support\DleDataService;
 
 /**
@@ -28,7 +27,7 @@ final class NewsGeneratorService {
 	 * @return array<string, mixed>
 	 */
 	public function generate(array $template, array $moduleConfig): array {
-		global $db, $config, $_TIME, $_IP;
+		global $config, $_TIME, $_IP;
 
 		if(!class_exists('ParseFilter')) {
 			require_once DLEPlugins::Check(ENGINE_DIR . '/classes/parse.class.php');
@@ -80,23 +79,49 @@ final class NewsGeneratorService {
 		$fullStory  = $this->parser->parseNewsValue((string) ($template['full_story'] ?? ''), $moduleConfig);
 		$fullStory  = $fullStory !== '' ? $fullStory : $shortStory;
 
-		$schema  = DleDataService::postXfields();
-		$altName = totranslit(stripslashes($title), true, false, $config['translit_url'] ?? false);
-		$altName = $this->ensureUniqueAltName($altName);
-		$stories = $this->prepareStories($parse, $shortStory, $fullStory);
+		$schema   = DleDataService::postXfields();
+		$altName  = totranslit(stripslashes($title), true, false, $config['translit_url'] ?? false);
+		$altName  = $this->ensureUniqueAltName($altName);
+		$stories  = $this->prepareStories($parse, $shortStory, $fullStory);
 		$metatags = create_metatags(dle_strlen($fullStory) > 12 ? $fullStory : $shortStory);
-		$categoryString = $db->safesql(implode(',', $selected));
-		$catalogUrl     = !empty($config['create_catalog']) ? $db->safesql(dle_substr(htmlspecialchars(strip_tags(stripslashes($title)), ENT_QUOTES, 'UTF-8'), 0, 1)) : '';
+		$catalogUrl = !empty($config['create_catalog']) ? dle_substr(htmlspecialchars(strip_tags(stripslashes($title)), ENT_QUOTES, 'UTF-8'), 0, 1) : '';
 
 		$xfieldsConfigured = (array) ($template['xfields'] ?? []);
 		$postId            = 0;
+		$news              = DcApi::news()
+			->withTitle($title)
+			->withAutor((string) $author['name'])
+			->withShortStory($stories['short'])
+			->withFullStory($stories['full'])
+			->withCategory($selected)
+			->with('date', $date)
+			->with('descr', (string) $metatags['description'])
+			->with('keywords', (string) $metatags['keywords'])
+			->with('metatitle', (string) $metatags['title'])
+			->with('alt_name', $altName)
+			->with('symbol', $catalogUrl)
+			->with('allow_br', 1)
+			->with('allow_comm', $this->boolFlag($template, 'allow_comm', $moduleConfig))
+			->with('approve', $this->boolFlag($template, 'approve', $moduleConfig))
+			->with('allow_main', $this->boolFlag($template, 'allow_main', $moduleConfig))
+			->with('fixed', $this->boolFlag($template, 'fixed', $moduleConfig))
+			->withExtras('user_id', (int) $author['user_id'])
+			->withExtras('votes', 0)
+			->withExtras('need_pass', 0)
+			->withExtras('allow_rate', $this->boolFlag($template, 'allow_rate', $moduleConfig))
+			->withExtras('disable_index', $this->boolFlag($template, 'disable_index', $moduleConfig))
+			->withExtras('disable_search', $this->boolFlag($template, 'disable_search', $moduleConfig))
+			->withExtras('allow_rss', $this->boolFlag($template, 'allow_rss', $moduleConfig))
+			->withExtras('allow_rss_dzen', $this->boolFlag($template, 'allow_rss_dzen', $moduleConfig));
 
 		try {
-			$this->queryOrFail(
-				"INSERT INTO " . PREFIX . "_post (date, autor, short_story, full_story, xfields, title, descr, keywords, category, alt_name, allow_comm, approve, allow_main, fixed, allow_br, symbol, tags, metatitle) values ('{$date}', '{$db->safesql((string) $author['name'])}', '{$stories['short']}', '{$stories['full']}', '', '{$db->safesql($title)}', '{$db->safesql((string) $metatags['description'])}', '{$db->safesql((string) $metatags['keywords'])}', '{$categoryString}', '{$db->safesql($altName)}', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_comm'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['approve'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_main'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['fixed'] ?? 'random'), $moduleConfig) . "', '1', '{$catalogUrl}', '', '{$db->safesql((string) $metatags['title'])}')"
-			);
+			// create() пишет post + post_extras + post_extras_cats одним Fluent-вызовом (prepared statements).
+			$news->create();
+			$postId = (int) $news->asArray()['id'];
 
-			$postId = (int) $db->insert_id();
+			if($postId < 1) {
+				throw new RuntimeException(__('Не удалось получить id созданной новости'));
+			}
 
 			$resolved      = (new XfieldValueResolver($this->parser))->resolve(
 				$xfieldsConfigured,
@@ -107,25 +132,25 @@ final class NewsGeneratorService {
 			);
 			$xfieldsString = (new XfieldValueEncoder())->encode($resolved, $schema);
 
+			// Доп. поля резолвятся уже с id новости (загрузка файлов), поэтому — отдельным UPDATE.
+			// save() здесь нельзя: он повторно создал бы дочерние post_extras / post_extras_cats.
 			if($xfieldsString !== '') {
-				$this->queryOrFail(
-					"UPDATE " . PREFIX . "_post SET xfields='{$db->safesql($xfieldsString)}' WHERE id='{$postId}'"
-				);
+				dle_api_update_by_pk('post', $postId, ['xfields' => $xfieldsString]);
 			}
 
-			$this->queryOrFail(
-				"INSERT INTO " . PREFIX . "_post_extras (news_id, allow_rate, votes, disable_index, related_ids, access, user_id, disable_search, need_pass, allow_rss, allow_rss_dzen, allowed_country, not_allowed_country) VALUES('{$postId}', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rate'] ?? 'random'), $moduleConfig) . "', 0, '" . (int) $this->parser->parseBoolValue((string) ($template['disable_index'] ?? 'random'), $moduleConfig) . "', '', '', '" . (int) $author['user_id'] . "', '" . (int) $this->parser->parseBoolValue((string) ($template['disable_search'] ?? 'random'), $moduleConfig) . "', '0', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss'] ?? 'random'), $moduleConfig) . "', '" . (int) $this->parser->parseBoolValue((string) ($template['allow_rss_dzen'] ?? 'random'), $moduleConfig) . "', '', '')"
-			);
-
-			$catsIds = [];
-			foreach($selected as $categoryId) {
-				$catsIds[] = '(' . $postId . ', ' . (int) $categoryId . ')';
-			}
-
-			$this->queryOrFail("INSERT INTO " . PREFIX . "_post_extras_cats (news_id, cat_id) VALUES " . implode(', ', $catsIds));
 			$this->queryOrFail("UPDATE " . USERPREFIX . "_users SET news_num=news_num+1 WHERE user_id='" . (int) $author['user_id'] . "'");
-			$this->queryOrFail("INSERT INTO " . USERPREFIX . "_admin_logs (name, date, ip, action, extras) values ('" . $db->safesql((string) $author['name']) . "', '{$_TIME}', '{$_IP}', '1', '" . $db->safesql($title) . "')");
+
+			DcApi::schema('admin_logs')
+				->with('name', (string) $author['name'])
+				->with('date', (int) $_TIME)
+				->with('ip', (string) $_IP)
+				->with('action', 1)
+				->with('extras', $title)
+				->create();
 		} catch (Throwable $e) {
+			// create() мог упасть уже после INSERT в post — id берём из сущности.
+			$postId = $postId > 0 ? $postId : (int) ($news->asArray()['id'] ?? 0);
+
 			if($postId > 0) {
 				$this->rollbackPost($postId, (int) $author['user_id']);
 			}
@@ -186,26 +211,33 @@ final class NewsGeneratorService {
 	}
 
 	/**
+	 * Значение bool-флага шаблона (`random` → случайное) как 0/1.
+	 *
+	 * @param array<string, mixed> $template
+	 * @param array<string, mixed> $moduleConfig
+	 */
+	private function boolFlag(array $template, string $key, array $moduleConfig): int {
+		return (int) $this->parser->parseBoolValue((string) ($template[$key] ?? 'random'), $moduleConfig);
+	}
+
+	/**
+	 * Тексты новости без экранирования: запись идёт через SDK (prepared statements).
+	 *
 	 * @return array{short: string, full: string}
 	 */
 	private function prepareStories(ParseFilter $parse, string $shortStory, string $fullStory): array {
-		global $db, $config;
+		global $config;
 
-		if($config['allow_admin_wysiwyg']) {
-			return [
-				'short' => $db->safesql($parse->BB_Parse($shortStory)),
-				'full'  => $db->safesql($parse->BB_Parse($fullStory)),
-			];
-		}
+		$wysiwyg = (bool) ($config['allow_admin_wysiwyg'] ?? false);
 
 		return [
-			'short' => $db->safesql($parse->BB_Parse($shortStory, false)),
-			'full'  => $db->safesql($parse->BB_Parse($fullStory, false)),
+			'short' => $parse->BB_Parse($shortStory, $wysiwyg),
+			'full'  => $parse->BB_Parse($fullStory, $wysiwyg),
 		];
 	}
 
 	private function ensureUniqueAltName(string $altName): string {
-		global $db, $config;
+		global $config;
 
 		if(!$config['allow_alt_url'] || $config['seo_type']) {
 			return $altName;
@@ -215,11 +247,11 @@ final class NewsGeneratorService {
 		$counter  = 1;
 
 		do {
-			$found = QueryBuilder::create('post')
-				->withColumns(['id'])
-				->withConditionsItem('alt_name', $altName)
-				->withLimit(1)
-				->first();
+			$found = DcApi::query('post')
+				->select(['id'])
+				->where('alt_name', $altName)
+				->limit(1)
+				->fetchAll();
 
 			if($found !== []) {
 				$altName = $original . '_' . $counter;

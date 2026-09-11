@@ -49,7 +49,7 @@ return [
 	],
 	'meta'              => [
 		'name'        => 'DLE Faker',
-		'version'     => '200.1.4',
+		'version'     => '200.1.5',
 		'description' => __('Генерация тестовых пользователей, новостей и шаблонов для DLE'),
 		'icon'        => 'mif-magic-wand',
 		'docsLink'    => 'https://readme.devcraft.club/dev/dle_faker/install/',
